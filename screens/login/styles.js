@@ -30,7 +30,12 @@ const styles = StyleSheet.create({
     },
     signUpnButton:{
         backgroundColor: 'red',
+    },
+    logo: {
+        height: 200,
+        width: 160,
     }
+
   });
 
 export default styles

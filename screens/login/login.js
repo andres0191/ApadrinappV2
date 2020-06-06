@@ -3,6 +3,7 @@ import { Text, View, TouchableHighlight, TextInput } from 'react-native';
 import styles from './styles';
 import firebaseService from '../../services/firebase';
 
+
 const login = ({navigation}) => {
     const [user, setUser] = useState('')
     const [pass, setPass] = useState('')
@@ -16,10 +17,10 @@ const login = ({navigation}) => {
         }
     }
 
-
   return (
     <View style={styles.container}>
         <View>
+        
             <TextInput
                 placeholder='e-mail' 
                 style={styles.inputText}
