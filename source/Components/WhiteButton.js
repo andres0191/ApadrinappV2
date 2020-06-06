@@ -16,8 +16,11 @@ const WhiteButton = (props) => {
 const styles = StyleSheet.create({
     button: {
         display: 'flex',
+        width: 110,
+        height: 25,
+        textAlign: 'center',
         paddingVertical: 2,
-        paddingHorizontal: 25,
+        paddingHorizontal: 20,
         borderRadius: 20,
         justifyContent: 'center',
         alignItems: 'center',

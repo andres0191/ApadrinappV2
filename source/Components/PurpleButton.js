@@ -15,9 +15,11 @@ const PurpleButton = (props) => {
 
 const styles = StyleSheet.create({
     button: {
-        display: 'flex',
+        width: 110,
+        height: 25,
+        textAlign: 'center',
         paddingVertical: 2,
-        paddingHorizontal: 25,
+        paddingHorizontal: 20,
         borderRadius: 20,
         justifyContent: 'center',
         alignItems: 'center',
@@ -26,7 +28,7 @@ const styles = StyleSheet.create({
     },
     textButton: {
         font: 5,
-        color: Color.white
+        color: Color.white,
     }
 })
 
