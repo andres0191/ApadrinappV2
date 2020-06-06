@@ -3,12 +3,12 @@ import { Text, View } from 'react-native';
 import styles from './styles';
 import firebaseService from '../../services/firebase';
 
-const Main = () => {
+const Start = () => {
    return (
     <View style={styles.container}>
-      <Text>{'Bienvenido a APADRINAPP !'}</Text>
+      <Text>{'Bienvenido a Start !'}</Text>
     </View>
   );
 }
 
-export default Main
+export default Start
