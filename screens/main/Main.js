@@ -1,12 +1,12 @@
 import React from 'react';
-import { Text, View } from 'react-native';
+import { Text, View, TouchableHighlight } from 'react-native';
 import styles from './styles';
 import firebaseService from '../../services/firebase';
 
-const Main = () => {
+const Main = ({ navigation }) => {
    return (
     <View style={styles.container}>
-      <Text>{'Bienvenido a APADRINAPP !'}</Text>
+      <Text>{'Estas en Main!'}</Text>
     </View>
   );
 }

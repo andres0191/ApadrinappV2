@@ -7,6 +7,18 @@ const styles = StyleSheet.create({
       alignItems: 'center',
       justifyContent: 'center',
     },
+    button: {
+      paddingVertical: 20,
+      borderWidth: 1,
+      borderColor: '#ccc',
+      marginTop: 10,
+  },
+  textButton: {
+      textAlign: 'center',
+  },
+  next: {
+    backgroundColor: 'green'
+  },
   });
 
 export default styles

@@ -5,9 +5,8 @@ import firebaseService from '../../services/firebase';
 
 const Inversion = ({ navigation }) => {
    return (
-
     <View style={styles.container}>
-      <Text>{'Bienvendo a Apadrinapp, '}</Text>
+      <Text>{'Estas en Inversiones, '}</Text>
       <TouchableHighlight style={[styles.button, styles.next]} onPress={() => navigation.navigate('Main')}>
           <Text style={styles.textButton} >Next</Text>
       </TouchableHighlight>
