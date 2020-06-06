@@ -4,8 +4,6 @@ import styles from './styles';
 import firebaseService from '../../services/firebase';
 
 const Inversion = ({ navigation }) => {
-  
-
    return (
 
     <View style={styles.container}>

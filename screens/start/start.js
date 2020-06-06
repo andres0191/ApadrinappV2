@@ -1,18 +1,17 @@
 import React from 'react';
-import {navigation} from '@react-navigation/native';
-import { View, Image, Button} from 'react-native';
+import { View, Image, TouchableHighlight, Text } from 'react-native';
 import styles from './styles';
 
-class Start extends React.Component {
-  render() {
+const Start = ({navigation}) => {
     return (
       <View style={styles.container}>
         <Image source={require('../../assets/apadrinapp_logo.png')}
           style={styles.logo}/>
-          <Button title='Next' onPress={() => navigation.navigate('Login')} />
+      <TouchableHighlight style={[styles.button, styles.next]} onPress={() => navigation.navigate('Login')}>
+          <Text style={styles.textButton} >Next</Text>
+      </TouchableHighlight>
       </View>
     );
   }
-}
 
 export default Start

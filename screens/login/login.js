@@ -20,7 +20,6 @@ const login = ({navigation}) => {
   return (
     <View style={styles.container}>
         <View>
-        
             <TextInput
                 placeholder='e-mail' 
                 style={styles.inputText}
