@@ -1,14 +1,18 @@
 import React from 'react';
-import { Text, View } from 'react-native';
+import {navigation} from '@react-navigation/native';
+import { View, Image, Button} from 'react-native';
 import styles from './styles';
-import firebaseService from '../../services/firebase';
 
-const Start = () => {
-   return (
-    <View style={styles.container}>
-      <Text>{'Bienvenido a Start !'}</Text>
-    </View>
-  );
+class Start extends React.Component {
+  render() {
+    return (
+      <View style={styles.container}>
+        <Image source={require('../../assets/apadrinapp_logo.png')}
+          style={styles.logo}/>
+          <Button title='Next' onPress={() => navigation.navigate('Login')} />
+      </View>
+    );
+  }
 }
 
 export default Start

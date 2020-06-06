@@ -21,11 +21,12 @@ export default function App(){
           headerTitle: 'Apadrinapp',
           headerTitleAlign: 'center',
           headeTintColor: 'read'
-        }} name='Login' component={Login} />
+        }} name='Start' component={Start} />
+        name='Login' component={Login} />
         <Stack.Screen name='SignUp' component={SignUp} />
         <Stack.Screen name='Main' component={Main} />
         <Stack.Screen name='Inversion' component={Inversion} />
-        <Stack.Screen name='Home' component={Home} />
+        <Stack.Screen name='Login' component={Login} />
         <Stack.Screen name='MenuApadrinapp' component={MenuApadrinapp} />
         <Stack.Screen name='PublicacionesRappi' component={PublicacionesRappi} />
         <Stack.Screen name='Transferencia' component={Transferencia} />*/
@@ -33,4 +34,3 @@ export default function App(){
     </NavigationContainer>
   );
 }
-        
