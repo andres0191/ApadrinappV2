@@ -2,7 +2,7 @@ import React from 'react';
 import { TouchableOpacity, StyleSheet, Text } from 'react-native';
 import Color from '../utils/Colors';
 
-const PurpleButton = (props) => {
+const HollowInput = (props) => {
     const { title = 'Enter', style = {}, textStyle = {}, onPress } = props
 
     return (
@@ -30,4 +30,4 @@ const styles = StyleSheet.create({
     }
 })
 
-export default PurpleButton
+export default HollowInput

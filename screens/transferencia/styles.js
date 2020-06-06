@@ -1,3 +1,4 @@
+import React from 'react';
 import { StyleSheet } from 'react-native';
 import Color from '../../source/utils/Colors';
 import { Dimensions } from 'react-native';
@@ -7,7 +8,7 @@ const ratio = win.width/541;
 
 const styles = StyleSheet.create({
   container : {
-    flex : 1,
+    flex: 1,
     flexDirection : 'column',
     justifyContent: 'center',
     alignContent: 'center',
@@ -17,7 +18,6 @@ const styles = StyleSheet.create({
     flex : 1,
     flexDirection : 'row',
     justifyContent : 'center',
-    marginTop : 30,
     backgroundColor: 'red'
   },
   headerLeft : {
@@ -26,13 +26,27 @@ const styles = StyleSheet.create({
   },
   headerRight : {
     flex: 1,
-    marginRight : 10,
     backgroundColor: 'blue'
   },
   body : {
     flex : 10,
+    flexDirection: 'column',
     alignItems : 'center',
-    justifyContent : 'stretch'
+    justifyContent : 'center',
+    borderColor: Color.grey,
+    backgroundColor: Color.lightpurple
+  },
+  info: {
+    flex : 10,
+    flexDirection : 'row',
+    justifyContent: 'center',
+    alignContent: 'center',
+    backgroundColor: 'yellow'
+  },
+  sidecolumn: {
+    flex: 1,
+    flexDirection: 'row',
+    backgroundColor: 'orange'
   },
   logo : {
     width: win.width,
@@ -41,11 +55,11 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-start',
   },
   footer : {
-    flex : 1.5,
-    flexDirection : 'row'
-  },
-  flex : {
-    flex : 1
+    flex : 1,
+    flexDirection : 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: 'brown'
   },
   textColor : {
     color : Color.black
