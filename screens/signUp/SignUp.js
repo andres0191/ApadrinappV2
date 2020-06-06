@@ -31,24 +31,24 @@ const SignUp = ({navigation}) => {
     <View style={styles.container}>
         <View>
             <TextInput
-                placeholder='Name'
+                placeholder='Name' 
                 style={styles.inputText}
                 value = {name}
                 onChange = {(e) => setName(e.nativeEvent.text)}
                 />
             <TextInput
-                placeholder='e-mail'
+                placeholder='e-mail' 
                 style={styles.inputText}
                 value = {user}
                 onChange = {(e) => setUser(e.nativeEvent.text)}
                 />
             <TextInput
-                placeholder='Password'
+                placeholder='Password' 
                 style={styles.inputText}
                 value = {pass}
                 onChange = {(e) => setPass(e.nativeEvent.text)}
-                />
-        </View>
+                />      
+        </View>      
       <TouchableHighlight style={[styles.button, styles.signUpnButton]} onPress={createNewUser}>
           <Text style={styles.textButton} >Create new user</Text>
       </TouchableHighlight>

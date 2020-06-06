@@ -27,11 +27,11 @@ const login = ({navigation}) => {
                 onChange = {(e) => setUser(e.nativeEvent.text)}
                 />
             <TextInput
-                placeholder='Password'
+                placeholder='Password' 
                 style={styles.inputText}
                 value = {pass}
                 onChange = {(e) => setPass(e.nativeEvent.text)}
-                />
+                />      
         </View>
       <TouchableHighlight style={[styles.button, styles.loginButton]} onPress={onPressLogin}>
           <Text style={styles.textButton} >Login</Text>
