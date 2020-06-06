@@ -10,7 +10,7 @@ const MenuApadrinapp = ({ navigation }) => {
      <TouchableHighlight style={[styles.button, styles.next]} onPress={() => navigation.navigate('PublicacionesRappi')}>
          <Text style={styles.textButton} >Lista de ahijados</Text>
      </TouchableHighlight>
-     <TouchableHighlight style={[styles.button, styles.next]} onPress={() => navigation.navigate('Transferencia')}>
+     <TouchableHighlight style={[styles.button, styles.next]} onPress={() => navigation.navigate('EstadoCuenta')}>
          <Text style={styles.textButton} >Estado de la cuenta</Text>
      </TouchableHighlight>
    </View>

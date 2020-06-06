@@ -7,8 +7,8 @@ const EstadoCuenta = ({ navigation }) => {
    return (
     <View style={styles.container}>
       <Text>{'Estas en EstadoCuenta, '}</Text>
-      <TouchableHighlight style={[styles.button, styles.next]} onPress={() => navigation.navigate('Main')}>
-          <Text style={styles.textButton} >Next</Text>
+      <TouchableHighlight style={[styles.button, styles.next]} onPress={() => navigation.navigate('MenuApadrinapp')}>
+          <Text style={styles.textButton} >Menu MenuApadrinapp</Text>
       </TouchableHighlight>
     </View>
   );
