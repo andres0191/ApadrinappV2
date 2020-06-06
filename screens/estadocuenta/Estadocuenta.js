@@ -1,7 +1,7 @@
 import React from 'react';
 import { Text, View, TouchableHighlight } from 'react-native';
 import styles from './styles';
-import Button from '../../source/Components/Button';
+import PurpleButton from '../../source/Components/PurpleButton';
 import firebaseService from '../../services/firebase';
 
 const EstadoCuenta = ({ navigation }) => {
@@ -11,7 +11,7 @@ const EstadoCuenta = ({ navigation }) => {
       <TouchableHighlight style={[styles.button, styles.next]} onPress={() => navigation.navigate('MenuApadrinapp')}>
           <Text style={styles.textButton} >Menu MenuApadrinapp</Text>
       </TouchableHighlight>
-      <Button>esesesesesese</Button>
+      <PurpleButton></PurpleButton>
     </View>
   );
 }

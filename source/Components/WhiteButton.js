@@ -2,7 +2,7 @@ import React from 'react';
 import { TouchableOpacity, StyleSheet, Text } from 'react-native';
 import Color from '../utils/Colors';
 
-const Button = (props) => {
+const WhiteButton = (props) => {
     const { title = 'Enter', style = {}, textStyle = {}, onPress } = props
 
     return (
@@ -16,20 +16,18 @@ const Button = (props) => {
 const styles = StyleSheet.create({
     button: {
         display: 'flex',
-        paddingVertical: 5,
-        paddingHorizontal: 10,
+        paddingVertical: 2,
+        paddingHorizontal: 25,
         borderRadius: 20,
-        borderWidth: 2,
-        borderColor: Color.lightpurple,
         justifyContent: 'center',
         alignItems: 'center',
         margin: 20,
-        backgroundColor: Color.purple
+        backgroundColor: Color.white
     },
     textButton: {
-        font: 12,
-        color: Color.white
+        font: 5,
+        color: Color.purple
     }
 })
 
-export default Button
+export default WhiteButton

@@ -1,20 +1,16 @@
 import React from 'react';
 import { View, Image, TouchableHighlight, Text } from 'react-native';
 import styles from './styles';
-import Button from '../../source/Components/Button';
+import WhiteButton from '../../source/Components/WhiteButton';
 
 const Start = ({navigation}) => {
     return (
       <View style={styles.container}>
-        <Image source={require('../../assets/apadrinapp_logo.png')}
-          style={styles.logo}/>
-      <TouchableHighlight style={[styles.button, styles.next]} onPress={() => navigation.navigate('Login')}>
-          <Text style={styles.textButton} >Next</Text>
-      </TouchableHighlight>
-      <TouchableHighlight style={[styles.button, styles.next]} onPress={() => navigation.navigate('MenuApadrinapp')}>
-          <Text style={styles.textButton} >Next</Text>
-      </TouchableHighlight>
-      <Button onPress={() => navigation.navigate('PublicacionesRappi')}>esesesesesese</Button>
+        <Image source={require('../../assets/apadrinapp_logo.png')} style={styles.logo}
+        />
+        <WhiteButton title="Log in" onPress={() => navigation.navigate('Login')}></WhiteButton>
+        <WhiteButton title="Sign in" onPress={() => navigation.navigate('SignUp')}></WhiteButton>
+        <WhiteButton title='holaa' onPress={() => navigation.navigate('Transferencia')}></WhiteButton>
       </View>
     );
   }
