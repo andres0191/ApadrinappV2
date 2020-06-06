@@ -25,7 +25,7 @@ const styles = StyleSheet.create({
         backgroundColor: Color.white
     },
     textButton: {
-        font: 5,
+        font: 6,
         color: Color.purple
     }
 })
