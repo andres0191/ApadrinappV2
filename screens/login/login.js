@@ -27,11 +27,13 @@ const login = ({navigation}) => {
         <View>
             <TextInput
                 placeholder='Ingresa tu correo' 
+                placeholderTextColor="white"
                 style={styles.inputText}
                 value = {user}
                 onChange = {(e) => setUser(e.nativeEvent.text)}/>
             <TextInput
                 placeholder='Ingresa tu contrasena'
+                placeholderTextColor="white"
                 style={styles.inputText}
                 value = {pass}
                 onChange = {(e) => setPass(e.nativeEvent.text)}/>
