@@ -6,16 +6,19 @@ import YellowButton from '../../source/Components/YellowButton';
 import firebaseService from '../../services/firebase';
 import HollowInput from '../../source/Components/HollowInputSpace';
 
-
 const Transferencia = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <View style={styles.header}>
-        <View style={styles.headerLeft}></View>
+        <View style={styles.headerLeft}>
+          <Text style={styles.PageTitle}>Apadrinar</Text>
+        </View>
         <View style={styles.headerRight}></View>
       </View>
       <View style={styles.body}>
-        <Image source={require('../../assets/apadrina-03.svg')} style={styles.logo}></Image>
+        <View style={styles.ElevatePic}>
+          <Image source={require('../../assets/apadrina-03.svg')} style={styles.logo}></Image>
+        </View>
             <View style={styles.info}>
               <View style={styles.InputInfo}>
                 <Text style={styles.YellowFont}>Monto a invertir: </Text>
@@ -23,7 +26,6 @@ const Transferencia = ({ navigation }) => {
               </View>
               <View style={styles.InputInfo}>
                 <Text style={styles.YellowFont}>Apadrinarás a:</Text>
-                
                 <HollowInput title= "Ingresa Monto"></HollowInput>
               </View>
             </View>
@@ -39,5 +41,4 @@ const Transferencia = ({ navigation }) => {
     </View>
     )
   }
-
 export default Transferencia
