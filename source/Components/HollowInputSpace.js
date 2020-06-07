@@ -2,7 +2,7 @@ import React from 'react';
 import { TouchableOpacity, StyleSheet, Text } from 'react-native';
 import Color from '../utils/Colors';
 
-const HollowInput = (desc, props) => {
+const HollowInput = (props) => {
     const { title = '$0', style = {}, textStyle = {}, onPress } = props;
 
     return (
@@ -24,7 +24,9 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         margin: 20,
         borderColor: Color.purple,
-        borderWidth: 2
+        borderWidth: 2,
+        marginTop: 65,
+
     },
     textButton: {
         fontSize: 34,

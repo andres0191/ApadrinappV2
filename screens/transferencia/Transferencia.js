@@ -23,13 +23,14 @@ const Transferencia = ({ navigation }) => {
               </View>
               <View style={styles.InputInfo}>
                 <Text style={styles.YellowFont}>Apadrinarás a:</Text>
-                <HollowInput title='Ingresa Monto' ></HollowInput>
+                
+                <HollowInput title= "Ingresa Monto"></HollowInput>
               </View>
             </View>
         </View>
         <View style={styles.footer}>
           <View style={[styles.flex, styles.footerLeft]}>
-            <WhiteButton title='Atras' onPress={() => navigation.navigate('PublicacionesRappi')}></WhiteButton>
+            <WhiteButton title='Atras' onPress={() => navigation.navigate('Login')}></WhiteButton>
           </View>
           <View style={[styles.flex, styles.footerRight]}>
             <YellowButton title='Apadrinar' onPress={() => navigation.navigate('EstadoCuenta')}></YellowButton>

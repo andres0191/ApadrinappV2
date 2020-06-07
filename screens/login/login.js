@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
-import { Text, View, TouchableHighlight, TextInput } from 'react-native';
+import { Text, View, TouchableHighlight, TextInput, Image } from 'react-native';
 import styles from './styles';
 import firebaseService from '../../services/firebase';
+import YellowBigButton from '../../source/Components/YellowBigButton';
+import WhiteBigButton from '../../source/Components/WhiteBigButton';
 
 
 const login = ({navigation}) => {
@@ -19,26 +21,26 @@ const login = ({navigation}) => {
 
   return (
     <View style={styles.container}>
+        <View style={styles.loginlogo}>
+            <Image source={require('../../assets/apadrinapp_logo.png')} style={styles.loginlogo}></Image>
+        </View>
         <View>
             <TextInput
-                placeholder='e-mail' 
+                placeholder='Ingresa tu correo' 
                 style={styles.inputText}
                 value = {user}
-                onChange = {(e) => setUser(e.nativeEvent.text)}
-                />
+                onChange = {(e) => setUser(e.nativeEvent.text)}/>
             <TextInput
-                placeholder='Password'
+                placeholder='Ingresa tu contrasena'
                 style={styles.inputText}
                 value = {pass}
-                onChange = {(e) => setPass(e.nativeEvent.text)}
-                />
+                onChange = {(e) => setPass(e.nativeEvent.text)}/>
         </View>
-      <TouchableHighlight style={[styles.button, styles.loginButton]} onPress={onPressLogin}>
-          <Text style={styles.textButton} >Login</Text>
-      </TouchableHighlight>
-      <TouchableHighlight style={[styles.button, styles.signUpnButton]} onPress={() => navigation.navigate('SignUp')}>
-          <Text style={styles.textButton} >Create new user</Text>
-      </TouchableHighlight>
+        <View style={styles.MenuOptions}>
+            <WhiteBigButton title='Ingresa' onPress={onPressLogin}></WhiteBigButton>
+            <YellowBigButton title='Registrate' onPress={() => navigation.navigate('SignUp')}></YellowBigButton>   
+        </View>
+         
     </View>
   );
 }

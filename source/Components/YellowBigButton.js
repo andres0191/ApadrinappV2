@@ -2,7 +2,7 @@ import React from 'react';
 import { TouchableOpacity, StyleSheet, Text } from 'react-native';
 import Color from '../utils/Colors';
 
-const YellowButton = (props) => {
+const YellowBigButton = (props) => {
     const { title = 'Enter', style = {}, textStyle = {}, onPress } = props
 
     return (
@@ -24,7 +24,8 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         margin: 20,
-        backgroundColor: Color.yellow
+        backgroundColor: Color.yellow,
+        marginTop: 50,
     },
     textButton: {
         fontSize: 15,
@@ -34,4 +35,4 @@ const styles = StyleSheet.create({
     }
 })
 
-export default YellowButton
+export default YellowBigButton
