@@ -21,7 +21,7 @@ const login = ({navigation}) => {
 
   return (
     <View style={styles.container}>
-        <View style={styles.loginlogo}>
+        <View>
             <Image source={require('../../assets/apadrinapp_logo.png')} style={styles.loginlogo}></Image>
         </View>
         <View>
