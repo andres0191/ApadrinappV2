@@ -33,29 +33,27 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     alignItems : 'center',
     justifyContent : 'center',
-    borderColor: Color.grey,
     backgroundColor: Color.lightpurple
-  },
-  info: {
-    flex : 10,
-    flexDirection : 'row',
-    justifyContent: 'center',
-    alignContent: 'center',
-    backgroundColor: 'yellow'
-  },
-  sidecolumn: {
-    flex: 1,
-    flexDirection: 'row',
-    backgroundColor: 'orange'
   },
   logo : {
     width: win.width,
     height: 362 * ratio,
     resizeMode: 'contain',
-    justifyContent: 'flex-start',
+    justifyContent: 'center',
   },
-  footer : {
-    flex : 1,
+  InfoCube: {
+    flexDirection : 'row',
+    width: win.width,
+    justifyContent: 'center',
+  },
+  info: {
+    width: win.width,
+    flexDirection : 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  footer: {
+    flex: 1,
     flexDirection : 'row',
     alignItems: 'center',
     justifyContent: 'center',
