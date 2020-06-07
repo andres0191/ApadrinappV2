@@ -8,9 +8,10 @@ const Start = ({navigation}) => {
       <View style={styles.container}>
         <Image source={require('../../assets/apadrinapp_logo.png')} style={styles.logo}
         />
-        <WhiteButton title="Log in" onPress={() => navigation.navigate('Login')}></WhiteButton>
-        <WhiteButton title="Sign in" onPress={() => navigation.navigate('SignUp')}></WhiteButton>
-        <WhiteButton title='holaa' onPress={() => navigation.navigate('Transferencia')}></WhiteButton>
+        <View style={styles.MenuOptions}>
+          <WhiteButton title="Log in" onPress={() => navigation.navigate('Login')}></WhiteButton>
+          <WhiteButton title="Sign in" onPress={() => navigation.navigate('SignUp')}></WhiteButton>
+        </View>
       </View>
     );
   }

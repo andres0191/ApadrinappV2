@@ -12,6 +12,9 @@ const styles = StyleSheet.create({
       logo: {
         height: 200,
         width: 160,
+      },
+      MenuOptions: {
+        flexDirection: 'row'
       }
 });
 
