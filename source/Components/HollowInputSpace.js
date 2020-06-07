@@ -2,11 +2,10 @@ import React from 'react';
 import { TouchableOpacity, StyleSheet, Text } from 'react-native';
 import Color from '../utils/Colors';
 
-const HollowInput = (props) => {
-    const { title = 'MONTO', style = {}, textStyle = {}, onPress } = props
+const HollowInput = (desc, props) => {
+    const { title = '$0', style = {}, textStyle = {}, onPress } = props;
 
     return (
-        <Text style={styles.YellowFont}
         <TouchableOpacity onPress={onPress} style = {[styles.button, style]}>
             <Text style={[styles.textButton, textStyle]}> {title} </Text>
 
@@ -17,8 +16,9 @@ const HollowInput = (props) => {
 const styles = StyleSheet.create({
     button: {
         display: 'flex',
-        paddingVertical: 2,
-        paddingHorizontal: 25,
+        width: 200,
+        paddingVertical: 3,
+        paddingHorizontal: 20,
         borderRadius: 60,
         justifyContent: 'center',
         alignItems: 'center',
@@ -27,8 +27,9 @@ const styles = StyleSheet.create({
         borderWidth: 2
     },
     textButton: {
-        font: 30,
-        color: Color.purple
+        fontSize: 34,
+        fontWeight: "bold",
+        color: Color.white
     }
 })
 

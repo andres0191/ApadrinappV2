@@ -18,7 +18,6 @@ const styles = StyleSheet.create({
     flex : 1,
     flexDirection : 'row',
     justifyContent : 'center',
-    backgroundColor: 'red'
   },
   headerLeft : {
     flex : 1,
@@ -40,6 +39,7 @@ const styles = StyleSheet.create({
     height: 362 * ratio,
     resizeMode: 'contain',
     justifyContent: 'center',
+    marginBottom: 10
   },
   InfoCube: {
     flexDirection : 'row',
@@ -57,10 +57,21 @@ const styles = StyleSheet.create({
     flexDirection : 'row',
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: 'brown'
+    backgroundColor: Color.purple
   },
-  textColor : {
-    color : Color.black
+  InputInfo: {
+    flex: .5,
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginVertical: 10
+  },
+  YellowFont: {
+    fontFamily: '',
+    marginBottom: -8,
+    fontSize: 17,
+    fontWeight: "bold",
+    color: Color.yellow,
   }
 })
 

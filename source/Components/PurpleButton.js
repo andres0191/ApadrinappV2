@@ -15,11 +15,11 @@ const PurpleButton = (props) => {
 
 const styles = StyleSheet.create({
     button: {
+        display: 'flex',
         width: 110,
         height: 25,
-        textAlign: 'center',
         paddingVertical: 2,
-        paddingHorizontal: 20,
+        paddingHorizontal: 10,
         borderRadius: 20,
         justifyContent: 'center',
         alignItems: 'center',
@@ -27,8 +27,10 @@ const styles = StyleSheet.create({
         backgroundColor: Color.purple
     },
     textButton: {
-        font: 5,
+        fontSize: 15,
+        textAlign: "center",
         color: Color.white,
+        fontFamily: 'Montserrat'
     }
 })
 
