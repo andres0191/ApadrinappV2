@@ -1,36 +1,37 @@
+import React from 'react';
 import { StyleSheet } from 'react-native';
+import Color from '../../source/utils/Colors';
+import { Dimensions } from 'react-native';
 
+const win = Dimensions.get('window');
+const ratio = win.width/541;
 const styles = StyleSheet.create({
     container: {
       flex: 1,
-      backgroundColor: '#fff',
-      marginTop: 20,
-      marginHorizontal: 10,
-      justifyContent: 'center'
+      backgroundColor: Color.purple,
+      justifyContent: 'center',
+      
     },
     inputText: {
-        height: 50,
+        height: 40,
         borderWidth: 1,
         borderColor: '#ccc',
-        paddingHorizontal: 20,
-        color: 'black',
-        backgroundColor: 'white',
-    },
-    button: {
-        paddingVertical: 20,
-        borderWidth: 1,
-        borderColor: '#ccc',
+        paddingHorizontal: 15,
+        color: Color.purple,
+        backgroundColor: Color.lightpurple,
+        borderRadius: 10,
         marginTop: 10,
-    },
-    textButton: {
-        textAlign: 'center',
-    },
-    loginButton:{
-        backgroundColor: 'grey',
-    },
-    signUpnButton:{
-        backgroundColor: 'red',
-    }
+      },
+      logo: {
+        height: 200,
+        width: 160,
+        backgroundColor: Color.purple,
+        alignItems: 'center',
+        justifyContent: 'center',
+      },
+      MenuOptions: {
+        alignItems: 'center',
+      }
   });
 
 export default styles
