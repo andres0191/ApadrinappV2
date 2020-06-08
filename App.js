@@ -9,6 +9,9 @@ import MenuApadrinapp from './screens/menuapadrinapp/MenuApadrinapp';
 import PublicacionesRappi from './screens/publicacionesrappi/PublicacionesRappi';
 import Transferencia from './screens/transferencia/Transferencia';
 import EstadoCuenta from './screens/estadocuenta/Estadocuenta';
+import Ciclo from './screens/slides/Ciclo';
+import Dreamer from './screens/slides/Dreamer';
+import Padrino from './screens/slides/Padrino';
 
 
 const Stack = createStackNavigator()
