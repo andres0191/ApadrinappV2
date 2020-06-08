@@ -5,12 +5,16 @@ import WhiteButton from '../../source/Components/WhiteButton';
 import YellowButton from '../../source/Components/YellowButton';
 import firebaseService from '../../services/firebase';
 import HollowInput from '../../source/Components/HollowInputSpace';
+import PrevScreenButton from '../../source/Components/PrevScreenButton';
 
 const Transferencia = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <View style={styles.header}>
         <View style={styles.headerLeft}>
+          <PrevScreenButton onPress={() => navigation.navigate('PublicacionesRappi')}></PrevScreenButton>
+        </View>
+        <View style={styles.headerMiddle}>
           <Text style={styles.PageTitle}>Apadrinar</Text>
         </View>
         <View style={styles.headerRight}></View>
