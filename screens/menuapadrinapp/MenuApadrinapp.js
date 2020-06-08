@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { Text, View, Image } from 'react-native';
+import React from 'react';
+import { Text, View, TouchableHighlight, Image } from 'react-native';
 import styles from './styles';
 import WhiteButton from '../../source/Components/WhiteButton';
 import YellowButton from '../../source/Components/YellowButton';
@@ -45,5 +45,5 @@ const MenuApadrinapp = ({ navigation }) => {
     </View>
     )
   }
-
+  
 export default MenuApadrinapp
