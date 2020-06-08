@@ -1,4 +1,4 @@
-import React from 'react';
+/* import React from 'react';
 import { Text, View, TouchableHighlight } from 'react-native';
 import styles from './styles';
 import PurpleButton from '../../source/Components/PurpleButton';
@@ -16,4 +16,4 @@ const Inversion = ({ navigation }) => {
   );
 }
 
-export default Inversion
+export default Inversion */
