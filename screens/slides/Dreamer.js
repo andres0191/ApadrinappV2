@@ -7,14 +7,15 @@ import WhiteButton from '../../source/Components/WhiteButton'
 const Dreamer = ({ navigation }) => {
     return (
      <View style={styles.container}>
+       <View style={styles.header} />
        <View style={styles.body}>
-       <ImageBackground source={require('../../assets/Slides/dreamer.svg')} style={styles.logo} />
-       </View> 
-      <View style={styles.footer}> 
-      {/* <ImageBackground style={styles.ImageBack} source={require('../../assets/slides/fondo_borde.svg')} style={styles.logo}> */}
-      <Text style={styles.parragraph}>La mayoría de las personas tienen grandes sueños y algunas saben que con esfuerzo y trabajo duro podrán alcanzarlos, pero.a veces en ese camino, necesitamos de un empujoncito</Text>
-      <WhiteButton syle={styles.bttn} title='Siguiente' onPress={() => navigation.navigate('Padrino')}></WhiteButton>
-      {/* </ImageBackground> */}
+       <Image source={require('../../assets/Slides/dreamer.svg')} style={styles.IconImage} />
+       </View>
+      <View style={styles.footer}>
+        <ImageBackground source={require('../../assets/Slides/FondoBorde.svg')} style={styles.logo}>
+          <Text style={styles.parragraph}>La mayoría de las personas tienen grandes sueños y algunas saben que con esfuerzo y trabajo duro podrán alcanzarlos, pero.a veces en ese camino, necesitamos de un empujoncito</Text>
+          <WhiteButton title='Siguiente' onPress={() => navigation.navigate('Padrino')}></WhiteButton>
+        </ImageBackground>
       </View>
      </View>
    );
