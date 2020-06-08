@@ -15,24 +15,31 @@ const styles = StyleSheet.create({
     backgroundColor : Color.grey
   },
   header : {
-    flex : .5,
+    flex : .8,
     flexDirection : 'row',
     alignItems: 'center',
     justifyContent : 'center',
+    textAlign: 'center'
   },
   headerLeft : {
     flex : 1,
     flexDirection: 'row',
-    justifyContent: 'center',
+    justifyContent: 'flex-start',
+    paddingLeft: 10,
     alignItems: 'flex-end',
+  },
+  headerMiddle : {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'flex-start',
+  },
+  headerRight : {
+    flex: 1,
   },
   PageTitle: {
     fontFamily: '',
     fontSize: 18,
     color: Color.purple
-  },
-  headerRight : {
-    flex: 2,
   },
   body : {
     flex : 10,
