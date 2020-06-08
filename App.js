@@ -9,6 +9,9 @@ import MenuApadrinapp from './screens/menuapadrinapp/MenuApadrinapp';
 import PublicacionesRappi from './screens/publicacionesrappi/PublicacionesRappi';
 import Transferencia from './screens/transferencia/Transferencia';
 import EstadoCuenta from './screens/estadocuenta/Estadocuenta';
+import Ciclo from './screens/slides/Ciclo';
+import Dreamer from './screens/slides/Dreamer';
+import Padrino from './screens/slides/Padrino';
 
 
 const Stack = createStackNavigator()
@@ -29,6 +32,9 @@ export default function App(){
         <Stack.Screen name='PublicacionesRappi' component={PublicacionesRappi} />
         <Stack.Screen name='Transferencia' component={Transferencia} />
         <Stack.Screen name='EstadoCuenta' component={EstadoCuenta} />
+        <Stack.Screen name='Ciclo' component={Ciclo} />
+        <Stack.Screen name='Dreamer' component={Dreamer} />
+        <Stack.Screen name='Padrino' component={Padrino} />
       </Stack.Navigator>
     </NavigationContainer>
   );

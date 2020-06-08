@@ -8,14 +8,14 @@ const Ciclo = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <View style={styles.body}>
-      <ImageBackground source={require('../../assets/Slides/ciclo.svg')} style={styles.logo} />
+      {/* <ImageBackground source={require('../../assets/Slides/ciclo.svg')} style={styles.logo} /> */}
       </View> 
      <View style={styles.footer}> 
-     <ImageBackground style={styles.ImageBack} source={require('../../assets/slides/fondo_borde.svg')} style={styles.logo}>
+     {/* <ImageBackground style={styles.ImageBack} source={require('../../assets/Slides/fondo_border.svg')} style={styles.logo}> */}
      <Text style={styles.parragraph}>Aquí estamos buscando conectarnos y ayudarnos para cumplir nuestros sueños, porque juntos siempre es más fáci. Ayudar cumpliendo sueños es bastante maravilloso.</Text>
-     <WhiteButton syle={styles.bttn} title='Next' onPress={() => navigation.navigate('padrino')}></WhiteButton>
-     </ImageBackground>
-
+     <WhiteButton syle={styles.bttn} title='Next' onPress={() => navigation.navigate('MenuApadrinapp')}></WhiteButton>
+    {/*  </ImageBackground>
+ */}
      </View>
     </View>
   );
