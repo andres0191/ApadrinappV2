@@ -1,7 +1,9 @@
 import React from 'react';
 import { View, Image, TouchableHighlight, Text } from 'react-native';
 import styles from './styles';
-import WhiteButton from '../../source/Components/WhiteButton';
+import YellowBigButton from '../../source/Components/YellowBigButton';
+import WhiteBigButton from '../../source/Components/WhiteBigButton';
+
 
 const Start = ({navigation}) => {
     return (
@@ -9,11 +11,12 @@ const Start = ({navigation}) => {
         <Image source={require('../../assets/apadrinapp_logo.png')} style={styles.logo}
         />
         <View style={styles.MenuOptions}>
-          <WhiteButton title="Log in" onPress={() => navigation.navigate('Login')}></WhiteButton>
-          <WhiteButton title="Sign in" onPress={() => navigation.navigate('SignUp')}></WhiteButton>
+          <WhiteBigButton title="Log in" onPress={() => navigation.navigate('Login')}></WhiteBigButton>
+          <YellowBigButton title="Sign in" onPress={() => navigation.navigate('SignUp')}></YellowBigButton>
         </View>
       </View>
     );
   }
 
 export default Start
+

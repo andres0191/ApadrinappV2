@@ -21,7 +21,7 @@ const EstadoCuenta = ({ navigation }) => {
       </View>
       <View style={styles.body}>
         <View style={styles.ElevatePic}>
-          <Image source={require('../../assets/apadrina-03.svg')} style={styles.logo}></Image>
+          <Image source={require('../../assets/estadodecuenta.svg')} style={styles.logo}></Image>
         </View>
             <View style={styles.info}>
               <View style={styles.InputInfo}>
