@@ -3,7 +3,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator} from '@react-navigation/stack';
 import Login from './screens/login/login';
 import SignUp from './screens/signUp/SignUp';
-import Inversion from './screens/inversion/inversion';
+/* import Inversion from './screens/inversion/inversion'; */
 import Start from './screens/start/start';
 import MenuApadrinapp from './screens/menuapadrinapp/MenuApadrinapp';
 import PublicacionesRappi from './screens/publicacionesrappi/PublicacionesRappi';
@@ -21,9 +21,9 @@ export default function App(){
           headerTitle: 'Apadrinapp',
           headerTitleAlign: 'center',
           headeTintColor: 'read'
-        }} name='Start' component={Transferencia} />
+        }} name='Start' component={Start} />
         <Stack.Screen name='SignUp' component={SignUp} />
-        <Stack.Screen name='Inversion' component={Inversion} />
+        {/* <Stack.Screen name='Inversion' component={Inversion} /> */}
         <Stack.Screen name='Login' component={Login} />
         <Stack.Screen name='MenuApadrinapp' component={MenuApadrinapp} />
         <Stack.Screen name='PublicacionesRappi' component={PublicacionesRappi} />
