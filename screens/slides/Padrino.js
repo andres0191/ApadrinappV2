@@ -1,3 +1,4 @@
+
 import React from 'react'
 import { Text, View, ImageBackground } from 'react-native' 
 import styles from './styles';
@@ -12,7 +13,7 @@ const Padrino = ({ navigation }) => {
      <View style={styles.footer}> 
      <ImageBackground style={styles.ImageBack} source={require('../../assets/slides/fondo_borde.svg')} style={styles.logo}>
      <Text style={styles.parragraph}> Muchos quisieran ayudar a otros, pero buscando cumplir  los sueños propios, a veces se hace difícil. Un viaje, una compra o quizás simplemente unos ahorros. </Text>
-     <WhiteButton syle={styles.bttn} title='Next' onPress={() => navigation.navigate('padrino')}></WhiteButton>
+     <WhiteButton syle={styles.bttn} title='Siguiente' onPress={() => navigation.navigate('Ciclo')}></WhiteButton>
      </ImageBackground>
 
      </View>
@@ -20,5 +21,4 @@ const Padrino = ({ navigation }) => {
   );
 }
 
- export default Padrino
- 
+export default Padrino

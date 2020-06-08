@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Text, View, Image, TextInput } from 'react-native';
 import styles from './styles';
 import firebaseService from '../../services/firebase';
-import WhiteBigButton from '../../source/Components/WhiteBigButton';
+import YellowBigButton from '../../source/Components/YellowBigButton';
 
 const SignUp = ({navigation}) => {
     const [user, setUser] = useState('')
@@ -36,25 +36,28 @@ const SignUp = ({navigation}) => {
         <View>
             <TextInput
                 placeholder='Ingresa tu Nombre'
+                placeholderTextColor="white"
                 style={styles.inputText}
                 value = {name}
                 onChange = {(e) => setName(e.nativeEvent.text)}
                 />
             <TextInput
                 placeholder='Cual estu e-mail?'
+                placeholderTextColor="white"
                 style={styles.inputText}
                 value = {user}
                 onChange = {(e) => setUser(e.nativeEvent.text)}
                 />
             <TextInput
                 placeholder='Ingresa tu contrasena'
+                placeholderTextColor="white"
                 style={styles.inputText}
                 value = {pass}
                 onChange = {(e) => setPass(e.nativeEvent.text)}
                 />
         </View>
         <View style={styles.MenuOptions}>
-            <WhiteBigButton title='Registrarme' onPress={createNewUser}></WhiteBigButton>
+            <YellowBigButton title='Registrarme' onPress={createNewUser}></YellowBigButton>
         </View>
     </View>
   );

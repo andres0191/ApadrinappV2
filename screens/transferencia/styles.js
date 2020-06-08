@@ -15,17 +15,31 @@ const styles = StyleSheet.create({
     backgroundColor : Color.grey
   },
   header : {
-    flex : 1,
+    flex : .8,
     flexDirection : 'row',
+    alignItems: 'center',
     justifyContent : 'center',
+    textAlign: 'center'
   },
   headerLeft : {
     flex : 1,
-    backgroundColor: 'green'
+    flexDirection: 'row',
+    justifyContent: 'flex-start',
+    paddingLeft: 10,
+    alignItems: 'flex-end',
+  },
+  headerMiddle : {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'flex-start',
   },
   headerRight : {
     flex: 1,
-    backgroundColor: 'blue'
+  },
+  PageTitle: {
+    fontFamily: '',
+    fontSize: 18,
+    color: Color.purple
   },
   body : {
     flex : 10,
@@ -39,7 +53,10 @@ const styles = StyleSheet.create({
     height: 362 * ratio,
     resizeMode: 'contain',
     justifyContent: 'center',
-    marginBottom: 10
+    marginBottom: 10,
+  },
+  ElevatePic: {
+    elevation: 2
   },
   InfoCube: {
     flexDirection : 'row',
