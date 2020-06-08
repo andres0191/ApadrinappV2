@@ -24,7 +24,7 @@ export default function App(){
           headerTitle: 'Apadrinapp',
           headerTitleAlign: 'center',
           headeTintColor: 'read'
-        }} name='Start' component={Start} />
+        }} name='Start' component={MenuApadrinapp} />
         <Stack.Screen name='SignUp' component={SignUp} />
         {/* <Stack.Screen name='Inversion' component={Inversion} /> */}
         <Stack.Screen name='Login' component={Login} />
