@@ -11,7 +11,7 @@ const Start = ({navigation}) => {
         <Image source={require('../../assets/apadrinapp_logo.png')} style={styles.logo}
         />
         <View style={styles.MenuOptions}>
-          <WhiteBigButton title="Log in" onPress={() => navigation.navigate('Login')}></WhiteBigButton>
+          <WhiteBigButton title="Log in" onPress={() => navigation.navigate('Dreamer')}></WhiteBigButton>
           <YellowBigButton title="Sign in" onPress={() => navigation.navigate('SignUp')}></YellowBigButton>
         </View>
       </View>

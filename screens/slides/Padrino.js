@@ -8,13 +8,13 @@ const Padrino = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <View style={styles.body}>
-      <ImageBackground source={require('../../assets/slides/padrino.svg')} style={styles.logo} />
+      {/* <ImageBackground source={require('../../assets/slides/padrino.svg')} style={styles.logo} /> */}
       </View> 
      <View style={styles.footer}> 
-     <ImageBackground style={styles.ImageBack} source={require('../../assets/slides/fondo_borde.svg')} style={styles.logo}>
+     {/* <ImageBackground style={styles.ImageBack} source={require('../../assets/slides/fondo_borde.svg')} style={styles.logo}> */}
      <Text style={styles.parragraph}> Muchos quisieran ayudar a otros, pero buscando cumplir  los sueños propios, a veces se hace difícil. Un viaje, una compra o quizás simplemente unos ahorros. </Text>
      <WhiteButton syle={styles.bttn} title='Siguiente' onPress={() => navigation.navigate('Ciclo')}></WhiteButton>
-     </ImageBackground>
+     {/* </ImageBackground> */}
 
      </View>
     </View>
