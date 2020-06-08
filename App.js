@@ -29,6 +29,9 @@ export default function App(){
         <Stack.Screen name='PublicacionesRappi' component={PublicacionesRappi} />
         <Stack.Screen name='Transferencia' component={Transferencia} />
         <Stack.Screen name='EstadoCuenta' component={EstadoCuenta} />
+        <Stack.Screen name='Ciclo' component={Ciclo} />
+        <Stack.Screen name='Dreamer' component={Dreamer} />
+        <Stack.Screen name='Padrino' component={Padrino} />
       </Stack.Navigator>
     </NavigationContainer>
   );
