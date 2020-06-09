@@ -17,7 +17,7 @@ const styles = StyleSheet.create({
     button: {
         display: 'flex',
         minWidth: 135,
-        height: 40,
+        height: 30,
         paddingVertical: 2,
         paddingHorizontal: 10,
         borderRadius: 20,
@@ -28,7 +28,7 @@ const styles = StyleSheet.create({
         marginTop: 50,
     },
     textButton: {
-        fontSize: 25,
+        fontSize: 20,
         textAlign: "center",
         color: Color.purple,
         /*fontFamily: 'Montserrat-Regular'*/
