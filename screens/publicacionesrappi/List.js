@@ -82,6 +82,6 @@ class Lista extends Component {
     monto :{
         flex : 1,
         flexDirection : 'row',
-        alignContent : 'flex-end'
+        justifyContent : 'flex-end'
     }
  })
