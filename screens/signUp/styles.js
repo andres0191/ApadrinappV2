@@ -20,6 +20,7 @@ const styles = StyleSheet.create({
         backgroundColor: Color.lightpurple,
         borderRadius: 10,
         marginTop: 10,
+        fontSize: 28,
       },
       logo: {
         height: 200,

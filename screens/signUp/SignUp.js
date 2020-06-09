@@ -12,9 +12,9 @@ const SignUp = ({navigation}) => {
     const createNewUser = async () => {
         try{
             await firebaseService.createUser(name, user, pass);
-            navigation.navigate('Dreamer')
+            navigation.navigate('MenuApadrinapp')
           } catch (e) {
-            alert(e)
+                alert('Por favor ingres los datos correctos')
         }
     }
 
@@ -23,7 +23,7 @@ const SignUp = ({navigation}) => {
             await firebaseService.login(user, pass)
             navigation.navigate('Main')
         } catch (e) {
-            alert(e)
+            alert('Por favor ingres los datos correctos')
         }
     }
 

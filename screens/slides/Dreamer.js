@@ -1,15 +1,18 @@
 import React from 'react'
 import { Text, View, TouchableHighlight, Image, ImageBackground } from 'react-native' 
 import styles from './styles';
-import WhiteButton from '../../source/Components/WhiteButton'
+import WhiteButton from '../../source/Components/WhiteButton';
+import PrevScreenButton from '../../source/Components/PrevScreenButton';
 
 
 const Dreamer = ({ navigation }) => {
     return (
      <View style={styles.container}>
+       <PrevScreenButton onPress={() => navigation.navigate('Start')}></PrevScreenButton>
        <View style={styles.header} />
        <View style={styles.body}>
-       <Image source={require('../../assets/Slides/dreamer.svg')} style={styles.IconImage} />
+       <Image source={require('../../assets/Slides/dreamer.png')} style={styles.IconImage} />
+       
        </View>
       <View style={styles.footer}>
         <ImageBackground source={require('../../assets/Slides/FondoBorde.svg')} style={styles.logo}>

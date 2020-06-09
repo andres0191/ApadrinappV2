@@ -13,7 +13,7 @@ import Ciclo from './screens/slides/Ciclo';
 import Dreamer from './screens/slides/Dreamer';
 import Padrino from './screens/slides/Padrino';
 import Color from './source/utils/Colors';
-import Lista from './screens/publicacionesrappi/List'
+import List from './screens/publicacionesrappi/List'
 
 
 const Stack = createStackNavigator()
@@ -22,7 +22,7 @@ export default function App(){
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen options={{ headerShown : false }} name='Start' component={MenuApadrinapp} />
+        <Stack.Screen options={{ headerShown : false }} name='Start' component={Start} />
         <Stack.Screen options={{ headerShown : false }} name='SignUp' component={SignUp} />
         {/* <Stack.Screen name='Inversion' component={Inversion} /> */}
         <Stack.Screen options={{ headerShown : false }} name='Login' component={Login} />
@@ -33,7 +33,7 @@ export default function App(){
         <Stack.Screen options={{ headerShown : false }} name='Ciclo' component={Ciclo} />
         <Stack.Screen options={{ headerShown : false }} name='Dreamer' component={Dreamer} />
         <Stack.Screen options={{ headerShown : false }} name='Padrino' component={Padrino} />
-        <Stack.Screen options={{ headerShown : false }} name='Lista' component={Lista} />
+        <Stack.Screen options={{ headerShown : false }} name='List' component={List} />
       </Stack.Navigator>
     </NavigationContainer>
   );
