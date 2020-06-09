@@ -17,7 +17,7 @@ const styles = StyleSheet.create({
     button: {
         display: 'flex',
         minWidth: 135,
-        height: 40,
+        height: 30,
         textAlign: 'center',
         paddingVertical: 2,
         paddingHorizontal: 10,
@@ -28,7 +28,7 @@ const styles = StyleSheet.create({
         backgroundColor: Color.white
     },
     textButton: {
-        fontSize: 25,
+        fontSize: 20,
         color: Color.purple
     }
 })

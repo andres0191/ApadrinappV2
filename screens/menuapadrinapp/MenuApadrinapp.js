@@ -4,6 +4,7 @@ import styles from './styles';
 import WhiteButton from '../../source/Components/WhiteButton';
 import YellowButton from '../../source/Components/YellowButton';
 import PrevScreenButton from '../../source/Components/PrevScreenButton';
+import { TouchableOpacity } from 'react-native-gesture-handler';
 
 const MenuApadrinapp = ({ navigation }) => {
   return (
@@ -16,17 +17,17 @@ const MenuApadrinapp = ({ navigation }) => {
       </View>
       <View style={styles.body}>
         <View style={styles.flexstyle}>
-          <TouchableHighlight onPress={() => navigation.navigate('EstadoCuenta')} >
-          <Image source={require('../../assets/estado_cuenta.png')} style={styles.estadoCuenta} />
-          </TouchableHighlight>
-          <TouchableHighlight /* onPress={() => navigation.navigate('Login')} */ >
-          <Image source={require('../../assets/microprestamos.png')} style={styles.MoneyStyle} />
-          </TouchableHighlight>
+          <TouchableOpacity onPress={() => navigation.navigate('EstadoCuenta')} >
+            <Image source={require('../../assets/estado_cuenta.png')} style={styles.estadoCuenta} />
+          </TouchableOpacity>
+          <TouchableOpacity /* onPress={() => navigation.navigate('Login')} */ >
+            <Image source={require('../../assets/microprestamos.png')} style={styles.MoneyStyle} />
+          </TouchableOpacity>
         </View>
         <View style={styles.flexstyle}>
-          <TouchableHighlight onPress={() => navigation.navigate('PublicacionesRappi')}>
-          <Image source={require('../../assets/apadrina_serv.png')} style={styles.ApadrinaStyle} />
-          </TouchableHighlight>
+          <TouchableOpacity onPress={() => navigation.navigate('PublicacionesRappi')}>
+            <Image source={require('../../assets/apadrina_serv.png')} style={styles.ApadrinaStyle} />
+          </TouchableOpacity>
             <Image source={require('../../assets/confia_serv.png')} style={styles.ConfiaStyle} />
         </View>
         </View>
