@@ -6,7 +6,7 @@ import YellowButton from '../../source/Components/YellowButton';
 import firebaseService from '../../services/firebase';
 import HollowInput from '../../source/Components/HollowInputSpace';
 import PrevScreenButton from '../../source/Components/PrevScreenButton';
-import List from './List.js'
+import Lista from './List.js'
 
 const PublicacionesRappi = ({ navigation }) => {
   return (
@@ -25,7 +25,7 @@ const PublicacionesRappi = ({ navigation }) => {
           <Image source={require('../../assets/apadrina-03.svg')} style={styles.logo}></Image>
         </View>
             <View style={styles.info}>
-            <List />
+            <Lista />
               <View style={styles.InputInfo}>
                 <Text style={styles.YellowFont}>Monto a invertir: </Text>
               </View>
