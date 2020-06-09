@@ -19,7 +19,8 @@ const styles = StyleSheet.create({
     flexDirection : 'row',
     alignItems: 'center',
     justifyContent : 'center',
-    textAlign: 'center'
+    textAlign: 'center',
+    backgroundColor: Color.grey
   },
   headerLeft : {
     flex : 1,
@@ -46,7 +47,7 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     alignItems : 'center',
     justifyContent : 'center',
-    backgroundColor: Color.lightpurple
+    backgroundColor: Color.lightpurple,
   },
   logo : {
     width: win.width,
@@ -86,7 +87,7 @@ const styles = StyleSheet.create({
   YellowFont: {
     /*fontFamily: '',*/
     marginBottom: -8,
-    fontSize: 17,
+    fontSize: 26,
     fontWeight: "bold",
     color: Color.yellow,
   }

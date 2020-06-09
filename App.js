@@ -21,21 +21,7 @@ export default function App(){
   return (
     <NavigationContainer>
       <Stack.Navigator>
-<<<<<<< HEAD
-        <Stack.Screen options={{
-          headerTitle: 'Apadrinapp',
-          headerTitleAlign: 'center',
-          headeTintColor: 'read'
-        }} name='Start' component={Start} />
-        <Stack.Screen name='SignUp' component={SignUp} />
-        <Stack.Screen name='Inversion' component={Inversion} />
-        <Stack.Screen name='Login' component={Login} />
-        <Stack.Screen name='MenuApadrinapp' component={MenuApadrinapp} />
-        <Stack.Screen name='PublicacionesRappi' component={PublicacionesRappi} />
-        <Stack.Screen name='Transferencia' component={Transferencia} />
-        <Stack.Screen name='EstadoCuenta' component={EstadoCuenta} />
-=======
-        <Stack.Screen options={{ headerShown : false }} name='Start' component={Dreamer} />
+        <Stack.Screen options={{ headerShown : false }} name='Start' component={Transferencia} />
         <Stack.Screen options={{ headerShown : false }} name='SignUp' component={SignUp} />
         {/* <Stack.Screen name='Inversion' component={Inversion} /> */}
         <Stack.Screen options={{ headerShown : false }} name='Login' component={Login} />
@@ -46,7 +32,6 @@ export default function App(){
         <Stack.Screen options={{ headerShown : false }} name='Ciclo' component={Ciclo} />
         <Stack.Screen options={{ headerShown : false }} name='Dreamer' component={Dreamer} />
         <Stack.Screen options={{ headerShown : false }} name='Padrino' component={Padrino} />
->>>>>>> 2c01ce996641b63d86fe13a60428c2715003285d
       </Stack.Navigator>
     </NavigationContainer>
   );
