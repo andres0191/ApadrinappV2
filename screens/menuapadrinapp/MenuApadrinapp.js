@@ -1,5 +1,5 @@
-import React from 'react';
-import { Text, View, Image,  } from 'react-native';
+import React, { Component } from 'react';
+import { Text, View, Image, TouchableHighlight, ScrollView } from 'react-native';
 import styles from './styles';
 import WhiteButton from '../../source/Components/WhiteButton';
 import YellowButton from '../../source/Components/YellowButton';
@@ -8,6 +8,15 @@ import { TouchableOpacity } from 'react-native-gesture-handler';
 const MenuApadrinapp = ({ navigation }) => {
   return (
     <View style={styles.container}>
+      <ScrollView stickyHeaderIndices={[0]} showsVerticalScrollIndicator={false}>
+        <View style={styles.header}>
+        <View style={styles.headerLeft}>
+        </View>
+        <View style={styles.headerMiddle}>
+          <Text style={styles.PageTitle}>Apadrinar</Text>
+        </View>
+        <View style={styles.headerRight}></View>
+      </View>
       <View>
         <Image source={require('../../assets/que_Deseas.png')} style={styles.logo} />
       </View>
@@ -40,6 +49,7 @@ const MenuApadrinapp = ({ navigation }) => {
             <YellowButton title='Saldo' onPress={() => navigation.navigate('EstadoCuenta')}></YellowButton>
           </View>
       </View>
+      </ScrollView>
     </View>
     )
   }

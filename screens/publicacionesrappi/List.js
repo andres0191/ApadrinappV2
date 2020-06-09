@@ -107,5 +107,9 @@ class Lista extends Component {
     },
     alertStyle: {
        backgroundColor: 'red',
+        flex : 1,
+        flexDirection : 'row',
+        justifyContent : 'flex-end'
+
     }
  })

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Text, View, Image } from 'react-native';
+import { Text, View, Image, ScrollView } from 'react-native';
 import styles from './styles';
 import WhiteButton from '../../source/Components/WhiteButton';
 import YellowButton from '../../source/Components/YellowButton';
@@ -10,7 +10,8 @@ import PrevScreenButton from '../../source/Components/PrevScreenButton';
 const Transferencia = ({ navigation }) => {
   return (
     <View style={styles.container}>
-      <View style={styles.header}>
+      <ScrollView stickyHeaderIndices={[0]} showsVerticalScrollIndicator={false}>
+        <View style={styles.header}>
         <View style={styles.headerLeft}>
           <PrevScreenButton onPress={() => navigation.navigate('PublicacionesRappi')}></PrevScreenButton>
         </View>
@@ -19,18 +20,18 @@ const Transferencia = ({ navigation }) => {
         </View>
         <View style={styles.headerRight}></View>
       </View>
-      <View style={styles.body}>
-        <View style={styles.ElevatePic}>
-          <Image source={require('../../assets/apadrina-03.svg')} style={styles.logo}></Image>
-        </View>
+        <View style={styles.body}>
+          <View style={styles.ElevatePic}>
+            <Image source={require('../../assets/Cabeceras/queDeseas.png')} style={styles.logo}></Image>
+          </View>
             <View style={styles.info}>
               <View style={styles.InputInfo}>
-                <Text style={styles.YellowFont}>Monto a invertir: </Text>
-                <HollowInput title='Ingresa Monto' ></HollowInput>
+                <Text style={styles.YellowFont}>Monto a invertir</Text>
+                <HollowInput title='$0' ></HollowInput>
               </View>
               <View style={styles.InputInfo}>
-                <Text style={styles.YellowFont}>Apadrinarás a:</Text>
-                <HollowInput title= "Ingresa Monto"></HollowInput>
+                <Text style={styles.YellowFont}>Apadrinarás a</Text>
+                <HollowInput title= "Nombre"></HollowInput>
               </View>
             </View>
         </View>
@@ -41,7 +42,8 @@ const Transferencia = ({ navigation }) => {
           <View style={[styles.flex, styles.footerRight]}>
             <YellowButton title='Apadrinar' onPress={() => navigation.navigate('EstadoCuenta')}></YellowButton>
           </View>
-      </View>
+        </View>
+        </ScrollView>
     </View>
     )
   }

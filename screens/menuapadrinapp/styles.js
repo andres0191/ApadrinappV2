@@ -14,6 +14,30 @@ const styles = StyleSheet.create({
     alignContent: 'center',
     backgroundColor : Color.grey
   },
+  header : {
+    flex : .8,
+    flexDirection : 'row',
+    alignItems: 'center',
+    justifyContent : 'center',
+    textAlign: 'center',
+    backgroundColor: Color.grey,
+    paddingVertical: 25
+  },
+  headerLeft : {
+    flex : 1,
+    flexDirection: 'row',
+    justifyContent: 'flex-start',
+    paddingLeft: 10,
+    alignItems: 'flex-end',
+  },
+  headerMiddle : {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'flex-start',
+  },
+  headerRight : {
+    flex: 1,
+  },
   body : {
     flex : 3,
     alignItems : 'center',
@@ -32,6 +56,7 @@ const styles = StyleSheet.create({
     flexDirection : 'row',
     alignItems: 'center',
     justifyContent: 'center',
+    backgroundColor: Color.purple,
   },
   HeaderText: {
     fontSize: 38,
@@ -72,8 +97,15 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: "center",
     justifyContent: "space-evenly",  
+  },
+  PageTitle: {
+    fontFamily: '',
+    fontSize: 18,
+    color: Color.purple
+  },
+  ElevatePic: {
+    elevation: 2
   }
-
 })
 
 export default styles

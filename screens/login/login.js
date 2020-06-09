@@ -43,7 +43,6 @@ const login = ({navigation}) => {
             <WhiteBigButton title='Ingresa' onPress={onPressLogin}></WhiteBigButton>
             <YellowBigButton title='Registrate' onPress={() => navigation.navigate('SignUp')}></YellowBigButton>   
         </View>
-         
     </View>
   );
 }
