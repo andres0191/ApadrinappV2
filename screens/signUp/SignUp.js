@@ -11,7 +11,11 @@ const SignUp = ({navigation}) => {
 
     const createNewUser = async () => {
         try{
+<<<<<<< HEAD
             await firebaseService.createUser(name, user, pass)
+=======
+            await firebaseService.createUser(name, user, pass);
+>>>>>>> master
             navigation.navigate('Dreamer')
           } catch (e) {
             alert(e)

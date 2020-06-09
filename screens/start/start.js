@@ -19,3 +19,4 @@ const Start = ({navigation}) => {
   }
 
 export default Start
+

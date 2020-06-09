@@ -6,6 +6,7 @@ import YellowButton from '../../source/Components/YellowButton';
 import firebaseService from '../../services/firebase';
 import HollowInput from '../../source/Components/HollowInputSpace';
 import PrevScreenButton from '../../source/Components/PrevScreenButton';
+import List from './List.js'
 
 const PublicacionesRappi = ({ navigation }) => {
   return (
@@ -24,13 +25,12 @@ const PublicacionesRappi = ({ navigation }) => {
           <Image source={require('../../assets/apadrina-03.svg')} style={styles.logo}></Image>
         </View>
             <View style={styles.info}>
+            <List />
               <View style={styles.InputInfo}>
                 <Text style={styles.YellowFont}>Monto a invertir: </Text>
-                <HollowInput title='Ingresa Monto' ></HollowInput>
               </View>
               <View style={styles.InputInfo}>
                 <Text style={styles.YellowFont}>Apadrinarás a:</Text>
-                <HollowInput title= "Ingresa Monto"></HollowInput>
               </View>
             </View>
         </View>
