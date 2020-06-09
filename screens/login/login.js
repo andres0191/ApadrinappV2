@@ -15,7 +15,8 @@ const login = ({navigation}) => {
             await firebaseService.login(user, pass)
             navigation.navigate('MenuApadrinapp')
         } catch (e) {
-            alert(e)
+            alert('Por favor ingres los datos correctos')
+            
         }
     }
 
