@@ -10,7 +10,6 @@ const styles = StyleSheet.create({
       flex: 1,
       backgroundColor: Color.purple,
       justifyContent: 'center',
-      
     },
     inputText: {
         height: 40,

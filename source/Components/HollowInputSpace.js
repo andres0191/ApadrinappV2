@@ -16,20 +16,20 @@ const HollowInput = (props) => {
 const styles = StyleSheet.create({
     button: {
         display: 'flex',
-        width: 200,
+        minWidth: 200,
         paddingVertical: 3,
         paddingHorizontal: 20,
         borderRadius: 60,
         justifyContent: 'center',
         alignItems: 'center',
-        margin: 20,
+        marginBottom: 27,
         borderColor: Color.purple,
         borderWidth: 2,
-        marginTop: 65,
+        marginTop: 18,
 
     },
     textButton: {
-        fontSize: 34,
+        fontSize: 40,
         fontWeight: "bold",
         color: Color.white
     }
