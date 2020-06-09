@@ -16,8 +16,8 @@ const YellowBigButton = (props) => {
 const styles = StyleSheet.create({
     button: {
         display: 'flex',
-        width: 110,
-        height: 25,
+        minWidth: 135,
+        height: 40,
         paddingVertical: 2,
         paddingHorizontal: 10,
         borderRadius: 20,
@@ -28,7 +28,7 @@ const styles = StyleSheet.create({
         marginTop: 50,
     },
     textButton: {
-        fontSize: 15,
+        fontSize: 25,
         textAlign: "center",
         color: Color.purple,
         /*fontFamily: 'Montserrat-Regular'*/

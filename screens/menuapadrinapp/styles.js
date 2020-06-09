@@ -15,8 +15,7 @@ const styles = StyleSheet.create({
     backgroundColor : Color.grey
   },
   body : {
-    flex : 10,
-    flexDirection: 'column',
+    flex : 3,
     alignItems : 'center',
     justifyContent : 'center',
     backgroundColor: Color.grey,
@@ -33,21 +32,47 @@ const styles = StyleSheet.create({
     flexDirection : 'row',
     alignItems: 'center',
     justifyContent: 'center',
-    marginTop: -500,
   },
   HeaderText: {
     fontSize: 38,
     color: Color.purple,
-    marginTop: -10,
+    flexDirection: 'row',
+    margin: 10,
   },
   estadoCuenta: {
-    width: 100,
-    height: 100,
-    marginTop: -360,
-    marginRight: 180,
+    width: 120,
+    height: 120,
+    margin: 30,
     backgroundColor: Color.yellow,
     borderRadius: 20,
   },
+  MoneyStyle: {
+    width: 120,
+    height: 120,
+    margin: 30,
+    backgroundColor: Color.yellow,
+    borderRadius: 20,
+  },
+  ApadrinaStyle: {
+    width: 120,
+    height: 120,
+    margin: 30,
+    backgroundColor: Color.lightpurple,
+    borderRadius: 20,
+  },
+  ConfiaStyle: {
+    width: 120,
+    height: 120,
+    margin: 30,
+    backgroundColor: Color.yellow,
+    borderRadius: 20,
+  },
+  flexstyle: {
+    flex: 1,
+    flexDirection: 'row',
+    alignItems: "center",
+    justifyContent: "space-evenly",  
+  }
 
 })
 
