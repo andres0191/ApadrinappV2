@@ -19,7 +19,7 @@ const styles = StyleSheet.create({
         minWidth: 260,
         paddingVertical: 3,
         paddingHorizontal: 20,
-        borderRadius: 60,
+        borderRadius: 10,
         justifyContent: 'center',
         alignItems: 'center',
         marginBottom: 27,
@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
     textButton: {
         fontSize: 40,
         fontWeight: "bold",
-        color: Color.white
+        color: Color.purple
     }
 })
 

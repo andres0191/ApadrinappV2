@@ -34,6 +34,7 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'flex-start',
+    marginTop: -32,
   },
   headerRight : {
     flex: 1,
@@ -48,14 +49,14 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     alignItems : 'center',
     justifyContent : 'center',
-    backgroundColor: Color.lightpurple,
+    backgroundColor: Color.grey,
   },
   logo : {
     width: win.width,
-    height: 362 * ratio,
+    height: 378* ratio,
     resizeMode: 'contain',
     justifyContent: 'center',
-    marginBottom: 10,
+    marginTop: -7,
   },
   ElevatePic: {
     elevation: 2
@@ -83,7 +84,7 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
-    marginVertical: 10
+    marginVertical: 10,
   },
   YellowFont: {
     /*fontFamily: '',*/
@@ -91,7 +92,17 @@ const styles = StyleSheet.create({
     fontSize: 26,
     fontWeight: "bold",
     color: Color.yellow,
-  }
+  },
+  inputText: {
+    borderColor: Color.purple,
+    minWidth: 235,
+    minHeight: 70,
+    borderRadius: 10,
+    borderWidth: 2,
+    marginVertical: 10,
+    fontSize: 44,
+    color: Color.purple,
+  },
 })
 
 export default styles
