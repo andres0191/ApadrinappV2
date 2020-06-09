@@ -22,16 +22,16 @@ const Transferencia = ({ navigation }) => {
       </View>
         <View style={styles.body}>
           <View style={styles.ElevatePic}>
-            <Image source={require('../../assets/apadrina-03.svg')} style={styles.logo}></Image>
+            <Image source={require('../../assets/Cabeceras/queDeseas.png')} style={styles.logo}></Image>
           </View>
             <View style={styles.info}>
               <View style={styles.InputInfo}>
-                <Text style={styles.YellowFont}>Monto a invertir: </Text>
-                <HollowInput title='Ingresa Monto' ></HollowInput>
+                <Text style={styles.YellowFont}>Monto a invertir</Text>
+                <HollowInput title='$0' ></HollowInput>
               </View>
               <View style={styles.InputInfo}>
-                <Text style={styles.YellowFont}>Apadrinarás a:</Text>
-                <HollowInput title= "Ingresa Monto"></HollowInput>
+                <Text style={styles.YellowFont}>Apadrinarás a</Text>
+                <HollowInput title= "Nombre"></HollowInput>
               </View>
             </View>
         </View>

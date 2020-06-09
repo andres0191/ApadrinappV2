@@ -16,7 +16,7 @@ const HollowInput = (props) => {
 const styles = StyleSheet.create({
     button: {
         display: 'flex',
-        minWidth: 200,
+        minWidth: 260,
         paddingVertical: 3,
         paddingHorizontal: 20,
         borderRadius: 60,

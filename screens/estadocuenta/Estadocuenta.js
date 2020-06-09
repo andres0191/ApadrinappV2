@@ -26,12 +26,12 @@ const EstadoCuenta = ({ navigation }) => {
         </View>
         <View style={styles.info}>
           <View style={styles.InputInfo}>
-            <Text style={styles.YellowFont}>Monto a invertir: </Text>
-            <HollowInput title='Ingresa Monto' ></HollowInput>
+            <Text style={styles.YellowFont}>Inversion actual </Text>
+            <HollowInput title='$100,000' ></HollowInput>
           </View>
           <View style={styles.InputInfo}>
-            <Text style={styles.YellowFont}>Apadrinarás a:</Text>
-            <HollowInput title= "Ingresa Monto"></HollowInput>
+            <Text style={styles.YellowFont}>Enviar a Rappipay</Text>
+            <HollowInput title= "$0"></HollowInput>
           </View>
         </View>
       </View>

@@ -15,8 +15,8 @@ const PrevScreenButton = (props) => {
 
 const styles = StyleSheet.create({
     BackButton: {
-        height: 40,
-        width: 40
+        height: 25,
+        width: 25
     }
 })
 

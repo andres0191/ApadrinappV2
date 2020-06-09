@@ -20,7 +20,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent : 'center',
     textAlign: 'center',
-    backgroundColor: Color.grey
+    backgroundColor: Color.grey,
+    paddingVertical: 25
   },
   headerLeft : {
     flex : 1,
