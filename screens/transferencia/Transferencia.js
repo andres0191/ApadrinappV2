@@ -37,7 +37,7 @@ const Transferencia = ({ navigation }) => {
         </View>
         <View style={styles.footer}>
           <View style={[styles.flex, styles.footerLeft]}>
-            <WhiteButton title='Atras' onPress={() => navigation.navigate('Login')}></WhiteButton>
+            <WhiteButton title='Atras' onPress={() => navigation.navigate('List')}></WhiteButton>
           </View>
           <View style={[styles.flex, styles.footerRight]}>
             <YellowButton title='Apadrinar' onPress={() => navigation.navigate('EstadoCuenta')}></YellowButton>

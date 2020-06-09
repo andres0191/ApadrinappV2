@@ -40,7 +40,7 @@ const EstadoCuenta = ({ navigation }) => {
           <WhiteButton title='Menu' onPress={() => navigation.navigate('MenuApadrinapp')}></WhiteButton>
         </View>
         <View style={[styles.flex, styles.footerRight]}>
-          <YellowButton title='Apadrinar' onPress={() => navigation.navigate('Transferencia')}></YellowButton>
+          <YellowButton title='Enviar' onPress={() => navigation.navigate('MenuApadrinapp')}></YellowButton>
         </View>
       </View>
       </ScrollView>
