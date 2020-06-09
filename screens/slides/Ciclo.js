@@ -17,8 +17,7 @@ const Ciclo = ({ navigation }) => {
      <View style={styles.footer}>
       <ImageBackground style={styles.ImageBack} source={require('../../assets/Slides/FondoBorde.svg')} style={styles.logo}>
         <Text style={styles.parragraph}>Aquí estamos buscando conectarnos y ayudarnos para cumplir nuestros sueños, porque juntos siempre es más fáci. Ayudar cumpliendo sueños es bastante maravilloso.</Text>
-        <WhiteButton syle={styles.bttn} title='Ingresa' onPress={() => navigation.navigate('Login')}></WhiteButton>
-        <YellowBigButton title='Registrate' onPress={() => navigation.navigate('SignUp')}></YellowBigButton>
+        <WhiteButton syle={styles.bttn} title='Menu' onPress={() => navigation.navigate('MenuApadrinapp')}></WhiteButton>
       </ImageBackground>
      </View>
     </View>

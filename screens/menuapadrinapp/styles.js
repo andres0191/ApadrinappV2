@@ -12,7 +12,8 @@ const styles = StyleSheet.create({
     flexDirection : 'column',
     justifyContent: 'center',
     alignContent: 'center',
-    backgroundColor : Color.grey
+    backgroundColor : Color.grey,
+
   },
   header : {
     flex : .8,
@@ -21,14 +22,14 @@ const styles = StyleSheet.create({
     justifyContent : 'center',
     textAlign: 'center',
     backgroundColor: Color.grey,
-    paddingVertical: 25
+    paddingVertical: 25,
   },
   headerLeft : {
     flex : 1,
     flexDirection: 'row',
     justifyContent: 'flex-start',
-    paddingLeft: 10,
     alignItems: 'flex-end',
+    
   },
   headerMiddle : {
     flex: 1,
@@ -36,7 +37,8 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-start',
   },
   headerRight : {
-    flex: 1,
+    flex : 1,
+    marginTop: -40,
   },
   body : {
     flex : 3,
