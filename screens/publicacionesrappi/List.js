@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
-import { Text, Image, View, StyleSheet, ScrollView, TouchableOpacity, Dimensions } from 'react-native';
-import Color from  '../../source/utils/Colors'
+import { Text, View, StyleSheet, ScrollView, TouchableOpacity, Dimensions, Alert} from 'react-native';
+import Color from  '../../source/utils/Colors';
+import WhiteButton from '../../source/Components/WhiteButton';
+
 
 const win = Dimensions.get('window');
 
@@ -20,9 +22,24 @@ class Lista extends Component {
           {'name': 'Steve', 'id': 11, 'meta':'Moto'},
        ]
     }
-    alertItemName = (item) => {
-        alert(item.name)
-    }
+    createThreeButtonAlert = (item) =>
+    Alert.alert(
+      "Vas a apadrinar a:",
+      item.name,
+      [
+        {
+          text: "Apadrinar",
+          onPress: () => console.log("Estado de cuenta")
+        },
+        {
+          text: "Cancelar",
+          onPress: () => console.log("Cancel Pressed"),
+          style: "cancel"
+        },
+        { text: "Saldo", onPress: () => console.log("OK Pressed") }
+      ],
+      { cancelable: false }
+    );
     render() {
        return (
           <View>
@@ -32,7 +49,7 @@ class Lista extends Component {
                     <TouchableOpacity
                        key = {item.id}
                        style = {styles.item}
-                       onPress = {() => this.alertItemName(item)}>
+                       onPress = {() => this.createThreeButtonAlert(item)}>
                            <Text style={styles.title}>Dreamer</Text>
                        <Text style = {styles.text}>
                           {item.name}
@@ -69,19 +86,26 @@ class Lista extends Component {
     },
     title : {
         color : Color.yellow,
-        fontSize : 15
+        fontSize : 20
     }, 
     titleW : {
         color : Color.white,
-        fontSize : 15
+        fontSize : 20
     }, 
     textY : {
         color : Color.yellow,
         fontSize : 24
     },
     monto :{
-        flex : 1,
-        flexDirection : 'row',
-        alignContent : 'flex-end'
+        fontSize: 30,
+        color: 'white',
+        marginTop: -55,
+        flexDirection: "row-reverse",
+        justifyContent: "center",
+        alignItems: "center",
+        marginRight: 200,
+    },
+    alertStyle: {
+       backgroundColor: 'red',
     }
  })
