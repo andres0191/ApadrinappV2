@@ -21,6 +21,7 @@ const styles = StyleSheet.create({
     backgroundColor: Color.lightpurple,
     borderRadius: 10,
     marginTop: 10,
+    fontSize: 20,
   },
   logo: {
     height: 200,
