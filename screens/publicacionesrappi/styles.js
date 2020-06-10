@@ -12,7 +12,8 @@ const styles = StyleSheet.create({
     flexDirection : 'column',
     justifyContent: 'center',
     alignContent: 'center',
-    backgroundColor : Color.grey
+    backgroundColor : Color.grey,
+    Height: 100,
   },
   header : {
     flex : .8,
@@ -74,7 +75,9 @@ const styles = StyleSheet.create({
     flexDirection : 'row',
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: Color.purple
+    backgroundColor: Color.purple,
+    position: fixed,
+    bottom: 0, 
   },
   InputInfo: {
     flex: .5,

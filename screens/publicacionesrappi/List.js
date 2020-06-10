@@ -79,7 +79,7 @@ class Lista extends Component {
        width: win.width,
        padding: 15,
        margin: 3,
-       backgroundColor: Color.purple
+       backgroundColor: Color.purple,
     },
     text : {
         color : Color.white,

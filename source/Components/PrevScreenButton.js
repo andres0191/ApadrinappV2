@@ -7,7 +7,7 @@ const PrevScreenButton = (props) => {
 
     return (
         <TouchableOpacity onPress={(onPress)}>
-            <Image source={require('../../assets/button-atras.svg')} style={styles.BackButton}></Image>
+            <Image source={require('../../assets/atras-giro-logo.png')} style={styles.BackButton}></Image>
 
         </TouchableOpacity>
     )
@@ -15,12 +15,12 @@ const PrevScreenButton = (props) => {
 
 const styles = StyleSheet.create({
     BackButton: {
-        height: 55,
-        width: 55,
-        backgroundColor: 'red',
-        borderRadius: 20,
+        height: 30,
+        width: 50,
         alignItems: 'center',
-        marginTop: 10,
+        flexDirection: 'row',
+        marginRight: 320,
+        marginTop: 40
     }
 })
 
