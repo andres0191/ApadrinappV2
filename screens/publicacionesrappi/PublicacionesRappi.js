@@ -4,7 +4,6 @@ import styles from './styles';
 import WhiteButton from '../../source/Components/WhiteButton';
 import YellowButton from '../../source/Components/YellowButton';
 import firebaseService from '../../services/firebase';
-import HollowInput from '../../source/Components/HollowInputSpace';
 import PrevScreenButton from '../../source/Components/PrevScreenButton';
 import Lista from './List.js'
 
@@ -15,7 +14,7 @@ const PublicacionesRappi = ({ navigation }) => {
       <View style={styles.header}>
         <View style={styles.headerLeft}>
           <PrevScreenButton onPress={() => navigation.navigate('MenuApadrinapp')}></PrevScreenButton>
-          <Text style={styles.PageTitle}>Historias Rappis</Text>
+          <Text style={styles.PageTitle}>Dreamers Rappis</Text>
           <Text>.</Text>
         </View>
         <View style={styles.ElevatePic}>
