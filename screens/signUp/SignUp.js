@@ -14,7 +14,7 @@ const SignUp = ({navigation}) => {
             await firebaseService.createUser(name, user, pass);
             navigation.navigate('Dreamer')
           } catch (e) {
-            alert(e)
+                alert('Por favor ingres los datos correctos')
         }
     }
 
@@ -23,7 +23,7 @@ const SignUp = ({navigation}) => {
             await firebaseService.login(user, pass)
             navigation.navigate('Main')
         } catch (e) {
-            alert(e)
+            alert('Por favor ingres los datos correctos')
         }
     }
 

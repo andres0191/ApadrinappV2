@@ -2,14 +2,16 @@
 import React from 'react'
 import { Text, View, ImageBackground, Image } from 'react-native' 
 import styles from './styles';
-import WhiteButton from '../../source/Components/WhiteButton'
+import WhiteButton from '../../source/Components/WhiteButton';
+import PrevScreenButton from '../../source/Components/PrevScreenButton';
 
 const Padrino = ({ navigation }) => {
   return (
     <View style={styles.container}>
+      <PrevScreenButton onPress={() => navigation.navigate('Dreamer')}></PrevScreenButton>
       <View style={styles.header} />
       <View style={styles.body}>
-        <Image source={require('../../assets/Slides/padrino.svg')} style={styles.IconImage} />
+        <Image source={require('../../assets/Slides/padrino.png')} style={styles.IconImage} />
       </View>
      <View style={styles.footer}>
       <ImageBackground source={require('../../assets/Slides/FondoBorde.svg')} style={styles.logo}>

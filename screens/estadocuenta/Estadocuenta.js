@@ -1,13 +1,15 @@
-import React, { Component } from 'react';
-import { Text, View, Image, ScrollView } from 'react-native';
+import React, { useState } from 'react';
+import { Text, View, Image, ScrollView, TextInput } from 'react-native';
 import styles from './styles';
 import WhiteButton from '../../source/Components/WhiteButton';
 import YellowButton from '../../source/Components/YellowButton';
 import firebaseService from '../../services/firebase';
 import HollowInput from '../../source/Components/HollowInputSpace';
 import PrevScreenButton from '../../source/Components/PrevScreenButton';
+import Color from '../../source/utils/Colors';
 
 const EstadoCuenta = ({ navigation }) => {
+  const [user, setMonto] = useState('')
   return (
     <View style={styles.container}>
       <ScrollView stickyHeaderIndices={[0]} showsVerticalScrollIndicator={false}>
@@ -22,7 +24,7 @@ const EstadoCuenta = ({ navigation }) => {
       </View>
         <View style={styles.body}>
         <View style={styles.ElevatePic}>
-          <Image source={require('../../assets/estadodecuenta.svg')} style={styles.logo}></Image>
+          <Image source={require('../../assets/estado_C.png')} style={styles.logo}></Image>
         </View>
         <View style={styles.info}>
           <View style={styles.InputInfo}>
@@ -31,7 +33,12 @@ const EstadoCuenta = ({ navigation }) => {
           </View>
           <View style={styles.InputInfo}>
             <Text style={styles.YellowFont}>Enviar a Rappipay</Text>
-            <HollowInput title= "$0"></HollowInput>
+            <TextInput
+                placeholder='  $' 
+                placeholderTextColor='#472387'
+                style={styles.inputText}
+                value = {user}
+                onChange = {(e) => setMonto(e.nativeEvent.text)}/>
           </View>
         </View>
       </View>
@@ -40,7 +47,7 @@ const EstadoCuenta = ({ navigation }) => {
           <WhiteButton title='Menu' onPress={() => navigation.navigate('MenuApadrinapp')}></WhiteButton>
         </View>
         <View style={[styles.flex, styles.footerRight]}>
-          <YellowButton title='Apadrinar' onPress={() => navigation.navigate('Transferencia')}></YellowButton>
+          <YellowButton title='Enviar' onPress={() => navigation.navigate('MenuApadrinapp')}></YellowButton>
         </View>
       </View>
       </ScrollView>

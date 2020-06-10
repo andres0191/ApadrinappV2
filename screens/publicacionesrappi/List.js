@@ -4,6 +4,7 @@ import Color from  '../../source/utils/Colors';
 import WhiteButton from '../../source/Components/WhiteButton';
 import ViewDreamer from './ViewDreamer'
 
+
 const win = Dimensions.get('window');
 
 class Lista extends Component {
@@ -78,7 +79,7 @@ class Lista extends Component {
        width: win.width,
        padding: 15,
        margin: 3,
-       backgroundColor: Color.purple
+       backgroundColor: Color.purple,
     },
     text : {
         color : Color.white,
