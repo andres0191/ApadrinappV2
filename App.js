@@ -14,7 +14,7 @@ import Dreamer from './screens/slides/Dreamer';
 import Padrino from './screens/slides/Padrino';
 import Color from './source/utils/Colors';
 import Lista from './screens/publicacionesrappi/List'
-
+//import ViewModel from './screens/publicacionesrappi/Prueba'
 
 const Stack = createStackNavigator()
 
@@ -22,7 +22,7 @@ export default function App(){
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen options={{ headerShown : false }} name='Start' component={MenuApadrinapp} />
+        <Stack.Screen options={{ headerShown : false }} name='Start' component={Start} />
         <Stack.Screen options={{ headerShown : false }} name='SignUp' component={SignUp} />
         {/* <Stack.Screen name='Inversion' component={Inversion} /> */}
         <Stack.Screen options={{ headerShown : false }} name='Login' component={Login} />
