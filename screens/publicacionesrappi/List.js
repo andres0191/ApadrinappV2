@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Text, View, StyleSheet, ScrollView, TouchableOpacity, Dimensions, Alert} from 'react-native';
 import Color from  '../../source/utils/Colors';
 import WhiteButton from '../../source/Components/WhiteButton';
-
+import ViewDreamer from './ViewDreamer'
 
 
 const win = Dimensions.get('window');
@@ -52,7 +52,7 @@ class Lista extends Component {
                        style = {styles.item}
                        onPress = {() => this.createThreeButtonAlert(item)}>
                            <Text style={styles.title}>Dreamer</Text>
-                       <Text style = {styles.text}>
+                        <Text style = {styles.text}>
                           {item.name}
                        </Text>
                        <Text style={styles.titleW}>Meta</Text>
