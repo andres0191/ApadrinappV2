@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Text, View, Image } from 'react-native';
+import { Text, View, Image, ScrollView } from 'react-native';
 import styles from './styles';
 import WhiteButton from '../../source/Components/WhiteButton';
 import YellowButton from '../../source/Components/YellowButton';
@@ -11,19 +11,22 @@ import Lista from './List.js'
 const PublicacionesRappi = ({ navigation }) => {
   return (
     <View style={styles.container}>
+      <ScrollView stickyHeaderIndices={[0]} showsVerticalScrollIndicator={false}>
       <View style={styles.header}>
         <View style={styles.headerLeft}>
           <PrevScreenButton onPress={() => navigation.navigate('MenuApadrinapp')}></PrevScreenButton>
+          <Text style={styles.PageTitle}>Historias Rappis</Text>
+          <Text>.</Text>
         </View>
-        <View style={styles.headerMiddle}>
+        <View style={styles.ElevatePic}>
+          <Image source={require('../../assets/apadrina.png')} style={styles.logo}></Image>
+        </View>
+      {/*   <View style={styles.headerMiddle}>
           <Text style={styles.PageTitle}>Historias Rappis</Text>
         </View>
-        <View style={styles.headerRight}></View>
+        <View style={styles.headerRight}></View> */}
       </View>
       <View style={styles.body}>
-        <View style={styles.ElevatePic}>
-          <Image source={require('../../assets/apadrina-03.svg')} style={styles.logo}></Image>
-        </View>
             <View style={styles.info}>
             <Lista />
               <View style={styles.InputInfo}>
@@ -34,6 +37,7 @@ const PublicacionesRappi = ({ navigation }) => {
               </View>
             </View>
         </View>
+        </ScrollView>
         <View style={styles.footer}>
           <View style={[styles.flex, styles.footerLeft]}>
             <WhiteButton title='Menu' onPress={() => navigation.navigate('MenuApadrinapp')}></WhiteButton>
