@@ -4,7 +4,7 @@ import Color from '../../source/utils/Colors';
 import { Dimensions } from 'react-native';
 
 const win = Dimensions.get('window');
-const ratio = win.width/541;
+const ratio = win.width/560;
 
 const styles = StyleSheet.create({
   container : {
@@ -13,26 +13,22 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignContent: 'center',
     backgroundColor : Color.grey,
-    Height: 100,
   },
   header : {
     flex : .8,
-    flexDirection : 'row',
-    alignItems: 'center',
-    justifyContent : 'center',
-    textAlign: 'center'
+    paddingTop: 22,
+    paddingBottom: 10,
   },
   headerLeft : {
     flex : 1,
     flexDirection: 'row',
-    justifyContent: 'flex-start',
-    paddingLeft: 10,
-    alignItems: 'flex-end',
+    justifyContent: 'space-between',
+    alignItems: 'baseline',
+    backgroundColor: Color.grey,
+    paddingHorizontal: 10,
   },
   headerMiddle : {
     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'flex-start',
   },
   headerRight : {
     flex: 1,
@@ -40,24 +36,22 @@ const styles = StyleSheet.create({
   PageTitle: {
     fontFamily: '',
     fontSize: 18,
-    color: Color.purple
+    color: Color.purple,
   },
   body : {
     flex : 10,
     flexDirection: 'column',
     alignItems : 'center',
     justifyContent : 'center',
-    backgroundColor: Color.lightpurple
+    backgroundColor: Color.lightpurple,
   },
   logo : {
     width: win.width,
-    height: 362 * ratio,
-    resizeMode: 'contain',
+    height: 450 * ratio,
     justifyContent: 'center',
-    marginBottom: 10,
   },
   ElevatePic: {
-    elevation: 2
+    elevation: 2,
   },
   InfoCube: {
     flexDirection : 'row',
@@ -76,8 +70,9 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     backgroundColor: Color.purple,
-    position: fixed,
-    bottom: 0, 
+    position: 'absolute',
+    bottom: 0,
+    width: win.width,
   },
   InputInfo: {
     flex: .5,
