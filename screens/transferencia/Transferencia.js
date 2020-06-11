@@ -18,7 +18,7 @@ const Transferencia = ({ navigation }) => {
             <Text>.</Text>
           </View>
           <View style={styles.ElevatePic}>
-          <Image source={require('../../assets/apadrina.png')} style={styles.logo}></Image>
+          <Image source={require('../../assets/Cabeceras/apadrinar.png')} style={styles.logo}></Image>
         </View>
         </View>
         <View style={styles.body}>

@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Text, View, StyleSheet, ScrollView, TouchableOpacity, Dimensions, Alert} from 'react-native';
 import Color from  '../../source/utils/Colors';
 import WhiteButton from '../../source/Components/WhiteButton';
-import ViewDreamer from './ViewDreamer'
+//import ViewDreamer from './ViewDreamer'
 
 
 const win = Dimensions.get('window');

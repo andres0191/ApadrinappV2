@@ -12,7 +12,7 @@ const styles = StyleSheet.create({
     flexDirection : 'column',
     justifyContent: 'center',
     alignContent: 'center',
-    backgroundColor : Color.grey
+    backgroundColor : Color.lightpurple
   },
   header : {
     flex : 1,
@@ -25,7 +25,7 @@ const styles = StyleSheet.create({
     alignItems: 'baseline',
     paddingHorizontal: 10,
     paddingBottom: 12,
-    backgroundColor: Color.grey
+    backgroundColor: Color.lightpurple
   },
   headerMiddle : {
     flex: 1,
