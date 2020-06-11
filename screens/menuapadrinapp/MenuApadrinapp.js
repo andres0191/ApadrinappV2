@@ -9,17 +9,12 @@ import PrevScreenButton from '../../source/Components/PrevScreenButton';
 const MenuApadrinapp = ({ navigation }) => {
   return (
     <View style={styles.container}>
-      
       <ScrollView stickyHeaderIndices={[0]} showsVerticalScrollIndicator={false}>
         <View style={styles.header}>
         <View style={styles.headerLeft}>
-        </View>
-        <View style={styles.headerMiddle}>
-          <Text style={styles.PageTitle}>Apadrinar</Text>
-        </View>
-        <View style={styles.headerRight}>
-
-        <PrevScreenButton onPress={() => navigation.navigate('Ciclo')}></PrevScreenButton>
+          <PrevScreenButton onPress={() => navigation.navigate('MenuApadrinapp')}></PrevScreenButton>
+          <Text style={styles.PageTitle}>Dreamers Rappis</Text>
+          <Text>.</Text>
         </View>
       </View>
       <View>

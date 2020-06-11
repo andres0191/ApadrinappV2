@@ -15,20 +15,17 @@ const styles = StyleSheet.create({
     backgroundColor : Color.grey
   },
   header : {
-    flex : .8,
-    flexDirection : 'row',
-    alignItems: 'center',
-    justifyContent : 'center',
-    textAlign: 'center',
-    backgroundColor: Color.grey,
-    paddingVertical: 25
+    flex : 1,
+    paddingTop: 22,
   },
   headerLeft : {
     flex : 1,
     flexDirection: 'row',
-    justifyContent: 'flex-start',
-    paddingLeft: 10,
-    alignItems: 'flex-end',
+    justifyContent: 'space-between',
+    alignItems: 'baseline',
+    paddingHorizontal: 10,
+    paddingBottom: 12,
+    backgroundColor: Color.grey
   },
   headerMiddle : {
     flex: 1,

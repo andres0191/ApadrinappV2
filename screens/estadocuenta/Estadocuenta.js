@@ -16,13 +16,9 @@ const EstadoCuenta = ({ navigation }) => {
         <View style={styles.header}>
         <View style={styles.headerLeft}>
           <PrevScreenButton onPress={() => navigation.navigate('MenuApadrinapp')}></PrevScreenButton>
+          <Text style={styles.PageTitle}>Inversión actual</Text>
+          <Text>.</Text>
         </View>
-        <View style={styles.headerMiddle}>
-          <Text style={styles.PageTitle}>Tu inversion actual</Text>
-        </View>
-        <View style={styles.headerRight}></View>
-      </View>
-        <View style={styles.body}>
         <View style={styles.ElevatePic}>
           <Image source={require('../../assets/estado_C.png')} style={styles.logo}></Image>
         </View>
