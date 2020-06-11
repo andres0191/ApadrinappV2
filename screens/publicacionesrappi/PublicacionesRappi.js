@@ -20,10 +20,6 @@ const PublicacionesRappi = ({ navigation }) => {
         <View style={styles.ElevatePic}>
           <Image source={require('../../assets/apadrina.png')} style={styles.logo}></Image>
         </View>
-      {/*   <View style={styles.headerMiddle}>
-          <Text style={styles.PageTitle}>Historias Rappis</Text>
-        </View>
-        <View style={styles.headerRight}></View> */}
       </View>
       <View style={styles.body}>
             <View style={styles.info}>

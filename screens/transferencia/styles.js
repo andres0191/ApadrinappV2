@@ -15,25 +15,20 @@ const styles = StyleSheet.create({
     backgroundColor : Color.grey
   },
   header : {
-    flex : .8,
-    flexDirection : 'row',
-    alignItems: 'center',
-    justifyContent : 'center',
-    textAlign: 'center',
-    backgroundColor: Color.grey,
-    paddingVertical: 25
+    flex : 1,
+    paddingTop: 22,
   },
   headerLeft : {
     flex : 1,
     flexDirection: 'row',
-    justifyContent: 'flex-start',
-    paddingLeft: 10,
-    alignItems: 'flex-end',
+    justifyContent: 'space-between',
+    alignItems: 'baseline',
+    paddingHorizontal: 10,
+    paddingBottom: 12,
+    backgroundColor: Color.grey
   },
   headerMiddle : {
     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'flex-start',
   },
   headerRight : {
     flex: 1,
@@ -48,17 +43,15 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     alignItems : 'center',
     justifyContent : 'center',
-    backgroundColor: Color.lightpurple
+    backgroundColor: Color.lightpurple,
   },
   logo : {
     width: win.width,
-    height: 362 * ratio,
-    resizeMode: 'contain',
+    height: 450 * ratio,
     justifyContent: 'center',
-    marginBottom: 10,
   },
   ElevatePic: {
-    elevation: 2
+    elevation: 1
   },
   InfoCube: {
     flexDirection : 'row',
@@ -83,7 +76,6 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
-    marginVertical: 10
   },
   YellowFont: {
     /*fontFamily: '',*/
