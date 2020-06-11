@@ -4,6 +4,7 @@ import { Modal, Text, TouchableHighlight, View, StyleSheet, Button} from 'react-
 
 class ModalExample extends Component {
 constructor {
+   
    super();
    this.state={
       show=False;
@@ -54,6 +55,7 @@ const styles = StyleSheet.create ({
    }
 
 })
+
 
 /* class ModalExample extends Component {
    state = {
