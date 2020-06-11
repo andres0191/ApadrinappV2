@@ -19,7 +19,7 @@ const PublicacionesRappi = ({ navigation }) => {
           <Text>.</Text>
         </View>
         <View style={styles.ElevatePic}>
-          <Image source={require('../../assets/apadrina.png')} style={styles.logo}></Image>
+          <Image source={require('../../assets/Cabeceras/listaDreamers.png')} style={styles.logo}></Image>
         </View>
       {/*   <View style={styles.headerMiddle}>
           <Text style={styles.PageTitle}>Historias Rappis</Text>
