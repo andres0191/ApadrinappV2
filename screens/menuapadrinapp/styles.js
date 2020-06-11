@@ -18,7 +18,7 @@ const styles = StyleSheet.create({
   header : {
     flex : 1,
     paddingTop: 22,
-    backgroundColor: Color.grey
+    backgroundColor: Color.lightpurple
   },
   headerLeft : {
     flex : 1,
@@ -27,7 +27,7 @@ const styles = StyleSheet.create({
     alignItems: 'baseline',
     paddingHorizontal: 10,
     paddingBottom: 12,
-    backgroundColor: Color.grey
+    backgroundColor: Color.lightpurple
   },
   headerMiddle : {
     flex: 1,
