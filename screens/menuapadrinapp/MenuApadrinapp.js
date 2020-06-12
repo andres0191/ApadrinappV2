@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
-import { Text, View, Image, TouchableHighlight, ScrollView } from 'react-native';
+import { Text, View, Image, TouchableHighlight, ScrollView, AsyncStorage } from 'react-native';
 import styles from './styles';
 import WhiteButton from '../../source/Components/WhiteButton';
 import YellowButton from '../../source/Components/YellowButton';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import PrevScreenButton from '../../source/Components/PrevScreenButton';
 
+const UserEmail = async ()  => {
+  await AsyncStorage.getItem(USEREMAIL);
+}
 const MenuApadrinapp = ({ navigation }) => {
   return (
     <View style={styles.container}>
@@ -15,7 +18,7 @@ const MenuApadrinapp = ({ navigation }) => {
         <View style={styles.headerLeft}>
         </View>
         <View style={styles.headerMiddle}>
-          <Text style={styles.PageTitle}>Apadrinar</Text>
+          <Text style={styles.PageTitle}>{UserEmail}</Text>
         </View>
         <View style={styles.headerRight}>
 

@@ -1,13 +1,15 @@
-import React, { Component } from 'react';
-import { Text, View, Image, ScrollView } from 'react-native';
+import React, { useState } from 'react';
+import { Text, View, Image, ScrollView, TextInput, AsyncStorage } from 'react-native';
 import styles from './styles';
 import WhiteButton from '../../source/Components/WhiteButton';
 import YellowButton from '../../source/Components/YellowButton';
 import firebaseService from '../../services/firebase';
 import HollowInput from '../../source/Components/HollowInputSpace';
 import PrevScreenButton from '../../source/Components/PrevScreenButton';
+/* import Lista from '../publicacionesrappi/List' */
 
 const Transferencia = ({ navigation }) => {
+  const [monto, setMonto] = useState('')
   return (
     <View style={styles.container}>
       <ScrollView stickyHeaderIndices={[0]} showsVerticalScrollIndicator={false}>
@@ -27,7 +29,12 @@ const Transferencia = ({ navigation }) => {
             <View style={styles.info}>
               <View style={styles.InputInfo}>
                 <Text style={styles.YellowFont}>Monto a invertir</Text>
-                <HollowInput title='$0' ></HollowInput>
+                <TextInput
+                placeholder='  $' 
+                placeholderTextColor='#472387'
+                style={styles.inputText}
+                value = {monto}
+                onChange = {(e) => setMonto(e.nativeEvent.text)}/>
               </View>
               <View style={styles.InputInfo}>
                 <Text style={styles.YellowFont}>Apadrinarás a</Text>
@@ -48,3 +55,5 @@ const Transferencia = ({ navigation }) => {
     )
   }
 export default Transferencia
+
+

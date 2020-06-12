@@ -91,7 +91,17 @@ const styles = StyleSheet.create({
     fontSize: 26,
     fontWeight: "bold",
     color: Color.yellow,
-  }
+  },
+  inputText: {
+    borderColor: Color.purple,
+    minWidth: 235,
+    minHeight: 70,
+    borderRadius: 10,
+    borderWidth: 2,
+    marginVertical: 10,
+    fontSize: 44,
+    color: Color.purple,
+  },
 })
 
 export default styles
