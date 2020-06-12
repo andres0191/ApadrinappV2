@@ -4,7 +4,7 @@ import Color from '../../source/utils/Colors';
 import { Dimensions } from 'react-native';
 
 const win = Dimensions.get('window');
-const ratio = win.width/560;
+const ratio = win.width/1100;
 
 const styles = StyleSheet.create({
   container : {
@@ -15,17 +15,18 @@ const styles = StyleSheet.create({
     backgroundColor : Color.grey,
   },
   header : {
-    flex : .8,
+    flex : 1,
     paddingTop: 22,
-    paddingBottom: 10,
+    backgroundColor: Color.purple
   },
   headerLeft : {
     flex : 1,
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'baseline',
-    backgroundColor: Color.grey,
     paddingHorizontal: 10,
+    paddingBottom: 12,
+    backgroundColor: Color.lightpurple
   },
   headerMiddle : {
     flex: 1,

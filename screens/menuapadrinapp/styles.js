@@ -16,20 +16,18 @@ const styles = StyleSheet.create({
 
   },
   header : {
-    flex : .8,
-    flexDirection : 'row',
-    alignItems: 'center',
-    justifyContent : 'center',
-    textAlign: 'center',
-    backgroundColor: Color.grey,
-    paddingVertical: 25,
+    flex : 1,
+    paddingTop: 22,
+    backgroundColor: Color.lightpurple
   },
   headerLeft : {
     flex : 1,
     flexDirection: 'row',
-    justifyContent: 'flex-start',
-    alignItems: 'flex-end',
-    
+    justifyContent: 'space-between',
+    alignItems: 'baseline',
+    paddingHorizontal: 10,
+    paddingBottom: 12,
+    backgroundColor: Color.lightpurple
   },
   headerMiddle : {
     flex: 1,
