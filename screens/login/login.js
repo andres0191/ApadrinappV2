@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import { Text, View, TouchableHighlight, TextInput, Image } from 'react-native';
+import { Text, View, TouchableHighlight, TextInput, Image, AsyncStorage } from 'react-native';
 import styles from './styles';
 import firebaseService from '../../services/firebase';
 import YellowBigButton from '../../source/Components/YellowBigButton';
 import WhiteBigButton from '../../source/Components/WhiteBigButton';
 
-
+let USEREMAIL = 'sinUser';
 const login = ({navigation}) => {
     const [user, setUser] = useState('')
     const [pass, setPass] = useState('')
@@ -13,6 +13,7 @@ const login = ({navigation}) => {
     const onPressLogin = async () => {
         try{
             await firebaseService.login(user, pass)
+            await AsyncStorage.setItem(USEREMAIL, user);
             navigation.navigate('MenuApadrinapp')
         } catch (e) {
             alert('Por favor ingres los datos correctos')

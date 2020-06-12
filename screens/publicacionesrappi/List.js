@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Text, View, StyleSheet, ScrollView, TouchableOpacity, Dimensions, Alert} from 'react-native';
 import Color from  '../../source/utils/Colors';
 import WhiteButton from '../../source/Components/WhiteButton';
-//import ViewDreamer from './ViewDreamer'
+/* import ViewDreamer from './ViewDreamer' */
 
 
 const win = Dimensions.get('window');
@@ -10,17 +10,17 @@ const win = Dimensions.get('window');
 class Lista extends Component {
     state = {
        names: [
-          {'name': 'Ben', 'id': 1, 'meta':'Moto'},
-          {'name': 'Susan', 'id': 2, 'meta':'Moto'},
-          {'name': 'Robert', 'id': 3, 'meta':'Moto'},
-          {'name': 'Mary', 'id': 4, 'meta':'Bicicleta'},
-          {'name': 'Daniel', 'id': 5, 'meta':'Repararción'},
-          {'name': 'Laura', 'id': 6, 'meta':'Moto'},
-          {'name': 'John', 'id': 7, 'meta':'Bicicleta'},
-          {'name': 'Debra', 'id': 8, 'meta':'Moto'},
-          {'name': 'Aron', 'id': 9, 'meta':'Moto'},
-          {'name': 'Ann', 'id': 10, 'meta':'Moto'},
-          {'name': 'Steve', 'id': 11, 'meta':'Moto'},
+          {'name': 'Ben', 'id': 1, 'meta':'Moto', 'value': '$1.800.000'},
+          {'name': 'Susan', 'id': 2, 'meta':'Moto', 'value': '$3.500.000'},
+          {'name': 'Robert', 'id': 3, 'meta':'Moto', 'value': '$1.500.000'},
+          {'name': 'Mary', 'id': 4, 'meta':'Bicicleta', 'value': '$2.450.000'},
+          {'name': 'Daniel', 'id': 5, 'meta':'Repararción', 'value': '$2.800.000'},
+          {'name': 'Laura', 'id': 6, 'meta':'Moto', 'value': '$1.000.000'},
+          {'name': 'John', 'id': 7, 'meta':'Bicicleta', 'value': '$800.000'},
+          {'name': 'Debra', 'id': 8, 'meta':'Moto', 'value': '$500.000'},
+          {'name': 'Aron', 'id': 9, 'meta':'Moto', 'value': '$1.200.000'},
+          {'name': 'Ann', 'id': 10, 'meta':'Moto', 'value': '$2.500.000'},
+          {'name': 'Steve', 'id': 11, 'meta':'Moto', 'value': '$3.000.000'},
        ]
     }
     createThreeButtonAlert = (item) =>
@@ -59,7 +59,7 @@ class Lista extends Component {
                        <Text style = {styles.textY}>
                           {item.meta}
                        </Text>
-                       <Text style={styles.monto}>$5'000.000</Text>
+                       <Text style={styles.monto}>{item.value}</Text>
                     </TouchableOpacity>
                    ))
                 }

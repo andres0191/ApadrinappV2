@@ -15,14 +15,13 @@ import Padrino from './screens/slides/Padrino';
 import Color from './source/utils/Colors';
 import List from './screens/publicacionesrappi/List'
 
-
 const Stack = createStackNavigator()
 
 export default function App(){
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen options={{ headerShown : false }} name='Start' component={PublicacionesRappi} />
+        <Stack.Screen options={{ headerShown : false }} name='Start' component={Transferencia} />
         <Stack.Screen options={{ headerShown : false }} name='SignUp' component={SignUp} />
         {/* <Stack.Screen name='Inversion' component={Inversion} /> */}
         <Stack.Screen options={{ headerShown : false }} name='Login' component={Login} />
