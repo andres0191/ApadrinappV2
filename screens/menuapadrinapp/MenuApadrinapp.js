@@ -13,16 +13,15 @@ const UserEmail = async ()  => {
 const MenuApadrinapp = ({ navigation }) => {
   return (
     <View style={styles.container}>
-      
       <ScrollView stickyHeaderIndices={[0]} showsVerticalScrollIndicator={false}>
         <View style={styles.header}>
           <View style={styles.headerLeft}>
-            <PrevScreenButton onPress={() => navigation.navigate('Ciclo')}></PrevScreenButton>
-            <Text style={styles.PageTitle}>Menu</Text>       
+            <PrevScreenButton onPress={() => navigation.navigate('MenuApadrinapp')}></PrevScreenButton>
+            <Text style={styles.PageTitle}>Menu</Text>
             <Prueba></Prueba>
           </View>
         </View>
-      <View>
+        <View>
         <Image source={require('../../assets/que_Deseas.png')} style={styles.logo} />
       </View>
       <View>

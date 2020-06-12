@@ -19,7 +19,7 @@ const Prueba = () => {
     }, [])
    
     return (
-        <View style={styles.container}>
+        <View >
             <Text>{`Holi ${userName}`}</Text>
         </View>
     );
