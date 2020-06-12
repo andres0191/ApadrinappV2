@@ -25,6 +25,9 @@ class Firebase{
             displayName: name
         })        
     }
+    getUser = () => {
+        return this.auth.currentUser.displayName
+    }
     
 }
 
