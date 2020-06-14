@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Text, View } from 'react-native';
-import styles from './styles'
+import styles from '../menuapadrinapp/styles'
 import firebaseService from '../../services/firebase';
 
-const Prueba = () => {
+const NameLogin = () => {
     const [userName, setUserName] = useState('')
     useEffect(() => {
         (
@@ -20,9 +20,9 @@ const Prueba = () => {
    
     return (
         <View >
-            <Text>{`Holi ${userName}`}</Text>
+            <Text style={styles.PageTitle}>{`${userName}`}</Text>
         </View>
     );
 }
 
-export default Prueba
+export default NameLogin
