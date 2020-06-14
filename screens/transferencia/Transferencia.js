@@ -8,6 +8,7 @@ import HollowInput from '../../source/Components/HollowInputSpace';
 import PrevScreenButton from '../../source/Components/PrevScreenButton';
 /* import Lista from '../publicacionesrappi/List' */
 
+/* let MONTO = "$0" */
 const Transferencia = ({ navigation }) => {
   const [monto, setMonto] = useState('')
   return (
@@ -31,11 +32,12 @@ const Transferencia = ({ navigation }) => {
               <View style={styles.InputInfo}>
                 <Text style={styles.YellowFont}>Monto a invertir</Text>
                 <TextInput
-                placeholder='  $' 
+                placeholder='  $'
                 placeholderTextColor='#472387'
                 style={styles.inputText}
                 value = {monto}
-                onChange = {(e) => setMonto(e.nativeEvent.text)}/>
+                onChange = {(e) => setMonto(e.nativeEvent.text)}
+                /* onChangeText={(text) => setMonto(text)} *//>
               </View>
               <View style={styles.InputInfo}>
                 <Text style={styles.YellowFont}>Apadrinarás a</Text>
