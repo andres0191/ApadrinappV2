@@ -14,8 +14,9 @@ import Dreamer from './screens/slides/Dreamer';
 import Padrino from './screens/slides/Padrino';
 import Color from './source/utils/Colors';
 import List from './screens/publicacionesrappi/List';
-import Prueba from './screens/menuapadrinapp/pureba';
+import NameLogin from './screens/NameLogin/NameLogin';
 import { startClock } from 'react-native-reanimated';
+import Prueba from './screens/NameLogin/prueba';
 
 const Stack = createStackNavigator()
 
@@ -23,7 +24,7 @@ export default function App(){
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen options={{ headerShown : false }} name='Start' component={Start} />
+        <Stack.Screen options={{ headerShown : false }} name='Start' component={Prueba} />
         <Stack.Screen options={{ headerShown : false }} name='SignUp' component={SignUp} />
         {/* <Stack.Screen name='Inversion' component={Inversion} /> */}
         <Stack.Screen options={{ headerShown : false }} name='Login' component={Login} />
@@ -35,7 +36,8 @@ export default function App(){
         <Stack.Screen options={{ headerShown : false }} name='Dreamer' component={Dreamer} />
         <Stack.Screen options={{ headerShown : false }} name='Padrino' component={Padrino} />
         <Stack.Screen options={{ headerShown : false }} name='List' component={List} />
-        <Stack.Screen options={{ headerShown : false }} name='Prueba' component={Prueba}/>
+        <Stack.Screen options={{ headerShown : false }} name='NameLogin' component={NameLogin}/>
+        <Stack.Screen options={{ headershown : false }} name='Prueba' component={Prueba}/>
       </Stack.Navigator>
     </NavigationContainer>
   );

@@ -6,6 +6,7 @@ import YellowButton from '../../source/Components/YellowButton';
 import firebaseService from '../../services/firebase';
 import PrevScreenButton from '../../source/Components/PrevScreenButton';
 import Lista from './List.js'
+import NameLogin from '../NameLogin/NameLogin'
 
 const PublicacionesRappi = ({ navigation }) => {
   return (
@@ -15,7 +16,7 @@ const PublicacionesRappi = ({ navigation }) => {
         <View style={styles.headerLeft}>
           <PrevScreenButton onPress={() => navigation.navigate('MenuApadrinapp')}></PrevScreenButton>
           <Text style={styles.PageTitle}>Dreamers Rappis</Text>
-          <Text>.</Text>
+          <NameLogin></NameLogin>
         </View>
         <View style={styles.ElevatePic}>
           <Image source={require('../../assets/Cabeceras/listaDreamers.png')} style={styles.logo}></Image>
