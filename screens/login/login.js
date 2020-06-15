@@ -18,7 +18,7 @@ const login = ({navigation}) => {
             await AsyncStorage.setItem(PASSW, pass);
             navigation.navigate('MenuApadrinapp')
         } catch (e) {
-            alert('Por favor ingres los datos correctos')
+            alert('Por favor ingresa los datos correctos')
         }
     }
 
@@ -64,7 +64,7 @@ const login = ({navigation}) => {
         </View>
         <View>
             <TextInput
-                placeholder='Ingresa tu correo' 
+                placeholder='Ingresa tu e-mail' 
                 placeholderTextColor="white"
                 style={styles.inputText}
                 value = {user}
@@ -80,7 +80,7 @@ const login = ({navigation}) => {
         </View>
         <View style={styles.MenuOptions}>
             <WhiteBigButton title='Ingresa' onPress={onPressLogin}></WhiteBigButton>
-            <WhiteBigButton title='borrar' onPress={() => remove()}></WhiteBigButton>
+            <WhiteBigButton title='Borrar' onPress={() => remove()}></WhiteBigButton>
             <YellowBigButton title='Registrate' onPress={() => navigation.navigate('SignUp')}></YellowBigButton>
         </View>
     </View>
