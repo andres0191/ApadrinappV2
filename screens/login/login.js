@@ -4,8 +4,6 @@ import styles from './styles';
 import firebaseService from '../../services/firebase';
 import YellowBigButton from '../../source/Components/YellowBigButton';
 import WhiteBigButton from '../../source/Components/WhiteBigButton';
-import load from './load';
-import remove from './remove';
 
 let USEREMAIL = 'sinUser'
 let PASSW = "NoPass"
