@@ -10,34 +10,30 @@ const win = Dimensions.get('window');
 class Lista extends Component {
     state = {
        names: [
-          {'name': 'Ben', 'id': 1, 'meta':'Moto', 'value': '$1.800.000'},
-          {'name': 'Susan', 'id': 2, 'meta':'Moto', 'value': '$3.500.000'},
-          {'name': 'Robert', 'id': 3, 'meta':'Moto', 'value': '$1.500.000'},
-          {'name': 'Mary', 'id': 4, 'meta':'Bicicleta', 'value': '$2.450.000'},
-          {'name': 'Daniel', 'id': 5, 'meta':'Repararción', 'value': '$2.800.000'},
-          {'name': 'Laura', 'id': 6, 'meta':'Moto', 'value': '$1.000.000'},
-          {'name': 'John', 'id': 7, 'meta':'Bicicleta', 'value': '$800.000'},
-          {'name': 'Debra', 'id': 8, 'meta':'Moto', 'value': '$500.000'},
-          {'name': 'Aron', 'id': 9, 'meta':'Moto', 'value': '$1.200.000'},
-          {'name': 'Ann', 'id': 10, 'meta':'Moto', 'value': '$2.500.000'},
-          {'name': 'Steve', 'id': 11, 'meta':'Moto', 'value': '$3.000.000'},
+         {'name': 'Ben', 'id': 1, 'meta':'Moto', 'value': '$1.800.000', 'description': 'Ben quien desea comprar una Motocicleta para mejorar su economia y la de su familia, por ello requiere $1.800.000 para iniciar su trabajo como Rappitendero'},
+         {'name': 'Susan', 'id': 2, 'meta':'Moto', 'value': '$3.500.000', 'description': 'Migrar de un pueblo a una ciudad trae grandes retos, por ello Susan pide $3.500.000 para comprar una Motocicleta y trabajar como Rappitendera'},
+         {'name': 'Robert', 'id': 3, 'meta':'Moto', 'value': '$1.500.000', 'description': 'Robert, hace poco termino el colegio y desea costearse su universidad para estudiar Ing. en Sistemas, por ello solicita $1.500.000 para alcanzar sus suenos'},
+         {'name': 'Mary', 'id': 4, 'meta':'Bicicleta', 'value': '$2.450.000', 'description': 'Mary migro de un pais vecino con lo poco que tenia. Investigo y encontro que con Rappi puede lograr su meta de darle un mejor futuro a su familia, por ello pide $2.400.000 para comprar una bicicleta, un celular y el cajon para empezar a trabajar en Rappi cuanto antes!'},
+         {'name': 'Daniel', 'id': 5, 'meta':'Repararción', 'value': '$2.800.000', 'description': 'Daniel vive con sus padres quienes son adultos mayores y propietarios de una tienda de barrio. Con Rappi desea mejorar sus ingresos y ayudarle a sus padres, por ello solicita $2.800.000 para Reparar su Motocicleta y comprar el cajon para trabajar en Rappi'},
+         {'name': 'Laura', 'id': 6, 'meta':'Moto', 'value': '$1.000.000', 'description': 'Laura trabajaba como Secretaria en un consultorio, debido a ello, desidio emprender por su cuenta y juntando los ahorros que tenia, solicita $1.000.000 para comprar una motocicleta y ser Rappitendera'},
+         {'name': 'John', 'id': 7, 'meta':'Bicicleta', 'value': '$800.000', 'description': 'Jhon desea comprar una casa para brindar un mejor futuro en su hogar. Por ello, solicita $800.000 para comprar una bicicleta y el cajon para trabajar en Rappi y lograr su sueno'},
        ]
     }
+
     createThreeButtonAlert = (item) =>
     Alert.alert(
       "Vas a apadrinar a:",
-      item.name,
+      `${item.name}. ${item.description}`,
       [
         {
-          text: "Apadrinar",
+          text: "Aceptar",
           onPress: () => console.log("Estado de cuenta")
         },
         {
           text: "Cancelar",
-          onPress: () => console.log("Cancel Pressed"),
-          style: "cancel"
+          onPress: () => ("Cancel Pressed"),
+          style: "Cancel"
         },
-        { text: "Saldo", onPress: () => console.log("OK Pressed") }
       ],
       { cancelable: false }
     );

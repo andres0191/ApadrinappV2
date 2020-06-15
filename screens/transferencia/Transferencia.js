@@ -3,12 +3,10 @@ import { Text, View, Image, ScrollView, TextInput, AsyncStorage } from 'react-na
 import styles from './styles';
 import WhiteButton from '../../source/Components/WhiteButton';
 import YellowButton from '../../source/Components/YellowButton';
-import firebaseService from '../../services/firebase';
 import HollowInput from '../../source/Components/HollowInputSpace';
 import PrevScreenButton from '../../source/Components/PrevScreenButton';
-/* import Lista from '../publicacionesrappi/List' */
 
-/* let MONTO = "$0" */
+
 const Transferencia = ({ navigation }) => {
   const [monto, setMonto] = useState('')
   return (
