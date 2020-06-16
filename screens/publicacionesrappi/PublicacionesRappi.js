@@ -5,7 +5,7 @@ import WhiteButton from '../../source/Components/WhiteButton';
 import YellowButton from '../../source/Components/YellowButton';
 import firebaseService from '../../services/firebase';
 import PrevScreenButton from '../../source/Components/PrevScreenButton';
-import Lista from './List.js'
+import List from './List.js'
 import NameLogin from '../NameLogin/NameLogin'
 
 const PublicacionesRappi = ({ navigation }) => {
@@ -24,23 +24,23 @@ const PublicacionesRappi = ({ navigation }) => {
       </View>
       <View style={styles.body}>
             <View style={styles.info}>
-            <Lista />
+            <List />
               <View style={styles.InputInfo}>
-                <Text style={styles.YellowFont}>Monto a invertir: </Text>
+                <Text style={styles.YellowFont}>Juntos lograremos la meta!!</Text>
               </View>
               <View style={styles.InputInfo}>
-                <Text style={styles.YellowFont}>Apadrinarás a:</Text>
+                {/* <Text style={styles.YellowFont}>Apadrinarás a:</Text> */}
               </View>
             </View>
         </View>
         </ScrollView>
         <View style={styles.footer}>
-          <View style={[styles.flex, styles.footerLeft]}>
+          {/* <View style={[styles.flex, styles.footerLeft]}>
             <WhiteButton title='Menu' onPress={() => navigation.navigate('MenuApadrinapp')}></WhiteButton>
           </View>
           <View style={[styles.flex, styles.footerRight]}>
             <YellowButton title='Apadrinar' onPress={() => navigation.navigate('Transferencia')}></YellowButton>
-          </View>
+          </View> */}
       </View>
     </View>
     )
