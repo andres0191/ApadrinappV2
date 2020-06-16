@@ -5,6 +5,7 @@ import WhiteButton from '../../source/Components/WhiteButton';
 import YellowButton from '../../source/Components/YellowButton';
 import HollowInput from '../../source/Components/HollowInputSpace';
 import PrevScreenButton from '../../source/Components/PrevScreenButton';
+import Lista from '../publicacionesrappi/List';
 
 
 const Transferencia = ({ navigation }) => {
@@ -39,6 +40,7 @@ const Transferencia = ({ navigation }) => {
               </View>
               <View style={styles.InputInfo}>
                 <Text style={styles.YellowFont}>Apadrinarás a</Text>
+                <Lista />
                 <HollowInput title= "Nombre"></HollowInput>
               </View>
             </View>
