@@ -31,25 +31,25 @@ const SignUp = ({navigation}) => {
   return (
     <View style={styles.container}>
         <View style={styles.logo}>
-        <Image source={require('../../assets/apadrinapp_logo.png')} style={styles.loginlogo}></Image>
+       <Image source={require('../../assets/Slides/dreamer.png')} style={styles.IconImage} />
         </View>
         <View>
             <TextInput
-                placeholder='Ingresa tu Nombre'
+                placeholder='Nombre'
                 placeholderTextColor="white"
                 style={styles.inputText}
                 value = {name}
                 onChange = {(e) => setName(e.nativeEvent.text)}
                 />
             <TextInput
-                placeholder='Cual estu e-mail?'
+                placeholder='e-mail'
                 placeholderTextColor="white"
                 style={styles.inputText}
                 value = {user}
                 onChange = {(e) => setUser(e.nativeEvent.text)}
                 />
             <TextInput
-                placeholder='Ingresa tu contrasena'
+                placeholder='contraseña'
                 placeholderTextColor="white"
                 style={styles.inputText}
                 value = {pass}

@@ -25,7 +25,7 @@ export default function App(){
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen options={{ headerShown : false }} name='Start' component={SaveFunction} />
+        <Stack.Screen options={{ headerShown : false }} name='Start' component={Start} />
         <Stack.Screen options={{ headerShown : false }} name='SignUp' component={SignUp} />
         <Stack.Screen options={{ headerShown : false }} name='Login' component={Login} />
         <Stack.Screen options={{ headerShown : false }} name='MenuApadrinapp' component={MenuApadrinapp} />
