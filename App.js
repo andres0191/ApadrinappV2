@@ -25,7 +25,6 @@ export default function App(){
       <Stack.Navigator>
         <Stack.Screen options={{ headerShown : false }} name='Start' component={Start} />
         <Stack.Screen options={{ headerShown : false }} name='SignUp' component={SignUp} />
-        {/* <Stack.Screen name='Inversion' component={Inversion} /> */}
         <Stack.Screen options={{ headerShown : false }} name='Login' component={Login} />
         <Stack.Screen options={{ headerShown : false }} name='MenuApadrinapp' component={MenuApadrinapp} />
         <Stack.Screen options={{ headerShown : false }} name='PublicacionesRappi' component={PublicacionesRappi} />
