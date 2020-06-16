@@ -16,6 +16,8 @@ import Color from './source/utils/Colors';
 import List from './screens/publicacionesrappi/List';
 import NameLogin from './screens/NameLogin/NameLogin';
 import { startClock } from 'react-native-reanimated';
+/* import SaveFunction from './screens/PruebasAndres/SaveFunction'; */
+import PostRappi from './screens/Rappitenderos/PostRappi';
 
 const Stack = createStackNavigator()
 
@@ -35,6 +37,8 @@ export default function App(){
         <Stack.Screen options={{ headerShown : false }} name='Padrino' component={Padrino} />
         <Stack.Screen options={{ headerShown : false }} name='List' component={List} />
         <Stack.Screen options={{ headerShown : false }} name='NameLogin' component={NameLogin}/>
+        {/* <Stack.Screen options={{ headerShown : false }} name='SaveFunction' component={SaveFunction}/> */}
+        <Stack.Screen options={{ headerShown : false }} name='PostRappi' component={PostRappi}/>
       </Stack.Navigator>
     </NavigationContainer>
   );
