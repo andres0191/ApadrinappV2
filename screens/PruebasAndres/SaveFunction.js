@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import {TextInput, Stylesheet, View, Text, TouchableHighlight } from 'react-native';
+import {TextInput, Stylesheet, View, Text, TouchableHighlight, SectionList } from 'react-native';
 import * as firebase from 'firebase';
 import 'firebase/firebase-firestore';
 import styles from './styles';
@@ -25,6 +25,7 @@ export default function App(){
     const [name, setName]=useState('');
     const [monto, setMonto]=useState('');
     const [description, setDescription]=useState('');
+    const [lista, setLista] = useState([]);
 
 const save = async () => {
     try{
@@ -41,6 +42,25 @@ const save = async () => {
     setMonto('');
     setDescription('');
 }
+
+const listar = async ()=> {
+    let vector =[];
+    try{
+        const fire = firebase.firestore();
+        const snapshot = await fire.collection('publications').get()
+        snapshot.forEach((doc) => {
+            let obj = {id:doc.id, name:doc.data().name, monto:doc.data().monto, description:doc.data().description};
+            vector.push(obj)
+        });
+        setLista(vector);
+    } catch (error) {
+        console.log('error')
+    }
+}
+
+useEffect(() => {
+    listar();
+},[])
 return(
     <View style={styles.container}>
         <TextInput
@@ -64,10 +84,22 @@ return(
                 underlayColor="red"
                 onPress={() => save()}>
                     <Text style={styles.texto}>Guardar</Text>
-                </TouchableHighlight>
-                
-            
+            </TouchableHighlight>
+            <View style={{textAlign: 'center'}}>
+                <Text>Lista de Rappitenderos</Text>
+                {lista.map(item => (
+                    <View key={item.id} >
+                    <Text>{item.name}</Text>
+                    <Text>{item.monto}</Text>
+                    <Text>{item.description}</Text>
+                    <TouchableHighlight style={styles.buttonForm}
+                    onPress={() => eliminar(item.id)}>
+                        <Text>Delete</Text>
+                        </TouchableHighlight>
+                    </View>
+                ))}
+            </View>
     </View>
-)
+);
 }
 
