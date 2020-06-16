@@ -5,8 +5,8 @@ import WhiteButton from '../../source/Components/WhiteButton';
 import YellowButton from '../../source/Components/YellowButton';
 import HollowInput from '../../source/Components/HollowInputSpace';
 import PrevScreenButton from '../../source/Components/PrevScreenButton';
+import NameLogin from '../NameLogin/NameLogin';
 import Lista from '../publicacionesrappi/List';
-
 
 const Transferencia = ({ navigation }) => {
   const [monto, setMonto] = useState('')
@@ -17,7 +17,7 @@ const Transferencia = ({ navigation }) => {
           <View style={styles.headerLeft}>
             <PrevScreenButton onPress={() => navigation.navigate('PublicacionesRappi')}></PrevScreenButton>
             <Text style={styles.PageTitle}>Apadrinar</Text>
-            <Text>.</Text>
+            <NameLogin></NameLogin>
           </View>
           <View style={styles.ElevatePic}>
           <Image source={require('../../assets/Cabeceras/apadrinar.png')} style={styles.logo}></Image>
