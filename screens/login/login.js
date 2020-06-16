@@ -80,7 +80,6 @@ const login = ({navigation}) => {
         </View>
         <View style={styles.MenuOptions}>
             <WhiteBigButton title='Ingresa' onPress={onPressLogin}></WhiteBigButton>
-            <WhiteBigButton title='Borrar' onPress={() => remove()}></WhiteBigButton>
             <YellowBigButton title='Registrate' onPress={() => navigation.navigate('SignUp')}></YellowBigButton>
         </View>
     </View>
