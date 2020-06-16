@@ -22,10 +22,10 @@ const MenuApadrinapp = ({ navigation }) => {
             <Text style={styles.PageTitle}>Menu</Text>
             <NameLogin></NameLogin>
           </View>
+          <View style={styles.ElevatePic}>
+          <Image source={require('../../assets/Cabeceras/queDeseas.png')} style={styles.logo}></Image>
         </View>
-        <View>
-        <Image source={require('../../assets/que_Deseas.png')} style={styles.logo} />
-      </View>
+        </View>
       <View>
         <Text style={styles.HeaderText}>Categorias</Text>
       </View>

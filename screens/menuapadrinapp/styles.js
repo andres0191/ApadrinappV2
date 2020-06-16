@@ -46,7 +46,7 @@ const styles = StyleSheet.create({
   },
   logo : {
     width: win.width,
-    height: 378* ratio,
+    height: 480* ratio,
     resizeMode: 'contain',
     justifyContent: 'center',
     marginTop: -7,

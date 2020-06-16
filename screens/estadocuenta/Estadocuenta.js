@@ -7,6 +7,7 @@ import firebaseService from '../../services/firebase';
 import HollowInput from '../../source/Components/HollowInputSpace';
 import PrevScreenButton from '../../source/Components/PrevScreenButton';
 import Color from '../../source/utils/Colors';
+import NameLogin from '../NameLogin/NameLogin';
 
 const EstadoCuenta = ({ navigation }) => {
   const [user, setMonto] = useState('')
@@ -17,7 +18,7 @@ const EstadoCuenta = ({ navigation }) => {
         <View style={styles.headerLeft}>
           <PrevScreenButton onPress={() => navigation.navigate('MenuApadrinapp')}></PrevScreenButton>
           <Text style={styles.PageTitle}>Inversión actual</Text>
-          <Text>.</Text>
+          <NameLogin></NameLogin>
         </View>
         <View style={styles.ElevatePic}>
           <Image source={require('../../assets/estado_C.png')} style={styles.logo}></Image>
