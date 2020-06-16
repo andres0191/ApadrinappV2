@@ -6,6 +6,8 @@ import YellowButton from '../../source/Components/YellowButton';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import PrevScreenButton from '../../source/Components/PrevScreenButton';
 import NameLogin from '../NameLogin/NameLogin';
+import PostRappi from '../Rappitenderos/PostRappi';
+import SaveFunction from '../PruebasAndres/SaveFunction';
 
 const UserEmail = async ()  => {
   await AsyncStorage.getItem(USEREMAIL);
@@ -32,7 +34,7 @@ const MenuApadrinapp = ({ navigation }) => {
           <TouchableOpacity onPress={() => navigation.navigate('EstadoCuenta')} >
             <Image source={require('../../assets/estado_cuenta.png')} style={styles.estadoCuenta} />
           </TouchableOpacity>
-          <TouchableOpacity /* onPress={() => navigation.navigate('Login')} */  >
+          <TouchableOpacity  onPress={() => navigation.navigate('PostRappi')}  >
             <Image source={require('../../assets/microprestamos.png')} style={styles.MoneyStyle} />
           </TouchableOpacity> 
         </View>
