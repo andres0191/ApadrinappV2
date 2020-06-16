@@ -31,7 +31,7 @@ const SignUp = ({navigation}) => {
   return (
     <View style={styles.container}>
         <View style={styles.logo}>
-       <Image source={require('../../assets/Slides/dreamer.png')} style={styles.IconImage} />
+       <Image source={require('../../assets/Cabeceras/registro.png')} style={styles.IconImage} />
         </View>
         <View>
             <TextInput
