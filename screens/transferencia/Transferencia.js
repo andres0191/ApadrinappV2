@@ -6,7 +6,6 @@ import YellowButton from '../../source/Components/YellowButton';
 import HollowInput from '../../source/Components/HollowInputSpace';
 import PrevScreenButton from '../../source/Components/PrevScreenButton';
 import NameLogin from '../NameLogin/NameLogin';
-import Lista from '../publicacionesrappi/List';
 
 const Transferencia = ({ navigation }) => {
   const [monto, setMonto] = useState('')
