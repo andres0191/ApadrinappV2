@@ -26,18 +26,11 @@ const PublicacionesRappi = ({ navigation }) => {
                 <Text style={styles.YellowFont}>Juntos lograremos la meta!!</Text>
               </View>
               <View style={styles.InputInfo}>
-                {/* <Text style={styles.YellowFont}>Apadrinarás a:</Text> */}
               </View>
             </View>
         </View>
         </ScrollView>
         <View style={styles.footer}>
-          {/* <View style={[styles.flex, styles.footerLeft]}>
-            <WhiteButton title='Menu' onPress={() => navigation.navigate('MenuApadrinapp')}></WhiteButton>
-          </View>
-          <View style={[styles.flex, styles.footerRight]}>
-            <YellowButton title='Apadrinar' onPress={() => navigation.navigate('Transferencia')}></YellowButton>
-          </View> */}
       </View>
     </View>
     )
