@@ -47,17 +47,26 @@ useEffect(() => {
     listar();
 },[])
 
+/* var NAMENAME = ''
+var IDID = ''
+
+function storeNameId(name, id){
+    NAMENAME = name;
+    IDID = id;
+} */
+
 return(
     <View style={styles.container}>
-            <View style={{textAlign: 'center'}}>
+            <View style={styles.AllBoxes}>
                 {lista.map(item => (
-                     <View key={item.id} >
-                    <Text>{item.name}</Text>
-                    <Text>{item.monto}</Text>
-                    <Text>{item.description}</Text>
+                     <View key={item.id} style={styles.Boxes}>
+                    <Text style={styles.Dreamer}>Dreamer</Text>
+                    <Text style={styles.ItemName}>{item.name}</Text>
+                    <Text style={styles.ItemMonto}>Cantidad solicitada: {item.monto}</Text>
+                    <Text style={styles.ItemDescription}>{item.description}</Text>
                     <Text></Text>
-                    <YellowButton title='Apadrinar' onPress={() => navigation.navigate('Transferencia')}></YellowButton>
-                    </View>  
+                    <YellowButton title='Apadrinar' onPress={() => {/* storeNameId(this.item.name, this.item.id); */ navigation.navigate('Transferencia');}}></YellowButton>
+                    </View>
                 ))}
             </View>
     </View>
@@ -65,3 +74,4 @@ return(
 }
 
 export default List
+

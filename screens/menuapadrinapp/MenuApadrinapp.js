@@ -25,7 +25,7 @@ const MenuApadrinapp = ({ navigation }) => {
           <Image source={require('../../assets/Cabeceras/queDeseas.png')} style={styles.logo}></Image>
         </View>
         </View>
-      <View>
+      <View style={styles.Categorias}>
         <Text style={styles.HeaderText}>Categorias</Text>
       </View>
       <View style={styles.body}>

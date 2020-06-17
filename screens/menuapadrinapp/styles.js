@@ -3,7 +3,7 @@ import Color from '../../source/utils/Colors';
 import { Dimensions } from 'react-native';
 
 const win = Dimensions.get('window');
-const ratio = win.width/541;
+const ratio = win.width/550;
 const styles = StyleSheet.create({
 
   container : {
@@ -17,7 +17,6 @@ const styles = StyleSheet.create({
   header : {
     flex : 1,
     paddingTop: 22,
-    backgroundColor: Color.lightpurple
   },
   headerLeft : {
     flex : 1,
@@ -30,23 +29,19 @@ const styles = StyleSheet.create({
   },
   headerMiddle : {
     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'flex-start',
   },
   headerRight : {
-    flex : 1,
-    marginTop: -40,
+    flex: 1,
   },
   body : {
-    flex : 3,
+    flex : 1,
     alignItems : 'center',
     justifyContent : 'center',
     backgroundColor: Color.grey,
   },
   logo : {
     width: win.width,
-    height: 480* ratio,
-    resizeMode: 'contain',
+    height: 450 * ratio,
     justifyContent: 'center',
   },
   footer: {
@@ -60,7 +55,8 @@ const styles = StyleSheet.create({
     fontSize: 38,
     color: Color.purple,
     flexDirection: 'row',
-    margin: 10,
+    paddingLeft: 10,
+    marginTop: 12
   },
   estadoCuenta: {
     width: 120,

@@ -6,6 +6,7 @@ import YellowButton from '../../source/Components/YellowButton';
 import HollowInput from '../../source/Components/HollowInputSpace';
 import PrevScreenButton from '../../source/Components/PrevScreenButton';
 import NameLogin from '../NameLogin/NameLogin';
+import BackButton from '../../source/Components/BackButton'
 
 const Transferencia = ({ navigation }) => {
   const [monto, setMonto] = useState('')
@@ -14,7 +15,7 @@ const Transferencia = ({ navigation }) => {
       <ScrollView stickyHeaderIndices={[0]} showsVerticalScrollIndicator={false}>
         <View style={styles.header}>
           <View style={styles.headerLeft}>
-            <PrevScreenButton onPress={() => navigation.navigate('PublicacionesRappi')}></PrevScreenButton>
+            <PrevScreenButton onPress={() => navigation.navigate('MenuApadrinapp')}></PrevScreenButton>
             <Text style={styles.PageTitle}>Apadrinar</Text>
             <NameLogin></NameLogin>
           </View>
