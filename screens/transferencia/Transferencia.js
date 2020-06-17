@@ -23,9 +23,6 @@ const Transferencia = ({ navigation }) => {
         </View>
         </View>
         <View style={styles.body}>
-         {/*  <View style={styles.ElevatePic}>
-            <Image source={require('../../assets/Cabeceras/queDeseas.png')} style={styles.logo}></Image>
-          </View> */}
             <View style={styles.info}>
               <View style={styles.InputInfo}>
                 <Text style={styles.YellowFont}>Monto a invertir</Text>
@@ -34,13 +31,11 @@ const Transferencia = ({ navigation }) => {
                 placeholderTextColor='#472387'
                 style={styles.inputText}
                 value = {monto}
-                onChange = {(e) => setMonto(e.nativeEvent.text)}
-                /* onChangeText={(text) => setMonto(text)} *//>
+                onChange = {(e) => setMonto(e.nativeEvent.text)}/>
               </View>
               <View style={styles.InputInfo}>
                 <Text style={styles.YellowFont}>Apadrinarás a</Text>
-                {/* <Lista /> */}
-                <HollowInput title= "Nombre"></HollowInput>
+                <HollowInput></HollowInput>
               </View>
             </View>
         </View>

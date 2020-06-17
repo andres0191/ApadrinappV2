@@ -6,8 +6,7 @@ import YellowButton from '../../source/Components/YellowButton';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import PrevScreenButton from '../../source/Components/PrevScreenButton';
 import NameLogin from '../NameLogin/NameLogin';
-import PostRappi from '../Rappitenderos/PostRappi';
-import SaveFunction from '../PruebasAndres/SaveFunction';
+
 
 const UserEmail = async ()  => {
   await AsyncStorage.getItem(USEREMAIL);
