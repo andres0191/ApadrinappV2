@@ -62,7 +62,7 @@ return(
                      <View key={item.id} style={styles.Boxes}>
                     <Text style={styles.Dreamer}>Dreamer</Text>
                     <Text style={styles.ItemName}>{item.name}</Text>
-                    <Text style={styles.ItemMonto}>Cantidad solicitada: {item.monto}</Text>
+                    <Text style={styles.ItemMonto}>Cantidad solicitada: $ {item.monto}</Text>
                     <Text style={styles.ItemDescription}>{item.description}</Text>
                     <Text></Text>
                     <YellowButton title='Apadrinar' onPress={() => {/* storeNameId(this.item.name, this.item.id); */ navigation.navigate('Transferencia');}}></YellowButton>
