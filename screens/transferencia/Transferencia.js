@@ -40,7 +40,7 @@ const Transferencia = ({ navigation }) => {
               </View>
               <View style={styles.InputInfo}>
                 <Text style={styles.YellowFont}>Apadrinarás a</Text>
-                <Lista />
+                {/* <Lista /> */}
                 <HollowInput title= "Nombre"></HollowInput>
               </View>
             </View>

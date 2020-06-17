@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Text, View, Image, ScrollView } from 'react-native';
 import styles from './styles';
-import WhiteButton from '../../source/Components/WhiteButton';
+/* import WhiteButton from '../../source/Components/WhiteButton';
 import YellowButton from '../../source/Components/YellowButton';
-import firebaseService from '../../services/firebase';
+import firebaseService from '../../services/firebase'; */
 import PrevScreenButton from '../../source/Components/PrevScreenButton';
 import List from './List.js'
 import NameLogin from '../NameLogin/NameLogin'
@@ -24,7 +24,7 @@ const PublicacionesRappi = ({ navigation }) => {
       </View>
       <View style={styles.body}>
             <View style={styles.info}>
-            <List />
+            <List navigation={props.navigation}/>
               <View style={styles.InputInfo}>
                 <Text style={styles.YellowFont}>Juntos lograremos la meta!!</Text>
               </View>
