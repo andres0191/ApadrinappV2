@@ -49,7 +49,6 @@ const styles = StyleSheet.create({
     height: 480* ratio,
     resizeMode: 'contain',
     justifyContent: 'center',
-    marginTop: -7,
   },
   footer: {
     flex: 1,

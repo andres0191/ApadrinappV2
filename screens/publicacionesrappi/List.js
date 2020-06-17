@@ -6,6 +6,7 @@ import styles from './styles';
 import YellowButton from '../../source/Components/YellowButton';
 /* import { TouchableOpacity } from 'react-native-gesture-handler';
 import { NavigationContext } from '@react-navigation/native'; */
+import { useNavigation } from '@react-navigation/native';
 
 const firebaseConfig = {
         apiKey: "AIzaSyAh8XV0mSjGA27eZUNcJgHNrWFFsUg2qG8",
@@ -21,14 +22,13 @@ class Firebase{
     constructor(){
         firebase.initializeApp(firebaseConfig)
         this.auth = firebase.auth()
-        console.ignoredYellowBox = [
-        'Setting a timer'
-        ];
+        console.disableYellowBox = true;
     }
 }
 
-const List = ({ navigation }) => {
-    const [lista, setLista] = useState([]);
+const List = () => {
+const [lista, setLista] = useState([]);
+const navigation = useNavigation();
 
 const listar = async () => {
     let vector =[];

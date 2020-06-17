@@ -60,7 +60,7 @@ const login = ({navigation}) => {
   return (
     <View style={styles.container}>
         <View>
-            <Image source={require('../../assets/apadrinapp_logo.png')} style={styles.loginlogo}></Image>
+            <Image source={require('../../assets/apadrinapp_logo.png')} style={styles.logo}></Image>
         </View>
         <View>
             <TextInput

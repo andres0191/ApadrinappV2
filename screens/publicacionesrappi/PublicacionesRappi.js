@@ -1,9 +1,6 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Text, View, Image, ScrollView } from 'react-native';
 import styles from './styles';
-import WhiteButton from '../../source/Components/WhiteButton';
-import YellowButton from '../../source/Components/YellowButton';
-import firebaseService from '../../services/firebase';
 import PrevScreenButton from '../../source/Components/PrevScreenButton';
 import List from './List.js'
 import NameLogin from '../NameLogin/NameLogin'
