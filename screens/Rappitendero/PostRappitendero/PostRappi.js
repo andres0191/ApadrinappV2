@@ -3,8 +3,9 @@ import {TextInput, Stylesheet, View, Text, TouchableHighlight } from 'react-nati
 import * as firebase from 'firebase';
 import 'firebase/firebase-firestore';
 import styles from './styles';
-import YellowBigButton from '../../source/Components/YellowBigButton';
-
+import YellowBigButton from '../../../source/Components/YellowBigButton';
+import { useNavigation } from '@react-navigation/native';
+import PrevScreenButton from '../../../source/Components/PrevScreenButton';
 
 
 const firebaseConfig = {
@@ -28,6 +29,7 @@ export default function PostPublication(){
     const [name, setName]=useState('');
     const [monto, setMonto]=useState('');
     const [description, setDescription]=useState(['']);
+    const navigation = useNavigation();
 
 const save = async () => {
     try{
@@ -47,6 +49,8 @@ const save = async () => {
 }
 return(
     <View style={styles.container}>
+        <PrevScreenButton onPress={() => navigation.navigate('login')}></PrevScreenButton>
+        <Text style={styles.textheader}>Es el momento de que nos cuentes hacerca de ti y lo que deseas, te aseguramos que encontraras el GoodFather ideal para ti</Text>
         <TextInput
             placeholder='Ingresa tu Nombre'
             placeholderTextColor="white"
@@ -71,6 +75,8 @@ return(
                 underlayColor="red"
                 onPress={() => save()}>
             </YellowBigButton>
+            <YellowBigButton title='Ver Publicaciones' onPress={() => { navigation.navigate('PublicacionesR'); }}></YellowBigButton>
+            
     </View> 
 )
 }

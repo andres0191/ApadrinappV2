@@ -17,7 +17,7 @@ const MenuApadrinapp = ({ navigation }) => {
       <ScrollView stickyHeaderIndices={[0]} showsVerticalScrollIndicator={false}>
         <View style={styles.header}>
           <View style={styles.headerLeft}>
-            <PrevScreenButton onPress={() => navigation.navigate('MenuApadrinapp')}></PrevScreenButton>
+            <PrevScreenButton onPress={() => navigation.navigate('Login')}></PrevScreenButton>
             <Text style={styles.PageTitle}>Menu</Text>
             <NameLogin></NameLogin>
           </View>
@@ -48,10 +48,10 @@ const MenuApadrinapp = ({ navigation }) => {
         </View>
         <View style={styles.footer}>
           <View style={[styles.flex, styles.footerLeft]}>
-            <WhiteButton title='Salir' onPress={() => navigation.navigate('Start')}></WhiteButton>
+            {/* <WhiteButton title='Salir' onPress={() => navigation.navigate('Start')}></WhiteButton> */}
           </View>
           <View style={[styles.flex, styles.footerRight]}>
-            <YellowButton title='Saldo' onPress={() => navigation.navigate('EstadoCuenta')}></YellowButton>
+            {/* <YellowButton title='Saldo' onPress={() => navigation.navigate('EstadoCuenta')}></YellowButton> */}
           </View>
       </View>
       </ScrollView>

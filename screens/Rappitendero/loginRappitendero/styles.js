@@ -1,9 +1,12 @@
+import React from 'react';
 import { StyleSheet } from 'react-native';
-import Color from '../../source/utils/Colors';
+import Color from '../../../source/utils/Colors';
+import { Dimensions } from 'react-native';
 
+const win = Dimensions.get('window');
+const ratio = win.width/541;
 const styles = StyleSheet.create({
-
-container: {
+  container: {
     flex: 1,
     backgroundColor: Color.purple,
     alignItems: 'center',
@@ -20,9 +23,13 @@ container: {
     marginTop: 10,
     fontSize: 20,
   },
-  buttonForm: {
-    
+  logo: {
+    height: 200,
+    width: 160,
+  },
+  MenuOptions: {
+    flexDirection: 'row'
   }
-})
+});
 
 export default styles

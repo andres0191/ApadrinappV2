@@ -3,7 +3,7 @@ import { View, Text } from 'react-native';
 import * as firebase from 'firebase';
 import 'firebase/firebase-firestore';
 import styles from './styles';
-import YellowButton from '../../source/Components/YellowButton';
+import YellowButton from '../../../source/Components/YellowButton';
 import { useNavigation } from '@react-navigation/native';
 
 const firebaseConfig = {
