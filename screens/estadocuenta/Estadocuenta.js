@@ -9,7 +9,7 @@ import PrevScreenButton from '../../source/Components/PrevScreenButton';
 import NameLogin from '../NameLogin/NameLogin';
 
 const EstadoCuenta = ({ route, navigation }) => {
-  let { cantidad } = route.params;
+  /* let { cantidad } = route.params; */
   const [user, setMonto] = useState('')
   return (
     <View style={styles.container}>
@@ -26,7 +26,7 @@ const EstadoCuenta = ({ route, navigation }) => {
         <View style={styles.info}>
           <View style={styles.InputInfo}>
             <Text style={styles.YellowFont}>Inversion actual </Text>
-            <HollowInput title={cantidad} ></HollowInput>
+            <HollowInput /* title={cantidad} */ ></HollowInput>
           </View>
           <View style={styles.InputInfo}>
             <Text style={styles.YellowFont}>Enviar a Rappipay</Text>

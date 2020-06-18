@@ -28,7 +28,13 @@ container: {
     margin: 15,
     padding: 15,
 
-  }
+  },
+  prevButton: {
+    marginTop: 10,
+    padding: 10,
+    marginLeft: 10,
+  },
+  
 })
 
 export default styles

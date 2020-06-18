@@ -49,7 +49,7 @@ const save = async () => {
 }
 return(
     <View style={styles.container}>
-        <PrevScreenButton onPress={() => navigation.navigate('login')}></PrevScreenButton>
+        <PrevScreenButton stye={styles.prevButton} onPress={() => navigation.navigate('login')}></PrevScreenButton>
         <Text style={styles.textheader}>Es el momento de que nos cuentes hacerca de ti y lo que deseas, te aseguramos que encontraras el GoodFather ideal para ti</Text>
         <TextInput
             placeholder='Ingresa tu Nombre'
