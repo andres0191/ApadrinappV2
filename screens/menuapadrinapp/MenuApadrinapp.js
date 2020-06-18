@@ -6,8 +6,7 @@ import YellowButton from '../../source/Components/YellowButton';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import PrevScreenButton from '../../source/Components/PrevScreenButton';
 import NameLogin from '../NameLogin/NameLogin';
-import PostRappi from '../Rappitenderos/PostRappi';
-import SaveFunction from '../PruebasAndres/SaveFunction';
+
 
 const UserEmail = async ()  => {
   await AsyncStorage.getItem(USEREMAIL);
@@ -18,15 +17,15 @@ const MenuApadrinapp = ({ navigation }) => {
       <ScrollView stickyHeaderIndices={[0]} showsVerticalScrollIndicator={false}>
         <View style={styles.header}>
           <View style={styles.headerLeft}>
-            <PrevScreenButton onPress={() => navigation.navigate('MenuApadrinapp')}></PrevScreenButton>
+            <PrevScreenButton onPress={() => navigation.navigate('Login')}></PrevScreenButton>
             <Text style={styles.PageTitle}>Menu</Text>
             <NameLogin></NameLogin>
           </View>
+          <View style={styles.ElevatePic}>
+          <Image source={require('../../assets/Cabeceras/queDeseas.png')} style={styles.logo}></Image>
         </View>
-        <View>
-        <Image source={require('../../assets/que_Deseas.png')} style={styles.logo} />
-      </View>
-      <View>
+        </View>
+      <View style={styles.Categorias}>
         <Text style={styles.HeaderText}>Categorias</Text>
       </View>
       <View style={styles.body}>
@@ -49,10 +48,10 @@ const MenuApadrinapp = ({ navigation }) => {
         </View>
         <View style={styles.footer}>
           <View style={[styles.flex, styles.footerLeft]}>
-            <WhiteButton title='Salir' onPress={() => navigation.navigate('Start')}></WhiteButton>
+            {/* <WhiteButton title='Salir' onPress={() => navigation.navigate('Start')}></WhiteButton> */}
           </View>
           <View style={[styles.flex, styles.footerRight]}>
-            <YellowButton title='Saldo' onPress={() => navigation.navigate('EstadoCuenta')}></YellowButton>
+            {/* <YellowButton title='Saldo' onPress={() => navigation.navigate('EstadoCuenta')}></YellowButton> */}
           </View>
       </View>
       </ScrollView>

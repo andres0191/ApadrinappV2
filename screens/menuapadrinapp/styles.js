@@ -1,10 +1,9 @@
-import React from 'react';
 import { StyleSheet } from 'react-native';
 import Color from '../../source/utils/Colors';
 import { Dimensions } from 'react-native';
 
 const win = Dimensions.get('window');
-const ratio = win.width/541;
+const ratio = win.width/550;
 const styles = StyleSheet.create({
 
   container : {
@@ -16,12 +15,11 @@ const styles = StyleSheet.create({
 
   },
   header : {
-    flex : 1,
+    flex : .1,
     paddingTop: 22,
-    backgroundColor: Color.lightpurple
+    marginBottom: -90
   },
   headerLeft : {
-    flex : 1,
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'baseline',
@@ -30,26 +28,19 @@ const styles = StyleSheet.create({
     backgroundColor: Color.lightpurple
   },
   headerMiddle : {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'flex-start',
   },
   headerRight : {
-    flex : 1,
-    marginTop: -40,
   },
   body : {
-    flex : 3,
+    flex : 1,
     alignItems : 'center',
     justifyContent : 'center',
     backgroundColor: Color.grey,
   },
   logo : {
     width: win.width,
-    height: 378* ratio,
-    resizeMode: 'contain',
+    height: 450 * ratio,
     justifyContent: 'center',
-    marginTop: -7,
   },
   footer: {
     flex: 1,
@@ -62,7 +53,7 @@ const styles = StyleSheet.create({
     fontSize: 38,
     color: Color.purple,
     flexDirection: 'row',
-    margin: 10,
+    paddingLeft: 10,
   },
   estadoCuenta: {
     width: 120,
@@ -75,14 +66,14 @@ const styles = StyleSheet.create({
     width: 120,
     height: 120,
     margin: 30,
-    backgroundColor: Color.yellow,
+    backgroundColor: Color.purple,
     borderRadius: 20,
   },
   ApadrinaStyle: {
     width: 120,
     height: 120,
     margin: 30,
-    backgroundColor: Color.lightpurple,
+    backgroundColor: Color.purple,
     borderRadius: 20,
   },
   ConfiaStyle: {
@@ -101,10 +92,10 @@ const styles = StyleSheet.create({
   PageTitle: {
     fontFamily: '',
     fontSize: 18,
-    color: Color.purple
+    color: Color.purple,
   },
   ElevatePic: {
-    elevation: 2
+    elevation: 2,
   }
 })
 
