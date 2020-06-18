@@ -33,7 +33,7 @@ const Transferencia = ({ navigation }) => {
               <View style={styles.InputInfo}>
                 <Text style={styles.YellowFont}>Monto a invertir</Text>
                 <TextInput
-                placeholder='  $'
+                placeholder='$'
                 placeholderTextColor='#472387'
                 style={styles.inputText}
                 value = {monto}

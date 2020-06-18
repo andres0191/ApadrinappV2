@@ -16,8 +16,8 @@ const YellowButton = (props) => {
 const styles = StyleSheet.create({
     button: {
         display: 'flex',
-        minWidth: 70,
-        maxWidth: 135,
+        minWidth: 135,
+        maxWidth: 136,
         height: 30,
         paddingVertical: 2,
         paddingHorizontal: 10,

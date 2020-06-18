@@ -97,14 +97,15 @@ const styles = StyleSheet.create({
   },
   inputText: {
     borderColor: Color.purple,
-    minWidth: 235,
+    minWidth: 258,
     minHeight: 70,
     borderRadius: 10,
     borderWidth: 2,
     marginVertical: 10,
     fontSize: 44,
     color: Color.purple,
-    fontWeight: "bold"
+    fontWeight: "bold",
+    paddingHorizontal: 20
   },
 })
 
