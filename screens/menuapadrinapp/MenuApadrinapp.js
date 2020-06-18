@@ -46,14 +46,14 @@ const MenuApadrinapp = ({ navigation }) => {
           </TouchableOpacity>
         </View>
         </View>
-        <View style={styles.footer}>
+        {/* <View style={styles.footer}>
           <View style={[styles.flex, styles.footerLeft]}>
-            {/* <WhiteButton title='Salir' onPress={() => navigation.navigate('Start')}></WhiteButton> */}
+            <WhiteButton title='Salir' onPress={() => navigation.navigate('Start')}></WhiteButton>
           </View>
           <View style={[styles.flex, styles.footerRight]}>
-            {/* <YellowButton title='Saldo' onPress={() => navigation.navigate('EstadoCuenta')}></YellowButton> */}
+            <YellowButton title='Saldo' onPress={() => navigation.navigate('EstadoCuenta')}></YellowButton>
           </View>
-      </View>
+      </View> */}
       </ScrollView>
     </View>
     )

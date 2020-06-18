@@ -65,7 +65,7 @@ return(
                     <Text style={styles.ItemMonto}>Cantidad solicitada: $ {item.monto}</Text>
                     <Text style={styles.ItemDescription}>{item.description}</Text>
                     <Text></Text>
-                    <YellowButton title='Apadrinar' onPress={() => {/* storeNameId(this.item.name, this.item.id); */ navigation.navigate('Transferencia');}}></YellowButton>
+                    <YellowButton title='Apadrinar' onPress={() => { navigation.navigate('Transferencia', {name: item.name})}}></YellowButton>
                     </View>
                 ))}
             </View>

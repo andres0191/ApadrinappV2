@@ -31,7 +31,7 @@ const EstadoCuenta = ({ navigation }) => {
           <View style={styles.InputInfo}>
             <Text style={styles.YellowFont}>Enviar a Rappipay</Text>
             <TextInput
-                placeholder='  $' 
+                placeholder='$'
                 placeholderTextColor='#472387'
                 style={styles.inputText}
                 value = {user}
