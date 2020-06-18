@@ -44,8 +44,7 @@ const Transferencia = ({ route, navigation }) => {
               </View>
               <View style={styles.InputInfo}>
                 <Text style={styles.YellowFont}>Apadrinarás a</Text>
-                <Text>{name}</Text>
-                <HollowInput>{name}</HollowInput>
+                <HollowInput title={name}></HollowInput>
               </View>
             </View>
         </View>
@@ -54,7 +53,7 @@ const Transferencia = ({ route, navigation }) => {
             <WhiteButton title='Atras' onPress={() => navigation.navigate('PublicacionesRappi')}></WhiteButton>
           </View>
           <View style={[styles.flex, styles.footerRight]}>
-            <YellowButton title='Apadrinar' onPress={() => navigation.navigate('EstadoCuenta')}></YellowButton>
+            <YellowButton title='Apadrinar' onPress={() => navigation.navigate('EstadoCuenta', {cantidad: monto})}></YellowButton>
           </View>
         </View>
         </ScrollView>

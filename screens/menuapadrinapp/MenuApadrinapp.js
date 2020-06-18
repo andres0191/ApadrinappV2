@@ -33,7 +33,7 @@ const MenuApadrinapp = ({ navigation }) => {
           <TouchableOpacity onPress={() => navigation.navigate('EstadoCuenta')} >
             <Image source={require('../../assets/estado_cuenta.png')} style={styles.estadoCuenta} />
           </TouchableOpacity>
-          <TouchableOpacity  onPress={() => navigation.navigate('PostRappi')}  >
+          <TouchableOpacity  /* onPress={() => navigation.navigate('PostRappi')} */  >
             <Image source={require('../../assets/microprestamos.png')} style={styles.MoneyStyle} />
           </TouchableOpacity> 
         </View>
@@ -41,7 +41,7 @@ const MenuApadrinapp = ({ navigation }) => {
           <TouchableOpacity onPress={() => navigation.navigate('PublicacionesRappi')}>
             <Image source={require('../../assets/apadrina_serv.png')} style={styles.ApadrinaStyle} />
           </TouchableOpacity>
-          <TouchableOpacity onPress={() => navigation.navigate('Transferencia')}>
+          <TouchableOpacity /* onPress={() => navigation.navigate('Transferencia')} */>
             <Image source={require('../../assets/confia_serv.png')} style={styles.ConfiaStyle} />
           </TouchableOpacity>
         </View>

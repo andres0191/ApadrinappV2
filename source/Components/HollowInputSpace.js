@@ -8,7 +8,6 @@ const HollowInput = (props) => {
     return (
         <TouchableOpacity onPress={onPress} style = {[styles.button, style]}>
             <Text style={[styles.textButton, textStyle]}> {title} </Text>
-
         </TouchableOpacity>
     )
 }
