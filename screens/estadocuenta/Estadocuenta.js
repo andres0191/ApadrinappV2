@@ -21,7 +21,7 @@ const EstadoCuenta = ({ navigation }) => {
           <NameLogin></NameLogin>
         </View>
         <View style={styles.ElevatePic}>
-          <Image source={require('../../assets/estado_C.png')} style={styles.logo}></Image>
+          <Image source={require('../../assets/Cabeceras/estadoDeCuentaHeader.png')} style={styles.logo}></Image>
         </View>
         <View style={styles.info}>
           <View style={styles.InputInfo}>

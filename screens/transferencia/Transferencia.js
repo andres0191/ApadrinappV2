@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Text, View, Image, ScrollView, TextInput, AsyncStorage } from 'react-native';
+import { Text, View, Image, ScrollView, TextInput, AsyncStorage, ImageBackground } from 'react-native';
 import styles from './styles';
 import WhiteButton from '../../source/Components/WhiteButton';
 import YellowButton from '../../source/Components/YellowButton';
@@ -20,8 +20,13 @@ const Transferencia = ({ navigation }) => {
             <NameLogin></NameLogin>
           </View>
           <View style={styles.ElevatePic}>
-          <Image source={require('../../assets/Cabeceras/apadrinar.png')} style={styles.logo}></Image>
-        </View>
+            <ImageBackground source={require('../../assets/Cabeceras/apadrinar.png')} style={styles.logo}>
+            <View style={styles.IntrestBox}>
+              <Text style={styles.YellowFont}>Interés</Text>
+              <Text style={styles.BigText}>12%*</Text>
+            </View>
+            </ImageBackground>
+          </View>
         </View>
         <View style={styles.body}>
             <View style={styles.info}>

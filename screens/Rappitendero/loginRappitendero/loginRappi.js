@@ -61,7 +61,7 @@ const login = ({navigation}) => {
   return (
     <View style={styles.container}>
         <View>
-            <PrevScreenButton onPress={() => navigation.navigate('login')}></PrevScreenButton>
+            <PrevScreenButton onPress={() => navigation.navigate('Inicio')}></PrevScreenButton>
         </View>
         <View>
             <Image source={require('../../../assets/apadrinapp_logo.png')} style={styles.logo}></Image>
