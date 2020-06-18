@@ -15,11 +15,11 @@ const styles = StyleSheet.create({
 
   },
   header : {
-    flex : 1,
+    flex : .1,
     paddingTop: 22,
+    marginBottom: -90
   },
   headerLeft : {
-    flex : 1,
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'baseline',
@@ -28,10 +28,8 @@ const styles = StyleSheet.create({
     backgroundColor: Color.lightpurple
   },
   headerMiddle : {
-    flex: 1,
   },
   headerRight : {
-    flex: 1,
   },
   body : {
     flex : 1,
@@ -56,7 +54,6 @@ const styles = StyleSheet.create({
     color: Color.purple,
     flexDirection: 'row',
     paddingLeft: 10,
-    marginTop: 12
   },
   estadoCuenta: {
     width: 120,
@@ -69,14 +66,14 @@ const styles = StyleSheet.create({
     width: 120,
     height: 120,
     margin: 30,
-    backgroundColor: Color.yellow,
+    backgroundColor: Color.purple,
     borderRadius: 20,
   },
   ApadrinaStyle: {
     width: 120,
     height: 120,
     margin: 30,
-    backgroundColor: Color.lightpurple,
+    backgroundColor: Color.purple,
     borderRadius: 20,
   },
   ConfiaStyle: {
@@ -95,10 +92,10 @@ const styles = StyleSheet.create({
   PageTitle: {
     fontFamily: '',
     fontSize: 18,
-    color: Color.purple
+    color: Color.purple,
   },
   ElevatePic: {
-    elevation: 2
+    elevation: 2,
   }
 })
 
