@@ -14,8 +14,12 @@ import Padrino from './screens/slides/Padrino';
 import List from './screens/publicacionesrappi/List';
 import NameLogin from './screens/NameLogin/NameLogin';
 import SaveFunction from './screens/PruebasAndres/SaveFunction';
-import PostRappi from './screens/Rappitenderos/PostRappi';
-import {decode, encode} from 'base-64'
+import PostRappi from './screens/Rappitendero/PostRappitendero/PostRappi';
+import {decode, encode} from 'base-64';
+import Inicio from './screens/Inicio/Inicio';
+import login from './screens/Rappitendero/loginRappitendero/loginRappi';
+import PublicacionesR from './screens/Rappitendero/PublicacionesR/PublicacionesR';
+import SignUpRappi from './screens/Rappitendero/SignUpRappi/SingUpRappi';
 
 if (!global.btoa) {  global.btoa = encode }
 if (!global.atob) { global.atob = decode }
@@ -25,6 +29,7 @@ export default function App(){
   return (
     <NavigationContainer>
       <Stack.Navigator>
+      <Stack.Screen options={{ headerShown : false }} name='Inicio' component={Inicio}/>
         <Stack.Screen options={{ headerShown : false }} name='Start' component={Start} />
         <Stack.Screen options={{ headerShown : false }} name='SignUp' component={SignUp} />
         <Stack.Screen options={{ headerShown : false }} name='Login' component={Login} />
@@ -39,6 +44,11 @@ export default function App(){
         <Stack.Screen options={{ headerShown : false }} name='NameLogin' component={NameLogin}/>
         <Stack.Screen options={{ headerShown : false }} name='SaveFunction' component={SaveFunction}/>
         <Stack.Screen options={{ headerShown : false }} name='PostRappi' component={PostRappi}/>
+        
+        <Stack.Screen options={{ headerShown : false }} name='login' component={login}/>
+        <Stack.Screen options={{ headerShown : false }} name='PublicacionesR' component={PublicacionesR}/>
+        <Stack.Screen options={{ headerShown : false }} name='SignUpRappi' component={SignUpRappi}/>
+
       </Stack.Navigator>
     </NavigationContainer>
   );

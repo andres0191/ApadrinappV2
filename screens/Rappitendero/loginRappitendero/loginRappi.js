@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import {  View, TextInput, Image, AsyncStorage } from 'react-native';
+import { Text, View, TouchableHighlight, TextInput, Image, AsyncStorage } from 'react-native';
 import styles from './styles';
-import firebaseService from '../../services/firebase';
-import YellowBigButton from '../../source/Components/YellowBigButton';
-import WhiteBigButton from '../../source/Components/WhiteBigButton';
+import firebaseService from '../../../services/firebase';
+import YellowBigButton from '../../../source/Components/YellowBigButton';
+import WhiteBigButton from '../../../source/Components/WhiteBigButton';
+import PrevScreenButton from '../../../source/Components/PrevScreenButton';
 
 let USEREMAIL = 'sinUser'
 let PASSW = "NoPass"
@@ -16,7 +17,7 @@ const login = ({navigation}) => {
             await firebaseService.login(user, pass)
             await AsyncStorage.setItem(USEREMAIL, user);
             await AsyncStorage.setItem(PASSW, pass);
-            navigation.navigate('MenuApadrinapp')
+            navigation.navigate('PostRappi')
         } catch (e) {
             alert('Por favor ingresa los datos correctos')
         }
@@ -60,7 +61,10 @@ const login = ({navigation}) => {
   return (
     <View style={styles.container}>
         <View>
-            <Image source={require('../../assets/apadrinapp_logo.png')} style={styles.logo}></Image>
+            <PrevScreenButton onPress={() => navigation.navigate('login')}></PrevScreenButton>
+        </View>
+        <View>
+            <Image source={require('../../../assets/apadrinapp_logo.png')} style={styles.logo}></Image>
         </View>
         <View>
             <TextInput
@@ -79,8 +83,8 @@ const login = ({navigation}) => {
                 onChangeText={(text) => setPass(text)}/>
         </View>
         <View style={styles.MenuOptions}>
-            <WhiteBigButton title='Ingresa' onPress={onPressLogin}></WhiteBigButton>
-            <YellowBigButton title='Registrate' onPress={() => navigation.navigate('SignUp')}></YellowBigButton>
+            <WhiteBigButton title='IngresaRappi' onPress={onPressLogin}></WhiteBigButton>
+            <YellowBigButton title='RegistrateRappi' onPress={() => navigation.navigate('SignUpRappi')}></YellowBigButton>
         </View>
     </View>
   );
