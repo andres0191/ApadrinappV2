@@ -54,7 +54,7 @@ const styles = StyleSheet.create({
     alignItems : 'center',
     justifyContent : 'center',
     backgroundColor: Color.lightpurple,
-    marginTop: -40
+    marginTop: -55
   },
   logo : {
     width: win.width,
