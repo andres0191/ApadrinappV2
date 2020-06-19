@@ -11,6 +11,7 @@ container: {
   },
   inputText: {
     height: 50,
+    minWidth: 312,
     borderWidth: 1,
     borderColor: '#ccc',
     paddingHorizontal: 15,
@@ -34,7 +35,9 @@ container: {
     padding: 10,
     marginLeft: 10,
   },
-  
+  options: {
+    flexDirection: 'row',
+  },
 })
 
 export default styles

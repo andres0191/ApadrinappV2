@@ -56,14 +56,6 @@ useEffect(() => {
     listar();
 },[])
 
-/* var NAMENAME = ''
-var IDID = ''
-
-function storeNameId(name, id){
-    NAMENAME = name;
-    IDID = id;
-} */
-
 return(
     <View style={styles.container}>
             <View style={styles.AllBoxes}>
