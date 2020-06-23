@@ -7,8 +7,11 @@ import HollowInput from '../../source/Components/HollowInputSpace';
 import PrevScreenButton from '../../source/Components/PrevScreenButton';
 import NameLogin from '../NameLogin/NameLogin';
 import BackButton from '../../source/Components/BackButton'
+import { useLinkProps } from '@react-navigation/native';
 
-const Transferencia = ({ navigation }) => {
+const Transferencia = ({ route, navigation }) => {
+  const { name } = route.params;
+  /* console.log(navigation.navigate) */
   const [monto, setMonto] = useState('')
   return (
     <View style={styles.container}>
@@ -33,7 +36,7 @@ const Transferencia = ({ navigation }) => {
               <View style={styles.InputInfo}>
                 <Text style={styles.YellowFont}>Monto a invertir</Text>
                 <TextInput
-                placeholder='  $'
+                placeholder='$'
                 placeholderTextColor='#472387'
                 style={styles.inputText}
                 value = {monto}
@@ -41,7 +44,7 @@ const Transferencia = ({ navigation }) => {
               </View>
               <View style={styles.InputInfo}>
                 <Text style={styles.YellowFont}>Apadrinarás a</Text>
-                <HollowInput></HollowInput>
+                <HollowInput title={name}></HollowInput>
               </View>
             </View>
         </View>
@@ -50,7 +53,7 @@ const Transferencia = ({ navigation }) => {
             <WhiteButton title='Atras' onPress={() => navigation.navigate('PublicacionesRappi')}></WhiteButton>
           </View>
           <View style={[styles.flex, styles.footerRight]}>
-            <YellowButton title='Apadrinar' onPress={() => navigation.navigate('EstadoCuenta')}></YellowButton>
+            <YellowButton title='Apadrinar' onPress={() => navigation.navigate('EstadoCuenta', {cantidad: monto})}></YellowButton>
           </View>
         </View>
         </ScrollView>

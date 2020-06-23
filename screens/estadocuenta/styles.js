@@ -99,6 +99,8 @@ const styles = StyleSheet.create({
     marginVertical: 10,
     fontSize: 44,
     color: Color.purple,
+    paddingHorizontal: 20,
+    fontWeight: "bold"
   },
 })
 
