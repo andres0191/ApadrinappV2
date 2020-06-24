@@ -3,12 +3,13 @@ import { Text, View, Image, ScrollView, TextInput } from 'react-native';
 import styles from './styles';
 import WhiteButton from '../../source/Components/WhiteButton';
 import YellowButton from '../../source/Components/YellowButton';
-/* import firebaseService from '../../services/firebase'; */
+import firebaseService from '../../services/firebase';
 import HollowInput from '../../source/Components/HollowInputSpace';
 import PrevScreenButton from '../../source/Components/PrevScreenButton';
 import NameLogin from '../NameLogin/NameLogin';
 
 const EstadoCuenta = ({ route, navigation }) => {
+
   const [cantidad, setCantidad] = useState('')
 
   const lookForAmount = (route) => {
@@ -21,6 +22,7 @@ const EstadoCuenta = ({ route, navigation }) => {
   useEffect(() => {
     lookForAmount()
 }, []);
+
 
   const [user, setMonto] = useState('')
   return (
@@ -38,7 +40,7 @@ const EstadoCuenta = ({ route, navigation }) => {
         <View style={styles.info}>
           <View style={styles.InputInfo}>
             <Text style={styles.YellowFont}>Inversion actual </Text>
-            <HollowInput title={cantidad} ></HollowInput>
+            <HollowInput title="100000"></HollowInput>
           </View>
           <View style={styles.InputInfo}>
             <Text style={styles.YellowFont}>Enviar a Rappipay</Text>

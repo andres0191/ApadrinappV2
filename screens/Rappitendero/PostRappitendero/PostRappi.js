@@ -49,6 +49,7 @@ export default function PostPublication(){
 
 return(
     <View style={styles.container}>
+
         <ScrollView stickyHeaderIndices={[0]} showsVerticalScrollIndicator={false}>
         <View style={styles.header}>
             <View style={styles.headerLeft}>
@@ -93,5 +94,6 @@ return(
         </View>
     </ScrollView>
   </View>
+
 )
 }

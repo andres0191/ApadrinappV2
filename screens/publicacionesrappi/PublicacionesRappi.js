@@ -2,8 +2,9 @@ import React from 'react';
 import { Text, View, Image, ScrollView } from 'react-native';
 import styles from './styles';
 import PrevScreenButton from '../../source/Components/PrevScreenButton';
-import List from './List.js'
-import NameLogin from '../NameLogin/NameLogin'
+import List from './List.js';
+import NameLogin from '../NameLogin/NameLogin';
+
 
 const PublicacionesRappi = ({ navigation }) => {
   return (
