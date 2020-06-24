@@ -49,8 +49,8 @@ const save = async () => {
 }
 return(
     <View style={styles.container}>
-        <PrevScreenButton onPress={() => navigation.navigate('login')}></PrevScreenButton>
-        <Text style={styles.textheader}>Es el momento de que nos cuentes hacerca de ti y lo que deseas, te aseguramos que encontraras el GoodFather ideal para ti</Text>
+        <PrevScreenButton stye={styles.prevButton} onPress={() => navigation.navigate('login')}></PrevScreenButton>
+        <Text style={styles.textheader}>Es el momento de que nos cuentes acerca de ti y lo que deseas, te aseguramos que encontraras el GoodFather ideal para ti</Text>
         <TextInput
             placeholder='Ingresa tu Nombre'
             placeholderTextColor="white"
@@ -69,15 +69,16 @@ return(
             style={styles.inputText}
             onChangeText={description => setDescription(description)}
             value={description} />
-
-            <YellowBigButton
-                activeOpacity={0.6}
-                underlayColor="red"
-                onPress={() => save()}>
-            </YellowBigButton>
-            <YellowBigButton title='Ver Publicaciones' onPress={() => { navigation.navigate('PublicacionesR'); }}></YellowBigButton>
-            
-    </View> 
+            <View style={styles.options}>
+                <YellowBigButton
+                title='Publicar'
+                    activeOpacity={0.6}
+                    underlayColor="red"
+                    onPress={() => save()}>
+                </YellowBigButton>
+                <YellowBigButton title='Ver' onPress={() => { navigation.navigate('PublicacionesR'); }}></YellowBigButton>
+            </View>      
+ </View> 
 )
 }
  
