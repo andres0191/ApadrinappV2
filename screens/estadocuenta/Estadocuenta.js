@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Text, View, Image, ScrollView, TextInput } from 'react-native';
 import styles from './styles';
 import WhiteButton from '../../source/Components/WhiteButton';
@@ -9,7 +9,19 @@ import PrevScreenButton from '../../source/Components/PrevScreenButton';
 import NameLogin from '../NameLogin/NameLogin';
 
 const EstadoCuenta = ({ route, navigation }) => {
-  let { cantidad } = route.params;
+  const [cantidad, setCantidad] = useState('')
+
+  const lookForAmount = (route) => {
+    if (route === undefined) {
+      return;
+    }
+    setCantidad(route.params);
+  }
+
+  useEffect(() => {
+    lookForAmount()
+}, []);
+
   const [user, setMonto] = useState('')
   return (
     <View style={styles.container}>
