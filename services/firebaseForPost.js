@@ -1,5 +1,6 @@
 import * as firebase from 'firebase'
 import 'firebase/firebase-firestore'
+import { Alert } from 'react-native'
 
 const firebaseConfig = {
         apiKey: "AIzaSyAh8XV0mSjGA27eZUNcJgHNrWFFsUg2qG8",
@@ -29,6 +30,20 @@ class FirebasePost{
             });
         } catch (error) {
             Alert('La publicación no se pudo realizar correctamente')
+        }
+    }
+
+    saveTransaction = async (monto, userId, publicationId) => {
+        try {
+            const fire = firebase.firestore()
+            await fire.collection('transacciones').add({
+                monto,
+                userId,
+                publicationId,
+                createdAt: firebase.firestore.FieldValue.serverTimestamp(),
+            })
+        } catch (error) {
+            Alert('La transacción no se pudo realizar correctamente')
         }
     }
 }

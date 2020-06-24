@@ -11,14 +11,12 @@ const styles = StyleSheet.create({
     flexDirection : 'column',
     justifyContent: 'center',
     alignContent: 'center',
-    backgroundColor : Color.grey,
-
+    backgroundColor : Color.white,
   },
   header : {
     flex : 1,
     paddingTop: 22,
     backgroundColor: Color.lightpurple
-    /* marginBottom: -90 */
   },
   headerLeft : {
     flexDirection: 'row',
@@ -33,7 +31,7 @@ const styles = StyleSheet.create({
   headerRight : {
   },
   body : {
-    flex : 5,
+    flex : 10,
     alignItems : 'center',
     justifyContent : 'center',
     backgroundColor: Color.lightpurple
@@ -43,10 +41,8 @@ const styles = StyleSheet.create({
     padding: 30
   },
   inputText: {
-
     height: 40,
     minWidth : 180,
-
     borderWidth: 1,
     borderColor: '#ccc',
     paddingHorizontal: 15,
@@ -57,12 +53,11 @@ const styles = StyleSheet.create({
     fontSize: 20,
   },
   footer: {
-    flex: .5,
+    flex: 1,
     flexDirection : 'row',
     alignItems: 'center',
     justifyContent: 'center',
-
-    backgroundColor: Color.purple,
+    backgroundColor: Color.purple
   },
   PageTitle: {
     fontFamily: '',
@@ -72,19 +67,6 @@ const styles = StyleSheet.create({
   ElevatePic: {
     elevation: 2,
   }
-    margin: 15,
-    padding: 15,
-
-  },
-  prevButton: {
-    marginTop: 10,
-    padding: 10,
-    marginLeft: 10,
-  },
-  options: {
-    flexDirection: 'row',
-  },
-
 })
 
 export default styles
