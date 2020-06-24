@@ -64,11 +64,11 @@ const Transferencia = ({ route, navigation }) => {
             </View>
         </View>
         <View style={styles.footer}>
-          <View style={[styles.flex, styles.footerLeft]}>
+          {/* <View style={[styles.flex, styles.footerLeft]}>
             <WhiteButton title='Atras' onPress={() => navigation.navigate('PublicacionesRappi')}></WhiteButton>
-          </View>
-          <View style={[styles.flex, styles.footerRight]}>
-            <YellowButton title='Apadrinar' onPress={() => navigation.navigate('EstadoCuenta', {cantidad: monto})}></YellowButton>
+          </View> */}
+          <View style={[styles.flex, styles.footerRight]}>            
+            <YellowButton title='Apadrinar' onPress={() => { navigation.navigate('EstadoCuenta', /* {monto: item.monto} */)}}></YellowButton>
           </View>
         </View>
         </ScrollView>

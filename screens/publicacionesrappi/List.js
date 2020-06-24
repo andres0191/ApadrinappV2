@@ -1,10 +1,19 @@
 import React, { useState, useEffect } from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, YellowBox } from 'react-native';
 import * as firebase from 'firebase';
 import 'firebase/firebase-firestore';
 import styles from './styles';
 import YellowButton from '../../source/Components/YellowButton';
 import { useNavigation } from '@react-navigation/native';
+import _ from 'lodash';
+
+YellowBox.ignoreWarnings(['Setting a timer']);
+const _console = _.clone(console);
+console.warn = message => {
+  if (message.indexOf('Setting a timer') <= -1) {
+    _console.warn(message);
+  }
+};
 
 const firebaseConfig = {
         apiKey: "AIzaSyAh8XV0mSjGA27eZUNcJgHNrWFFsUg2qG8",
@@ -46,14 +55,6 @@ const listar = async () => {
 useEffect(() => {
     listar();
 },[])
-
-/* var NAMENAME = ''
-var IDID = ''
-
-function storeNameId(name, id){
-    NAMENAME = name;
-    IDID = id;
-} */
 
 return(
     <View style={styles.container}>

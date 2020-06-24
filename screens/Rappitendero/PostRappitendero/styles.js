@@ -43,8 +43,10 @@ const styles = StyleSheet.create({
     padding: 30
   },
   inputText: {
+
     height: 40,
     minWidth : 180,
+
     borderWidth: 1,
     borderColor: '#ccc',
     paddingHorizontal: 15,
@@ -59,6 +61,7 @@ const styles = StyleSheet.create({
     flexDirection : 'row',
     alignItems: 'center',
     justifyContent: 'center',
+
     backgroundColor: Color.purple,
   },
   PageTitle: {
@@ -69,6 +72,19 @@ const styles = StyleSheet.create({
   ElevatePic: {
     elevation: 2,
   }
+    margin: 15,
+    padding: 15,
+
+  },
+  prevButton: {
+    marginTop: 10,
+    padding: 10,
+    marginLeft: 10,
+  },
+  options: {
+    flexDirection: 'row',
+  },
+
 })
 
 export default styles

@@ -9,9 +9,9 @@ import PrevScreenButton from '../../source/Components/PrevScreenButton';
 const Start = ({navigation}) => {
     return (
       <View style={styles.container}>
-        <View>
-          <PrevScreenButton onPress={() => navigation.navigate('Inicio')}></PrevScreenButton>
-        </View>
+        {/* <View style={styles.headerLeft}>
+            <PrevScreenButton onPress={() => navigation.navigate('Inicio')}></PrevScreenButton>
+          </View> */}
         <Image source={require('../../assets/apadrinapp_logo.png')} style={styles.logo}/>
         <View style={styles.MenuOptions}>
           <WhiteBigButton title="Ingresar" onPress={() => navigation.navigate('Login')}></WhiteBigButton>
