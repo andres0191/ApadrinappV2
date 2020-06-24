@@ -49,8 +49,7 @@ export default function PostPublication(){
 
 return(
     <View style={styles.container}>
-
-        <ScrollView stickyHeaderIndices={[0]} showsVerticalScrollIndicator={false}>
+        {/* <ScrollView stickyHeaderIndices={[0]} showsVerticalScrollIndicator={false}> */}
         <View style={styles.header}>
             <View style={styles.headerLeft}>
                 <PrevScreenButton onPress={() => navigation.navigate('login')}></PrevScreenButton>
@@ -86,14 +85,18 @@ return(
                 underlayColor="red"
                 onPress={() => firebasePostService.savePublication(name, monto, description, rappiId)}>
             </YellowBigButton>
+            
             <YellowBigButton title='Ver Publicaciones'
                 onPress={() => { navigation.navigate('PublicacionesR'); }}>
             </YellowBigButton>
+            {/* <YellowBigButton title='Ver mi publicación'
+                onPress={() => return({yourCondition ? <yourComponent /> : null});}>
+            </YellowBigButton> */}
         </View>
         <View style={styles.footer}>
+            <Text>hola</Text>
         </View>
-    </ScrollView>
+    {/* </ScrollView> */}
   </View>
-
 )
 }

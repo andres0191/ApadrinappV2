@@ -9,23 +9,34 @@ import NameLogin from '../NameLogin/NameLogin';
 import BackButton from '../../source/Components/BackButton'
 import { useLinkProps } from '@react-navigation/native';
 import firebaseService from '../../services/firebase'
+import firebasePostService from '../../services/firebaseForPost'
 
 const Transferencia = ({ route, navigation }) => {
-  const { name } = route.params;
+  const { item } = route.params;
   /* console.log(navigation.navigate) */
   const [monto, setMonto] = useState('')
   const [userId, setUserId] = useState('')
+  const publicacionId = item.id
   const LoadUserId = async () => {
     try {
       const User = await firebaseService.getUserId()
       setUserId(User)
     } catch (error) {
-      alert('No user')
+      Alert('No user')
     }
   }
   useEffect(() => {
     LoadUserId()
 }, []);
+
+const onPressTransaction = async (monto, userId, publicacionId) => {
+  try {
+     await firebasePostService.saveTransaction(monto, userId, publicacionId);
+     await navigation.navigate('EstadoCuenta')
+  } catch (error){
+    Alert('No se pudo realizar la transacción')
+  }
+}
 
   return (
     <View style={styles.container}>
@@ -59,7 +70,7 @@ const Transferencia = ({ route, navigation }) => {
               </View>
               <View style={styles.InputInfo}>
                 <Text style={styles.YellowFont}>Apadrinarás a</Text>
-                <HollowInput title={name}></HollowInput>
+                <HollowInput title={item.name}></HollowInput>
               </View>
             </View>
         </View>
@@ -67,8 +78,8 @@ const Transferencia = ({ route, navigation }) => {
           {/* <View style={[styles.flex, styles.footerLeft]}>
             <WhiteButton title='Atras' onPress={() => navigation.navigate('PublicacionesRappi')}></WhiteButton>
           </View> */}
-          <View style={[styles.flex, styles.footerRight]}>            
-            <YellowButton title='Apadrinar' onPress={() => { navigation.navigate('EstadoCuenta', /* {monto: item.monto} */)}}></YellowButton>
+          <View style={[styles.flex, styles.footerRight]}>
+            <YellowButton title='Apadrinar' onPress={() => onPressTransaction(monto, userId, publicacionId)}></YellowButton>
           </View>
         </View>
         </ScrollView>
