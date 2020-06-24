@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Text, View, Image, ScrollView, TextInput, AsyncStorage, ImageBackground } from 'react-native';
+import React, { useState, useEffect } from 'react';
+import { Text, View, Image, ScrollView, TextInput, AsyncStorage, ImageBackground, Alert } from 'react-native';
 import styles from './styles';
 import WhiteButton from '../../source/Components/WhiteButton';
 import YellowButton from '../../source/Components/YellowButton';
@@ -8,11 +8,25 @@ import PrevScreenButton from '../../source/Components/PrevScreenButton';
 import NameLogin from '../NameLogin/NameLogin';
 import BackButton from '../../source/Components/BackButton'
 import { useLinkProps } from '@react-navigation/native';
+import firebaseService from '../../services/firebase'
 
 const Transferencia = ({ route, navigation }) => {
   const { name } = route.params;
   /* console.log(navigation.navigate) */
   const [monto, setMonto] = useState('')
+  const [userId, setUserId] = useState('')
+  const LoadUserId = async () => {
+    try {
+      const User = await firebaseService.getUserId()
+      setUserId(User)
+    } catch (error) {
+      alert('No user')
+    }
+  }
+  useEffect(() => {
+    LoadUserId()
+}, []);
+
   return (
     <View style={styles.container}>
       <ScrollView stickyHeaderIndices={[0]} showsVerticalScrollIndicator={false}>
@@ -21,6 +35,7 @@ const Transferencia = ({ route, navigation }) => {
             <PrevScreenButton onPress={() => navigation.navigate('MenuApadrinapp')}></PrevScreenButton>
             <Text style={styles.PageTitle}>Apadrinar</Text>
             <NameLogin></NameLogin>
+            <Text>{userId}</Text>
           </View>
           <View style={styles.ElevatePic}>
             <ImageBackground source={require('../../assets/Cabeceras/apadrinar.png')} style={styles.logo}>

@@ -34,11 +34,11 @@ const login = ({navigation}) => {
                 setPass(pass);
             }
         } catch (e) {
-            alert(err);
+            alert('Error al cargar los datos');
         }
     };
 
-    const remove = async () => {
+    /* const remove = async () => {
         try {
             await AsyncStorage.removeItem(USEREMAIL);
             await AsyncStorage.removeItem(PASSW);
@@ -50,7 +50,7 @@ const login = ({navigation}) => {
             setUser("");
             setPass("");
         }
-    };
+    }; */
 
     useEffect(() => {
         load()
