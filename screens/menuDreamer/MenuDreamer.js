@@ -9,7 +9,7 @@ import NameLogin from '../NameLogin/NameLogin';
 import firebaseService from '../../services/firebase'
 
 
-const MenuApadrinapp = ({ navigation }) => {
+const MenuDreamer = ({ navigation }) => {
   const [userId, setUserId] = useState('')
 
   const LoadUserId = async () => {
@@ -44,32 +44,16 @@ const MenuApadrinapp = ({ navigation }) => {
       <View style={styles.body}>
         <View style={styles.flexstyle}>
           <TouchableOpacity onPress={() => navigation.navigate('EstadoCuenta', {userId: userId})} >
-            <Image source={require('../../assets/Menu/estadoDeCuenta.png')} style={styles.estadoCuenta} />
+            <Image source={require('../../assets/Menu/estadoDelDream.png')} style={styles.estadoCuenta} />
           </TouchableOpacity>
-          <TouchableOpacity  /* onPress={() => navigation.navigate('PostRappi')} */  >
-            <Image source={require('../../assets/Menu/menuestado.png')} style={styles.MoneyStyle} />
+          <TouchableOpacity  onPress={() => navigation.navigate('PostRappi')}>
+            <Image source={require('../../assets/Menu/publicarDream.png')} style={styles.MoneyStyle} />
           </TouchableOpacity> 
         </View>
-        <View style={styles.flexstyle}>
-          <TouchableOpacity onPress={() => navigation.navigate('PublicacionesRappi')}>
-            <Image source={require('../../assets/Menu/menuapadrina.png')} style={styles.ApadrinaStyle} />
-          </TouchableOpacity>
-          <TouchableOpacity /* onPress={() => navigation.navigate('Transferencia')} */>
-            <Image source={require('../../assets/Menu/confiar.png')} style={styles.ConfiaStyle} />
-          </TouchableOpacity>
         </View>
-        </View>
-        {/* <View style={styles.footer}>
-          <View style={[styles.flex, styles.footerLeft]}>
-            <WhiteButton title='Salir' onPress={() => navigation.navigate('Start')}></WhiteButton>
-          </View>
-          <View style={[styles.flex, styles.footerRight]}>
-            <YellowButton title='Saldo' onPress={() => navigation.navigate('EstadoCuenta')}></YellowButton>
-          </View>
-      </View> */}
       </ScrollView>
     </View>
     )
   }
 
-export default MenuApadrinapp
+export default MenuDreamer

@@ -34,7 +34,7 @@ const styles = StyleSheet.create({
   body : {
     flex : 1,
     alignItems : 'center',
-    justifyContent : 'center',
+    justifyContent : 'flex-end',
     backgroundColor: Color.grey,
   },
   logo : {
@@ -56,8 +56,8 @@ const styles = StyleSheet.create({
     paddingLeft: 10,
   },
   estadoCuenta: {
-    width: 118,
-    height: 118,
+    width: 120,
+    height: 120,
     margin: 30,
     backgroundColor: Color.yellow,
     borderRadius: 20,
