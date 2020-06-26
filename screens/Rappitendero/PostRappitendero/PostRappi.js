@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import {TextInput, Stylesheet, View, Text, TouchableHighlight, Alert, ScrollView } from 'react-native';
-import * as firebase from 'firebase';
-import 'firebase/firebase-firestore';
 import styles from './styles';
 import YellowBigButton from '../../../source/Components/YellowBigButton';
 import { useNavigation } from '@react-navigation/native';
 import PrevScreenButton from '../../../source/Components/PrevScreenButton';
 import NameLogin from '../../NameLogin/NameLogin';
-import firebaseService from '../../../services/firebase'
-import firebasePostService from '../../../services/firebaseForPost'
+import * as firebase from 'firebase';
+import 'firebase/firebase-firestore';
+import firebaseService from '../../../services/firebase';
+import firebasePostService from '../../../services/firebaseForPost';
 
 
 const firebaseConfig = {
@@ -78,6 +78,7 @@ return(
             placeholder='Cuentanos para que deseas el $'
             placeholderTextColor="white"
             style={styles.inputText}
+            keyboardType = 'numeric'
             onChangeText={description => setDescription(description)}
             value={description} />
             <YellowBigButton
