@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { View, Text, YellowBox } from 'react-native';
+import { View, Text, YellowBox, ActivityIndicator } from 'react-native';
 import * as firebase from 'firebase';
 import 'firebase/firebase-firestore';
 import styles from './styles';
@@ -16,7 +16,8 @@ console.warn = message => {
 };
 
 
-const firebaseConfig = {
+/*
+/const firebaseConfig = {
         apiKey: "AIzaSyAh8XV0mSjGA27eZUNcJgHNrWFFsUg2qG8",
         authDomain: "apadrinapp-450d3.firebaseapp.com",
         databaseURL: "https://apadrinapp-450d3.firebaseio.com",
@@ -25,17 +26,20 @@ const firebaseConfig = {
         messagingSenderId: "529527861357",
         appId: "1:529527861357:web:6e3b80b1790c6e384acf64",
         measurementId: "G-HD1SSPMEXJ"
-}
-class Firebase{
+} */
+/* class Firebase{
     constructor(){
         firebase.initializeApp(firebaseConfig)
         this.auth = firebase.auth()
         console.disableYellowBox = true;
     }
-}
+} */
+
+
 
 const List = () => {
 const [lista, setLista] = useState([]);
+const [isLoading, setLoading] = useState(true);
 const navigation = useNavigation();
 
 const listar = async () => {
@@ -47,7 +51,8 @@ const listar = async () => {
             let obj = {id:doc.id, name:doc.data().name, monto:doc.data().monto, description:doc.data().description};
             vector.push(obj)
         });
-        setLista(vector);
+        await setLista(vector);
+        setLoading(false);
     } catch (error) {
         console.log('error')
     }
@@ -58,7 +63,8 @@ useEffect(() => {
 },[])
 
 return(
-    <View style={styles.container}>
+        <View style={styles.container}>
+            {isLoading ? <ActivityIndicator/> : (
             <View style={styles.AllBoxes}>
                 {lista.map(item => (
                      <View key={item.id} style={styles.Boxes}>
@@ -72,9 +78,9 @@ return(
                     </View>
                 ))}
             </View>
-    </View>
+            )}
+        </View>
 );
 }
 
 export default List
-

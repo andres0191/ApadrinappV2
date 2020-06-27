@@ -30,7 +30,7 @@ export default function App(){
   return (
     <NavigationContainer>
       <Stack.Navigator>
-      <Stack.Screen options={{ headerShown : false }} name='Inicio' component={MenuDreamer}/>
+      <Stack.Screen options={{ headerShown : false }} name='Inicio' component={Inicio}/>
         <Stack.Screen options={{ headerShown : false }} name='Start' component={Start} />
         <Stack.Screen options={{ headerShown : false }} name='SignUp' component={SignUp} />
         <Stack.Screen options={{ headerShown : false }} name='Login' component={Login} />

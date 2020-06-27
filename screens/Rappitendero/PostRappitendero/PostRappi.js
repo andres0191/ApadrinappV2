@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import {TextInput, Stylesheet, View, Text, TouchableHighlight, Alert, ScrollView } from 'react-native';
+import {TextInput, View, Text, YellowBox, Alert } from 'react-native';
 import styles from './styles';
 import YellowBigButton from '../../../source/Components/YellowBigButton';
 import { useNavigation } from '@react-navigation/native';
@@ -9,6 +9,13 @@ import firebaseService from '../../../services/firebase'
 import firebasePostService from '../../../services/firebaseForPost'
 import MenuDreamer from '../../menuDreamer/MenuDreamer'
 
+YellowBox.ignoreWarnings(['Setting a timer']);
+const _console = _.clone(console);
+console.warn = message => {
+  if (message.indexOf('Setting a timer') <= -1) {
+    _console.warn(message);
+  }
+};
 
 const firebaseConfig = {
         apiKey: "AIzaSyAh8XV0mSjGA27eZUNcJgHNrWFFsUg2qG8",
@@ -75,6 +82,7 @@ return(
             value={monto} />
             <TextInput
             placeholder='Cuentanos para que deseas el $'
+            keyboardType={String}
             placeholderTextColor="white"
             style={styles.inputText}
             keyboardType = 'numeric'
@@ -93,8 +101,8 @@ return(
                 onPress={() => return({yourCondition ? <yourComponent /> : null});}>
             </YellowBigButton> */}
         </View>
-        <View style={styles.footer}>
-            <Text>hola</Text>
+        <View style={styles.footer}>{/* 
+            <Text>hola</Text> */}
         </View>
     {/* </ScrollView> */}
   </View>
