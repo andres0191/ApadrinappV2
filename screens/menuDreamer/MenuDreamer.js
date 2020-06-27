@@ -29,7 +29,7 @@ const MenuDreamer = ({ navigation }) => {
       <ScrollView stickyHeaderIndices={[0]} showsVerticalScrollIndicator={false}>
         <View style={styles.header}>
           <View style={styles.headerLeft}>
-            <PrevScreenButton onPress={() => navigation.navigate('Login')}></PrevScreenButton>
+            <PrevScreenButton onPress={() => navigation.navigate('login')}></PrevScreenButton>
             <Text style={styles.PageTitle}>Menu</Text>
             <NameLogin></NameLogin>
             <Text>{userId}</Text>
