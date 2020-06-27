@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import {TextInput, View, Text, YellowBox, Alert } from 'react-native';
+import {TextInput, View, Text, Alert } from 'react-native';
 import styles from './styles';
 import YellowBigButton from '../../../source/Components/YellowBigButton';
 import { useNavigation } from '@react-navigation/native';
@@ -9,13 +9,6 @@ import firebaseService from '../../../services/firebase'
 import firebasePostService from '../../../services/firebaseForPost'
 import MenuDreamer from '../../menuDreamer/MenuDreamer'
 
-YellowBox.ignoreWarnings(['Setting a timer']);
-const _console = _.clone(console);
-console.warn = message => {
-  if (message.indexOf('Setting a timer') <= -1) {
-    _console.warn(message);
-  }
-};
 
 const firebaseConfig = {
         apiKey: "AIzaSyAh8XV0mSjGA27eZUNcJgHNrWFFsUg2qG8",
@@ -70,22 +63,23 @@ return(
             <Text style={styles.initialText}>Es el momento de que nos cuentes hacerca de ti y lo que deseas, te aseguramos que encontraras el GoodFather ideal para ti</Text>
             <TextInput
             placeholder='Ingresa tu Nombre'
+            keyboardType="String"
             placeholderTextColor="white"
             style={styles.inputText}
             onChangeText={name => setName(name)}
             value={name} />
             <TextInput
             placeholder='Cuanto necesitas?'
+            keyboardType="number"
             placeholderTextColor="white"
             style={styles.inputText}
             onChangeText={monto => setMonto(monto)}
             value={monto} />
             <TextInput
             placeholder='Cuentanos para que deseas el $'
-            keyboardType={String}
             placeholderTextColor="white"
             style={styles.inputText}
-            keyboardType = 'numeric'
+            keyboardType = "string"
             onChangeText={description => setDescription(description)}
             value={description} />
             <YellowBigButton
@@ -97,9 +91,6 @@ return(
             <YellowBigButton title='Ver Publicaciones'
                 onPress={() => { navigation.navigate('PublicacionesR'); }}>
             </YellowBigButton>
-            {/* <YellowBigButton title='Ver mi publicación'
-                onPress={() => return({yourCondition ? <yourComponent /> : null});}>
-            </YellowBigButton> */}
         </View>
         <View style={styles.footer}>{/* 
             <Text>hola</Text> */}
