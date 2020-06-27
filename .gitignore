@@ -1,4 +1,5 @@
 .expo
 .expo/packager-info.json
 Prueba.js
-ruebasAndres
+node_modules
+.expo-shared
