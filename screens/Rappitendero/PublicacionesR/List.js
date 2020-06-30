@@ -1,48 +1,35 @@
-import React, { useState, useEffect } from 'react';
+import React, { Component, useState, useEffect } from 'react';
 import { View, Text, YellowBox, ActivityIndicator } from 'react-native';
 import * as firebase from 'firebase';
 import 'firebase/firebase-firestore';
 import styles from './styles';
+import YellowButton from '../../../source/Components/YellowButton';
 import { useNavigation } from '@react-navigation/native';
 import _ from 'lodash';
+import {CARGAR_LISTA_RAPPI} from '../../../redux/const';
+import { connect } from "react-redux";
+import {ObtenerListaRappi} from './selectorrappi';
 
-/* YellowBox.ignoreWarnings(['Setting a timer']);
+YellowBox.ignoreWarnings(['Setting a timer']);
 const _console = _.clone(console);
 console.warn = message => {
   if (message.indexOf('Setting a timer') <= -1) {
     _console.warn(message);
   }
-}; */
-const List = () => {
-const [lista, setLista] = useState([]);
-const [isLoading, setLoading] = useState(true);
-const navigation = useNavigation();
+};
 
-const listar = async () => {
-    let vector =[];
-    try{
-        const fire = firebase.firestore();
-        const snapshot = await fire.collection('publications').get()
-        snapshot.forEach((doc) => {
-            let obj = {id:doc.id, name:doc.data().name, monto:doc.data().monto, description:doc.data().description};
-            vector.push(obj)
-        });
-        await setLista(vector);
-        setLoading(false);
-    } catch (error) {
-        console.log('error')
+
+class List extends Component{
+/* Llamar a las funciones una vez cargue la pantalla */
+    componentDidMount () {
+        const { obtenerListaDispatch }=this.props;
+        obtenerListaDispatch();
     }
-}
-
-useEffect(() => {
-    listar();
-},[])
-
-return(
-        <View style={styles.container}>
-            {isLoading ? <ActivityIndicator/> : (
+    render(){
+        const {listaState, navigation} = this.props
+        return( <View style={styles.container}>
             <View style={styles.AllBoxes}>
-                {lista.map(item => (
+                {listaState ? listaState.map(item => (
                      <View key={item.id} style={styles.Boxes}>
                     <Text style={styles.Dreamer}>Dreamer</Text>
                     <Text style={styles.ItemName}>{item.name}</Text>
@@ -50,12 +37,34 @@ return(
                     <Text style={styles.ItemDescription}>{item.description}</Text>
                     <Text style={styles.ItemDescription}>{item.id}</Text>
                     <Text></Text>
-                </View>
-                ))}
+                    <YellowButton title='Apadrinar' onPress={() => { navigation.navigate('Transferencia', {item: item})}}></YellowButton>
+                    </View>
+                )): <ActivityIndicator />}
             </View>
-            )}
-        </View>
-);
+           {/*  )} */}
+        </View>)     
+    }
+}
+/* Unir lo que viene de ObtenerLista con la propiedad List  de este componente*/
+const mapStateToProps=state => {
+    return{
+        /* esta es la funcion del selector */
+        listaState:ObtenerListaRappi(state )
+    }
 }
 
-export default List
+/* mapDispachToProps es para emparejar las accciones del archivo action a las propiedades de List */
+const mapDispachToProps=dispatch => {
+    return{
+        /* Es un llamado a un action */
+        obtenerListaDispatch:() => dispatch (
+            {
+                type:CARGAR_LISTA_RAPPI, value:1
+            }
+        )
+    }
+}
+export default connect(
+    mapStateToProps,
+    mapDispachToProps
+  )(List)

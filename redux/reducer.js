@@ -1,4 +1,4 @@
-import {CARGAR_LISTA, CARGAR_LISTA_OK, CARGAR_LISTA_ERROR, CARGAR_LISTA_INFORMACION} from './const';
+import {CARGAR_LISTA, CARGAR_LISTA_OK, CARGAR_LISTA_ERROR, CARGAR_LISTA_INFORMACION, CARGAR_LISTA_RAPPI, CARGAR_LISTA_OK_RAPPI, CARGAR_LISTA_ERROR_RAPPI, CARGAR_LISTA_INFORMACION_RAPPI } from './const';
 /* Crear objeto que cambia de estados y se actualiza cada que haga un cambio de servicio o accion. Este objeto lo voy a mostrar en pantalla */
 export const initialState={ lista:false , listaInformation:false}
 
@@ -9,6 +9,8 @@ const reducer=(state=initialState, action) => {
   const {payload}=action
   /* validar que este funcionando, existe un plugin que se llama reduxDevTools para navegador y hace el console.log */
   /* console.log('ListaReducer: ',JSON.stringify(payload)) */
+
+  //publicacionesrappi/Publicacionesrappi
   switch (action.type) {
     case CARGAR_LISTA:
       newState.lista=false
@@ -24,6 +26,23 @@ const reducer=(state=initialState, action) => {
         newState.lista=false
         newState.listaInformation=true
         return{...newState};
+    
+    //Rappitendero/PublicacionesR
+    case CARGAR_LISTA_RAPPI:
+      newState.lista=false
+      newState.listaInformation=false
+      return{...newState};
+
+    case CARGAR_LISTA_OK_RAPPI:
+      newState.lista=payload
+      newState.listaInformation=false
+      return{...newState};
+
+    case CARGAR_LISTA_INFORMACION_RAPPI:
+        newState.lista=false
+        newState.listaInformation=true
+        return{...newState};
+    
   
     default:
       return{...newState}
