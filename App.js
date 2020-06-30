@@ -20,6 +20,8 @@ import Inicio from './screens/Inicio/Inicio';
 import login from './screens/Rappitendero/loginRappitendero/loginRappi';
 import PublicacionesR from './screens/Rappitendero/PublicacionesR/PublicacionesR';
 import SignUpRappi from './screens/Rappitendero/SignUpRappi/SingUpRappi';
+import SinglePostRappi from './screens/Rappitendero/PostRappitendero/SingleRappiPost'
+import SinglePost from './screens/Rappitendero/PostRappitendero/SingleRappiPost';
 
 if (!global.btoa) {  global.btoa = encode }
 if (!global.atob) { global.atob = decode }
@@ -48,6 +50,8 @@ export default function App(){
         <Stack.Screen options={{ headerShown : false }} name='login' component={login}/>
         <Stack.Screen options={{ headerShown : false }} name='PublicacionesR' component={PublicacionesR}/>
         <Stack.Screen options={{ headerShown : false }} name='SignUpRappi' component={SignUpRappi}/>
+
+        <Stack.Screen options={{ headerShown : false }} name='SinglePostRappi' component={SinglePost}/>
 
       </Stack.Navigator>
     </NavigationContainer>
