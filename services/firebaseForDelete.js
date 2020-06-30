@@ -1,5 +1,6 @@
 import * as firebase from 'firebase'
 import 'firebase/firebase-firestore'
+import { Alert } from 'react-native';
 
 const firebaseConfig = {
         apiKey: "AIzaSyAh8XV0mSjGA27eZUNcJgHNrWFFsUg2qG8",
@@ -11,7 +12,7 @@ const firebaseConfig = {
         appId: "1:529527861357:web:6e3b80b1790c6e384acf64",
         measurementId: "G-HD1SSPMEXJ"
 }
-class FirebaseGet{
+class FirebaseDelete{
     /* constructor(){
         firebase.initializeApp(firebaseConfig)
         this.auth = firebase.auth()
@@ -27,26 +28,28 @@ class FirebaseGet{
                     onePost.push(obj)
             });
         } catch (error) {
-            Alert('No has realizado publicaciones todavia')
+            Alert('No haz realizado publicaciones todavia')
         }
         return onePost
     };
 
-    getTransactions = async (userId) => {
-        let showTransactions = [];
+    deleteUser() {
+        const dbRef = firebase.firestore().collection('users').doc(this.props.route.params.userkey)
+          dbRef.delete().then((res) => {
+              console.log('Item removed from database')
+              this.props.navigation.navigate('UserScreen');
+          })
+      }
+
+    deletePublication = async (rappiId) => {
         try {
-            const fire = firebase.firestore();
-            const snapshot = await fire.collection('transacciones').where('userId', "==", userId).get();
-                snapshot.forEach((doc) => {
-                    let obj = {id:doc.id, name:doc.data().name, monto:doc.data().monto, description:doc.data().description, createdAt:doc.data().createdAt, montoRecogido:doc.data().montoRecogido};
-                    showTransactions.push(obj)
-            });
+            const dbRef = firebase.firestore().collection('publications').where('rappiId', '==', rappiId).get();
+            dbRef.delete()
         } catch (error) {
-            Alert('No tienes transacciones para mostrar')
+            Alert('Item removed from database')
         }
-        return showTransactions;
     };
 }
 
-const firebaseGetService = new FirebaseGet()
-export default firebaseGetService
+const firebaseDeleteService = new FirebaseDelete()
+export default firebaseDeleteService

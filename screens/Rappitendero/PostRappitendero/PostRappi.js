@@ -7,8 +7,8 @@ import PrevScreenButton from '../../../source/Components/PrevScreenButton';
 import NameLogin from '../../NameLogin/NameLogin';
 import firebaseService from '../../../services/firebase'
 import firebasePostService from '../../../services/firebaseForPost'
+/* import SinglePost from './SingleRappiPost'; */
 import MenuDreamer from '../../menuDreamer/MenuDreamer'
-
 
 const firebaseConfig = {
         apiKey: "AIzaSyAh8XV0mSjGA27eZUNcJgHNrWFFsUg2qG8",
@@ -32,9 +32,11 @@ export default function PostPublication(){
     const [monto, setMonto]=useState('');
     const [description, setDescription]=useState(['']);
     const [rappiId, setRappiId] = useState('');
+    const [singlePost, setSinglePost] = useState([]);
+
     const navigation = useNavigation();
 
-  const LoadUserId = async () => {
+    const LoadUserId = async () => {
     try {
       const RappiId = await firebaseService.getUserId()
       setRappiId(RappiId)
@@ -87,7 +89,9 @@ return(
                 underlayColor="red"
                 onPress={() => firebasePostService.savePublication(name, monto, description, rappiId)}>
             </YellowBigButton>
-            
+            <YellowBigButton title='Ver mi publicacion'
+                onPress={() => { navigation.navigate('SinglePostRappi'); }}>
+            </YellowBigButton>
             <YellowBigButton title='Ver Publicaciones'
                 onPress={() => { navigation.navigate('PublicacionesR'); }}>
             </YellowBigButton>
