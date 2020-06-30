@@ -9,6 +9,7 @@ import PrevScreenButton from '../../../source/Components/PrevScreenButton';
 import NameLogin from '../../NameLogin/NameLogin';
 import firebaseService from '../../../services/firebase'
 import firebasePostService from '../../../services/firebaseForPost'
+/* import SinglePost from './SingleRappiPost'; */
 
 
 const firebaseConfig = {
@@ -33,9 +34,11 @@ export default function PostPublication(){
     const [monto, setMonto]=useState('');
     const [description, setDescription]=useState(['']);
     const [rappiId, setRappiId] = useState('');
+    const [singlePost, setSinglePost] = useState([]);
+
     const navigation = useNavigation();
 
-  const LoadUserId = async () => {
+    const LoadUserId = async () => {
     try {
       const RappiId = await firebaseService.getUserId()
       setRappiId(RappiId)
@@ -63,7 +66,7 @@ return(
         <View style={styles.body}>
             <Text style={styles.initialText}>Es el momento de que nos cuentes hacerca de ti y lo que deseas, te aseguramos que encontraras el GoodFather ideal para ti</Text>
             <TextInput
-            placeholder='Ingresa tu Nombre'
+            placeholder='Ingresa tu Nombreeee'
             placeholderTextColor="white"
             style={styles.inputText}
             onChangeText={name => setName(name)}
@@ -85,13 +88,12 @@ return(
                 underlayColor="red"
                 onPress={() => firebasePostService.savePublication(name, monto, description, rappiId)}>
             </YellowBigButton>
-            
+            <YellowBigButton title='Ver mi publicacion'
+                onPress={() => { navigation.navigate('SinglePostRappi'); }}>
+            </YellowBigButton>
             <YellowBigButton title='Ver Publicaciones'
                 onPress={() => { navigation.navigate('PublicacionesR'); }}>
             </YellowBigButton>
-            {/* <YellowBigButton title='Ver mi publicación'
-                onPress={() => return({yourCondition ? <yourComponent /> : null});}>
-            </YellowBigButton> */}
         </View>
         <View style={styles.footer}>
             <Text>hola</Text>
