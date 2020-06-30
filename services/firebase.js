@@ -23,12 +23,14 @@ class Firebase{
         await this.auth.createUserWithEmailAndPassword(user, pass)
         return this.auth.currentUser.updateProfile({
             displayName: name
-        })        
+        })
     }
-    getUser = () => {
+    getUserName = () => {
         return this.auth.currentUser.displayName
     }
-    
+    getUserId = () => {
+        return this.auth.currentUser.uid
+    }
 }
 
 const firebaseService = new Firebase()

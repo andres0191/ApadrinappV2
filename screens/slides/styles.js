@@ -18,7 +18,7 @@ const styles = StyleSheet.create({
       flex: .4,
     },
     body : {
-      flex : 4,
+      flex : 3,
     },
     IconImage: {
       width: win.width,
@@ -31,15 +31,15 @@ const styles = StyleSheet.create({
       resizeMode: 'contain',
     },
     footer : {
-      flex : 3,
+      flex : 2,
       justifyContent: "center",
       alignItems: 'flex-end'
     },
     parragraph : {
       flex : 0.8,
       justifyContent : 'center',
-      padding : 40,
-      paddingTop : 80,
+      paddingHorizontal : 40,
+      paddingTop : 40,
       fontSize : 20,
       color : Colors.white
     },

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Text, View, TouchableHighlight, TextInput, Image, AsyncStorage } from 'react-native';
+import {  View, TextInput, Image, AsyncStorage } from 'react-native';
 import styles from './styles';
 import firebaseService from '../../services/firebase';
 import YellowBigButton from '../../source/Components/YellowBigButton';
@@ -34,11 +34,11 @@ const login = ({navigation}) => {
                 setPass(pass);
             }
         } catch (e) {
-            alert(err);
+            alert('Error al cargar los datos');
         }
     };
 
-    const remove = async () => {
+    /* const remove = async () => {
         try {
             await AsyncStorage.removeItem(USEREMAIL);
             await AsyncStorage.removeItem(PASSW);
@@ -50,7 +50,7 @@ const login = ({navigation}) => {
             setUser("");
             setPass("");
         }
-    };
+    }; */
 
     useEffect(() => {
         load()
@@ -60,7 +60,7 @@ const login = ({navigation}) => {
   return (
     <View style={styles.container}>
         <View>
-            <Image source={require('../../assets/apadrinapp_logo.png')} style={styles.loginlogo}></Image>
+            <Image source={require('../../assets/apadrinapp_logo.png')} style={styles.logo}></Image>
         </View>
         <View>
             <TextInput

@@ -9,7 +9,7 @@ const NameLogin = () => {
         (
             async () => {
                 try {
-                    const userData = await firebaseService.getUser()
+                    const userData = await firebaseService.getUserName()
                     setUserName(userData)
                 } catch (e) {
                     alert(e)

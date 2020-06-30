@@ -17,6 +17,7 @@ const styles = StyleSheet.create({
   header : {
     flex : 1,
     paddingTop: 22,
+    /* marginBottom: -50 */
   },
   headerLeft : {
     flex : 1,
@@ -33,6 +34,15 @@ const styles = StyleSheet.create({
   headerRight : {
     flex: 1,
   },
+  IntrestBox: {
+    margin: 25,
+    marginTop: 100
+  },
+  BigText: {
+    color: Color.white,
+    fontWeight: "bold",
+    fontSize: 37,
+  },
   PageTitle: {
     fontFamily: '',
     fontSize: 18,
@@ -44,10 +54,11 @@ const styles = StyleSheet.create({
     alignItems : 'center',
     justifyContent : 'center',
     backgroundColor: Color.lightpurple,
+    marginTop: -55
   },
   logo : {
     width: win.width,
-    height: 450 * ratio,
+    height: 500 * ratio,
     justifyContent: 'center',
   },
   ElevatePic: {
@@ -63,6 +74,7 @@ const styles = StyleSheet.create({
     flexDirection : 'column',
     justifyContent: 'center',
     alignItems: 'center',
+    marginTop: 33,
   },
   footer: {
     flex: 1,
@@ -86,13 +98,15 @@ const styles = StyleSheet.create({
   },
   inputText: {
     borderColor: Color.purple,
-    minWidth: 235,
+    minWidth: 258,
     minHeight: 70,
     borderRadius: 10,
     borderWidth: 2,
     marginVertical: 10,
     fontSize: 44,
     color: Color.purple,
+    fontWeight: "bold",
+    paddingHorizontal: 20
   },
 })
 

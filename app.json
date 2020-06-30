@@ -1,15 +1,11 @@
 {
   "expo": {
-    "name": "apadrinappv2",
-    "slug": "apadrinappv2",
-    "platforms": [
-      "ios",
-      "android",
-      "web"
-    ],
+    "name": "Apadrinapp",
+    "slug": "Apadrinapp",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "sdkVersion": "37.0.0",
+    "icon": "./assets/icono-apadrinapp.png",
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
@@ -18,11 +14,27 @@
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
     "ios": {
-      "supportsTablet": true
+      "bundleIdentifier": "com.Apadrinapp.Apadrinapp"
+    },
+    "android": {
+      "package": "com.Apadrinapp.Apadrinapp"
     }
   }
 }
+
+/* {
+  "expo": {
+  "name": "apadrinappv2",
+  "icon": "./assets/icono-apadrinapp.png",
+  "version": "1.0.0",
+  "slug": "apadrinappv2",
+  "sdkVersion": "37.0.0",
+  "ios": {
+    "bundleIdentifier": "com.apadrinappv2.apadrinappv2"
+  },
+  "android": {
+    "package": "com.apadrinappv2.apadrinappv2"
+  }
+}
+}  */

@@ -1,54 +1,85 @@
-import React, { useState } from 'react';
-import { Text, View, Image, ScrollView, TextInput, AsyncStorage } from 'react-native';
+import React, { useState, useEffect } from 'react';
+import { Text, View, Image, ScrollView, TextInput, AsyncStorage, ImageBackground, Alert } from 'react-native';
 import styles from './styles';
 import WhiteButton from '../../source/Components/WhiteButton';
 import YellowButton from '../../source/Components/YellowButton';
 import HollowInput from '../../source/Components/HollowInputSpace';
 import PrevScreenButton from '../../source/Components/PrevScreenButton';
+import NameLogin from '../NameLogin/NameLogin';
+import BackButton from '../../source/Components/BackButton'
+import { useLinkProps } from '@react-navigation/native';
+import firebaseService from '../../services/firebase'
+import firebasePostService from '../../services/firebaseForPost'
 
-
-const Transferencia = ({ navigation }) => {
+const Transferencia = ({ route, navigation }) => {
+  const { item } = route.params;
+  /* console.log(navigation.navigate) */
   const [monto, setMonto] = useState('')
+  const [userId, setUserId] = useState('')
+  const publicacionId = item.id
+  const LoadUserId = async () => {
+    try {
+      const User = await firebaseService.getUserId()
+      setUserId(User)
+    } catch (error) {
+      Alert('No user')
+    }
+  }
+  useEffect(() => {
+    LoadUserId()
+}, []);
+
+const onPressTransaction = async (monto, userId, publicacionId) => {
+  try {
+     await firebasePostService.saveTransaction(monto, userId, publicacionId);
+     await navigation.navigate('EstadoCuenta')
+  } catch (error){
+    Alert('No se pudo realizar la transacción')
+  }
+}
+
   return (
     <View style={styles.container}>
       <ScrollView stickyHeaderIndices={[0]} showsVerticalScrollIndicator={false}>
         <View style={styles.header}>
           <View style={styles.headerLeft}>
-            <PrevScreenButton onPress={() => navigation.navigate('PublicacionesRappi')}></PrevScreenButton>
+            <PrevScreenButton onPress={() => navigation.navigate('MenuApadrinapp')}></PrevScreenButton>
             <Text style={styles.PageTitle}>Apadrinar</Text>
-            <Text>.</Text>
+            <NameLogin></NameLogin>
+            <Text>{userId}</Text>
           </View>
           <View style={styles.ElevatePic}>
-          <Image source={require('../../assets/Cabeceras/apadrinar.png')} style={styles.logo}></Image>
-        </View>
+            <ImageBackground source={require('../../assets/Cabeceras/apadrinar.png')} style={styles.logo}>
+            <View style={styles.IntrestBox}>
+              <Text style={styles.YellowFont}>Interés</Text>
+              <Text style={styles.BigText}>12%*</Text>
+            </View>
+            </ImageBackground>
+          </View>
         </View>
         <View style={styles.body}>
-         {/*  <View style={styles.ElevatePic}>
-            <Image source={require('../../assets/Cabeceras/queDeseas.png')} style={styles.logo}></Image>
-          </View> */}
             <View style={styles.info}>
               <View style={styles.InputInfo}>
                 <Text style={styles.YellowFont}>Monto a invertir</Text>
                 <TextInput
-                placeholder='  $'
+                placeholder='$'
                 placeholderTextColor='#472387'
                 style={styles.inputText}
                 value = {monto}
-                onChange = {(e) => setMonto(e.nativeEvent.text)}
-                /* onChangeText={(text) => setMonto(text)} *//>
+                onChange = {(e) => setMonto(e.nativeEvent.text)}/>
               </View>
               <View style={styles.InputInfo}>
                 <Text style={styles.YellowFont}>Apadrinarás a</Text>
-                <HollowInput title= "Nombre"></HollowInput>
+                <HollowInput title={item.name}></HollowInput>
               </View>
             </View>
         </View>
         <View style={styles.footer}>
-          <View style={[styles.flex, styles.footerLeft]}>
+          {/* <View style={[styles.flex, styles.footerLeft]}>
             <WhiteButton title='Atras' onPress={() => navigation.navigate('PublicacionesRappi')}></WhiteButton>
-          </View>
+          </View> */}
           <View style={[styles.flex, styles.footerRight]}>
-            <YellowButton title='Apadrinar' onPress={() => navigation.navigate('EstadoCuenta')}></YellowButton>
+            <YellowButton title='Apadrinar' onPress={() => onPressTransaction(monto, userId, publicacionId)}></YellowButton>
           </View>
         </View>
         </ScrollView>

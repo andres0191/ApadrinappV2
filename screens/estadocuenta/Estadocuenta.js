@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Text, View, Image, ScrollView, TextInput } from 'react-native';
 import styles from './styles';
 import WhiteButton from '../../source/Components/WhiteButton';
@@ -6,9 +6,24 @@ import YellowButton from '../../source/Components/YellowButton';
 import firebaseService from '../../services/firebase';
 import HollowInput from '../../source/Components/HollowInputSpace';
 import PrevScreenButton from '../../source/Components/PrevScreenButton';
-import Color from '../../source/utils/Colors';
+import NameLogin from '../NameLogin/NameLogin';
 
-const EstadoCuenta = ({ navigation }) => {
+const EstadoCuenta = ({ route, navigation }) => {
+
+  const [cantidad, setCantidad] = useState('')
+
+  const lookForAmount = (route) => {
+    if (route === undefined) {
+      return;
+    }
+    setCantidad(route.params);
+  }
+
+  useEffect(() => {
+    lookForAmount()
+}, []);
+
+
   const [user, setMonto] = useState('')
   return (
     <View style={styles.container}>
@@ -17,20 +32,20 @@ const EstadoCuenta = ({ navigation }) => {
         <View style={styles.headerLeft}>
           <PrevScreenButton onPress={() => navigation.navigate('MenuApadrinapp')}></PrevScreenButton>
           <Text style={styles.PageTitle}>Inversión actual</Text>
-          <Text>.</Text>
+          <NameLogin></NameLogin>
         </View>
         <View style={styles.ElevatePic}>
-          <Image source={require('../../assets/estado_C.png')} style={styles.logo}></Image>
+          <Image source={require('../../assets/Cabeceras/estadoDeCuentaHeader.png')} style={styles.logo}></Image>
         </View>
         <View style={styles.info}>
           <View style={styles.InputInfo}>
             <Text style={styles.YellowFont}>Inversion actual </Text>
-            <HollowInput title='$100,000' ></HollowInput>
+            <HollowInput title="100000"></HollowInput>
           </View>
           <View style={styles.InputInfo}>
             <Text style={styles.YellowFont}>Enviar a Rappipay</Text>
             <TextInput
-                placeholder='  $' 
+                placeholder='$'
                 placeholderTextColor='#472387'
                 style={styles.inputText}
                 value = {user}

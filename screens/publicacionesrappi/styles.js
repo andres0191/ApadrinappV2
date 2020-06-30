@@ -17,7 +17,7 @@ const styles = StyleSheet.create({
   header : {
     flex : 1,
     paddingTop: 22,
-    backgroundColor: Color.purple
+    backgroundColor: Color.lightpurple
   },
   headerLeft : {
     flex : 1,
@@ -53,6 +53,7 @@ const styles = StyleSheet.create({
   },
   ElevatePic: {
     elevation: 2,
+    marginBottom: -10
   },
   InfoCube: {
     flexDirection : 'row',
@@ -85,9 +86,40 @@ const styles = StyleSheet.create({
   YellowFont: {
     /*fontFamily: '',*/
     marginBottom: -8,
-    fontSize: 17,
+    fontSize: 30,
     fontWeight: "bold",
     color: Color.yellow,
+  },
+  AllBoxes: {
+    backgroundColor: Color.lightpurple
+  },
+  Boxes: {
+    padding: 30,
+    backgroundColor: Color.purple,
+    width: win.width/1.05,
+    margin: 5,
+    borderColor: Color.lightpurple,
+    borderRadius: 20
+  },
+  Dreamer: {
+    color: Color.yellow,
+    fontSize: 20,
+    fontWeight: "bold"
+  },
+  ItemName: {
+    fontSize: 30,
+    color: Color.white,
+    fontWeight: "bold"
+  },
+  ItemMonto: {
+    fontSize: 18,
+    color: Color.grey,
+    fontWeight: "bold"
+  },
+  ItemDescription: {
+    color: Color.grey,
+    fontSize: 24,
+    marginTop: 10
   }
 })
 

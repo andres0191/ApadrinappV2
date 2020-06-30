@@ -12,7 +12,7 @@ const styles = StyleSheet.create({
     flexDirection : 'column',
     justifyContent: 'center',
     alignContent: 'center',
-    backgroundColor : Color.lightpurple
+    backgroundColor : Color.lightpurple,
   },
   header : {
     flex : 1,
@@ -25,7 +25,8 @@ const styles = StyleSheet.create({
     alignItems: 'baseline',
     paddingHorizontal: 10,
     paddingBottom: 12,
-    backgroundColor: Color.lightpurple
+    backgroundColor: Color.lightpurple,
+    marginTop: -7,
   },
   headerMiddle : {
     flex: 1,
@@ -39,7 +40,7 @@ const styles = StyleSheet.create({
   PageTitle: {
     fontFamily: '',
     fontSize: 18,
-    color: Color.purple
+    color: Color.purple,
   },
   body : {
     flex : 10,
@@ -50,13 +51,13 @@ const styles = StyleSheet.create({
   },
   logo : {
     width: win.width,
-    height: 378* ratio,
+    height: 475* ratio,
     resizeMode: 'contain',
     justifyContent: 'center',
     marginTop: -7,
   },
   ElevatePic: {
-    elevation: 2
+    elevation: 2,
   },
   InfoCube: {
     flexDirection : 'row',
@@ -68,6 +69,7 @@ const styles = StyleSheet.create({
     flexDirection : 'column',
     justifyContent: 'center',
     alignItems: 'center',
+    marginTop: -31,
   },
   footer: {
     flex: 1,
@@ -99,6 +101,8 @@ const styles = StyleSheet.create({
     marginVertical: 10,
     fontSize: 44,
     color: Color.purple,
+    paddingHorizontal: 20,
+    fontWeight: "bold"
   },
 })
 
