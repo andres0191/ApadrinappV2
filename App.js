@@ -20,6 +20,8 @@ import Inicio from './screens/Inicio/Inicio';
 import login from './screens/Rappitendero/loginRappitendero/loginRappi';
 import PublicacionesR from './screens/Rappitendero/PublicacionesR/PublicacionesR';
 import SignUpRappi from './screens/Rappitendero/SignUpRappi/SingUpRappi';
+import SinglePostRappi from './screens/Rappitendero/PostRappitendero/SingleRappiPost'
+import SinglePost from './screens/Rappitendero/PostRappitendero/SingleRappiPost';
 import MenuDreamer from './screens/menuDreamer/MenuDreamer'
 
 if (!global.btoa) {  global.btoa = encode }
@@ -51,6 +53,8 @@ export default function App(){
         <Stack.Screen options={{ headerShown : false }} name='SignUpRappi' component={SignUpRappi}/>
         <Stack.Screen options={{ headerShown : false }} name='MenuDreamer' component={MenuDreamer}/>
 
+
+        <Stack.Screen options={{ headerShown : false }} name='SinglePostRappi' component={SinglePost}/>
 
       </Stack.Navigator>
     </NavigationContainer>
