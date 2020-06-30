@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import {TextInput, Stylesheet, View, Text, TouchableHighlight, Alert, ScrollView } from 'react-native';
-import * as firebase from 'firebase';
-import 'firebase/firebase-firestore';
+import {TextInput, View, Text, Alert } from 'react-native';
 import styles from './styles';
 import YellowBigButton from '../../../source/Components/YellowBigButton';
 import { useNavigation } from '@react-navigation/native';
@@ -10,7 +8,7 @@ import NameLogin from '../../NameLogin/NameLogin';
 import firebaseService from '../../../services/firebase'
 import firebasePostService from '../../../services/firebaseForPost'
 /* import SinglePost from './SingleRappiPost'; */
-
+import MenuDreamer from '../../menuDreamer/MenuDreamer'
 
 const firebaseConfig = {
         apiKey: "AIzaSyAh8XV0mSjGA27eZUNcJgHNrWFFsUg2qG8",
@@ -55,7 +53,7 @@ return(
         {/* <ScrollView stickyHeaderIndices={[0]} showsVerticalScrollIndicator={false}> */}
         <View style={styles.header}>
             <View style={styles.headerLeft}>
-                <PrevScreenButton onPress={() => navigation.navigate('login')}></PrevScreenButton>
+                <PrevScreenButton onPress={() => navigation.navigate('MenuDreamer')}></PrevScreenButton>
                 <Text style={styles.PageTitle}>Dreamers Rappis</Text>
                 <NameLogin></NameLogin>
             </View>
@@ -66,13 +64,15 @@ return(
         <View style={styles.body}>
             <Text style={styles.initialText}>Es el momento de que nos cuentes hacerca de ti y lo que deseas, te aseguramos que encontraras el GoodFather ideal para ti</Text>
             <TextInput
-            placeholder='Ingresa tu Nombreeee'
+            placeholder='Ingresa tu Nombre'
+            keyboardType="String"
             placeholderTextColor="white"
             style={styles.inputText}
             onChangeText={name => setName(name)}
             value={name} />
             <TextInput
             placeholder='Cuanto necesitas?'
+            keyboardType="number"
             placeholderTextColor="white"
             style={styles.inputText}
             onChangeText={monto => setMonto(monto)}
@@ -81,6 +81,7 @@ return(
             placeholder='Cuentanos para que deseas el $'
             placeholderTextColor="white"
             style={styles.inputText}
+            keyboardType = "string"
             onChangeText={description => setDescription(description)}
             value={description} />
             <YellowBigButton
@@ -95,8 +96,8 @@ return(
                 onPress={() => { navigation.navigate('PublicacionesR'); }}>
             </YellowBigButton>
         </View>
-        <View style={styles.footer}>
-            <Text>hola</Text>
+        <View style={styles.footer}>{/* 
+            <Text>hola</Text> */}
         </View>
     {/* </ScrollView> */}
   </View>

@@ -32,7 +32,7 @@ const MenuApadrinapp = ({ navigation }) => {
             <PrevScreenButton onPress={() => navigation.navigate('Login')}></PrevScreenButton>
             <Text style={styles.PageTitle}>Menu</Text>
             <NameLogin></NameLogin>
-            <Text>{userId}</Text>
+            {/* <Text>{userId}</Text> */}
           </View>
           <View style={styles.ElevatePic}>
           <Image source={require('../../assets/Cabeceras/queDeseas.png')} style={styles.logo}></Image>
@@ -44,18 +44,18 @@ const MenuApadrinapp = ({ navigation }) => {
       <View style={styles.body}>
         <View style={styles.flexstyle}>
           <TouchableOpacity onPress={() => navigation.navigate('EstadoCuenta', {userId: userId})} >
-            <Image source={require('../../assets/estado_cuenta.png')} style={styles.estadoCuenta} />
+            <Image source={require('../../assets/Menu/estadoDeCuenta.png')} style={styles.estadoCuenta} />
           </TouchableOpacity>
           <TouchableOpacity  /* onPress={() => navigation.navigate('PostRappi')} */  >
-            <Image source={require('../../assets/microprestamos.png')} style={styles.MoneyStyle} />
+            <Image source={require('../../assets/Menu/menuestado.png')} style={styles.MoneyStyle} />
           </TouchableOpacity> 
         </View>
         <View style={styles.flexstyle}>
           <TouchableOpacity onPress={() => navigation.navigate('PublicacionesRappi')}>
-            <Image source={require('../../assets/apadrina_serv.png')} style={styles.ApadrinaStyle} />
+            <Image source={require('../../assets/Menu/menuapadrina.png')} style={styles.ApadrinaStyle} />
           </TouchableOpacity>
           <TouchableOpacity /* onPress={() => navigation.navigate('Transferencia')} */>
-            <Image source={require('../../assets/confia_serv.png')} style={styles.ConfiaStyle} />
+            <Image source={require('../../assets/Menu/confiar.png')} style={styles.ConfiaStyle} />
           </TouchableOpacity>
         </View>
         </View>
