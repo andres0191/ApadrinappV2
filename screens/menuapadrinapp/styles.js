@@ -56,8 +56,8 @@ const styles = StyleSheet.create({
     paddingLeft: 10,
   },
   estadoCuenta: {
-    width: 120,
-    height: 120,
+    width: 118,
+    height: 118,
     margin: 30,
     backgroundColor: Color.yellow,
     borderRadius: 20,
