@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import {TextInput, Stylesheet, View, Text, TouchableHighlight, Alert, ScrollView } from 'react-native';
-import * as firebase from 'firebase';
-import 'firebase/firebase-firestore';
+import {TextInput, View, Text, Alert } from 'react-native';
 import styles from './styles';
 import YellowBigButton from '../../../source/Components/YellowBigButton';
 import { useNavigation } from '@react-navigation/native';
@@ -9,8 +7,8 @@ import PrevScreenButton from '../../../source/Components/PrevScreenButton';
 import NameLogin from '../../NameLogin/NameLogin';
 import firebaseService from '../../../services/firebase'
 import firebasePostService from '../../../services/firebaseForPost'
+/* import SinglePost from './SingleRappiPost'; */
 import MenuDreamer from '../../menuDreamer/MenuDreamer'
-
 
 const firebaseConfig = {
         apiKey: "AIzaSyAh8XV0mSjGA27eZUNcJgHNrWFFsUg2qG8",
@@ -34,9 +32,11 @@ export default function PostPublication(){
     const [monto, setMonto]=useState('');
     const [description, setDescription]=useState(['']);
     const [rappiId, setRappiId] = useState('');
+    const [singlePost, setSinglePost] = useState([]);
+
     const navigation = useNavigation();
 
-  const LoadUserId = async () => {
+    const LoadUserId = async () => {
     try {
       const RappiId = await firebaseService.getUserId()
       setRappiId(RappiId)
@@ -65,12 +65,14 @@ return(
             <Text style={styles.initialText}>Es el momento de que nos cuentes hacerca de ti y lo que deseas, te aseguramos que encontraras el GoodFather ideal para ti</Text>
             <TextInput
             placeholder='Ingresa tu Nombre'
+            keyboardType="String"
             placeholderTextColor="white"
             style={styles.inputText}
             onChangeText={name => setName(name)}
             value={name} />
             <TextInput
             placeholder='Cuanto necesitas?'
+            keyboardType="number"
             placeholderTextColor="white"
             style={styles.inputText}
             onChangeText={monto => setMonto(monto)}
@@ -79,6 +81,7 @@ return(
             placeholder='Cuentanos para que deseas el $'
             placeholderTextColor="white"
             style={styles.inputText}
+            keyboardType = "string"
             onChangeText={description => setDescription(description)}
             value={description} />
             <YellowBigButton
@@ -86,16 +89,15 @@ return(
                 underlayColor="red"
                 onPress={() => firebasePostService.savePublication(name, monto, description, rappiId)}>
             </YellowBigButton>
-            
+            <YellowBigButton title='Ver mi publicacion'
+                onPress={() => { navigation.navigate('SinglePostRappi'); }}>
+            </YellowBigButton>
             <YellowBigButton title='Ver Publicaciones'
                 onPress={() => { navigation.navigate('PublicacionesR'); }}>
             </YellowBigButton>
-            {/* <YellowBigButton title='Ver mi publicación'
-                onPress={() => return({yourCondition ? <yourComponent /> : null});}>
-            </YellowBigButton> */}
         </View>
-        <View style={styles.footer}>
-            <Text>hola</Text>
+        <View style={styles.footer}>{/* 
+            <Text>hola</Text> */}
         </View>
     {/* </ScrollView> */}
   </View>

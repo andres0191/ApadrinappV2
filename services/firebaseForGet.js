@@ -16,14 +16,36 @@ class FirebaseGet{
         firebase.initializeApp(firebaseConfig)
         this.auth = firebase.auth()
     } */
+
     getOnePublication = async (rappiId) => {
+        let onePost = [];
         try {
-            const fire = firebase.firestore()
-            return await fire.collection('publications').where('rappiId', '==', rappiId).get();
+            const fire = firebase.firestore();
+            const snapshot = await fire.collection('publications').where('rappiId', "==", rappiId).get();
+                snapshot.forEach((doc) => {
+                    let obj = {id:doc.id, name:doc.data().name, monto:doc.data().monto, description:doc.data().description, createdAt:doc.data().createdAt, montoRecogido:doc.data().montoRecogido};
+                    onePost.push(obj)
+            });
         } catch (error) {
-            Alert('El Id del rappitendero no se encuentra')
+            Alert('No has realizado publicaciones todavia')
         }
-    }
+        return onePost
+    };
+
+    getTransactions = async (userId) => {
+        let showTransactions = [];
+        try {
+            const fire = firebase.firestore();
+            const snapshot = await fire.collection('transacciones').where('userId', "==", userId).get();
+                snapshot.forEach((doc) => {
+                    let obj = {id:doc.id, name:doc.data().name, monto:doc.data().monto, description:doc.data().description, createdAt:doc.data().createdAt, montoRecogido:doc.data().montoRecogido};
+                    showTransactions.push(obj)
+            });
+        } catch (error) {
+            Alert('No tienes transacciones para mostrar')
+        }
+        return showTransactions;
+    };
 }
 
 const firebaseGetService = new FirebaseGet()

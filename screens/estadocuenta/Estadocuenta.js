@@ -12,17 +12,6 @@ const EstadoCuenta = ({ route, navigation }) => {
 
   const [cantidad, setCantidad] = useState('')
 
-  const lookForAmount = (route) => {
-    if (route === undefined) {
-      return;
-    }
-    setCantidad(route.params);
-  }
-
-  useEffect(() => {
-    lookForAmount()
-}, []);
-
 
   const [user, setMonto] = useState('')
   return (
