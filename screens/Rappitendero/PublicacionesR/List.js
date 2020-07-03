@@ -11,12 +11,12 @@ import { connect } from "react-redux";
 import {ObtenerListaRappi} from './selectorrappi';
 
 YellowBox.ignoreWarnings(['Setting a timer']);
-const _console = _.clone(console);
+/* const _console = _.clone(console);
 console.warn = message => {
   if (message.indexOf('Setting a timer') <= -1) {
     _console.warn(message);
   }
-};
+}; */
 
 
 class List extends Component{
@@ -35,9 +35,9 @@ class List extends Component{
                     <Text style={styles.ItemName}>{item.name}</Text>
                     <Text style={styles.ItemMonto}>Cantidad solicitada: $ {item.monto}</Text>
                     <Text style={styles.ItemDescription}>{item.description}</Text>
-                    <Text style={styles.ItemDescription}>{item.id}</Text>
+                    {/* <Text style={styles.ItemDescription}>{item.id}</Text> */}
                     <Text></Text>
-                    <YellowButton title='Apadrinar' onPress={() => { navigation.navigate('Transferencia', {item: item})}}></YellowButton>
+                    {/* <YellowButton title='Apadrinar' onPress={() => { navigation.navigate('Transferencia', {item: item})}}></YellowButton> */}
                     </View>
                 )): <ActivityIndicator />}
             </View>

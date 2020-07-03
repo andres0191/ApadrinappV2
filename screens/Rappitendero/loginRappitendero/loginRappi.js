@@ -77,6 +77,7 @@ const login = ({navigation}) => {
             <TextInput
                 placeholder='Ingresa tu contraseña'
                 placeholderTextColor="white"
+                secureTextEntry
                 style={styles.inputText}
                 value = {pass}
                 onChange = {(e) => setPass(e.nativeEvent.text)}

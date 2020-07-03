@@ -9,18 +9,19 @@ import NameLogin from '../../NameLogin/NameLogin';
 import firebaseService from '../../../services/firebase'
 import firebasePostService from '../../../services/firebaseForPost'
 /* import SinglePost from './SingleRappiPost'; */
-import MenuDreamer from '../../menuDreamer/MenuDreamer'
+import MenuDreamer from '../menuDreamer/MenuDreamer';
+
 
 
 const firebaseConfig = {
-        apiKey: "AIzaSyAh8XV0mSjGA27eZUNcJgHNrWFFsUg2qG8",
-        authDomain: "apadrinapp-450d3.firebaseapp.com",
-        databaseURL: "https://apadrinapp-450d3.firebaseio.com",
-        projectId: "apadrinapp-450d3",
-        storageBucket: "apadrinapp-450d3.appspot.com",
-        messagingSenderId: "529527861357",
-        appId: "1:529527861357:web:6e3b80b1790c6e384acf64",
-        measurementId: "G-HD1SSPMEXJ"
+    apiKey: "AIzaSyAh8XV0mSjGA27eZUNcJgHNrWFFsUg2qG8",
+    authDomain: "apadrinapp-450d3.firebaseapp.com",
+    databaseURL: "https://apadrinapp-450d3.firebaseio.com",
+    projectId: "apadrinapp-450d3",
+    storageBucket: "apadrinapp-450d3.appspot.com",
+    messagingSenderId: "529527861357",
+    appId: "1:529527861357:web:6e3b80b1790c6e384acf64",
+    measurementId: "G-HD1SSPMEXJ"
 }
 class Firebase{
     constructor(){
@@ -67,7 +68,11 @@ return(
             </View>
         </View>
         <View style={styles.body}>
+<<<<<<< HEAD
         <Text style={styles.initialText}>Hola {Dreamer}, este es un lugar para soñar. </Text>
+=======
+        <Text style={styles.initialText}>Hola {Dreamer}, recuerda que:            "Cualquier cosa que la mente del hombre puede concebir y creer, puede ser conseguida." Napoleon Hill. </Text>
+>>>>>>> 8ff485e4919f0ae550d814b89f57a58c3c57e3fb
             <View style={styles.textW}>
             {/* <TextInput
             placeholder='Nombre'

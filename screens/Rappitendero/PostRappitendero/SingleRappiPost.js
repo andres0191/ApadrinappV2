@@ -15,48 +15,55 @@ import YellowButton from '../../../source/Components/YellowButton';
 const SinglePost = () => {
 const [singlePost, setPost] = useState([]);
 const [rappiId, setRappiId] = useState("");
-/* const [isLoading, setLoading] = useState(true); */
+let [publicationId, setPublicationId] = useState([]);
 
 const navigation = useNavigation();
 
 const LoadUserId = async () => {
     try {
         const RappiId = await firebaseService.getUserId();
-      /* setLoading(false) */
-        const onePost = await firebaseGetService.getOnePublication(RappiId)
-        setPost(onePost)
+        const onlyPost = await firebaseGetService.getOnePublication(RappiId)
+        const onePost = await firebaseGetService.getSinglePublication(RappiId)
+        let itemId = 
+onePost.id
+;
+        setPublicationId(itemId);
+        setPost(onlyPost);
         setRappiId(RappiId);
     } catch (error) {
-      Alert('No user')
+      Alert.alert('No user')
     }
   }
 
 useEffect(() => {
-    LoadUserId()
+    LoadUserId();
 }, []);
 
-const OnPressDelete = async (rappiId) => {
+const OnPressDelete = async (publicationId) => {
     try {
-        await firebaseDeleteService.deletePublication(rappiId);
+        await firebaseDeleteService.deletePublication(publicationId);
+        Alert.alert('La publicacion se ha eliminado correctamente')
         /* await navigation.navigate('PostRappi'); */
     } catch (error) {
-        Alert('No se logro eliminar la publicación')
+        Alert.alert('No se logro eliminar la publicación')
     }
 };
 
-const openTwoButtonAlert=(rappiId)=>{
-    Alert(
+
+/* const openTwoButtonAlert=(publicationId) => {
+  console.log('hola si');
+    Alert.alert(
       'Borrar publicación',
       'Estas seguro?',
       [
-        {text: 'Sí', onPress: () => OnPressDelete(rappiId)},
+        {text: 'Sí', onPress: () =>  OnPressDelete(publicationId)},
         {text: 'No', onPress: () => console.log('No item was removed'), style: 'cancel'},
       ],
       {
         cancelable: true
       }
     );
-  }
+    }; */
 
 
 return(
@@ -72,7 +79,7 @@ return(
                     </View>
                 ))}
             </View>
-            <YellowButton title='Eliminar Publicación' onPress={() => openTwoButtonAlert(rappiId)}></YellowButton>
+            <YellowButton title='Eliminar Publicación' onPress={() => OnPressDelete(publicationId)}></YellowButton>
     </View>
 );
 }

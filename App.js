@@ -22,7 +22,7 @@ import PublicacionesR from './screens/Rappitendero/PublicacionesR/PublicacionesR
 import SignUpRappi from './screens/Rappitendero/SignUpRappi/SingUpRappi';
 import SinglePostRappi from './screens/Rappitendero/PostRappitendero/SingleRappiPost'
 import SinglePost from './screens/Rappitendero/PostRappitendero/SingleRappiPost';
-import MenuDreamer from './screens/menuDreamer/MenuDreamer'
+import MenuDreamer from './screens/Rappitendero/menuDreamer/MenuDreamer'
 
 if (!global.btoa) {  global.btoa = encode }
 if (!global.atob) { global.atob = decode }
