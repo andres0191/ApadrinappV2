@@ -32,7 +32,7 @@ const MenuDreamer = ({ navigation }) => {
             <PrevScreenButton onPress={() => navigation.navigate('login')}></PrevScreenButton>
             <Text style={styles.PageTitle}>Menu</Text>
             <NameLogin></NameLogin>
-            <Text>{userId}</Text>
+            {/* <Text>{userId}</Text> */}
           </View>
           <View style={styles.ElevatePic}>
           <Image source={require('../../../assets/Cabeceras/queDeseas.png')} style={styles.logo}></Image>
@@ -43,7 +43,7 @@ const MenuDreamer = ({ navigation }) => {
       </View>
       <View style={styles.body}>
         <View style={styles.flexstyle}>
-          <TouchableOpacity onPress={() => navigation.navigate('EstadoCuenta', {userId: userId})} >
+          <TouchableOpacity onPress={() => navigation.navigate('SinglePostRappi', {userId: userId})} >
             <Image source={require('../../../assets/Menu/estadoDelDream.png')} style={styles.estadoCuenta} />
           </TouchableOpacity>
           <TouchableOpacity  onPress={() => navigation.navigate('PostRappi')}>
