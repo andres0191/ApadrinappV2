@@ -32,13 +32,28 @@ class FirebaseGet{
         return onePost
     };
 
+    getSinglePublication = async (rappiId) => {
+        let onePost = {};
+        try {
+            const fire = firebase.firestore();
+            const snapshot = await fire.collection('publications').where('rappiId', "==", rappiId).get();
+                snapshot.forEach((doc) => {
+                    let obj = {id:doc.id, name:doc.data().name, monto:doc.data().monto, description:doc.data().description, createdAt:doc.data().createdAt, montoRecogido:doc.data().montoRecogido};
+                    onePost = {...obj};
+            });
+        } catch (error) {
+            Alert('No has realizado publicaciones todavia')
+        }
+        return onePost
+    };
+
     getTransactions = async (userId) => {
         let showTransactions = [];
         try {
             const fire = firebase.firestore();
             const snapshot = await fire.collection('transacciones').where('userId', "==", userId).get();
                 snapshot.forEach((doc) => {
-                    let obj = {id:doc.id, name:doc.data().name, monto:doc.data().monto, description:doc.data().description, createdAt:doc.data().createdAt, montoRecogido:doc.data().montoRecogido};
+                    let obj = {id:doc.id, monto:doc.data().monto, createdAt:doc.data().createdAt};
                     showTransactions.push(obj)
             });
         } catch (error) {
@@ -46,6 +61,7 @@ class FirebaseGet{
         }
         return showTransactions;
     };
+    
 }
 
 const firebaseGetService = new FirebaseGet()

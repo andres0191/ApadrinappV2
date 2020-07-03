@@ -32,7 +32,7 @@ const Transferencia = ({ route, navigation }) => {
 const onPressTransaction = async (monto, userId, publicacionId) => {
   try {
      await firebasePostService.saveTransaction(monto, userId, publicacionId);
-     await navigation.navigate('EstadoCuenta')
+     await navigation.navigate('EstadoCuenta', {userId: userId})
   } catch (error){
     Alert('No se pudo realizar la transacción')
   }
