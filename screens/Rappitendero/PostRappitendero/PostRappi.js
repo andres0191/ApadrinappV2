@@ -11,7 +11,10 @@ import firebasePostService from '../../../services/firebaseForPost'
 /* import SinglePost from './SingleRappiPost'; */
 import MenuDreamer from '../menuDreamer/MenuDreamer';
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
 
 const firebaseConfig = {
     apiKey: "AIzaSyAh8XV0mSjGA27eZUNcJgHNrWFFsUg2qG8",
@@ -69,10 +72,14 @@ return(
         </View>
         <View style={styles.body}>
 <<<<<<< HEAD
+<<<<<<< HEAD
         <Text style={styles.initialText}>Hola {Dreamer}, este es un lugar para soñar. </Text>
 =======
         <Text style={styles.initialText}>Hola {Dreamer}, recuerda que:            "Cualquier cosa que la mente del hombre puede concebir y creer, puede ser conseguida." Napoleon Hill. </Text>
 >>>>>>> 8ff485e4919f0ae550d814b89f57a58c3c57e3fb
+=======
+        <Text style={styles.initialText}>Hola {Dreamer}, recuerda que:            "Cualquier cosa que la mente del hombre puede concebir y creer, puede ser conseguida." Napoleon Hill. </Text>
+>>>>>>> master
             <View style={styles.textW}>
             {/* <TextInput
             placeholder='Nombre'
