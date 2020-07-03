@@ -16,8 +16,9 @@ const styles = StyleSheet.create({
   header : {
     flex : 1,
     paddingTop: 22,
-    // marginBottom: -90,
-    backgroundColor: Color.lightpurple
+    //marginBottom: -90,
+    backgroundColor: Color.lightpurple,
+    marginTop: 25,
   },
   headerLeft : {
     flexDirection: 'row',
@@ -72,7 +73,7 @@ const styles = StyleSheet.create({
     color: Color.purple,
   },
   ElevatePic: {
-    elevation: 2, 
+    elevation: 2,
   },
   buttons : {
     justifyContent : 'space-evenly'
