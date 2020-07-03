@@ -61,10 +61,12 @@ const MenuApadrinapp = ({ navigation }) => {
         </View>
         {/* <View style={styles.footer}>
           <View style={[styles.flex, styles.footerLeft]}>
-            {/* <WhiteButton title='Salir' onPress={() => navigation.navigate('Start')}></WhiteButton> */}
-          <View style={[styles.flex, styles.footerRight]}>
-            {/* <YellowButton title='Saldo' onPress={() => navigation.navigate('EstadoCuenta')}></YellowButton> */}
+            <WhiteButton title='Salir' onPress={() => navigation.navigate('Start')}></WhiteButton>
           </View>
+          <View style={[styles.flex, styles.footerRight]}>
+            <YellowButton title='Saldo' onPress={() => navigation.navigate('EstadoCuenta')}></YellowButton>
+          </View>
+      </View> */}
       </ScrollView>
     </View>
     )

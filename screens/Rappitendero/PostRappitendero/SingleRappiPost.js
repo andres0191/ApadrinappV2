@@ -70,20 +70,12 @@ return(
     <View style={styles.container}>
         <PrevScreenButton onPress={() => navigation.navigate('PostRappi')}></PrevScreenButton>
             <View style={styles.AllBoxes}>
-                {
-singlePost.map
-(item  => (
-                     <View key={
-item.id
-} style={{ backgroundColor: 'red' }}>
-                        <Text style={styles.ItemName}>{
-item.name
-}</Text>
+                {singlePost.map(item  => (
+                     <View key={item.id} style={{ backgroundColor: 'red' }}>
+                        <Text style={styles.ItemName}>{item.name}</Text>
                         <Text style={styles.ItemMonto}>{item.monto}</Text>
                         <Text style={styles.ItemDescription}>{item.description}</Text>
-                        <Text style={styles.ItemDescription}>{
-item.id
-}</Text>
+                        <Text style={styles.ItemDescription}>{item.id}</Text>
                     </View>
                 ))}
             </View>
