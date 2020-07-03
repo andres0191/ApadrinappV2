@@ -34,21 +34,7 @@ const login = ({navigation}) => {
                 setPass(pass);
             }
         } catch (e) {
-            alert(err);
-        }
-    };
-
-    const remove = async () => {
-        try {
-            await AsyncStorage.removeItem(USEREMAIL);
-            await AsyncStorage.removeItem(PASSW);
-        } catch (err) {
-            alert(err);
-        }
-
-        finally {
-            setUser("");
-            setPass("");
+            alert('Error al cargar los datos');
         }
     };
 
@@ -72,6 +58,7 @@ const login = ({navigation}) => {
                 onChangeText={(text) => setUser(text)}/>
             <TextInput
                 placeholder='Ingresa tu contraseña'
+                secureTextEntry
                 placeholderTextColor="white"
                 style={styles.inputText}
                 value = {pass}

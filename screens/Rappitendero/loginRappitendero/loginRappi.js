@@ -17,7 +17,7 @@ const login = ({navigation}) => {
             await firebaseService.login(user, pass)
             await AsyncStorage.setItem(USEREMAIL, user);
             await AsyncStorage.setItem(PASSW, pass);
-            navigation.navigate('PostRappi')
+            navigation.navigate('MenuDreamer')
         } catch (e) {
             alert('Por favor ingresa los datos correctos')
         }
@@ -77,6 +77,7 @@ const login = ({navigation}) => {
             <TextInput
                 placeholder='Ingresa tu contraseña'
                 placeholderTextColor="white"
+                secureTextEntry
                 style={styles.inputText}
                 value = {pass}
                 onChange = {(e) => setPass(e.nativeEvent.text)}

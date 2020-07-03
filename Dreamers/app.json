@@ -1,0 +1,25 @@
+{
+  "expo": {
+    "name": "ApadrinappDreamers",
+    "slug": "ApadrinappDreamers",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "sdkVersion": "37.0.0",
+    "icon": "./assets/icono-apadrinapp.png",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "ios": {
+      "bundleIdentifier": "com.Apadrinapp.Apadrinapp"
+    },
+    "android": {
+      "package": "com.Apadrinapp.Apadrinapp"
+    }
+  }
+}
+

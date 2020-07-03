@@ -20,6 +20,9 @@ import Inicio from './screens/Inicio/Inicio';
 import login from './screens/Rappitendero/loginRappitendero/loginRappi';
 import PublicacionesR from './screens/Rappitendero/PublicacionesR/PublicacionesR';
 import SignUpRappi from './screens/Rappitendero/SignUpRappi/SingUpRappi';
+import SinglePostRappi from './screens/Rappitendero/PostRappitendero/SingleRappiPost'
+import SinglePost from './screens/Rappitendero/PostRappitendero/SingleRappiPost';
+import MenuDreamer from './screens/Rappitendero/menuDreamer/MenuDreamer'
 
 if (!global.btoa) {  global.btoa = encode }
 if (!global.atob) { global.atob = decode }
@@ -29,7 +32,7 @@ export default function App(){
   return (
     <NavigationContainer>
       <Stack.Navigator>
-      <Stack.Screen options={{ headerShown : false }} name='Inicio' component={Inicio}/>
+      <Stack.Screen options={{ headerShown : false }} name='Inicio' component={SinglePostRappi}/>
         <Stack.Screen options={{ headerShown : false }} name='Start' component={Start} />
         <Stack.Screen options={{ headerShown : false }} name='SignUp' component={SignUp} />
         <Stack.Screen options={{ headerShown : false }} name='Login' component={Login} />
@@ -48,6 +51,10 @@ export default function App(){
         <Stack.Screen options={{ headerShown : false }} name='login' component={login}/>
         <Stack.Screen options={{ headerShown : false }} name='PublicacionesR' component={PublicacionesR}/>
         <Stack.Screen options={{ headerShown : false }} name='SignUpRappi' component={SignUpRappi}/>
+        <Stack.Screen options={{ headerShown : false }} name='MenuDreamer' component={MenuDreamer}/>
+
+
+        <Stack.Screen options={{ headerShown : false }} name='SinglePostRappi' component={SinglePost}/>
 
       </Stack.Navigator>
     </NavigationContainer>
