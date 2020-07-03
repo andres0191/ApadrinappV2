@@ -11,12 +11,12 @@ import { connect } from "react-redux";
 import {ObtenerListaRappi} from './selectorrappi';
 
 YellowBox.ignoreWarnings(['Setting a timer']);
-const _console = _.clone(console);
+/* const _console = _.clone(console);
 console.warn = message => {
   if (message.indexOf('Setting a timer') <= -1) {
     _console.warn(message);
   }
-};
+}; */
 
 
 class List extends Component{

@@ -104,6 +104,26 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
     fontWeight: "bold"
   },
+  AllBoxes: {
+    backgroundColor: Color.lightpurple
+  },
+  Boxes: {
+    padding: 30,
+    backgroundColor: Color.purple,
+    width: win.width/1.05,
+    margin: 5,
+    borderColor: Color.lightpurple,
+    borderRadius: 20
+  },
+  ItemMonto: {
+    color: Color.white,
+    fontSize: 20
+  },
+  ItemDate: {
+    color: Color.yellow,
+    fontSize: 30,
+    fontWeight: "bold"
+  }
 })
 
 export default styles

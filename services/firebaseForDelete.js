@@ -33,20 +33,19 @@ class FirebaseDelete{
         return onePost
     };
 
-    deleteUser() {
+    /* deleteUser() {
         const dbRef = firebase.firestore().collection('users').doc(this.props.route.params.userkey)
           dbRef.delete().then((res) => {
               console.log('Item removed from database')
               this.props.navigation.navigate('UserScreen');
           })
-      }
+      } */
 
-    deletePublication = async (rappiId) => {
+    deletePublication = async (publicationId) => {
         try {
-            const dbRef = firebase.firestore().collection('publications').where('rappiId', '==', rappiId).get();
-            dbRef.delete()
+            await firebase.firestore().collection('publications').doc(publicationId).delete();
         } catch (error) {
-            Alert('Item removed from database')
+            Alert.alert('Item removed from database')
         }
     };
 }
