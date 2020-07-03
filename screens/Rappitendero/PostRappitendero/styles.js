@@ -16,6 +16,7 @@ const styles = StyleSheet.create({
   header : {
     flex : 1,
     paddingTop: 22,
+    // marginBottom: -90,
     backgroundColor: Color.lightpurple
   },
   headerLeft : {
@@ -26,19 +27,25 @@ const styles = StyleSheet.create({
     paddingBottom: 12,
     backgroundColor: Color.lightpurple
   },
-  headerMiddle : {
-  },
-  headerRight : {
-  },
+  // headerMiddle : {
+  // },
+  // headerRight : {
+  // },
   body : {
-    flex : 10,
+    flex : 1.5,
     alignItems : 'center',
     justifyContent : 'center',
     backgroundColor: Color.lightpurple
   },
+  logo : {
+    width: win.width,
+    height: 450 * ratio,
+    justifyContent: 'center',
+  },
   initialText: {
     fontSize: 20,
-    padding: 30
+    paddingVertical: 10,
+    paddingHorizontal: 30
   },
   inputText: {
     height: 40,
@@ -53,7 +60,7 @@ const styles = StyleSheet.create({
     fontSize: 20,
   },
   footer: {
-    flex: 1,
+    flex: 0.1,
     flexDirection : 'row',
     alignItems: 'center',
     justifyContent: 'center',
@@ -65,7 +72,10 @@ const styles = StyleSheet.create({
     color: Color.purple,
   },
   ElevatePic: {
-    elevation: 2,
+    elevation: 2, 
+  },
+  buttons : {
+    justifyContent : 'space-evenly'
   }
 })
 

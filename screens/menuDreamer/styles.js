@@ -17,7 +17,8 @@ const styles = StyleSheet.create({
   header : {
     flex : .1,
     paddingTop: 22,
-    marginBottom: -90
+    marginBottom: -90,
+    backgroundColor: Color.lightpurple
   },
   headerLeft : {
     flexDirection: 'row',
