@@ -38,20 +38,6 @@ const login = ({navigation}) => {
         }
     };
 
-    /* const remove = async () => {
-        try {
-            await AsyncStorage.removeItem(USEREMAIL);
-            await AsyncStorage.removeItem(PASSW);
-        } catch (err) {
-            alert(err);
-        }
-
-        finally {
-            setUser("");
-            setPass("");
-        }
-    }; */
-
     useEffect(() => {
         load()
     }, []);
@@ -72,6 +58,7 @@ const login = ({navigation}) => {
                 onChangeText={(text) => setUser(text)}/>
             <TextInput
                 placeholder='Ingresa tu contraseña'
+                secureTextEntry
                 placeholderTextColor="white"
                 style={styles.inputText}
                 value = {pass}

@@ -8,7 +8,7 @@ import NameLogin from '../../NameLogin/NameLogin';
 import firebaseService from '../../../services/firebase'
 import firebasePostService from '../../../services/firebaseForPost'
 /* import SinglePost from './SingleRappiPost'; */
-import MenuDreamer from '../../menuDreamer/MenuDreamer'
+import MenuDreamer from '../menuDreamer/MenuDreamer'
 
 const firebaseConfig = {
         apiKey: "AIzaSyAh8XV0mSjGA27eZUNcJgHNrWFFsUg2qG8",
