@@ -33,7 +33,7 @@ class FirebasePost{
         }
     }
 
-    saveTransaction = async (monto, userId, publicationId) => {
+    saveTransaction = async (monto, userId, publicationId, rappiName) => {
         try {
             const fire = firebase.firestore()
             await fire.collection('transacciones').add({
@@ -41,11 +41,14 @@ class FirebasePost{
                 userId,
                 publicationId,
                 createdAt: firebase.firestore.FieldValue.serverTimestamp(),
+                rappiName,
             })
         } catch (error) {
             Alert('La transacción no se pudo realizar correctamente')
         }
     }
+
+    //funcion de actualizar la publicacion del rappitendero con el monto ehcho por la transaccion
 }
 
 const firebasePostService = new FirebasePost()

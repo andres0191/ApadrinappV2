@@ -23,6 +23,7 @@ import SignUpRappi from './screens/Rappitendero/SignUpRappi/SingUpRappi';
 import SinglePostRappi from './screens/Rappitendero/PostRappitendero/SingleRappiPost'
 import SinglePost from './screens/Rappitendero/PostRappitendero/SingleRappiPost';
 import MenuDreamer from './screens/Rappitendero/menuDreamer/MenuDreamer'
+import UserTransacciones from './screens/UserTransacciones/userTransacciones';
 
 if (!global.btoa) {  global.btoa = encode }
 if (!global.atob) { global.atob = decode }
@@ -40,6 +41,7 @@ export default function App(){
         <Stack.Screen options={{ headerShown : false }} name='PublicacionesRappi' component={PublicacionesRappi} />
         <Stack.Screen options={{ headerShown : false }} name='Transferencia' component={Transferencia} />
         <Stack.Screen options={{ headerShown : false }} name='EstadoCuenta' component={EstadoCuenta} />
+        <Stack.Screen options={{ headerShown : false }} name='UserTransacciones' component={UserTransacciones} />
         <Stack.Screen options={{ headerShown : false }} name='Ciclo' component={Ciclo} />
         <Stack.Screen options={{ headerShown : false }} name='Dreamer' component={Dreamer} />
         <Stack.Screen options={{ headerShown : false }} name='Padrino' component={Padrino} />

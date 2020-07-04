@@ -11,13 +11,13 @@ const styles = StyleSheet.create({
     flexDirection : 'column',
     justifyContent: 'center',
     alignContent: 'center',
-    backgroundColor : Color.white,
+    backgroundColor : Color.grey,
+
   },
   header : {
-    flex : 1,
+    flex : .1,
     paddingTop: 22,
-    // marginBottom: -90,
-    backgroundColor: Color.lightpurple
+    marginBottom: -90
   },
   headerLeft : {
     flexDirection: 'row',
@@ -27,44 +27,67 @@ const styles = StyleSheet.create({
     paddingBottom: 12,
     backgroundColor: Color.lightpurple
   },
-  // headerMiddle : {
-  // },
-  // headerRight : {
-  // },
+  headerMiddle : {
+  },
+  headerRight : {
+  },
   body : {
-    flex : 1.5,
+    flex : 1,
     alignItems : 'center',
-    justifyContent : 'center',
-    backgroundColor: Color.lightpurple
+    justifyContent : 'flex-end',
+    backgroundColor: Color.grey,
   },
   logo : {
     width: win.width,
     height: 450 * ratio,
     justifyContent: 'center',
   },
-  initialText: {
-    fontSize: 20,
-    paddingVertical: 10,
-    paddingHorizontal: 30
-  },
-  inputText: {
-    height: 40,
-    minWidth : 180,
-    borderWidth: 1,
-    borderColor: '#ccc',
-    paddingHorizontal: 15,
-    color: Color.purple,
-    backgroundColor: Color.lightpurple,
-    borderRadius: 10,
-    marginTop: 10,
-    fontSize: 20,
-  },
   footer: {
-    flex: 0.1,
+    flex: 1,
     flexDirection : 'row',
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: Color.purple
+    backgroundColor: Color.purple,
+  },
+  HeaderText: {
+    fontSize: 38,
+    color: Color.purple,
+    flexDirection: 'row',
+    paddingLeft: 10,
+  },
+  estadoCuenta: {
+    width: 120,
+    height: 120,
+    margin: 30,
+    backgroundColor: Color.yellow,
+    borderRadius: 20,
+  },
+  MoneyStyle: {
+    width: 120,
+    height: 120,
+    margin: 30,
+    backgroundColor: Color.purple,
+    borderRadius: 20,
+  },
+  ApadrinaStyle: {
+    width: 120,
+    height: 120,
+    margin: 30,
+    backgroundColor: Color.purple,
+    borderRadius: 20,
+  },
+  ConfiaStyle: {
+    width: 120,
+    height: 120,
+    margin: 30,
+    backgroundColor: Color.yellow,
+    borderRadius: 20,
+  },
+  flexstyle: {
+    flex: 1,
+    flexDirection: 'row',
+    alignItems: "center",
+    justifyContent: "space-evenly",  
   },
   PageTitle: {
     fontFamily: '',
@@ -72,10 +95,7 @@ const styles = StyleSheet.create({
     color: Color.purple,
   },
   ElevatePic: {
-    elevation: 2, 
-  },
-  buttons : {
-    justifyContent : 'space-evenly'
+    elevation: 2,
   }
 })
 
