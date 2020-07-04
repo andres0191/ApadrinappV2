@@ -36,7 +36,6 @@ export default function PostPublication(){
     const [rappiId, setRappiId] = useState('');
     const [Dreamer, setDreamer] = useState('');
     const [singlePost, setSinglePost] = useState([]);
-
     const navigation = useNavigation();
 
     const LoadUserId = async () => {
@@ -52,6 +51,16 @@ export default function PostPublication(){
   useEffect(() => {
     LoadUserId()
 }, []);
+
+const publicationOk = () =>
+    Alert.alert(
+      `${Dreamer}`,
+      "Tu publicacion fue realizada con exito!",
+      [
+         { text: "Ver publicacion", onPress: () => navigation.navigate('SinglePostRappi'),
+         onPress=() => firebasePostService.savePublication(name, monto, description, rappiId) }
+      ],      
+    );
 
 return(
     <View style={styles.container}>
@@ -69,22 +78,17 @@ return(
         <View style={styles.body}>
         <Text style={styles.initialText}>Hola {Dreamer}, recuerda que:            "Cualquier cosa que la mente del hombre puede concebir y creer, puede ser conseguida." Napoleon Hill. </Text>
             <View style={styles.textW}>
-            {/* <TextInput
-            placeholder='Nombre'
-            keyboardType="String"
-            placeholderTextColor="white"
-            style={styles.inputText}
-            onChangeText={name => setName(name)}
-            value={name} /> */}
+            
             <TextInput
             placeholder='¿Cuánto necesitas?'
-            keyboardType="number"
+            keyboardType="numeric"
             placeholderTextColor="white"
             style={styles.inputText}
             onChangeText={monto => setMonto(monto)}
             value={monto} />
             <TextInput
             placeholder='¿Cual es tu sueño?'
+            multiline
             placeholderTextColor="white"
             style={styles.inputText}
             keyboardType = "string"
@@ -95,7 +99,7 @@ return(
             <YellowBigButton title="Dream"
                 activeOpacity={0.6}
                 underlayColor="red"
-                onPress={() => firebasePostService.savePublication(name, monto, description, rappiId)}>
+                onPress={() => firebasePostService.savePublication(name, monto, description, rappiId)} onPress={publicationOk}>
             </YellowBigButton>
             </View>
         </View>
