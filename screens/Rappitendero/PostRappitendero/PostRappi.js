@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import {TextInput, View, Text, Alert, Image } from 'react-native';
+import {TextInput, View, Text, Alert, Image, ScrollView } from 'react-native';
 import styles from './styles';
 import YellowBigButton from '../../../source/Components/YellowBigButton';
 import WhiteBigButton from '../../../source/Components/WhiteBigButton';
@@ -55,7 +55,7 @@ export default function PostPublication(){
 
 return(
     <View style={styles.container}>
-        {/* <ScrollView stickyHeaderIndices={[0]} showsVerticalScrollIndicator={false}> */}
+        <ScrollView stickyHeaderIndices={[0]} showsVerticalScrollIndicator={false}>
         <View style={styles.header}>
             <View style={styles.headerLeft}>
                 <PrevScreenButton onPress={() => navigation.navigate('MenuDreamer')}></PrevScreenButton>
@@ -102,7 +102,7 @@ return(
         <View style={styles.footer}>{/* 
             <Text>hola</Text> */}
         </View>
-    {/* </ScrollView> */}
+    </ScrollView> 
   </View>
 )
 }
