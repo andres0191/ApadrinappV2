@@ -46,7 +46,7 @@ const MenuApadrinapp = ({ navigation }) => {
           <TouchableOpacity onPress={() => navigation.navigate('EstadoCuenta', {userId: userId})} >
             <Image source={require('../../assets/Menu/estadoDeCuenta.png')} style={styles.estadoCuenta} />
           </TouchableOpacity>
-          <TouchableOpacity  /* onPress={() => navigation.navigate('PostRappi')} */  >
+          <TouchableOpacity  onPress={() => navigation.navigate('UserTransacciones')}  >
             <Image source={require('../../assets/Menu/menuestado.png')} style={styles.MoneyStyle} />
           </TouchableOpacity> 
         </View>

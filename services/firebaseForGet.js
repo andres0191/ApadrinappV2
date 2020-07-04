@@ -1,5 +1,6 @@
-import * as firebase from 'firebase'
-import 'firebase/firebase-firestore'
+import * as firebase from 'firebase';
+import 'firebase/firebase-firestore';
+import { Alert } from 'react-native'
 
 const firebaseConfig = {
         apiKey: "AIzaSyAh8XV0mSjGA27eZUNcJgHNrWFFsUg2qG8",
@@ -12,10 +13,6 @@ const firebaseConfig = {
         measurementId: "G-HD1SSPMEXJ"
 }
 class FirebaseGet{
-    /* constructor(){
-        firebase.initializeApp(firebaseConfig)
-        this.auth = firebase.auth()
-    } */
 
     getOnePublication = async (rappiId) => {
         let onePost = [];
@@ -27,7 +24,7 @@ class FirebaseGet{
                     onePost.push(obj)
             });
         } catch (error) {
-            Alert('No has realizado publicaciones todavia')
+            Alert.alert('No has realizado publicaciones todavia');
         }
         return onePost
     };
@@ -42,7 +39,7 @@ class FirebaseGet{
                     onePost = {...obj};
             });
         } catch (error) {
-            Alert('No has realizado publicaciones todavia')
+            Alert.alert('No has realizado publicaciones todavia');
         }
         return onePost
     };
@@ -53,15 +50,14 @@ class FirebaseGet{
             const fire = firebase.firestore();
             const snapshot = await fire.collection('transacciones').where('userId', "==", userId).get();
                 snapshot.forEach((doc) => {
-                    let obj = {id:doc.id, monto:doc.data().monto, createdAt:doc.data().createdAt};
+                    let obj = {id:doc.id, monto:doc.data().monto, publicationId:doc.data().publicationId, createdAt:doc.data().createdAt, userId:doc.data().userId, rappiName:doc.data().rappiName};
                     showTransactions.push(obj)
             });
         } catch (error) {
-            Alert('No tienes transacciones para mostrar')
+            Alert.alert('No tienes transacciones para mostrar');
         }
         return showTransactions;
     };
-    
 }
 
 const firebaseGetService = new FirebaseGet()
