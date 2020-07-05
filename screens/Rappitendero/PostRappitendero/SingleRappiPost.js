@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { View, Text, YellowBox, Alert, ImagePickerIOS } from 'react-native';
+import { View, Text, YellowBox, Alert, ScrollView } from 'react-native';
 import * as firebase from 'firebase';
 import firebaseService from '../../../services/firebase'
 import 'firebase/firebase-firestore';
@@ -43,7 +43,7 @@ const OnPressDelete = async (publicationId) => {
     try {
         await firebaseDeleteService.deletePublication(publicationId);
         Alert.alert('La publicacion se ha eliminado correctamente')
-        await navigation.navigate('PostRappi');
+        await navigation.navigate('MenuDreamer');
     } catch (error) {
         Alert.alert('No se logro eliminar la publicación')
     }
@@ -51,7 +51,8 @@ const OnPressDelete = async (publicationId) => {
 
 return(
     <View style={styles.container}>
-        <PrevScreenButton onPress={() => navigation.navigate('PostRappi')}></PrevScreenButton>
+    <ScrollView>
+        <PrevScreenButton onPress={() => navigation.navigate('MenuDreamer')}></PrevScreenButton>
             <View style={styles.AllBoxes}>
                 {singlePost.map(item  => (
                      <View key={item.id} style={styles.Boxes}>
@@ -63,6 +64,7 @@ return(
                 ))}
             </View>
             <YellowButton title='Eliminar' onPress={() => OnPressDelete(publicationId)}></YellowButton>
+            </ScrollView>
     </View>
 );
 }

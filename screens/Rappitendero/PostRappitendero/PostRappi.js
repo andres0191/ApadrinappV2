@@ -36,6 +36,7 @@ export default function PostPublication(){
     const [rappiId, setRappiId] = useState('');
     const [Dreamer, setDreamer] = useState('');
     const [singlePost, setSinglePost] = useState([]);
+
     const navigation = useNavigation();
 
     const LoadUserId = async () => {
@@ -52,19 +53,28 @@ export default function PostPublication(){
     LoadUserId()
 }, []);
 
-const publicationOk = () =>
-    Alert.alert(
-      `${Dreamer}`,
-      "Tu publicacion fue realizada con exito!",
-      [
-         { text: "Ver publicacion", onPress: () => navigation.navigate('SinglePostRappi'),
-         onPress=() => firebasePostService.savePublication(name, monto, description, rappiId) }
-      ],      
-    );
+
+const DoubleFunctionOk = async () => {
+    try{
+        
+        Alert.alert(
+            `${Dreamer}`,
+            "La publicacion ha sido exitosa!",
+            [
+                await firebasePostService.savePublication(name, monto, description, rappiId),
+              { text: "OK", onPress: () =>  navigation.navigate('MenuDreamer')}
+            ],
+          );
+        
+    }catch (error) {
+        Alert.alert('fallo')
+    }
+
+}
 
 return(
     <View style={styles.container}>
-        <ScrollView stickyHeaderIndices={[0]} showsVerticalScrollIndicator={false}>
+        <ScrollView>
         <View style={styles.header}>
             <View style={styles.headerLeft}>
                 <PrevScreenButton onPress={() => navigation.navigate('MenuDreamer')}></PrevScreenButton>
@@ -78,7 +88,6 @@ return(
         <View style={styles.body}>
         <Text style={styles.initialText}>Hola {Dreamer}, recuerda que:            "Cualquier cosa que la mente del hombre puede concebir y creer, puede ser conseguida." Napoleon Hill. </Text>
             <View style={styles.textW}>
-            
             <TextInput
             placeholder='¿Cuánto necesitas?'
             keyboardType="numeric"
@@ -88,7 +97,6 @@ return(
             value={monto} />
             <TextInput
             placeholder='¿Cual es tu sueño?'
-            multiline
             placeholderTextColor="white"
             style={styles.inputText}
             keyboardType = "string"
@@ -99,14 +107,13 @@ return(
             <YellowBigButton title="Dream"
                 activeOpacity={0.6}
                 underlayColor="red"
-                onPress={() => firebasePostService.savePublication(name, monto, description, rappiId)} onPress={publicationOk}>
+                onPress={() => {DoubleFunctionOk()}}>
             </YellowBigButton>
             </View>
         </View>
-        <View style={styles.footer}>{/* 
-            <Text>hola</Text> */}
+        <View style={styles.footer}>
         </View>
-    </ScrollView> 
+        </ScrollView>
   </View>
 )
 }
