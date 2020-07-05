@@ -13,7 +13,9 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   inputText: {
-    height: 50,
+    minHeight: 50,
+    maxWidth: 300,
+    minWidth: 300,
     borderWidth: 1,
     borderColor: '#ccc',
     paddingHorizontal: 15,
