@@ -94,12 +94,12 @@ const styles = StyleSheet.create({
     backgroundColor: Color.lightpurple
   },
   Boxes: {
-    padding: 30,
+    padding: 10,
     backgroundColor: Color.purple,
     width: win.width/1.05,
-    margin: 5,
+    margin: 10,
     borderColor: Color.lightpurple,
-    borderRadius: 20
+    borderRadius: 20,
   },
   Dreamer: {
     color: Color.yellow,

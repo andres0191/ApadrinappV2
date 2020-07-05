@@ -4,3 +4,4 @@ Prueba.js
 node_modules
 .expo-shared
 packager-info.json
+.expo/packager-info.json
