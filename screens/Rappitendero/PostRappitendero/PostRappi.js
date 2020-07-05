@@ -2,15 +2,11 @@ import React, { useState, useEffect } from 'react';
 import {TextInput, View, Text, Alert, Image, ScrollView } from 'react-native';
 import styles from './styles';
 import YellowBigButton from '../../../source/Components/YellowBigButton';
-import WhiteBigButton from '../../../source/Components/WhiteBigButton';
 import { useNavigation } from '@react-navigation/native';
 import PrevScreenButton from '../../../source/Components/PrevScreenButton';
 import NameLogin from '../../NameLogin/NameLogin';
 import firebaseService from '../../../services/firebase'
 import firebasePostService from '../../../services/firebaseForPost'
-/* import SinglePost from './SingleRappiPost'; */
-import MenuDreamer from '../menuDreamer/MenuDreamer';
-
 
 const firebaseConfig = {
     apiKey: "AIzaSyAh8XV0mSjGA27eZUNcJgHNrWFFsUg2qG8",
@@ -36,7 +32,6 @@ export default function PostPublication(){
     const [rappiId, setRappiId] = useState('');
     const [Dreamer, setDreamer] = useState('');
     const [singlePost, setSinglePost] = useState([]);
-
     const navigation = useNavigation();
 
     const LoadUserId = async () => {
@@ -54,9 +49,10 @@ export default function PostPublication(){
 }, []);
 
 
+
 const DoubleFunctionOk = async () => {
     try{
-        
+        if ((monto != '') && (description != '')){
         Alert.alert(
             `${Dreamer}`,
             "La publicacion ha sido exitosa!",
@@ -65,11 +61,13 @@ const DoubleFunctionOk = async () => {
               { text: "OK", onPress: () =>  navigation.navigate('MenuDreamer')}
             ],
           );
-        
+        }
+        else {
+            Alert.alert('Por favor ingresa los datos correctos')
+        }
     }catch (error) {
         Alert.alert('fallo')
     }
-
 }
 
 return(
@@ -98,6 +96,7 @@ return(
             <TextInput
             placeholder='¿Cual es tu sueño?'
             placeholderTextColor="white"
+            multiline
             style={styles.inputText}
             keyboardType = "string"
             onChangeText={description => setDescription(description)}
