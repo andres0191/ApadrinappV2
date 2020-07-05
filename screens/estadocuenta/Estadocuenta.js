@@ -44,21 +44,6 @@ const LoadUserTransactions = async (userId) => {
         <View style={styles.ElevatePic}>
           <Image source={require('../../assets/Cabeceras/estadoDeCuentaHeader.png')} style={styles.logo}></Image>
         </View>
-        {/* <View style={styles.info}>
-          <View style={styles.InputInfo}>
-            <Text style={styles.YellowFont}>Inversion actual </Text>
-            <HollowInput title="100000"></HollowInput>
-          </View>
-          <View style={styles.InputInfo}>
-            <Text style={styles.YellowFont}>Enviar a Rappipay</Text>
-            <TextInput
-                placeholder='$'
-                placeholderTextColor='#472387'
-                style={styles.inputText}
-                value = {user}
-                onChange = {(e) => setMonto(e.nativeEvent.text)}/>
-          </View>
-        </View> */}
       </View>
       <View style={styles.body}>
       <View style={styles.info}>
@@ -70,6 +55,7 @@ const LoadUserTransactions = async (userId) => {
             <Text style={styles.YellowFont}>Enviar a Rappipay</Text>
             <TextInput
                 placeholder='$'
+                keyboardType= 'numeric'
                 placeholderTextColor='#472387'
                 style={styles.inputText}
                 value = {user}

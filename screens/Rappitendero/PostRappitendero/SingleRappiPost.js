@@ -9,7 +9,6 @@ import _ from 'lodash';
 import firebaseGetService from '../../../services/firebaseForGet';
 import firebaseDeleteService from '../../../services/firebaseForDelete';
 import YellowButton from '../../../source/Components/YellowButton';
-import NameLogin from '../../NameLogin/NameLogin';
 
 const SinglePost = () => {
 const [singlePost, setPost] = useState([]);
@@ -51,8 +50,7 @@ return(
     <ScrollView>
         <PrevScreenButton onPress={() => navigation.navigate('MenuDreamer')}></PrevScreenButton>
             <View style={styles.AllBoxes}>
-            <NameLogin> </NameLogin>
-            <Text>Este esl sueno que deseas:</Text>
+            <Text style={{fontSize: 28, color: '#cccccc'}}>Tu publicacion es:</Text>
                 {singlePost.map(item  => (
                      <View key={item.id} style={styles.Boxes}>
                         

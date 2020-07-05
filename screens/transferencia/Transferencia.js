@@ -32,7 +32,7 @@ const Transferencia = ({ route, navigation }) => {
 const onPressTransaction = async (monto, userId, publicacionId) => {
   try {
      await firebasePostService.saveTransaction(monto, userId, publicacionId, item.name);
-     await navigation.navigate('EstadoCuenta', {userId: userId})
+     await navigation.navigate('MenuApadrinapp', {userId: userId})
   } catch (error){
     Alert('No se pudo realizar la transacción')
   }
@@ -46,13 +46,12 @@ const onPressTransaction = async (monto, userId, publicacionId) => {
             <PrevScreenButton onPress={() => navigation.navigate('MenuApadrinapp')}></PrevScreenButton>
             <Text style={styles.PageTitle}>Apadrinar</Text>
             <NameLogin></NameLogin>
-            <Text>{userId}</Text>
           </View>
           <View style={styles.ElevatePic}>
             <ImageBackground source={require('../../assets/Cabeceras/apadrinar.png')} style={styles.logo}>
             <View style={styles.IntrestBox}>
               <Text style={styles.YellowFont}>Interés</Text>
-              <Text style={styles.BigText}>12%*</Text>
+              <Text style={styles.BigText}>8%*</Text>
             </View>
             </ImageBackground>
           </View>
@@ -75,9 +74,6 @@ const onPressTransaction = async (monto, userId, publicacionId) => {
             </View>
         </View>
         <View style={styles.footer}>
-          {/* <View style={[styles.flex, styles.footerLeft]}>
-            <WhiteButton title='Atras' onPress={() => navigation.navigate('PublicacionesRappi')}></WhiteButton>
-          </View> */}
           <View style={[styles.flex, styles.footerRight]}>
             <YellowButton title='Apadrinar' onPress={() => onPressTransaction(monto, userId, publicacionId)}></YellowButton>
           </View>
