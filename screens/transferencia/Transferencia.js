@@ -14,7 +14,7 @@ import firebasePostService from '../../services/firebaseForPost'
 const Transferencia = ({ route, navigation }) => {
   const { item } = route.params;
   /* console.log(navigation.navigate) */
-  const [monto, setMonto] = useState('')
+  const [monto, setMonto] = useState(0)
   const [userId, setUserId] = useState('')
   const publicacionId = item.id
   const LoadUserId = async () => {
@@ -63,6 +63,7 @@ const onPressTransaction = async (monto, userId, publicacionId) => {
                 <TextInput
                 placeholder='$'
                 placeholderTextColor='#472387'
+                keyboardType='numeric'
                 style={styles.inputText}
                 value = {monto}
                 onChange = {(e) => setMonto(e.nativeEvent.text)}/>
