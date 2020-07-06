@@ -47,7 +47,7 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     alignItems : 'center',
     justifyContent : 'center',
-    backgroundColor: Color.grey,
+    backgroundColor: Color.lightpurple,
   },
   logo : {
     width: win.width,
@@ -107,22 +107,28 @@ const styles = StyleSheet.create({
   AllBoxes: {
     backgroundColor: Color.lightpurple
   },
-  /* Boxes: {
+  Boxes: {
     padding: 30,
     backgroundColor: Color.purple,
     width: win.width/1.05,
     margin: 5,
     borderColor: Color.lightpurple,
     borderRadius: 20,
-  }, */
-  ItemMonto: {
+  },
+  ItemName: {
+    fontSize: 30,
     color: Color.white,
-    fontSize: 20
+    fontWeight: "bold"
+  },
+  ItemMonto: {
+    fontSize: 18,
+    color: Color.grey,
+    fontWeight: "bold"
   },
   ItemDate: {
-    color: Color.yellow,
-    fontSize: 30,
-    fontWeight: "bold"
+    color: Color.grey,
+    fontSize: 24,
+    marginTop: 10
   }
 })
 
