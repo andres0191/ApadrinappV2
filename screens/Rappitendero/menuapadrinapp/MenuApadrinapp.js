@@ -1,8 +1,8 @@
 import React, { Component, useEffect, useState } from 'react';
 import { Text, View, Image, TouchableHighlight, ScrollView, AsyncStorage } from 'react-native';
 import styles from './styles';
-//import WhiteButton from '../../source/Components/WhiteButton';
-//import YellowButton from '../../source/Components/YellowButton';
+import WhiteButton from '../../source/Components/WhiteButton';
+import YellowButton from '../../source/Components/YellowButton';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import PrevScreenButton from '../../source/Components/PrevScreenButton';
 import NameLogin from '../NameLogin/NameLogin';
@@ -32,6 +32,7 @@ const MenuApadrinapp = ({ navigation }) => {
             <PrevScreenButton onPress={() => navigation.navigate('Login')}></PrevScreenButton>
             <Text style={styles.PageTitle}>Menu</Text>
             <NameLogin></NameLogin>
+            {/* <Text>{userId}</Text> */}
           </View>
           <View style={styles.ElevatePic}>
           <Image source={require('../../assets/Cabeceras/queDeseas.png')} style={styles.logo}></Image>
@@ -45,7 +46,7 @@ const MenuApadrinapp = ({ navigation }) => {
           <TouchableOpacity onPress={() => navigation.navigate('EstadoCuenta', {userId: userId})} >
             <Image source={require('../../assets/Menu/estadoDeCuenta.png')} style={styles.estadoCuenta} />
           </TouchableOpacity>
-          <TouchableOpacity  /* onPress={() => navigation.navigate('PostRappi')} */  >
+          <TouchableOpacity  onPress={() => navigation.navigate('UserTransacciones')}  >
             <Image source={require('../../assets/Menu/menuestado.png')} style={styles.MoneyStyle} />
           </TouchableOpacity> 
         </View>

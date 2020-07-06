@@ -7,6 +7,8 @@ import PrevScreenButton from '../../../source/Components/PrevScreenButton';
 import NameLogin from '../../NameLogin/NameLogin';
 import firebaseService from '../../../services/firebase'
 import firebasePostService from '../../../services/firebaseForPost'
+/* import SinglePost from './SingleRappiPost'; */
+import MenuDreamer from '../menuDreamer/MenuDreamer';
 
 const firebaseConfig = {
     apiKey: "AIzaSyAh8XV0mSjGA27eZUNcJgHNrWFFsUg2qG8",
@@ -84,7 +86,7 @@ return(
             </View>
         </View>
         <View style={styles.body}>
-        <Text style={styles.initialText}>Hola {Dreamer}, recuerda que:            "Cualquier cosa que la mente del hombre puede concebir y creer, puede ser conseguida." Napoleon Hill. </Text>
+        <Text style={styles.initialText}>Hola {Dreamer}, recuerda que: "Cualquier cosa que la mente del hombre puede concebir y creer, puede ser conseguida." Napoleon Hill. </Text>
             <View style={styles.textW}>
             <TextInput
             placeholder='¿Cuánto necesitas?'
