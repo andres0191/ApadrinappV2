@@ -32,7 +32,6 @@ const MenuApadrinapp = ({ navigation }) => {
             <PrevScreenButton onPress={() => navigation.navigate('Login')}></PrevScreenButton>
             <Text style={styles.PageTitle}>Menu</Text>
             <NameLogin></NameLogin>
-            {/* <Text>{userId}</Text> */}
           </View>
           <View style={styles.ElevatePic}>
           <Image source={require('../../assets/Cabeceras/queDeseas.png')} style={styles.logo}></Image>
