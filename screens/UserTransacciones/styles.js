@@ -1,10 +1,10 @@
 import React from 'react';
 import { StyleSheet } from 'react-native';
-import Color from '../../../source/utils/Colors';
+import Color from '../../source/utils/Colors';
 import { Dimensions } from 'react-native';
 
 const win = Dimensions.get('window');
-const ratio = win.width/1100;
+const ratio = win.width/541;
 
 const styles = StyleSheet.create({
   container : {
@@ -12,12 +12,11 @@ const styles = StyleSheet.create({
     flexDirection : 'column',
     justifyContent: 'center',
     alignContent: 'center',
-    backgroundColor : Color.grey,
+    backgroundColor : Color.lightpurple,
   },
   header : {
     flex : 1,
     paddingTop: 22,
-    backgroundColor: Color.lightpurple
   },
   headerLeft : {
     flex : 1,
@@ -26,10 +25,14 @@ const styles = StyleSheet.create({
     alignItems: 'baseline',
     paddingHorizontal: 10,
     paddingBottom: 12,
-    backgroundColor: Color.lightpurple
+    backgroundColor: Color.lightpurple,
+    marginTop: -7,
   },
   headerMiddle : {
     flex: 1,
+    alignItems: 'center',
+    justifyContent: 'flex-start',
+    marginTop: -32,
   },
   headerRight : {
     flex: 1,
@@ -44,16 +47,17 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     alignItems : 'center',
     justifyContent : 'center',
-    backgroundColor: Color.lightpurple,
+    backgroundColor: Color.grey,
   },
   logo : {
     width: win.width,
-    height: 450 * ratio,
+    height: 475* ratio,
+    resizeMode: 'contain',
     justifyContent: 'center',
+    marginTop: -7,
   },
   ElevatePic: {
     elevation: 2,
-    marginBottom: -10
   },
   InfoCube: {
     flexDirection : 'row',
@@ -65,61 +69,60 @@ const styles = StyleSheet.create({
     flexDirection : 'column',
     justifyContent: 'center',
     alignItems: 'center',
+    marginTop: -31,
   },
   footer: {
     flex: 1,
     flexDirection : 'row',
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: Color.purple,
-    position: 'absolute',
-    bottom: 0,
-    width: win.width,
+    backgroundColor: Color.purple
   },
   InputInfo: {
     flex: .5,
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
-    marginVertical: 10
+    marginVertical: 10,
   },
   YellowFont: {
     /*fontFamily: '',*/
     marginBottom: -8,
-    fontSize: 17,
+    fontSize: 26,
     fontWeight: "bold",
     color: Color.yellow,
+  },
+  inputText: {
+    borderColor: Color.purple,
+    minWidth: 235,
+    minHeight: 70,
+    borderRadius: 10,
+    borderWidth: 2,
+    marginVertical: 10,
+    fontSize: 44,
+    color: Color.purple,
+    paddingHorizontal: 20,
+    fontWeight: "bold"
   },
   AllBoxes: {
     backgroundColor: Color.lightpurple
   },
-  Boxes: {
-    padding: 10,
+  /* Boxes: {
+    padding: 30,
     backgroundColor: Color.purple,
     width: win.width/1.05,
-    margin: 10,
+    margin: 5,
     borderColor: Color.lightpurple,
     borderRadius: 20,
-  },
-  Dreamer: {
-    color: Color.yellow,
-    fontSize: 20,
-    fontWeight: "bold"
-  },
-  ItemName: {
-    fontSize: 30,
-    color: Color.white,
-    fontWeight: "bold"
-  },
+  }, */
   ItemMonto: {
-    fontSize: 18,
-    color: Color.grey,
-    fontWeight: "bold"
+    color: Color.white,
+    fontSize: 20
   },
-  ItemDescription: {
-    color: Color.grey,
-    fontSize: 24,
-    marginTop: 10
+  ItemDate: {
+    color: Color.yellow,
+    fontSize: 30,
+    fontWeight: "bold"
   }
 })
 

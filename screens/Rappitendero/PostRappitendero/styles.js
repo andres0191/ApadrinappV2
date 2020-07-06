@@ -16,7 +16,7 @@ const styles = StyleSheet.create({
   header : {
     flex : 1,
     paddingTop: 22,
-    // marginBottom: -90,
+    marginBottom: -4,
     backgroundColor: Color.lightpurple
   },
   headerLeft : {
@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
   // headerRight : {
   // },
   body : {
-    flex : 1.5,
+    flex : 1.2,
     alignItems : 'center',
     justifyContent : 'center',
     backgroundColor: Color.lightpurple
@@ -48,8 +48,8 @@ const styles = StyleSheet.create({
     paddingHorizontal: 30
   },
   inputText: {
-    height: 40,
-    minWidth : 180,
+    height: 60,
+    maxWidth : 300,
     borderWidth: 1,
     borderColor: '#ccc',
     paddingHorizontal: 15,
@@ -58,6 +58,7 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     marginTop: 10,
     fontSize: 20,
+    padding: 10,
   },
   footer: {
     flex: 0.1,
@@ -75,7 +76,7 @@ const styles = StyleSheet.create({
     elevation: 2, 
   },
   buttons : {
-    justifyContent : 'space-evenly'
+    flex : 0.2,
   }
 })
 

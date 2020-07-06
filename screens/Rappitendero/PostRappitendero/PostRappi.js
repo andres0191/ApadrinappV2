@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import {TextInput, View, Text, Alert, Image } from 'react-native';
+import {TextInput, View, Text, Alert, Image, ScrollView } from 'react-native';
 import styles from './styles';
 import YellowBigButton from '../../../source/Components/YellowBigButton';
-import WhiteBigButton from '../../../source/Components/WhiteBigButton';
 import { useNavigation } from '@react-navigation/native';
 import PrevScreenButton from '../../../source/Components/PrevScreenButton';
 import NameLogin from '../../NameLogin/NameLogin';
@@ -10,11 +9,6 @@ import firebaseService from '../../../services/firebase'
 import firebasePostService from '../../../services/firebaseForPost'
 /* import SinglePost from './SingleRappiPost'; */
 import MenuDreamer from '../menuDreamer/MenuDreamer';
-
-<<<<<<< HEAD
-
-=======
->>>>>>> master
 
 const firebaseConfig = {
     apiKey: "AIzaSyAh8XV0mSjGA27eZUNcJgHNrWFFsUg2qG8",
@@ -40,7 +34,6 @@ export default function PostPublication(){
     const [rappiId, setRappiId] = useState('');
     const [Dreamer, setDreamer] = useState('');
     const [singlePost, setSinglePost] = useState([]);
-
     const navigation = useNavigation();
 
     const LoadUserId = async () => {
@@ -57,9 +50,31 @@ export default function PostPublication(){
     LoadUserId()
 }, []);
 
+
+
+const DoubleFunctionOk = async () => {
+    try{
+        if ((monto != '') && (description != '')){
+        Alert.alert(
+            `${Dreamer}`,
+            "La publicacion ha sido exitosa!",
+            [
+                await firebasePostService.savePublication(name, monto, description, rappiId),
+              { text: "OK", onPress: () =>  navigation.navigate('MenuDreamer')}
+            ],
+          );
+        }
+        else {
+            Alert.alert('Por favor ingresa los datos correctos')
+        }
+    }catch (error) {
+        Alert.alert('fallo')
+    }
+}
+
 return(
     <View style={styles.container}>
-        {/* <ScrollView stickyHeaderIndices={[0]} showsVerticalScrollIndicator={false}> */}
+        <ScrollView>
         <View style={styles.header}>
             <View style={styles.headerLeft}>
                 <PrevScreenButton onPress={() => navigation.navigate('MenuDreamer')}></PrevScreenButton>
@@ -71,26 +86,11 @@ return(
             </View>
         </View>
         <View style={styles.body}>
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <Text style={styles.initialText}>Hola {Dreamer}, este es un lugar para soñar. </Text>
-=======
-        <Text style={styles.initialText}>Hola {Dreamer}, recuerda que:            "Cualquier cosa que la mente del hombre puede concebir y creer, puede ser conseguida." Napoleon Hill. </Text>
->>>>>>> 8ff485e4919f0ae550d814b89f57a58c3c57e3fb
-=======
-        <Text style={styles.initialText}>Hola {Dreamer}, recuerda que:            "Cualquier cosa que la mente del hombre puede concebir y creer, puede ser conseguida." Napoleon Hill. </Text>
->>>>>>> master
+        <Text style={styles.initialText}>Hola {Dreamer}, recuerda que: "Cualquier cosa que la mente del hombre puede concebir y creer, puede ser conseguida." Napoleon Hill. </Text>
             <View style={styles.textW}>
-            {/* <TextInput
-            placeholder='Nombre'
-            keyboardType="String"
-            placeholderTextColor="white"
-            style={styles.inputText}
-            onChangeText={name => setName(name)}
-            value={name} /> */}
             <TextInput
             placeholder='¿Cuánto necesitas?'
-            keyboardType="number"
+            keyboardType="numeric"
             placeholderTextColor="white"
             style={styles.inputText}
             onChangeText={monto => setMonto(monto)}
@@ -98,6 +98,7 @@ return(
             <TextInput
             placeholder='¿Cual es tu sueño?'
             placeholderTextColor="white"
+            multiline
             style={styles.inputText}
             keyboardType = "string"
             onChangeText={description => setDescription(description)}
@@ -107,14 +108,13 @@ return(
             <YellowBigButton title="Dream"
                 activeOpacity={0.6}
                 underlayColor="red"
-                onPress={() => firebasePostService.savePublication(name, monto, description, rappiId)}>
+                onPress={() => {DoubleFunctionOk()}}>
             </YellowBigButton>
             </View>
         </View>
-        <View style={styles.footer}>{/* 
-            <Text>hola</Text> */}
+        <View style={styles.footer}>
         </View>
-    {/* </ScrollView> */}
+        </ScrollView>
   </View>
 )
 }

@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native';
-import Color from '../../../source/utils/Colors';
+import Color from '../../source/utils/Colors';
 import { Dimensions } from 'react-native';
 
 const win = Dimensions.get('window');
@@ -34,7 +34,7 @@ const styles = StyleSheet.create({
   body : {
     flex : 1,
     alignItems : 'center',
-    justifyContent : 'flex-end',
+    justifyContent : 'center',
     backgroundColor: Color.grey,
   },
   logo : {
@@ -56,8 +56,8 @@ const styles = StyleSheet.create({
     paddingLeft: 10,
   },
   estadoCuenta: {
-    width: 120,
-    height: 120,
+    width: 118,
+    height: 118,
     margin: 30,
     backgroundColor: Color.yellow,
     borderRadius: 20,
