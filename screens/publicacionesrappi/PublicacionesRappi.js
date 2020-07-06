@@ -41,8 +41,6 @@ const PublicacionesRappi = ({ navigation }) => {
               <View style={styles.InputInfo}>
                 <Text style={styles.YellowFont}>Juntos lograremos la meta!!</Text>
               </View>
-              <View style={styles.InputInfo}>
-              </View>
             </View>
         </View>
         </ScrollView>

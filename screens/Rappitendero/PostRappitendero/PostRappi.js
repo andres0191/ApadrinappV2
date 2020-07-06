@@ -59,7 +59,7 @@ const DoubleFunctionOk = async () => {
             `${Dreamer}`,
             "La publicacion ha sido exitosa!",
             [
-                await firebasePostService.savePublication(name, monto, description, rappiId),
+                await firebasePostService.savePublication(Dreamer, monto, description, rappiId),
               { text: "OK", onPress: () =>  navigation.navigate('MenuDreamer')}
             ],
           );
@@ -96,10 +96,10 @@ return(
             onChangeText={monto => setMonto(monto)}
             value={monto} />
             <TextInput
-            placeholder='¿Cual es tu sueño?'
+            placeholder='     ¿Cual es tu sueño?'
             placeholderTextColor="white"
             multiline
-            style={styles.inputText}
+            style={styles.inputTextDream}
             keyboardType = "string"
             onChangeText={description => setDescription(description)}
             value={description} />

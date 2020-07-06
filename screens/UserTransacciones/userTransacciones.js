@@ -13,6 +13,7 @@ const UserTransacciones = ({ navigation }) => {
 
   const [misTrans, setTrans] = useState([]);
   const [userId, setUser] = useState('');
+  const [date, setDate] = useState('')
 
   useEffect(() => {
     const UserId = firebaseService.getUserId()
@@ -31,40 +32,39 @@ const LoadUserTransactions = async (userId) => {
 
   return (
     <View style={styles.container}>
-      {/* <ScrollView stickyHeaderIndices={[0]} showsVerticalScrollIndicator={false}> */}
+      <ScrollView stickyHeaderIndices={[0]} showsVerticalScrollIndicator={false}>
         <View style={styles.header}>
             <View style={styles.headerLeft}>
             <PrevScreenButton onPress={() => navigation.navigate('MenuApadrinapp')}></PrevScreenButton>
             <Text style={styles.PageTitle}>Transacciones Realizadas</Text>
             <NameLogin></NameLogin>
             </View>
-            {/* <View style={styles.ElevatePic}>
+            <View style={styles.ElevatePic}>
             <Image source={require('../../assets/Cabeceras/estadoDeCuentaHeader.png')} style={styles.logo}></Image>
-            </View> */}
+            </View>
         </View>
         <View style={styles.body}>
             <View style={styles.info}>
             </View>
             <View style={styles.AllBoxes}>
-              <Text>{userId}</Text>
                 {misTrans.map(item  => (
-                     <View key={item.id} style={{ backgroundColor: 'red' }}>
+                     <View key={item.id} style={styles.Boxes}>
                         <Text style={styles.ItemName}>Haz ayudado a: {item.rappiName}</Text>
                         <Text style={styles.ItemMonto}>Tu monto invertido fue de: ${item.monto}</Text>
-                        {/* <Text style={styles.ItemDate}>{item.createdAt}</Text> */}
+                        <Text style={styles.ItemDate}>La fecha de tu transacción fue en: {item.createdAt.toDate().toDateString()}</Text>
                     </View>
                 ))}
             </View>
+            <View style={styles.InputInfo}>
+                <Text style={styles.YellowFont}>Juntos lograremos la meta!!</Text>
+              </View>
         </View>
         <View style={styles.footer}>
             <View style={[styles.flex, styles.footerLeft]}>
             <WhiteButton title='Menu' onPress={() => navigation.navigate('MenuApadrinapp')}></WhiteButton>
             </View>
-            <View style={[styles.flex, styles.footerRight]}>
-            <YellowButton title='Enviar' onPress={() => navigation.navigate('MenuApadrinapp')}></YellowButton>
-            </View>
         </View>
-      {/* </ScrollView> */}
+      </ScrollView>
     </View>
     )
   }
