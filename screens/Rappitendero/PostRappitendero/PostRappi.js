@@ -96,7 +96,7 @@ return(
             onChangeText={monto => setMonto(monto)}
             value={monto} />
             <TextInput
-            placeholder='     ¿Cual es tu sueño?'
+            placeholder='¿Cual es tu sueño?'
             placeholderTextColor="white"
             multiline
             style={styles.inputTextDream}

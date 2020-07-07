@@ -120,6 +120,11 @@ const styles = StyleSheet.create({
     color: Color.grey,
     fontSize: 24,
     marginTop: 10
+  },
+  recordatorio: {
+    fontSize: 30,
+    color: Color.white,
+    fontWeight: "bold"
   }
 })
 
