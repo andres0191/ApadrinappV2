@@ -62,12 +62,11 @@ const styles = StyleSheet.create({
     borderWidth: 2,
     borderColor: Color.yellow,
     paddingHorizontal: 15,
-    color: Color.purple,
+    color: Color.white,
     backgroundColor: Color.purple,
     borderRadius: 10,
     marginTop: 10,
-    fontSize: 20,
-    //marginLeft: 20,
+    fontSize: 20
   },
   inputTextDream: {
     textAlign : 'center',
@@ -78,7 +77,7 @@ const styles = StyleSheet.create({
     borderWidth: 2,
     borderColor: Color.yellow,
     paddingHorizontal: 15,
-    color: Color.purple,
+    color: Color.white,
     backgroundColor: Color.purple,
     borderRadius: 10,
     marginTop: 10,
