@@ -14,7 +14,7 @@ import firebasePostService from '../../services/firebaseForPost'
 const Transferencia = ({ route, navigation }) => {
   const { item } = route.params;
   /* console.log(navigation.navigate) */
-  const [monto, setMonto] = useState(0)
+  const [monto, setMonto] = useState('')
   const [userId, setUserId] = useState('')
   const publicacionId = item.id
   const LoadUserId = async () => {
