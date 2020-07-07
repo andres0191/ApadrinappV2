@@ -47,7 +47,6 @@ export default function App(){
         <Stack.Screen options={{ headerShown : false }} name='Padrino' component={Padrino} />
         <Stack.Screen options={{ headerShown : false }} name='List' component={List} />
         <Stack.Screen options={{ headerShown : false }} name='NameLogin' component={NameLogin}/>
-        <Stack.Screen options={{ headerShown : false }} name='SaveFunction' component={SaveFunction}/>
         <Stack.Screen options={{ headerShown : false }} name='PostRappi' component={PostRappi}/>
         
         <Stack.Screen options={{ headerShown : false }} name='login' component={login}/>
