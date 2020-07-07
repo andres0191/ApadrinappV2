@@ -4,6 +4,7 @@ import styles from './styles';
 import firebaseService from '../../services/firebase';
 import YellowBigButton from '../../source/Components/YellowBigButton';
 import WhiteBigButton from '../../source/Components/WhiteBigButton';
+import PrevScreenButton from '../../source/Components/PrevScreenButton';
 
 let USEREMAIL = 'sinUser'
 let PASSW = "NoPass"
@@ -45,6 +46,11 @@ const login = ({navigation}) => {
 
   return (
     <View style={styles.container}>
+        <View style={styles.header}>
+            <View style={styles.headerLeft}>
+            <PrevScreenButton onPress={() => navigation.navigate('Inicio')}></PrevScreenButton>
+        </View>
+        </View>
         <View>
             <Image source={require('../../assets/apadrinapp_logo.png')} style={styles.logo}></Image>
         </View>

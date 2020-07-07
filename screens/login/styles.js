@@ -29,7 +29,20 @@ const styles = StyleSheet.create({
   },
   MenuOptions: {
     flexDirection: 'row'
-  }
+  },
+  headerLeft : {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'baseline',
+    paddingHorizontal: 10,
+    paddingBottom: 12,
+    backgroundColor: Color.lightpurple
+  },
+  header : {
+    flex : .1,
+    paddingTop: 22,
+    marginBottom: -90
+  },
 });
 
 export default styles
