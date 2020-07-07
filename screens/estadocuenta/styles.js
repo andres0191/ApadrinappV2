@@ -82,9 +82,15 @@ const styles = StyleSheet.create({
   },
   YellowFont: {
     marginBottom: -8,
-    fontSize: 26,
-    fontWeight: "bold",
+    fontSize: 22,
+    fontWeight: 'bold',
     color: Color.yellow,
+  },
+  textPurple: {
+    fontWeight: "bold",
+    fontSize: 54,
+    paddingVertical: 10,
+    color: Color.purple
   },
   inputText: {
     borderColor: Color.purple,
@@ -93,7 +99,7 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     borderWidth: 2,
     marginVertical: 10,
-    fontSize: 44,
+    fontSize: 54,
     color: Color.purple,
     paddingHorizontal: 20,
     fontWeight: "bold"

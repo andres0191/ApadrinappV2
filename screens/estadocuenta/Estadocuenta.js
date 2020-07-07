@@ -51,7 +51,7 @@ const LoadUserTransactions = async (userId) => {
       <View style={styles.body}>
           <View style={styles.InputInfo}>
             <Text style={styles.YellowFont}>Inversion actual </Text>
-            <HollowInput title={cantidad} ></HollowInput>
+            <Text style={styles.textPurple}>{cantidad}</Text>
           </View>
           <View style={styles.InputInfo}>
             <Text style={styles.YellowFont}>Enviar a Rappipay</Text>
