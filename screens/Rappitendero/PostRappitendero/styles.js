@@ -66,8 +66,7 @@ const styles = StyleSheet.create({
     backgroundColor: Color.purple,
     borderRadius: 10,
     marginTop: 10,
-    fontSize: 20,
-    //marginLeft: 20,
+    fontSize: 20
   },
   inputTextDream: {
     textAlign : 'center',
