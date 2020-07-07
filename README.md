@@ -48,8 +48,7 @@ and we think the architecture in the following way:
 ![img of architecture](https://github.com/andres0191/ApadrinappV2/blob/andres/assets/readmeImages/Crowdlending-Rappi.png)
 
 Once the architecture and priorities were defined on the screens that we had to develop, we proceeded to design and connect the database:
-![]()
-(db image)
+![db image]()
 
 
 We use firebase due to:
