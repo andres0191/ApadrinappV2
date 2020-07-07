@@ -86,7 +86,7 @@ return(
             </View>
         </View>
         <View style={styles.body}>
-        <Text style={styles.initialText}>Hola {Dreamer}, recuerda que: "Cualquier cosa que la mente del hombre puede concebir y creer, puede ser conseguida." Napoleon Hill. </Text>
+        <Text style={styles.initialText}>Hola {Dreamer}, este es un lugar{"\n"}para compartir tus sueños {"\n"}y hasta donde quieres llegar </Text>
             <View style={styles.textW}>
             <TextInput
             placeholder='¿Cuánto necesitas?'
@@ -96,7 +96,7 @@ return(
             onChangeText={monto => setMonto(monto)}
             value={monto} />
             <TextInput
-            placeholder='     ¿Cual es tu sueño?'
+            placeholder='¿Cual es tu sueño?'
             placeholderTextColor="white"
             multiline
             style={styles.inputTextDream}
