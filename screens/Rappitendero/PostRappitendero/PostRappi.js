@@ -75,7 +75,7 @@ return(
         <ScrollView>
         <View style={styles.header}>
             <View style={styles.headerLeft}>
-                <PrevScreenButton onPress={() => navigation.navigate('MenuDreamer')}></PrevScreenButton>
+                <PrevScreenButton style={styles.back} onPress={() => navigation.navigate('MenuDreamer')}></PrevScreenButton>
                 <Text style={styles.PageTitle}>Dreamers Rappis</Text>
                 <NameLogin></NameLogin>
             </View>

@@ -16,6 +16,8 @@ const styles = StyleSheet.create({
   header : {
     flex : 1,
     paddingTop: 22,
+    paddingBottom : 40,
+    //marginBottom: 2,
     backgroundColor: Color.lightpurple
   },
   headerLeft : {
@@ -34,13 +36,14 @@ const styles = StyleSheet.create({
   },
   logo : {
     width: win.width,
-    height: 450 * ratio,
+    height: 280 * ratio,
     justifyContent: 'center',
   },
   initialText: {
     fontSize: 20,
     justifyContent : 'center',
     textAlign : 'justify',
+    paddingVertical: 5,
     paddingHorizontal: 30
   },
   textW : {

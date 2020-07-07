@@ -3,9 +3,9 @@ import Color from '../../../source/utils/Colors';
 import { Dimensions } from 'react-native';
 
 const win = Dimensions.get('window');
-const ratio = win.width/1100;
-
+const ratio = win.width/550;
 const styles = StyleSheet.create({
+
   container : {
     flex: 1,
     flexDirection : 'column',
@@ -16,6 +16,7 @@ const styles = StyleSheet.create({
   header : {
     flex : 1,
     paddingTop: 22,
+    paddingBottom : 40,
     backgroundColor: Color.lightpurple
   },
   headerLeft : {
@@ -38,6 +39,11 @@ const styles = StyleSheet.create({
     fontSize: 18,
     color: Color.purple,
   },
+  titulo : {
+    justifyContent : 'center',
+    fontSize: 28,
+    color: Color.yellow
+  },
   body : {
     flex : 10,
     flexDirection: 'column',
@@ -47,7 +53,7 @@ const styles = StyleSheet.create({
   },
   logo : {
     width: win.width,
-    height: 450 * ratio,
+    height: 280 * ratio,
     justifyContent: 'center',
   },
   ElevatePic: {
@@ -96,13 +102,8 @@ const styles = StyleSheet.create({
     backgroundColor: Color.purple,
     width: win.width/1.05,
     margin: 10,
-    borderColor: Color.lightpurple,
+    borderColor: Color.yellow,
     borderRadius: 20,
-  },
-  Dreamer: {
-    color: Color.yellow,
-    fontSize: 20,
-    fontWeight: "bold"
   },
   ItemName: {
     fontSize: 30,
@@ -119,10 +120,8 @@ const styles = StyleSheet.create({
     fontSize: 24,
     marginTop: 10
   },
-  recordatorio: {
-    fontSize: 30,
-    color: Color.white,
-    fontWeight: "bold"
+  buttons : {
+    justifyContent : 'space-evenly'
   }
 })
 
