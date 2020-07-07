@@ -10,11 +10,12 @@ import NameLogin from '../NameLogin/NameLogin';
 import firebaseGetService from '../../services/firebaseForGet';
 
 
-const EstadoCuenta = ({ route, navigation }) => {
+const EstadoCuenta = ({ navigation }) => {
 
   const [cantidad, setCantidad] = useState(0);
   const [misTrans, setTrans] = useState([]);
   const [userId, setUser] = useState('');
+  const [user, setMonto] = useState('');
 
   useEffect(() => {
     const UserId = firebaseService.getUserId()
@@ -26,15 +27,14 @@ const LoadUserTransactions = async (userId) => {
   try {
       const myTransactions = await firebaseGetService.getTransactions(userId);
       setTrans(myTransactions);
-      let c = myTransactions.forEach(element => c += int(element.monto));
-      setCantidad(c);
+      let totalAmount = 0;
+      myTransactions.forEach(element => totalAmount = +totalAmount + +(element.monto));
+      setCantidad('$' + totalAmount);
   } catch (error) {
     Alert.alert('No hay transacciones para mostrar')
   }
 }
 
-
-  const [user, setMonto] = useState('')
   return (
     <View style={styles.container}>
       <ScrollView stickyHeaderIndices={[0]} showsVerticalScrollIndicator={false}>
@@ -43,17 +43,15 @@ const LoadUserTransactions = async (userId) => {
           <PrevScreenButton onPress={() => navigation.navigate('MenuApadrinapp')}></PrevScreenButton>
           <Text style={styles.PageTitle}>Inversión actual</Text>
           <NameLogin></NameLogin>
-          <Text>{userId}</Text>
         </View>
         <View style={styles.ElevatePic}>
           <Image source={require('../../assets/Cabeceras/estadoDeCuentaHeader.png')} style={styles.logo}></Image>
         </View>
       </View>
       <View style={styles.body}>
-      <View style={styles.info}>
           <View style={styles.InputInfo}>
             <Text style={styles.YellowFont}>Inversion actual </Text>
-            <HollowInput>{cantidad}</HollowInput>
+            <HollowInput title={cantidad} ></HollowInput>
           </View>
           <View style={styles.InputInfo}>
             <Text style={styles.YellowFont}>Enviar a Rappipay</Text>
@@ -64,25 +62,16 @@ const LoadUserTransactions = async (userId) => {
                 style={styles.inputText}
                 value = {user}
                 onChange = {(e) => setMonto(e.nativeEvent.text)}/>
-          </View>
+
         </View>
-        <View style={styles.AllBoxes}>
-                {misTrans.map(item  => (
-                     <View key={item.id} style={{ backgroundColor: 'red' }}>
-                        <Text style={styles.ItemName}>Haz ayudado a: {item.rappiName}</Text>
-                        <Text style={styles.ItemMonto}>Tu monto invertido fue de: ${item.monto}</Text>
-                        {/* <Text style={styles.ItemDate}>{item.createdAt}</Text> */}
-                    </View>
-                ))}
-            </View>
       </View>
       <View style={styles.footer}>
-        <View style={[styles.flex, styles.footerLeft]}>
+       {/*  <View style={[styles.flex, styles.footerLeft]}>
           <WhiteButton title='Menu' onPress={() => navigation.navigate('MenuApadrinapp')}></WhiteButton>
         </View>
         <View style={[styles.flex, styles.footerRight]}>
           <YellowButton title='Enviar' onPress={() => navigation.navigate('MenuApadrinapp')}></YellowButton>
-        </View>
+        </View> */}
       </View>
       </ScrollView>
     </View>

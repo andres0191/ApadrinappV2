@@ -48,7 +48,8 @@ const styles = StyleSheet.create({
     alignItems : 'center',
     justifyContent : 'center',
     backgroundColor: Color.lightpurple,
-    marginTop: 10,
+    width: win.width,
+    marginTop: -31,
   },
   logo : {
     width: win.width,
@@ -65,13 +66,6 @@ const styles = StyleSheet.create({
     width: win.width,
     justifyContent: 'center',
   },
-  info: {
-    width: win.width,
-    flexDirection : 'column',
-    justifyContent: 'center',
-    alignItems: 'center',
-    marginTop: -31,
-  },
   footer: {
     flex: 1,
     flexDirection : 'row',
@@ -87,7 +81,6 @@ const styles = StyleSheet.create({
     marginTop: 15,
   },
   YellowFont: {
-    /*fontFamily: '',*/
     marginBottom: -8,
     fontSize: 26,
     fontWeight: "bold",
@@ -105,25 +98,9 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
     fontWeight: "bold"
   },
-  AllBoxes: {
-    backgroundColor: Color.lightpurple
-  },
-  Boxes: {
-    padding: 30,
-    backgroundColor: Color.purple,
-    width: win.width/1.05,
-    margin: 5,
-    borderColor: Color.lightpurple,
-    borderRadius: 20
-  },
   ItemMonto: {
     color: Color.white,
     fontSize: 20
-  },
-  ItemDate: {
-    color: Color.yellow,
-    fontSize: 30,
-    fontWeight: "bold"
   }
 })
 
