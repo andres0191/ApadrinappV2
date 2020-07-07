@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Text, View, Image, TextInput } from 'react-native';
+import { View, Image, TextInput } from 'react-native';
 import styles from './styles';
 import firebaseService from '../../../services/firebase';
 import YellowBigButton from '../../../source/Components/YellowBigButton';
@@ -51,6 +51,7 @@ const SignUpRappi = ({navigation}) => {
             <TextInput
                 placeholder='contraseña'
                 placeholderTextColor="white"
+                secureTextEntry
                 style={styles.inputText}
                 value = {pass}
                 onChange = {(e) => setPass(e.nativeEvent.text)}

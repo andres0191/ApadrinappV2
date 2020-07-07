@@ -1,4 +1,3 @@
-import React from 'react';
 import { StyleSheet } from 'react-native';
 import Color from '../../source/utils/Colors';
 import { Dimensions } from 'react-native';
@@ -71,7 +70,7 @@ const styles = StyleSheet.create({
     flexDirection : 'row',
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: Color.purple
+    backgroundColor: Color.purple,
   },
   InputInfo: {
     flex: .5,

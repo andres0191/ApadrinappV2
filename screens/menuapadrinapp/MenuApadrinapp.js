@@ -1,8 +1,6 @@
 import React, { Component, useEffect, useState } from 'react';
 import { Text, View, Image, TouchableHighlight, ScrollView, AsyncStorage } from 'react-native';
 import styles from './styles';
-import WhiteButton from '../../source/Components/WhiteButton';
-import YellowButton from '../../source/Components/YellowButton';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import PrevScreenButton from '../../source/Components/PrevScreenButton';
 import NameLogin from '../NameLogin/NameLogin';
@@ -20,9 +18,7 @@ const MenuApadrinapp = ({ navigation }) => {
       alert('No user')
     }
   }
-  useEffect(() => {
-    LoadUserId()
-}, []);
+  useEffect(() => { LoadUserId() }, []);
 
   return (
     <View style={styles.container}>
@@ -53,19 +49,11 @@ const MenuApadrinapp = ({ navigation }) => {
           <TouchableOpacity onPress={() => navigation.navigate('PublicacionesRappi')}>
             <Image source={require('../../assets/Menu/menuapadrina.png')} style={styles.ApadrinaStyle} />
           </TouchableOpacity>
-          <TouchableOpacity /* onPress={() => navigation.navigate('Transferencia')} */>
+          <TouchableOpacity>
             <Image source={require('../../assets/Menu/confiar.png')} style={styles.ConfiaStyle} />
           </TouchableOpacity>
         </View>
         </View>
-        {/* <View style={styles.footer}>
-          <View style={[styles.flex, styles.footerLeft]}>
-            <WhiteButton title='Salir' onPress={() => navigation.navigate('Start')}></WhiteButton>
-          </View>
-          <View style={[styles.flex, styles.footerRight]}>
-            <YellowButton title='Saldo' onPress={() => navigation.navigate('EstadoCuenta')}></YellowButton>
-          </View>
-      </View> */}
       </ScrollView>
     </View>
     )
