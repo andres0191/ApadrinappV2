@@ -1,5 +1,7 @@
 # APADRINAPP
+
 ![img](https://raw.githubusercontent.com/andres0191/ApadrinappV2/master/assets/icono-apadrinapp.png)
+
 
 What is **Apadrinapp**?
 
@@ -9,6 +11,7 @@ An application that, through **Crowdlending**, allows the collection to finance 
 The application consists of two different profiles:
 Rappitendero's Profile:
 The first screen that is found is the login screen, where you can create an account by filling in the **Name**, **e-mail** and **password**, or log in by entering the **e-mail** and **password**:
+
 ![img register and singup Rappitendero](https://github.com/andres0191/ApadrinappV2/blob/andres/assets/readmeImages/perfilRappitendero/login-singup-rappitendero.png)
 
 When the session is already started, the menu appears, where there are two options:
@@ -57,3 +60,4 @@ We use firebase due to:
 - Extensive functionalities.
 - Support for web, Android and iOS.
 - Simple control board.
+
