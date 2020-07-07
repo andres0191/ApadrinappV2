@@ -14,31 +14,31 @@ The first screen that is found is the login screen, where you can create an acco
 
 ![img register and singup Rappitendero](https://github.com/andres0191/ApadrinappV2/blob/andres/assets/readmeImages/perfilRappitendero/login-singup-rappitendero.png)
 
-When the session is already started, the menu appears, where there are two options:
+When the session is already started, the **menu** appears, where there are two options:
 ![img menu rappitendero](https://github.com/andres0191/ApadrinappV2/blob/andres/assets/readmeImages/perfilRappitendero/menu-rappitendero.jpeg)
 
-1- [In Login Rappitendero](https://github.com/andres0191/ApadrinappV2/blob/master/screens/Rappitendero/loginRappitendero/loginRappi.js) you can see the publication that has been made, and how much has been collected so far
+1- [In Login Rappitendero](https://github.com/andres0191/ApadrinappV2/blob/master/screens/Rappitendero/loginRappitendero/loginRappi.js) you can see the **publication** that has been made, and how much has been collected so far
 ![img singlepost Rappitendero](https://github.com/andres0191/ApadrinappV2/blob/andres/assets/readmeImages/perfilRappitendero/singlepostRappi.jpeg)
 
-2- [In Post Rappitendero](https://github.com/andres0191/ApadrinappV2/blob/master/screens/Rappitendero/PostRappitendero/SingleRappiPost.js) you can post how much money you need and what you want to do with that money, what do you plan to invest in to be a Rappitendero
+2- [In Post Rappitendero](https://github.com/andres0191/ApadrinappV2/blob/master/screens/Rappitendero/PostRappitendero/SingleRappiPost.js) you can **post** how much money you need and what you want to do with that money, what do you plan to invest in to be a Rappitendero
 ![img postRappi Rappitendero](https://github.com/andres0191/ApadrinappV2/blob/andres/assets/readmeImages/perfilRappitendero/postRappi.jpeg)
 
 
 
 Investor Profile:
 
-The first screen that is found is the [login](https://github.com/andres0191/ApadrinappV2/blob/master/screens/login/login.js) screen, where you can create an account by filling in the Name, e-mail and password, or log in by entering the e-mail and password:
+The first screen that is found is the [login](https://github.com/andres0191/ApadrinappV2/blob/master/screens/login/login.js) screen, where you can **create an account** by filling in the Name, e-mail and password, or **login** by entering the e-mail and password:
 ![image Login and Singup Inversor](https://github.com/andres0191/ApadrinappV2/blob/andres/assets/readmeImages/perfilInversor/loginSingupInversor.jpeg)
-When the session is already started, the menu appears, where there are four options:
+When the session is already started, the **menu** appears, where there are four options:
 ![Menu inversor](https://github.com/andres0191/ApadrinappV2/blob/andres/assets/readmeImages/perfilInversor/MenuInversor.jpeg)
 
-1- [In the Account Status](https://github.com/andres0191/ApadrinappV2/blob/master/screens/estadocuenta/Estadocuenta.js) you can see the investment you currently have, you will have the possibility to transfer money to Rappipay and return to the Menu
+1- [In the Account Status](https://github.com/andres0191/ApadrinappV2/blob/master/screens/estadocuenta/Estadocuenta.js) you can see the **investment you currently** have, you will have the possibility to transfer money to Rappipay and return to the Menu
 ![img EstadoCuenta Inversor](https://github.com/andres0191/ApadrinappV2/blob/andres/assets/readmeImages/perfilInversor/EstadocuentaInversor.jpeg)
 
-2- [in the Apadrinar ](https://github.com/andres0191/ApadrinappV2/blob/master/screens/publicacionesrappi/PublicacionesRappi.js) are all the publications made by people who want to be Rappitenderos, where you can see for what purpose they want the money and how much they are requesting
+2- [in the Apadrinar ](https://github.com/andres0191/ApadrinappV2/blob/master/screens/publicacionesrappi/PublicacionesRappi.js) are all the **publications** made by people who want to be Rappitenderos, where you can see for what purpose they want the money and how much they are requesting
 ![img Publicaciones](https://github.com/andres0191/ApadrinappV2/blob/andres/assets/readmeImages/perfilInversor/listaPublicaciones.jpeg)
 
-3- [In Microprestamos](https://github.com/andres0191/ApadrinappV2/blob/master/screens/UserTransacciones/userTransacciones.js) shows the history of the transactions made, whom you have invested in and in what time
+3- [In Microprestamos](https://github.com/andres0191/ApadrinappV2/blob/master/screens/UserTransacciones/userTransacciones.js) shows the history of the **transactions** made, whom you have invested in and in what time
 
 For the development of this application we use the technologies of:
 ![img of technologies ](https://github.com/andres0191/ApadrinappV2/blob/andres/assets/readmeImages/tecnologias.jpg)

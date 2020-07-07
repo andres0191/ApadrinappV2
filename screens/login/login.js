@@ -22,7 +22,6 @@ const login = ({navigation}) => {
             alert('Por favor ingresa los datos correctos')
         }
     }
-
     const load = async () => {
         try {
             let user = await AsyncStorage.getItem(USEREMAIL)
@@ -30,26 +29,18 @@ const login = ({navigation}) => {
 
             if (USEREMAIL !== null) {
                 setUser(user);
-            }
-            if (PASSW !== null) {
+            } if (PASSW !== null) {
                 setPass(pass);
-            }
-        } catch (e) {
+            }} catch (e) {
             alert('Error al cargar los datos');
-        }
-    };
-
-    useEffect(() => {
-        load()
-    }, []);
-
+        }}; useEffect(() => { load() }, []);
 
   return (
     <View style={styles.container}>
         <View style={styles.header}>
             <View style={styles.headerLeft}>
-            <PrevScreenButton onPress={() => navigation.navigate('Inicio')}></PrevScreenButton>
-        </View>
+                <PrevScreenButton onPress={() => navigation.navigate('Inicio')}></PrevScreenButton>
+            </View>
         </View>
         <View>
             <Image source={require('../../assets/apadrinapp_logo.png')} style={styles.logo}></Image>

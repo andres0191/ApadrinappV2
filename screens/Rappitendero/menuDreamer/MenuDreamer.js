@@ -1,8 +1,6 @@
-import React, { Component, useEffect, useState } from 'react';
-import { Text, View, Image, TouchableHighlight, ScrollView, AsyncStorage } from 'react-native';
+import React, { useEffect, useState } from 'react';
+import { Text, View, Image, ScrollView } from 'react-native';
 import styles from './styles';
-import WhiteButton from '../../../source/Components/WhiteButton';
-import YellowButton from '../../../source/Components/YellowButton';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import PrevScreenButton from '../../../source/Components/PrevScreenButton';
 import NameLogin from '../../NameLogin/NameLogin';

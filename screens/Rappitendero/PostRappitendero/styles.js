@@ -15,8 +15,7 @@ const styles = StyleSheet.create({
   },
   header : {
     flex : 1,
-    paddingTop: 22, 
-    // marginBottom: -90,
+    paddingTop: 22,
     backgroundColor: Color.lightpurple
   },
   headerLeft : {
@@ -27,10 +26,6 @@ const styles = StyleSheet.create({
     paddingBottom: 12,
     backgroundColor: Color.lightpurple
   },
-  // headerMiddle : {
-  // },
-  // headerRight : {
-  // },
   body : {
     flex : 1.5,
     alignItems : 'center',
@@ -46,7 +41,6 @@ const styles = StyleSheet.create({
     fontSize: 20,
     justifyContent : 'center',
     textAlign : 'justify',
-    // paddingVertical: 10,
     paddingHorizontal: 30
   },
   textW : {

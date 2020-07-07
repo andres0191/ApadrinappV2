@@ -4,7 +4,6 @@ import styles from './styles';
 import WhiteButton from '../../source/Components/WhiteButton';
 import YellowButton from '../../source/Components/YellowButton';
 import firebaseService from '../../services/firebase';
-import HollowInput from '../../source/Components/HollowInputSpace';
 import PrevScreenButton from '../../source/Components/PrevScreenButton';
 import NameLogin from '../NameLogin/NameLogin';
 import firebaseGetService from '../../services/firebaseForGet';
@@ -66,12 +65,12 @@ const LoadUserTransactions = async (userId) => {
         </View>
       </View>
       <View style={styles.footer}>
-       {/*  <View style={[styles.flex, styles.footerLeft]}>
+       <View style={[styles.flex, styles.footerLeft]}>
           <WhiteButton title='Menu' onPress={() => navigation.navigate('MenuApadrinapp')}></WhiteButton>
         </View>
         <View style={[styles.flex, styles.footerRight]}>
           <YellowButton title='Enviar' onPress={() => navigation.navigate('MenuApadrinapp')}></YellowButton>
-        </View> */}
+        </View> 
       </View>
       </ScrollView>
     </View>

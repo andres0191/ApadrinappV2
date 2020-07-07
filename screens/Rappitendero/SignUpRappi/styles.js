@@ -1,4 +1,3 @@
-import React from 'react';
 import { StyleSheet } from 'react-native';
 import Color from '../../../source/utils/Colors';
 import { Dimensions } from 'react-native';

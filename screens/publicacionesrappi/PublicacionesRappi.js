@@ -4,18 +4,15 @@ import styles from './styles';
 import PrevScreenButton from '../../source/Components/PrevScreenButton';
 import List from './List.js';
 import NameLogin from '../NameLogin/NameLogin';
-/* Redux */
 import { createStore, applyMiddleware } from "redux";
 import createSagaMiddleware from "redux-saga";
 import { Provider } from "react-redux";
 import reducer from '../../redux/reducer';
-import { watchSaga } from "./saga";
+import { watchSaga } from "./redux/saga";
 import { composeWithDevTools } from 'redux-devtools-extension';
 
 
 const sagaMiddleware = createSagaMiddleware();
-/* crear el store */
-/* el composeWithDevTools sirve para usar el plugin del navegador. cuando salga a produccion hay que quitarlo */
 const store = createStore(reducer, composeWithDevTools(applyMiddleware(sagaMiddleware)));
 sagaMiddleware.run(watchSaga);
 

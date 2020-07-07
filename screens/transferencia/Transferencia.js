@@ -1,19 +1,15 @@
 import React, { useState, useEffect } from 'react';
-import { Text, View, Image, ScrollView, TextInput, AsyncStorage, ImageBackground, Alert } from 'react-native';
+import { Text, View, ScrollView, TextInput, ImageBackground, Alert } from 'react-native';
 import styles from './styles';
-import WhiteButton from '../../source/Components/WhiteButton';
 import YellowButton from '../../source/Components/YellowButton';
 import HollowInput from '../../source/Components/HollowInputSpace';
 import PrevScreenButton from '../../source/Components/PrevScreenButton';
 import NameLogin from '../NameLogin/NameLogin';
-import BackButton from '../../source/Components/BackButton'
-import { useLinkProps } from '@react-navigation/native';
 import firebaseService from '../../services/firebase'
 import firebasePostService from '../../services/firebaseForPost'
 
 const Transferencia = ({ route, navigation }) => {
   const { item } = route.params;
-  /* console.log(navigation.navigate) */
   const [monto, setMonto] = useState('')
   const [userId, setUserId] = useState('')
   const publicacionId = item.id

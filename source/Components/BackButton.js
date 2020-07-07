@@ -1,6 +1,4 @@
 function ScreenWithCustomBackBehavior() {
-    // ...
-  
     useFocusEffect(
       React.useCallback(() => {
         const onBackPress = () => {
@@ -18,8 +16,6 @@ function ScreenWithCustomBackBehavior() {
           BackHandler.removeEventListener('hardwareBackPress', onBackPress);
       }, [isSelectionModeEnabled, disableSelectionMode])
     );
-  
-    // ...
   }
 
   export default ScreenWithCustomBackBehavior
