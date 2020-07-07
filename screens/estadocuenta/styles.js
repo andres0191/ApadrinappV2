@@ -1,4 +1,3 @@
-import React from 'react';
 import { StyleSheet } from 'react-native';
 import Color from '../../source/utils/Colors';
 import { Dimensions } from 'react-native';
@@ -71,7 +70,7 @@ const styles = StyleSheet.create({
     flexDirection : 'row',
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: Color.purple
+    backgroundColor: Color.purple,
   },
   InputInfo: {
     flex: .5,
@@ -82,9 +81,15 @@ const styles = StyleSheet.create({
   },
   YellowFont: {
     marginBottom: -8,
-    fontSize: 26,
-    fontWeight: "bold",
+    fontSize: 22,
+    fontWeight: 'bold',
     color: Color.yellow,
+  },
+  textPurple: {
+    fontWeight: "bold",
+    fontSize: 54,
+    paddingVertical: 10,
+    color: Color.purple
   },
   inputText: {
     borderColor: Color.purple,
@@ -93,7 +98,7 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     borderWidth: 2,
     marginVertical: 10,
-    fontSize: 44,
+    fontSize: 54,
     color: Color.purple,
     paddingHorizontal: 20,
     fontWeight: "bold"

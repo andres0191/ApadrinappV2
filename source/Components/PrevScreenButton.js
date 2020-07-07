@@ -1,6 +1,5 @@
 import React from 'react';
 import { TouchableOpacity, StyleSheet, Text, Image } from 'react-native';
-import Color from '../utils/Colors';
 
 const PrevScreenButton = (props) => {
     let { title = 'Enter', style = {}, textStyle = {}, onPress } = props

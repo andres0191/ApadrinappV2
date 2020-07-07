@@ -1,10 +1,6 @@
-import React from 'react';
 import { StyleSheet } from 'react-native';
 import Color from '../../source/utils/Colors';
-import { Dimensions } from 'react-native';
 
-const win = Dimensions.get('window');
-const ratio = win.width/541;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -29,7 +25,20 @@ const styles = StyleSheet.create({
   },
   MenuOptions: {
     flexDirection: 'row'
-  }
+  },
+  headerLeft : {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'baseline',
+    paddingHorizontal: 10,
+    paddingBottom: 12,
+    backgroundColor: Color.lightpurple
+  },
+  header : {
+    flex : .1,
+    paddingTop: 22,
+    marginBottom: -90
+  },
 });
 
 export default styles

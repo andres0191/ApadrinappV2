@@ -89,7 +89,6 @@ const styles = StyleSheet.create({
     marginVertical: 10
   },
   YellowFont: {
-    /*fontFamily: '',*/
     marginBottom: -8,
     fontSize: 17,
     fontWeight: "bold",

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import {TextInput, Stylesheet, View, Text, TouchableHighlight, SectionList } from 'react-native';
+import {TextInput, View, Text, TouchableHighlight } from 'react-native';
 import * as firebase from 'firebase';
 import 'firebase/firebase-firestore';
 import styles from './styles';

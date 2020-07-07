@@ -28,10 +28,6 @@ const styles = StyleSheet.create({
     paddingBottom: 12,
     backgroundColor: Color.lightpurple
   },
-  // headerMiddle : {
-  // },
-  // headerRight : {
-  // },
   body : {
     flex : 1.5,
     alignItems : 'center',
