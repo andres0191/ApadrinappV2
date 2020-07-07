@@ -53,10 +53,14 @@ return(
             <Text style={{fontSize: 28, color: '#cccccc'}}>Tu publicacion es:</Text>
                 {singlePost.map(item  => (
                      <View key={item.id} style={styles.Boxes}>
-                        
                         <Text style={styles.ItemName}>{item.name}</Text>
                         <Text style={styles.ItemMonto}>Cantidad solicitada: $ {item.monto}</Text>
                         <Text style={styles.ItemDescription}>{item.description}</Text>
+                    </View>
+                ))}
+                {singlePost.map(item  => (
+                     <View key={item.id} style={styles.Boxes}>
+                        <Text style={styles.ItemDescription}>Has recogido: $ {item.monto}</Text>
                     </View>
                 ))}
             </View>
