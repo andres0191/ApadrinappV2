@@ -13,7 +13,7 @@ import Dreamer from './screens/slides/Dreamer';
 import Padrino from './screens/slides/Padrino';
 import List from './screens/publicacionesrappi/List';
 import NameLogin from './screens/NameLogin/NameLogin';
-import SaveFunction from './screens/PruebasAndres/SaveFunction';
+import SaveFunction from './screens/SaveFunction/SaveFunction';
 import PostRappi from './screens/Rappitendero/PostRappitendero/PostRappi';
 import {decode, encode} from 'base-64';
 import Inicio from './screens/Inicio/Inicio';
