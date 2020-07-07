@@ -86,8 +86,6 @@ const styles = StyleSheet.create({
     //margin: 5,
     padding: 5,
   },
-
-
   footer: {
     flex: 0.1,
     flexDirection : 'row',
