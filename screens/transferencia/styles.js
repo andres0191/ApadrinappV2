@@ -1,4 +1,3 @@
-import React from 'react';
 import { StyleSheet } from 'react-native';
 import Color from '../../source/utils/Colors';
 import { Dimensions } from 'react-native';
@@ -17,7 +16,6 @@ const styles = StyleSheet.create({
   header : {
     flex : 1,
     paddingTop: 22,
-    /* marginBottom: -50 */
   },
   headerLeft : {
     flex : 1,
@@ -90,7 +88,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   YellowFont: {
-    /*fontFamily: '',*/
     marginBottom: -8,
     fontSize: 26,
     fontWeight: "bold",

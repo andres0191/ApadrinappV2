@@ -13,10 +13,6 @@ const firebaseConfig = {
         measurementId: "G-HD1SSPMEXJ"
 }
 class FirebasePost{
-    /* constructor(){
-        firebase.initializeApp(firebaseConfig)
-        this.auth = firebase.auth()
-    } */
     savePublication = async (name, monto, description, rappiId) => {
         try {
             const fire = firebase.firestore()
@@ -47,8 +43,6 @@ class FirebasePost{
             Alert('La transacción no se pudo realizar correctamente')
         }
     }
-
-    //funcion de actualizar la publicacion del rappitendero con el monto ehcho por la transaccion
 }
 
 const firebasePostService = new FirebasePost()

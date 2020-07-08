@@ -31,7 +31,6 @@ const styles = StyleSheet.create({
         fontSize: 20,
         textAlign: "center",
         color: Color.purple,
-        /*fontFamily: 'Montserrat-Regular'*/
     }
 })
 

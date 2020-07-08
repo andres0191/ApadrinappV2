@@ -1,4 +1,3 @@
-import React from 'react';
 import { StyleSheet } from 'react-native';
 import Color from '../../source/utils/Colors';
 import { Dimensions } from 'react-native';
@@ -13,8 +12,10 @@ const styles = StyleSheet.create({
       alignItems : 'center'
     },
     inputText: {
-        height: 40,
+        minHeight: 40,
+        maxHeight: 40,
         minWidth : 180,
+        maxWidth: 180,
         borderWidth: 1,
         borderColor: '#ccc',
         paddingHorizontal: 15,

@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { Text, View, Image, ScrollView, TextInput, Alert } from 'react-native';
 import styles from './styles';
 import WhiteButton from '../../source/Components/WhiteButton';
-import YellowButton from '../../source/Components/YellowButton';
 import firebaseService from '../../services/firebase';
 import PrevScreenButton from '../../source/Components/PrevScreenButton';
 import NameLogin from '../NameLogin/NameLogin';

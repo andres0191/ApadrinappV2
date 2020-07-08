@@ -1,14 +1,12 @@
-import React, { Component, useState, useEffect } from 'react';
+import React, { Component } from 'react';
 import { View, Text, YellowBox, ActivityIndicator } from 'react-native';
-import * as firebase from 'firebase';
 import 'firebase/firebase-firestore';
 import styles from './styles';
 import YellowButton from '../../source/Components/YellowButton';
-import { useNavigation } from '@react-navigation/native';
 import _ from 'lodash';
 import {CARGAR_LISTA} from '../../redux/const';
 import { connect } from "react-redux";
-import {ObtenerLista} from './selector';
+import {ObtenerLista} from './redux/selector';
 
 YellowBox.ignoreWarnings(['Setting a timer']);
 

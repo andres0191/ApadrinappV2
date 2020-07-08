@@ -1,9 +1,7 @@
-
 import React from 'react'
 import { Text, View, ImageBackground } from 'react-native'
 import styles from './styles';
 import WhiteButton from '../../source/Components/WhiteButton';
-import YellowBigButton from '../../source/Components/YellowBigButton';
 import PrevScreenButton from '../../source/Components/PrevScreenButton';
 
 const Ciclo = ({ navigation }) => {

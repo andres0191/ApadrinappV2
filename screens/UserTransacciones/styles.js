@@ -1,4 +1,3 @@
-import React from 'react';
 import { StyleSheet } from 'react-native';
 import Color from '../../source/utils/Colors';
 import { Dimensions } from 'react-native';
@@ -86,7 +85,6 @@ const styles = StyleSheet.create({
     marginVertical: 10,
   },
   YellowFont: {
-    /*fontFamily: '',*/
     marginBottom: -8,
     fontSize: 26,
     fontWeight: "bold",

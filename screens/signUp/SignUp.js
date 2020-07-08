@@ -1,17 +1,10 @@
 import React, { useState } from 'react';
-import { Text, View, Image, TextInput } from 'react-native';
+import { View, Image, TextInput } from 'react-native';
 import styles from './styles';
 import firebaseService from '../../services/firebase';
 import YellowBigButton from '../../source/Components/YellowBigButton';
-import { CheckBox } from 'react-native-elements'
 
 const SignUp = ({navigation}) => {
-    /* onePressed();{
-        alert('one')
-    }
-    twoPressed();{
-        alert('two')
-    } */
     const [user, setUser] = useState('')
     const [pass, setPass] = useState('')
     const [name, setName] = useState('')
@@ -61,14 +54,7 @@ const SignUp = ({navigation}) => {
                 style={styles.inputText}
                 value = {pass}
                 onChange = {(e) => setPass(e.nativeEvent.text)}
-                />
-            {/* <CheckBox checked={false}
-                onPress={() => this.onePressed} />
-                <Text>uno</Text>
-            <CheckBox checked={false}
-                onPress={() => this.twoPressed} />
-                <Text>dos</Text> */}
-            
+                />            
         </View>
         <View style={styles.MenuOptions}>
             <YellowBigButton title='Registrarme' onPress={createNewUser}></YellowBigButton>

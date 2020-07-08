@@ -1,6 +1,5 @@
 import { StyleSheet, Dimensions, Image } from 'react-native';
 import Colors from '../../source/utils/Colors.js'
-import { ceil } from 'react-native-reanimated';
 
 
 const win = Dimensions.get('window');

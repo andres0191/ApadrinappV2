@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Text, View, TouchableHighlight, TextInput, Image, AsyncStorage } from 'react-native';
+import { View, TextInput, Image, AsyncStorage } from 'react-native';
 import styles from './styles';
 import firebaseService from '../../../services/firebase';
 import YellowBigButton from '../../../source/Components/YellowBigButton';

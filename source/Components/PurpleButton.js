@@ -30,7 +30,6 @@ const styles = StyleSheet.create({
         fontSize: 15,
         textAlign: "center",
         color: Color.white,
-        /*fontFamily: 'Montserrat'*/
     }
 })
 
