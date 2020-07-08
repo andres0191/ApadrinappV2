@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { View, Text, Alert, ScrollView, Image } from 'react-native';
+import { View, Text, Alert, ScrollView, Image, Button } from 'react-native';
 import firebaseService from '../../../services/firebase'
 import 'firebase/firebase-firestore';
 import styles from './stylePost';
@@ -8,12 +8,12 @@ import PrevScreenButton from '../../../source/Components/PrevScreenButton';
 import _ from 'lodash';
 import firebaseGetService from '../../../services/firebaseForGet';
 import firebaseDeleteService from '../../../services/firebaseForDelete';
-import NameLogin from '../../NameLogin/NameLogin';
 import YellowButton from '../../../source/Components/YellowButton';
 
 const SinglePost = () => {
 const [singlePost, setPost] = useState([]);
 const [rappiId, setRappiId] = useState("");
+const [Dreamer, setDreamer] = useState('');
 let [publicationId, setPublicationId] = useState([]);
 
 const navigation = useNavigation();
@@ -23,14 +23,23 @@ const LoadUserId = async () => {
         const RappiId = await firebaseService.getUserId();
         const onlyPost = await firebaseGetService.getOnePublication(RappiId);
         const onePost = await firebaseGetService.getSinglePublication(RappiId);
+        const Dreamer  = await firebaseService.getUserName();
+        setDreamer(Dreamer)
         let itemId = onePost.id;
         setPublicationId(itemId);
+        if (!itemId) {
+            Alert.alert(
+                `${Dreamer}`,
+                'Aun no nos dices cual es tu sueno, Te invitamos a realizar tu publicacion para encontrar las personas que te desean apadrinar :D'),
+            await navigation.navigate('PostRappi');
+        }
         setPost(onlyPost);
         setRappiId(RappiId);
+        
     } catch (error) {
       Alert.alert('No user')
     }
-  } 
+  }
 
 useEffect(() => {
     LoadUserId();
@@ -46,14 +55,16 @@ const OnPressDelete = async (publicationId) => {
     }
 };
 
+
 return(
     <View style={styles.container}>
+          
     <ScrollView>
     <View style={styles.header}>
             <View style={styles.headerLeft}>
                 <PrevScreenButton style={styles.back} onPress={() => navigation.navigate('MenuDreamer')}></PrevScreenButton>
                 <Text style={styles.PageTitle}>Estado del Dream</Text>
-                <NameLogin></NameLogin>
+              
             </View>
             <View style={styles.ElevatePic}>
                 <Image source={require('../../../assets/Cabeceras/estadoDream.png')} style={styles.logo}></Image>
@@ -68,11 +79,6 @@ return(
                         <Text style={styles.ItemDescription}>{item.description}</Text>
                     </View>
                 ))}
-                {/* {singlePost.map(item  => (
-                     <View key={item.id} style={styles.Boxes}>
-                        <Text style={styles.ItemDescription}>Has recogido: $ {item.monto}</Text>
-                    </View>
-                ))} */}
             </View>
             <View style={styles.buttons}>
             <YellowButton title='Eliminar' onPress={() => OnPressDelete(publicationId)}></YellowButton>
