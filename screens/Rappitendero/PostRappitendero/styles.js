@@ -52,8 +52,8 @@ const styles = StyleSheet.create({
   },
   inputText: {
     textAlign : 'center',
-    minHeight: 40,
-    maxHeight: 40,
+    minHeight: 50,
+    maxHeight: 50,
     minWidth: 250,
     maxWidth: 250,
     borderWidth: 2,

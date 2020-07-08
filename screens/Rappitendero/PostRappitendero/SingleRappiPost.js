@@ -68,11 +68,11 @@ return(
                         <Text style={styles.ItemDescription}>{item.description}</Text>
                     </View>
                 ))}
-                {singlePost.map(item  => (
+                {/* {singlePost.map(item  => (
                      <View key={item.id} style={styles.Boxes}>
                         <Text style={styles.ItemDescription}>Has recogido: $ {item.monto}</Text>
                     </View>
-                ))}
+                ))} */}
             </View>
             <View style={styles.buttons}>
             <YellowButton title='Eliminar' onPress={() => OnPressDelete(publicationId)}></YellowButton>

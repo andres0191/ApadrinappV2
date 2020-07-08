@@ -49,9 +49,9 @@ const MenuApadrinapp = ({ navigation }) => {
           <TouchableOpacity onPress={() => navigation.navigate('PublicacionesRappi')}>
             <Image source={require('../../assets/Menu/menuapadrina.png')} style={styles.ApadrinaStyle} />
           </TouchableOpacity>
-          <TouchableOpacity>
+          {/* <TouchableOpacity>
             <Image source={require('../../assets/Menu/confiar.png')} style={styles.ConfiaStyle} />
-          </TouchableOpacity>
+          </TouchableOpacity> */}
         </View>
         </View>
       </ScrollView>
