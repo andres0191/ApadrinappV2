@@ -38,9 +38,9 @@ const login = ({navigation}) => {
   return (
     <View style={styles.container}>
         <View style={styles.header}>
-            <View style={styles.headerLeft}>
+            {/* <View style={styles.headerLeft}>
                 <PrevScreenButton onPress={() => navigation.navigate('Inicio')}></PrevScreenButton>
-            </View>
+            </View> */}
         </View>
         <View>
             <Image source={require('../../assets/apadrinapp_logo.png')} style={styles.logo}></Image>

@@ -15,7 +15,6 @@ const styles = StyleSheet.create({
   },
   header : {
     flex : 1,
-    paddingTop: 22,
   },
   headerLeft : {
     flex : 1,
@@ -25,7 +24,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 10,
     paddingBottom: 12,
     backgroundColor: Color.lightpurple,
-    marginTop: -7,
+    marginTop: 25,
   },
   headerMiddle : {
     flex: 1,
@@ -71,6 +70,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     backgroundColor: Color.purple,
+    marginTop: 28,
   },
   InputInfo: {
     flex: .5,
@@ -84,24 +84,28 @@ const styles = StyleSheet.create({
     fontSize: 22,
     fontWeight: 'bold',
     color: Color.yellow,
+    marginTop: -21,
   },
   textPurple: {
     fontWeight: "bold",
-    fontSize: 54,
+    fontSize: 35,
     paddingVertical: 10,
     color: Color.purple
   },
   inputText: {
     borderColor: Color.purple,
-    minWidth: 235,
-    minHeight: 70,
+    minWidth: 200,
+    maxWidth: 200,
+    minHeight: 50,
+    maxHeight: 50,
     borderRadius: 10,
     borderWidth: 2,
     marginVertical: 10,
-    fontSize: 54,
+    fontSize: 35,
     color: Color.purple,
-    paddingHorizontal: 20,
-    fontWeight: "bold"
+    paddingHorizontal: 10,
+    fontWeight: "bold",
+    marginTop: 10,
   },
   ItemMonto: {
     color: Color.white,
