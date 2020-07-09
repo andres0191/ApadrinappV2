@@ -22,7 +22,7 @@ class FirebasePost{
                 description,
                 rappiId,
                 createdAt: firebase.firestore.FieldValue.serverTimestamp(),
-                montoRecogido: {}
+                montoRecogido: {},
             });
         } catch (error) {
             Alert('La publicación no se pudo realizar correctamente')
