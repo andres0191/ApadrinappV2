@@ -11,11 +11,14 @@ const styles = StyleSheet.create({
       justifyContent: 'center',
       alignItems : 'center'
     },
+    logoH : {
+      height : 100
+    },
     inputText: {
         height: 40,
         minWidth : 180,
         borderWidth: 1,
-        borderColor: '#ccc',
+        borderColor: Color.yellow,
         paddingHorizontal: 15,
         color: Color.purple,
         backgroundColor: Color.lightpurple,
@@ -32,12 +35,16 @@ const styles = StyleSheet.create({
       },
       IconImage: {
         width: win.width,
-        height: 362 * ratio,
+        height: 150 * ratio,
         resizeMode: 'contain',
       },
       MenuOptions: {
+        paddingTop : 40,
         alignItems: 'center',
-      }
+      },
+      // bottony : {
+      //   paddingTop : 10
+      // }
   });
 
 export default styles

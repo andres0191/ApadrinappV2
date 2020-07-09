@@ -11,7 +11,7 @@ const styles = StyleSheet.create({
   inputText: {
     height: 50,
     borderWidth: 1,
-    borderColor: '#ccc',
+    borderColor: Color.yellow,
     paddingHorizontal: 15,
     color: Color.purple,
     backgroundColor: Color.lightpurple,
@@ -24,7 +24,7 @@ const styles = StyleSheet.create({
     width: 160,
   },
   MenuOptions: {
-    flexDirection: 'row'
+    flexDirection: 'column'
   },
   headerLeft : {
     flexDirection: 'row',

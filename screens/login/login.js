@@ -4,7 +4,7 @@ import styles from './styles';
 import firebaseService from '../../services/firebase';
 import YellowBigButton from '../../source/Components/YellowBigButton';
 import WhiteBigButton from '../../source/Components/WhiteBigButton';
-import PrevScreenButton from '../../source/Components/PrevScreenButton';
+import PurpleBigButton from '../../source/Components/PurpleBigButton'
 
 let USEREMAIL = 'sinUser'
 let PASSW = "NoPass"
@@ -37,11 +37,6 @@ const login = ({navigation}) => {
 
   return (
     <View style={styles.container}>
-        <View style={styles.header}>
-            <View style={styles.headerLeft}>
-                <PrevScreenButton onPress={() => navigation.navigate('Inicio')}></PrevScreenButton>
-            </View>
-        </View>
         <View>
             <Image source={require('../../assets/apadrinapp_logo.png')} style={styles.logo}></Image>
         </View>
@@ -65,6 +60,8 @@ const login = ({navigation}) => {
         <View style={styles.MenuOptions}>
             <WhiteBigButton title='Ingresa' onPress={onPressLogin}></WhiteBigButton>
             <YellowBigButton title='Registrate' onPress={() => navigation.navigate('SignUp')}></YellowBigButton>
+            <PurpleBigButton title='Cancelar' onPress={() => navigation.navigate('Inicio')}></PurpleBigButton>
+
         </View>
     </View>
   );

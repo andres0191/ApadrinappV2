@@ -26,6 +26,11 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         margin: 20,
         backgroundColor: Color.white,
+        shadowColor: "#000",
+        shadowOffset: { width: 0, height: 3, },
+        shadowOpacity: 0.27,
+        shadowRadius: 4.65,
+        elevation: 6,
         marginTop: 50,
     },
     textButton: {
