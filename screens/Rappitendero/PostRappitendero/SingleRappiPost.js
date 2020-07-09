@@ -10,11 +10,14 @@ import firebaseGetService from '../../../services/firebaseForGet';
 import firebaseDeleteService from '../../../services/firebaseForDelete';
 import NameLogin from '../../NameLogin/NameLogin';
 import YellowButton from '../../../source/Components/YellowButton';
+import { sin } from 'react-native-reanimated';
 
 const SinglePost = () => {
 const [singlePost, setPost] = useState([]);
 const [rappiId, setRappiId] = useState("");
-let [publicationId, setPublicationId] = useState([]);
+let [publicationId, setPublicationId] = useState('');
+let [timePassed, setTimePassed] = useState('');
+let [timeDue, setTimeDue] = useState('');
 
 const navigation = useNavigation();
 
@@ -24,17 +27,35 @@ const LoadUserId = async () => {
         const onlyPost = await firebaseGetService.getOnePublication(RappiId);
         const onePost = await firebaseGetService.getSinglePublication(RappiId);
         let itemId = onePost.id;
-        setPublicationId(itemId);
+        let itemTime = onePost.createdAt.toDate();
+        let oneMonth = new Date(itemTime);
+        oneMonth.setMonth(oneMonth.getMonth() + 1);
+        if (!itemId) {
+            Alert.alert('Todavia no has realizado ninguna publicacion')
+            /* await navigation.navigate('PostRappi'); */
+        }
+        setTimePassed(getTimeLeft(itemTime, oneMonth));
         setPost(onlyPost);
+        /* setTimeDue(oneMonth); */
         setRappiId(RappiId);
     } catch (error) {
-      Alert.alert('No user')
+      Alert.alert('No user');
     }
-  } 
+  };
+
+  function getTimeLeft (itemTime, oneMonth) {
+    let currentDate = new Date();
+    var Difference_In_Time = currentDate.getTime() - itemTime.getTime();
+    var Difference_In_Days = Difference_In_Time / (1000 * 3600 * 24);
+    var currentDateString = oneMonth.toJSON().slice(0,10).replace(/-/g,'/');
+    setTimeDue(currentDateString);
+
+    return Difference_In_Days.toFixed(0);
+  }
 
 useEffect(() => {
     LoadUserId();
-}, []); 
+}, []);
 
 const OnPressDelete = async (publicationId) => {
     try {
@@ -60,26 +81,30 @@ return(
             </View>
     </View>
             <View style={styles.AllBoxes}>
-            <Text style={styles.titulo}>Tu publicacion es:</Text>
+            <Text style={styles.titulo}>Tu publicación actual:</Text>
                 {singlePost.map(item  => (
                      <View key={item.id} style={styles.Boxes}>
                         <Text style={styles.ItemName}>{item.name}</Text>
                         <Text style={styles.ItemMonto}>Cantidad solicitada: $ {item.monto}</Text>
-                        <Text style={styles.ItemDescription}>{item.description}</Text>
+                        <Text style={styles.ItemDescription}>Sueño: {item.description}</Text>
+                        <Text style={styles.ItemDescription}>Fecha de publicación: {item.createdAt.toDate().toDateString()}</Text>
                     </View>
                 ))}
-                {singlePost.map(item  => (
-                     <View key={item.id} style={styles.Boxes}>
-                        <Text style={styles.ItemDescription}>Has recogido: $ {item.monto}</Text>
+                    <View style={styles.Boxes}>
+                        <Text style={styles.publicationValidity}>Recuerda que tu publiación tendra vigencia hasta la fecha: {timeDue}. Si la cantidad solicitada
+                        se recoge antes de que se cumpla el tiempo de vigencia entonces comenzara el proceso del prestamo.</Text>
+                        <Text style={styles.passedTime}>Tu publiación lleva {timePassed} dias desde su publicación</Text>
                     </View>
-                ))}
             </View>
-            <View style={styles.buttons}>
-            <YellowButton title='Eliminar' onPress={() => OnPressDelete(publicationId)}></YellowButton>
-            </View>
-            <View style={styles.footer}>
-            </View>
+            {/* <View style={styles.buttons}>
+                    <YellowButton title='Eliminar' onPress={() => OnPressDelete(publicationId)}></YellowButton>
+                </View> */}
     </ScrollView>
+            <View style={styles.footer}>
+                <View style={styles.buttons}>
+                    <YellowButton title='Eliminar' onPress={() => OnPressDelete(publicationId)}></YellowButton>
+                </View>
+            </View>
     </View>
 );
 }

@@ -50,7 +50,7 @@ class FirebaseGet{
             const fire = firebase.firestore();
             const snapshot = await fire.collection('transacciones').where('userId', "==", userId).get();
                 snapshot.forEach((doc) => {
-                    let obj = {id:doc.id, monto:doc.data().monto, publicationId:doc.data().publicationId, createdAt:doc.data().createdAt, userId:doc.data().userId, rappiName:doc.data().rappiName};
+                    let obj = {id:doc.id, monto:doc.data().monto, publicationId:doc.data().publicationId, createdAt:doc.data().createdAt, userId:doc.data().userId, rappiName:doc.data().rappiName, publicationTime:doc.data().publicationTime};
                     showTransactions.push(obj)
             });
         } catch (error) {
