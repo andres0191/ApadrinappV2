@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { View, Text, Alert, ScrollView, Image } from 'react-native';
+import { View, Text, Alert, ScrollView, Image, Button } from 'react-native';
 import firebaseService from '../../../services/firebase'
 import 'firebase/firebase-firestore';
 import styles from './stylePost';
@@ -8,7 +8,6 @@ import PrevScreenButton from '../../../source/Components/PrevScreenButton';
 import _ from 'lodash';
 import firebaseGetService from '../../../services/firebaseForGet';
 import firebaseDeleteService from '../../../services/firebaseForDelete';
-import NameLogin from '../../NameLogin/NameLogin';
 import YellowButton from '../../../source/Components/YellowButton';
 import { sin } from 'react-native-reanimated';
 
@@ -18,7 +17,7 @@ const [rappiId, setRappiId] = useState("");
 let [publicationId, setPublicationId] = useState('');
 let [timePassed, setTimePassed] = useState('');
 let [timeDue, setTimeDue] = useState('');
-
+const [Dreamer, setDreamer] = useState('');
 const navigation = useNavigation();
 
 const LoadUserId = async () => {
@@ -26,30 +25,33 @@ const LoadUserId = async () => {
         const RappiId = await firebaseService.getUserId();
         const onlyPost = await firebaseGetService.getOnePublication(RappiId);
         const onePost = await firebaseGetService.getSinglePublication(RappiId);
+        const Dreamer  = await firebaseService.getUserName();
+        setDreamer(Dreamer)
         let itemId = onePost.id;
         let itemTime = onePost.createdAt.toDate();
         let oneMonth = new Date(itemTime);
         oneMonth.setMonth(oneMonth.getMonth() + 1);
-        if (!itemId) {
-            Alert.alert('Todavia no has realizado ninguna publicacion')
-            /* await navigation.navigate('PostRappi'); */
-        }
         setTimePassed(getTimeLeft(itemTime, oneMonth));
+        setPublicationId(itemId);
+        if (!itemId) {
+            Alert.alert(
+                `${Dreamer}`,
+                'Aun no nos dices cual es tu sueno, Te invitamos a realizar tu publicacion para encontrar las personas que te desean apadrinar :D'),
+        }
         setPost(onlyPost);
-        /* setTimeDue(oneMonth); */
         setRappiId(RappiId);
+        
     } catch (error) {
       Alert.alert('No user');
     }
-  };
 
+  };
   function getTimeLeft (itemTime, oneMonth) {
     let currentDate = new Date();
     var Difference_In_Time = currentDate.getTime() - itemTime.getTime();
     var Difference_In_Days = Difference_In_Time / (1000 * 3600 * 24);
     var currentDateString = oneMonth.toJSON().slice(0,10).replace(/-/g,'/');
     setTimeDue(currentDateString);
-
     return Difference_In_Days.toFixed(0);
   }
 
@@ -67,14 +69,16 @@ const OnPressDelete = async (publicationId) => {
     }
 };
 
+
 return(
     <View style={styles.container}>
+          
     <ScrollView>
     <View style={styles.header}>
             <View style={styles.headerLeft}>
                 <PrevScreenButton style={styles.back} onPress={() => navigation.navigate('MenuDreamer')}></PrevScreenButton>
                 <Text style={styles.PageTitle}>Estado del Dream</Text>
-                <NameLogin></NameLogin>
+              
             </View>
             <View style={styles.ElevatePic}>
                 <Image source={require('../../../assets/Cabeceras/estadoDream.png')} style={styles.logo}></Image>
@@ -96,9 +100,9 @@ return(
                         <Text style={styles.passedTime}>Tu publiación lleva {timePassed} dias desde su publicación</Text>
                     </View>
             </View>
-            {/* <View style={styles.buttons}>
-                    <YellowButton title='Eliminar' onPress={() => OnPressDelete(publicationId)}></YellowButton>
-                </View> */}
+            <View style={styles.buttons}>
+            <YellowButton title='Eliminar' onPress={() => OnPressDelete(publicationId)}></YellowButton>
+            </View>
     </ScrollView>
             <View style={styles.footer}>
                 <View style={styles.buttons}>

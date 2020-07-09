@@ -12,8 +12,10 @@ const styles = StyleSheet.create({
       alignItems : 'center'
     },
     inputText: {
-        height: 40,
-        minWidth : 180,
+        minHeight: 50,
+        maxHeight: 50,
+        minWidth: 250,
+        maxWidth: 250,
         borderWidth: 1,
         borderColor: '#ccc',
         paddingHorizontal: 15,
