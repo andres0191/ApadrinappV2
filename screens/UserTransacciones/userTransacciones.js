@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Text, View, Image, ScrollView, TextInput, Alert } from 'react-native';
+import { Text, View, Image, ScrollView, Alert } from 'react-native';
 import styles from './styles';
 import WhiteButton from '../../source/Components/WhiteButton';
 import firebaseService from '../../services/firebase';
