@@ -15,7 +15,7 @@ const MenuDreamer = ({ navigation }) => {
       const UserId = await firebaseService.getUserId()
       setUserId(UserId)
     } catch (error) {
-      alert('No user')
+      alert('No hay usuario')
     }
   }
   useEffect(() => {

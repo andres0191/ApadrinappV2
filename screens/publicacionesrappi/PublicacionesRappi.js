@@ -23,7 +23,7 @@ const PublicacionesRappi = ({ navigation }) => {
       <View style={styles.header}>
         <View style={styles.headerLeft}>
           <PrevScreenButton onPress={() => navigation.navigate('MenuApadrinapp')}></PrevScreenButton>
-          <Text style={styles.PageTitle}>Dreamers Rappis</Text>
+          <Text style={styles.PageTitle}>Dreamers</Text>
           <NameLogin></NameLogin>
         </View>
         <View style={styles.ElevatePic}>

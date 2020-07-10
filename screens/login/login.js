@@ -59,7 +59,7 @@ const login = ({navigation}) => {
         </View>
         <View style={styles.MenuOptions}>
             <WhiteBigButton title='Ingresa' onPress={onPressLogin}></WhiteBigButton>
-            <YellowBigButton title='Registrate' onPress={() => navigation.navigate('SignUp')}></YellowBigButton>
+            <YellowBigButton title='Regístrate' onPress={() => navigation.navigate('SignUp')}></YellowBigButton>
             <PurpleBigButton title='Cancelar' onPress={() => navigation.navigate('Inicio')}></PurpleBigButton>
 
         </View>

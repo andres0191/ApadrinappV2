@@ -9,7 +9,7 @@ import _ from 'lodash';
 import firebaseGetService from '../../../services/firebaseForGet';
 import firebaseDeleteService from '../../../services/firebaseForDelete';
 import YellowButton from '../../../source/Components/YellowButton';
-import { sin } from 'react-native-reanimated';
+import NameLogin from '../../NameLogin/NameLogin';
 
 const SinglePost = () => {
 const [singlePost, setPost] = useState([]);
@@ -36,13 +36,13 @@ const LoadUserId = async () => {
         if (!itemId) {
             Alert.alert(
                 `${Dreamer}`,
-                'Aun no nos dices cual es tu sueno, Te invitamos a realizar tu publicacion para encontrar las personas que te desean apadrinar :D'),
+                'Aún no nos dices cual es tu sueño, Te invitamos a realizar tu publicación para encontrar las personas que te desean apadrinar :D')
         }
         setPost(onlyPost);
         setRappiId(RappiId);
         
     } catch (error) {
-      Alert.alert('No user');
+      Alert.alert('Aún no nos dices cual es tu sueño, Te invitamos a realizar tu publicación para encontrar las personas que te desean apadrinar :D')
     }
 
   };
@@ -78,6 +78,7 @@ return(
             <View style={styles.headerLeft}>
                 <PrevScreenButton style={styles.back} onPress={() => navigation.navigate('MenuDreamer')}></PrevScreenButton>
                 <Text style={styles.PageTitle}>Estado del Dream</Text>
+                <NameLogin></NameLogin>
               
             </View>
             <View style={styles.ElevatePic}>
@@ -97,11 +98,8 @@ return(
                     <View style={styles.Boxes}>
                         <Text style={styles.publicationValidity}>Recuerda que tu publiación tendra vigencia hasta la fecha: {timeDue}. Si la cantidad solicitada
                         se recoge antes de que se cumpla el tiempo de vigencia entonces comenzara el proceso del prestamo.</Text>
-                        <Text style={styles.passedTime}>Tu publiación lleva {timePassed} dias desde su publicación</Text>
+                        <Text style={styles.passedTime}>Tu sueño lleva {timePassed} dias desde su publicación</Text>
                     </View>
-            </View>
-            <View style={styles.buttons}>
-            <YellowButton title='Eliminar' onPress={() => OnPressDelete(publicationId)}></YellowButton>
             </View>
     </ScrollView>
             <View style={styles.footer}>

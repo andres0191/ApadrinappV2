@@ -49,7 +49,7 @@ const TransaccionStatus = async (userId) => {
       if ( (disponible) >= (monto) && (disponible ) != (0)){
         Alert.alert(
           `${Dreamer}`,
-          "Tu dinero estara disponible el 13 de Feb de 2021 y la rentabilidad sera de: $" + `${disponible}`, 
+          "Tu dinero estará disponible el 13 de Feb de 2021 y la rentabilidad sera de: $" + `${disponible}`, 
           [
             {text: 'Aceptar', onPress: () => navigation.navigate('MenuApadrinapp')}
           ],

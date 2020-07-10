@@ -15,7 +15,7 @@ const MenuApadrinapp = ({ navigation }) => {
       const UserId = await firebaseService.getUserId()
       setUserId(UserId)
     } catch (error) {
-      alert('No user')
+      alert('No hay usuario')
     }
   }
   useEffect(() => { LoadUserId() }, []);
@@ -26,7 +26,7 @@ const MenuApadrinapp = ({ navigation }) => {
         <View style={styles.header}>
           <View style={styles.headerLeft}>
             <PrevScreenButton onPress={() => navigation.navigate('Login')}></PrevScreenButton>
-            <Text style={styles.PageTitle}>Menu</Text>
+            <Text style={styles.PageTitle}>Menú</Text>
             <NameLogin></NameLogin>
           </View>
           <View style={styles.ElevatePic}>

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import {TextInput, View, Text, Alert, Image, ScrollView } from 'react-native';
 import styles from './styles';
 import YellowBigButton from '../../../source/Components/YellowBigButton';
+import PurpleBigButton from '../../../source/Components/PurpleBigButton';
 import { useNavigation } from '@react-navigation/native';
 import PrevScreenButton from '../../../source/Components/PrevScreenButton';
 import NameLogin from '../../NameLogin/NameLogin';
@@ -41,7 +42,7 @@ export default function PostPublication(){
       setDreamer(Dreamer)
       setRappiId(RappiId)
     } catch (error) {
-      Alert('No user')
+      Alert('No hay usuario')
     }
   }
   useEffect(() => {
@@ -55,7 +56,7 @@ const DoubleFunctionOk = async () => {
         if ((monto != '') && (description != '')){
         Alert.alert(
             `${Dreamer}`,
-            "La publicacion ha sido exitosa!",
+            "La publicación ha sido exitosa!",
             [
                 await firebasePostService.savePublication(Dreamer, monto, description, rappiId),
               { text: "OK", onPress: () =>  navigation.navigate('MenuDreamer')}
@@ -63,10 +64,10 @@ const DoubleFunctionOk = async () => {
           );
         }
         else {
-            Alert.alert('Por favor ingresa los datos correctos')
+            Alert.alert('Favor ingresar datos correctos')
         }
     }catch (error) {
-        Alert.alert('fallo')
+        Alert.alert('Falló')
     }
 }
 
@@ -76,7 +77,7 @@ return(
         <View style={styles.header}>
             <View style={styles.headerLeft}>
                 <PrevScreenButton style={styles.back} onPress={() => navigation.navigate('MenuDreamer')}></PrevScreenButton>
-                <Text style={styles.PageTitle}>Dreamers Rappis</Text>
+                <Text style={styles.PageTitle}>Dreamers</Text>
                 <NameLogin></NameLogin>
             </View>
             <View style={styles.ElevatePic}>
@@ -94,7 +95,7 @@ return(
             onChangeText={monto => setMonto(monto)}
             value={monto} />
             <TextInput
-            placeholder='¿Cual es tu sueño?'
+            placeholder='¿Cuál es tu sueño?'
             placeholderTextColor="white"
             multiline
             style={styles.inputTextDream}
@@ -111,6 +112,7 @@ return(
             </View>
         </View>
         <View style={styles.footer}>
+            <PurpleBigButton title='Cancelar' onPress={() => navigation.navigate('MenuDreamer')}></PurpleBigButton>
         </View>
         </ScrollView>
   </View>
