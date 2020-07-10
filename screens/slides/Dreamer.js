@@ -8,7 +8,7 @@ import PrevScreenButton from '../../source/Components/PrevScreenButton';
 const Dreamer = ({ navigation }) => {
     return (
      <View style={styles.container}>
-       <PrevScreenButton onPress={() => navigation.navigate('Start')}></PrevScreenButton>
+       <PrevScreenButton onPress={() => navigation.navigate('Inicio')}></PrevScreenButton>
        <View style={styles.header} />
        <View style={styles.body}>
        <Image source={require('../../assets/Slides/dreamer.png')} style={styles.IconImage} />

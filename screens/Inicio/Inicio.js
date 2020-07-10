@@ -10,8 +10,8 @@ const Inicio = ({navigation}) => {
       <View style={styles.container}>
         <Image source={require('../../assets/apadrinapp_logo.png')} style={styles.logo}/>
         <View style={styles.MenuOptions}>          
-          <WhiteBigButton title="Rappi" onPress={() => navigation.navigate('login')}></WhiteBigButton>
-          <YellowBigButton title="Inversor" onPress={() => navigation.navigate('Login')}></YellowBigButton>
+          <WhiteBigButton title="Dreamer" onPress={() => navigation.navigate('login')}></WhiteBigButton>
+          <YellowBigButton style={styles.yellowB} title="Inversor" onPress={() => navigation.navigate('Login')}></YellowBigButton>
         </View>
       </View>
     );

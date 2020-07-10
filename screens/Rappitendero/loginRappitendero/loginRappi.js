@@ -4,7 +4,7 @@ import styles from './styles';
 import firebaseService from '../../../services/firebase';
 import YellowBigButton from '../../../source/Components/YellowBigButton';
 import WhiteBigButton from '../../../source/Components/WhiteBigButton';
-import PrevScreenButton from '../../../source/Components/PrevScreenButton';
+import PurpleBigButton from '../../../source/Components/PurpleBigButton'
 
 let USEREMAIL = 'sinUser'
 let PASSW = "NoPass"
@@ -61,10 +61,7 @@ const login = ({navigation}) => {
   return (
     <View style={styles.container}>
         <View>
-            <PrevScreenButton onPress={() => navigation.navigate('Inicio')}></PrevScreenButton>
-        </View>
-        <View>
-            <Image source={require('../../../assets/apadrinapp_logo.png')} style={styles.logo}></Image>
+            <Image source={require('../../../assets/apadrinapp_logo_h.png')} style={styles.logo}></Image>
         </View>
         <View>
             <TextInput
@@ -84,10 +81,12 @@ const login = ({navigation}) => {
                 onChangeText={(text) => setPass(text)}/>
         </View>
         <View style={styles.MenuOptions}>
-            <WhiteBigButton title='IngresaRappi' onPress={onPressLogin}></WhiteBigButton>
-            <YellowBigButton title='RegistrateRappi' onPress={() => navigation.navigate('SignUpRappi')}></YellowBigButton>
+            <WhiteBigButton title='Ingresar' onPress={onPressLogin}></WhiteBigButton>
+            <YellowBigButton title='Registrate' onPress={() => navigation.navigate('SignUpRappi')}></YellowBigButton>
+            <PurpleBigButton title='Cancelar' onPress={() => navigation.navigate('Inicio')}></PurpleBigButton>
         </View>
     </View>
   );
 }
 export default login
+

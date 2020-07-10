@@ -9,12 +9,14 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
       },
       logo: {
-        height: 200,
-        width: 160,
+        height: 240,
+        width: 200,
       },
       MenuOptions: {
-        flexDirection: 'row'
-      }
+        flexDirection: 'column',
+        margin : -30,
+        justifyContent :  'flex-start'
+      },
 });
 
 export default styles;
