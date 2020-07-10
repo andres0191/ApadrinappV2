@@ -16,7 +16,7 @@ const Dreamer = ({ navigation }) => {
        </View>
       <View style={styles.footer}>
         <ImageBackground source={require('../../assets/Slides/FondoBorde.svg')} style={styles.logo}>
-          <Text style={styles.parragraph}>La mayoría de las personas tienen grandes sueños y algunas saben que con esfuerzo y trabajo duro podrán alcanzarlos, pero.a veces en ese camino, necesitamos de un empujoncito</Text>
+          <Text style={styles.parragraph}>La mayoría de las personas tienen grandes sueños y algunas saben que con esfuerzo y trabajo duro podrán alcanzarlos, pero a veces en ese camino, necesitamos de un empujoncito</Text>
           <WhiteButton title='Siguiente' onPress={() => navigation.navigate('Padrino')}></WhiteButton>
         </ImageBackground>
       </View>

@@ -14,7 +14,7 @@ const SignUp = ({navigation}) => {
             await firebaseService.createUser(name, user, pass);
             navigation.navigate('Dreamer')
           } catch (e) {
-                alert('Por favor ingresa los datos correctos')
+            alert('Recuerda que la contraseña debe tener minimo 8 caracteres y debes ingresar un correo valido. Por favor intentalo de nuevo')
         }
     }
 
@@ -23,7 +23,7 @@ const SignUp = ({navigation}) => {
             await firebaseService.login(user, pass)
             navigation.navigate('Main')
         } catch (e) {
-            alert('Por favor ingresa los datos correctos')
+            alert('Recuerda que la contraseña debe tener minimo 8 caracteres y debes ingresar un correo valido. Por favor intentalo de nuevo')
         }
     }
 
