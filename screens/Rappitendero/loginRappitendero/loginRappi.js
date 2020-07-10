@@ -19,7 +19,7 @@ const login = ({navigation}) => {
             await AsyncStorage.setItem(PASSW, pass);
             navigation.navigate('MenuDreamer')
         } catch (e) {
-            alert('Por favor ingresa los datos correctos')
+            alert('Favor ingresar datos correctos')
         }
     }
 
