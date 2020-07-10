@@ -2,7 +2,7 @@ import React from 'react';
 import { TouchableOpacity, StyleSheet, Text } from 'react-native';
 import Color from '../utils/Colors';
 
-const YellowBigButton = (props) => {
+const WhiteBigButton = (props) => {
     const { title = 'Enter', style = {}, textStyle = {}, onPress } = props
 
     return (
@@ -18,25 +18,25 @@ const styles = StyleSheet.create({
         display: 'flex',
         minWidth: 135,
         height: 30,
+        textAlign: 'center',
         paddingVertical: 2,
         paddingHorizontal: 10,
         borderRadius: 20,
         justifyContent: 'center',
         alignItems: 'center',
         margin: 20,
-        backgroundColor: Color.yellow,
+        backgroundColor: Color.purple,
         shadowColor: "#000",
         shadowOffset: { width: 0, height: 3, },
         shadowOpacity: 0.27,
         shadowRadius: 4.65,
         elevation: 6,
-        marginTop: 5,
+        marginTop: 50,
     },
     textButton: {
         fontSize: 20,
-        textAlign: "center",
-        color: Color.purple,
+        color: Color.white
     }
 })
 
-export default YellowBigButton
+export default WhiteBigButton

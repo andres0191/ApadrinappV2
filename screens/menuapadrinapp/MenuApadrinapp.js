@@ -34,21 +34,25 @@ const MenuApadrinapp = ({ navigation }) => {
         </View>
         </View>
       <View style={styles.Categorias}>
-        <Text style={styles.HeaderText}>Categorias</Text>
+        <Text style={styles.HeaderText}>Categorías</Text>
       </View>
       <View style={styles.body}>
         <View style={styles.flexstyle}>
-          <TouchableOpacity onPress={() => navigation.navigate('EstadoCuenta', {userId: userId})} >
-            <Image source={require('../../assets/Menu/estadoDeCuenta.png')} style={styles.estadoCuenta} />
-          </TouchableOpacity>
-          <TouchableOpacity  onPress={() => navigation.navigate('UserTransacciones')}  >
-            <Image source={require('../../assets/Menu/menuestado.png')} style={styles.MoneyStyle} />
-          </TouchableOpacity> 
-        </View>
-        <View style={styles.flexstyle}>
           <TouchableOpacity onPress={() => navigation.navigate('PublicacionesRappi')}>
-            <Image source={require('../../assets/Menu/menuapadrina.png')} style={styles.ApadrinaStyle} />
+            <View  style={styles.ApadrinaStyle}>
+            <Image style={styles.imageMenu} source={require('../../assets/Menu/menuapadrina.png')}/>
+            </View>
+            </TouchableOpacity> 
+          <TouchableOpacity onPress={() => navigation.navigate('EstadoCuenta', {userId: userId})} >
+            <View style={styles.estadoCuenta}>
+            <Image style={styles.imageMenu} source={require('../../assets/Menu/estadoDeCuenta.png')} />
+            </View>
           </TouchableOpacity>
+            <TouchableOpacity  onPress={() => navigation.navigate('UserTransacciones')}>
+            <View style={styles.MoneyStyle}>
+            <Image style={styles.imageMenu} source={require('../../assets/Menu/menuestado.png')} />
+            </View>
+            </TouchableOpacity>
           {/* <TouchableOpacity>
             <Image source={require('../../assets/Menu/confiar.png')} style={styles.ConfiaStyle} />
           </TouchableOpacity> */}

@@ -11,13 +11,14 @@ const styles = StyleSheet.create({
     flexDirection : 'column',
     justifyContent: 'center',
     alignContent: 'center',
-    backgroundColor : Color.grey,
+    backgroundColor : Color.lightpurple,
 
   },
   header : {
     flex : .1,
     paddingTop: 22,
-    marginBottom: -90
+    marginBottom: -90,
+    backgroundColor: Color.lightpurple
   },
   headerLeft : {
     flexDirection: 'row',
@@ -27,15 +28,11 @@ const styles = StyleSheet.create({
     paddingBottom: 12,
     backgroundColor: Color.lightpurple
   },
-  headerMiddle : {
-  },
-  headerRight : {
-  },
   body : {
     flex : 1,
     alignItems : 'center',
     justifyContent : 'flex-end',
-    backgroundColor: Color.grey,
+    //backgroundColor: Color.lightpurple,
   },
   logo : {
     width: win.width,
@@ -50,49 +47,54 @@ const styles = StyleSheet.create({
     backgroundColor: Color.purple,
   },
   HeaderText: {
+    alignContent : 'center',
     fontSize: 38,
-    color: Color.purple,
+    color: Color.white,
     flexDirection: 'row',
-    paddingLeft: 10,
+    paddingLeft: 140,
   },
   estadoCuenta: {
+    justifyContent : 'center',
     width: 120,
     height: 120,
     margin: 30,
     backgroundColor: Color.yellow,
     borderRadius: 20,
+    shadowColor: "#000",
+    shadowOffset: { width: 0, height: 3, },
+    shadowOpacity: 0.27,
+    shadowRadius: 4.65,
+    elevation: 6,
   },
   MoneyStyle: {
+    justifyContent : 'center',
     width: 120,
     height: 120,
     margin: 30,
     backgroundColor: Color.purple,
     borderRadius: 20,
+    shadowColor: "#000",
+    shadowOffset: { width: 0, height: 3, },
+    shadowOpacity: 0.27,
+    shadowRadius: 4.65,
+    elevation: 6,
   },
-  ApadrinaStyle: {
-    width: 120,
-    height: 120,
-    margin: 30,
-    backgroundColor: Color.purple,
-    borderRadius: 20,
-  },
-  ConfiaStyle: {
-    width: 120,
-    height: 120,
-    margin: 30,
-    backgroundColor: Color.yellow,
-    borderRadius: 20,
+  imageMenu : {
+    paddingLeft : 50,
+    alignItems : 'center',
+    width: 110,
+    height: 110,
   },
   flexstyle: {
     flex: 1,
     flexDirection: 'row',
     alignItems: "center",
-    justifyContent: "space-evenly",  
+    justifyContent: "space-evenly",
   },
   PageTitle: {
     fontFamily: '',
     fontSize: 18,
-    color: Color.purple,
+    color: Color.white
   },
   ElevatePic: {
     elevation: 2,
