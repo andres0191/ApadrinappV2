@@ -95,7 +95,8 @@ const styles = StyleSheet.create({
     color: Color.yellow,
   },
   AllBoxes: {
-    backgroundColor: Color.lightpurple
+    backgroundColor: Color.lightpurple,
+    marginTop: -30,
   },
   Boxes: {
     padding: 10,
@@ -104,6 +105,12 @@ const styles = StyleSheet.create({
     margin: 10,
     borderColor: Color.yellow,
     borderRadius: 20,
+    paddingHorizontal: 20,
+    marginTop: 10,
+    
+  },
+  boxTime: {
+    marginBottom: 80,
   },
   ItemName: {
     fontSize: 30,
@@ -126,6 +133,8 @@ const styles = StyleSheet.create({
   publicationValidity: {
     fontSize: 20,
     color: Color.yellow,
+    margin: 5,
+    paddingHorizontal: 5,
   },
   passedTime: {
     color: Color.grey,

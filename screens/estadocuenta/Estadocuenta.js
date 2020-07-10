@@ -35,8 +35,8 @@ const LoadUserTransactions = async (userId) => {
       let totalAmount = 0;
       myTransactions.forEach(element => totalAmount = +totalAmount + +(element.monto));
       setCantidad('$' + totalAmount);
-      setDisponible( (totalAmount * 8) / 100);
-      setPorMes((totalAmount * 1.3) / 100);
+      setDisponible( (totalAmount * 5.83005244) / 100);
+      setPorMes((totalAmount * 0.94887929) / 100);
       
   } catch (error) {
     Alert.alert('No hay transacciones para mostrar')
@@ -49,7 +49,7 @@ const TransaccionStatus = async (userId) => {
       if ( (disponible) >= (monto) && (disponible ) != (0)){
         Alert.alert(
           `${Dreamer}`,
-          "Tu dinero estará disponible el 13 de Feb de 2021 y la rentabilidad sera de: $" + `${disponible}`, 
+          "Su dinero estará disponible el 13 de febrero de 2021 y la rentabilidad será: $" + `${disponible.toFixed(0)}`, 
           [
             {text: 'Aceptar', onPress: () => navigation.navigate('MenuApadrinapp')}
           ],
@@ -81,7 +81,7 @@ const TransaccionStatus = async (userId) => {
           </View>
           <View style={styles.InputInfo}>
             <Text style={styles.YellowFont}>Tu interes generado es de: </Text>
-            <Text style={styles.inputText}>{'$' + porMes}</Text>
+            <Text style={styles.inputText}>{'$' + porMes.toFixed(2)}</Text>
           </View>
           <View style={styles.InputInfo}>
             <Text style={styles.YellowFont}>Enviar a Rappipay</Text>

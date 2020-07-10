@@ -32,13 +32,13 @@ const styles = StyleSheet.create({
     footer : {
       flex : 2,
       justifyContent: "center",
-      alignItems: 'flex-end'
+      alignItems: 'flex-end',
     },
     parragraph : {
       flex : 0.8,
       justifyContent : 'center',
       paddingHorizontal : 40,
-      paddingTop : 40,
+      paddingTop : -60,
       fontSize : 20,
       color : Colors.white
     },

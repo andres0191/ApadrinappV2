@@ -13,7 +13,7 @@ const SignUpRappi = ({navigation}) => {
     const createNewUser = async () => {
         try{
             await firebaseService.createUser(name, user, pass);
-            navigation.navigate('PostRappi')
+            navigation.navigate('MenuDreamer')
           } catch (e) {
             alert('Recuerda que la contraseña debe tener minimo 8 caracteres y debes ingresar un correo valido. Por favor intentalo de nuevo')
         }
