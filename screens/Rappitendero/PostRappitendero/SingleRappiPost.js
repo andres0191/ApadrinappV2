@@ -39,7 +39,7 @@ const LoadUserId = async () => {
     } catch (error) {
         Alert.alert(
             `${Dreamer}`,
-            'Aun no nos dices cual es tu sueno, Te invitamos a realizar tu publicacion para encontrar las personas que te desean apadrinar :D')
+            'Todavía no nos dicen cuál es su sueño, lo invitamos a hacer su publicación para encontrar a las personas que desean patrocinarlo: D')
     }
 
   };
@@ -61,7 +61,7 @@ const OnPressDelete = async (publicationId) => {
         await firebaseDeleteService.deletePublication(publicationId);
         Alert.alert(
             `${Dreamer}`,
-            'La publicacion se ha eliminado correctamente',
+            'La publicación se ha eliminado correctamente',
             await navigation.navigate('MenuDreamer'));
     } catch (error) {
         Alert.alert('No se logro eliminar la publicación')
@@ -94,18 +94,19 @@ return(
                         <Text style={styles.ItemDescription}>Fecha de publicación: {item.createdAt.toDate().toDateString()}</Text>
                     </View>
                 ))}
-                    <View style={styles.Boxes}>
-                        <Text style={styles.publicationValidity}>Recuerda que tu publiación tendra vigencia hasta la fecha: {timeDue}. Si la cantidad solicitada
-                        se recoge antes de que se cumpla el tiempo de vigencia entonces comenzara el proceso del prestamo.</Text>
+                    <View style={[styles.Boxes, styles.boxTime]}>
+                        <Text style={styles.publicationValidity}>Tu publiación tendra vigencia hasta: {timeDue}. Si la cantidad solicitada
+                        se recoge antes de que se cumpla el tiempo de vigencia, comenzara el proceso del prestamo. </Text>
                         <Text style={styles.passedTime}>Tu sueño lleva {timePassed} dias desde su publicación</Text>
                     </View>
             </View>
-    </ScrollView>
+            </ScrollView>
             <View style={styles.footer}>
                 <View style={styles.buttons}>
                     <YellowButton title='Eliminar' onPress={() => OnPressDelete(publicationId)}></YellowButton>
                 </View>
             </View>
+    
     </View>
 );
 }

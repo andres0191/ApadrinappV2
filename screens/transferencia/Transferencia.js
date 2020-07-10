@@ -47,7 +47,7 @@ const onPressTransaction = async (monto, userId, publicacionId) => {
             <ImageBackground source={require('../../assets/Cabeceras/apadrinar.png')} style={styles.logo}>
             <View style={styles.IntrestBox}>
               <Text style={styles.YellowFont}>Interés</Text>
-              <Text style={styles.BigText}>8%*</Text>
+              <Text style={styles.BigText}>12%*</Text>
             </View>
             </ImageBackground>
           </View>
