@@ -122,6 +122,15 @@ const styles = StyleSheet.create({
   },
   buttons : {
     justifyContent : 'space-evenly'
+  },
+  publicationValidity: {
+    fontSize: 20,
+    color: Color.yellow,
+  },
+  passedTime: {
+    color: Color.grey,
+    fontSize: 16,
+    fontWeight: "bold"
   }
 })
 

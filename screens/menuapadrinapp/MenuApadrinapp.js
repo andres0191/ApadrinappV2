@@ -53,7 +53,7 @@ const MenuApadrinapp = ({ navigation }) => {
             <Image style={styles.imageMenu} source={require('../../assets/Menu/menuestado.png')} />
             </View>
             </TouchableOpacity>
-            {/* <TouchableOpacity>
+          {/* <TouchableOpacity>
             <Image source={require('../../assets/Menu/confiar.png')} style={styles.ConfiaStyle} />
           </TouchableOpacity> */}
         </View>

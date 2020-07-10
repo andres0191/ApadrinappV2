@@ -15,8 +15,10 @@ const styles = StyleSheet.create({
       height : 100
     },
     inputText: {
-        height: 40,
-        minWidth : 180,
+        minHeight: 50,
+        maxHeight: 50,
+        minWidth: 250,
+        maxWidth: 250,
         borderWidth: 1,
         borderColor: Color.yellow,
         paddingHorizontal: 15,
