@@ -65,6 +65,7 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.27,
     shadowRadius: 4.65,
     elevation: 6,
+    marginTop: 43,
   },
   MoneyStyle: {
     justifyContent : 'center',
@@ -78,6 +79,7 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.27,
     shadowRadius: 4.65,
     elevation: 6,
+    marginTop: 43,
   },
   imageMenu : {
     paddingLeft : 50,
@@ -89,12 +91,12 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: 'row',
     alignItems: "center",
-    justifyContent: "space-evenly",
+    justifyContent: "space-evenly",  
   },
   PageTitle: {
     fontFamily: '',
     fontSize: 18,
-    color: Color.white
+    color: Color.purple,
   },
   ElevatePic: {
     elevation: 2,

@@ -14,10 +14,10 @@ import NameLogin from '../../NameLogin/NameLogin';
 const SinglePost = () => {
 const [singlePost, setPost] = useState([]);
 const [rappiId, setRappiId] = useState("");
+const [Dreamer, setDreamer] = useState('');
 let [publicationId, setPublicationId] = useState('');
 let [timePassed, setTimePassed] = useState('');
 let [timeDue, setTimeDue] = useState('');
-const [Dreamer, setDreamer] = useState('');
 const navigation = useNavigation();
 
 const LoadUserId = async () => {
@@ -33,16 +33,13 @@ const LoadUserId = async () => {
         oneMonth.setMonth(oneMonth.getMonth() + 1);
         setTimePassed(getTimeLeft(itemTime, oneMonth));
         setPublicationId(itemId);
-        if (!itemId) {
-            Alert.alert(
-                `${Dreamer}`,
-                'Aún no nos dices cual es tu sueño, Te invitamos a realizar tu publicación para encontrar las personas que te desean apadrinar :D')
-        }
         setPost(onlyPost);
         setRappiId(RappiId);
         
     } catch (error) {
-      Alert.alert('Aún no nos dices cual es tu sueño, Te invitamos a realizar tu publicación para encontrar las personas que te desean apadrinar :D')
+        Alert.alert(
+            `${Dreamer}`,
+            'Aun no nos dices cual es tu sueno, Te invitamos a realizar tu publicacion para encontrar las personas que te desean apadrinar :D')
     }
 
   };
@@ -62,8 +59,10 @@ useEffect(() => {
 const OnPressDelete = async (publicationId) => {
     try {
         await firebaseDeleteService.deletePublication(publicationId);
-        Alert.alert('La publicacion se ha eliminado correctamente')
-        await navigation.navigate('MenuDreamer');
+        Alert.alert(
+            `${Dreamer}`,
+            'La publicacion se ha eliminado correctamente',
+            await navigation.navigate('MenuDreamer'));
     } catch (error) {
         Alert.alert('No se logro eliminar la publicación')
     }
