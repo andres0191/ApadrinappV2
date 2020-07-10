@@ -32,7 +32,7 @@ const SignUpRappi = ({navigation}) => {
   return (
     <View style={styles.container}>
         <View style={styles.header}>
-            <Image style={styles.logoH} source={require('../../../assets/apadrinapp_logo_h.png')}/> 
+            {/* <Image style={styles.logoH} source={require('../../../assets/apadrinapp_logo_h.png')}/>  */}
         </View>
         <View style={styles.logo}>
        <Image source={require('../../../assets/apadrinapp_logo_h.png')} style={styles.IconImage} />

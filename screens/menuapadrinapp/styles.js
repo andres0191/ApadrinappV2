@@ -48,8 +48,7 @@ const styles = StyleSheet.create({
   HeaderText: {
     fontSize: 38,
     color: Color.white,
-    flexDirection: 'row',
-    paddingLeft: 130,
+    marginLeft: 20,
   },
   estadoCuenta: {
     justifyContent : 'center',
@@ -99,7 +98,7 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: 'row',
     alignItems: "center",
-    justifyContent: 'center',  
+    justifyContent: 'space-evenly',  
   },
   imageMenu : {
     //paddingLeft : 50,

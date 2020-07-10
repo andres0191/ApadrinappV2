@@ -85,7 +85,7 @@ return(
             </View>
         </View>
         <View style={styles.body}>
-        <Text style={styles.initialText}>Hola {Dreamer}, este es un lugar{"\n"}para compartir tus sueños {"\n"}y hasta donde quieres llegar </Text>
+        <Text style={styles.initialText}>Hola {Dreamer}, este es un lugar para compartir tus sueños y hasta donde quieres llegar </Text>
             <View style={styles.textW}>
             <TextInput
             placeholder='¿Cuánto necesitas?'
