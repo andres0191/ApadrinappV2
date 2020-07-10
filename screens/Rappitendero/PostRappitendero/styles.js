@@ -44,7 +44,8 @@ const styles = StyleSheet.create({
     justifyContent : 'center',
     textAlign : 'justify',
     paddingVertical: 5,
-    paddingHorizontal: 30
+    paddingHorizontal: 30,
+    color: Color.white,
   },
   textW : {
     justifyContent : 'center',

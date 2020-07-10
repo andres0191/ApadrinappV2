@@ -15,7 +15,7 @@ const SignUpRappi = ({navigation}) => {
             await firebaseService.createUser(name, user, pass);
             navigation.navigate('PostRappi')
           } catch (e) {
-                alert('Por favor ingresa los datos correctos')
+            alert('Recuerda que la contraseña debe tener minimo 8 caracteres y debes ingresar un correo valido. Por favor intentalo de nuevo')
         }
     }
 
@@ -24,7 +24,7 @@ const SignUpRappi = ({navigation}) => {
             await firebaseService.login(user, pass)
             navigation.navigate('Main')
         } catch (e) {
-            alert('Por favor ingresa los datos correctos')
+            alert('Recuerda que la contraseña debe tener minimo 8 caracteres y debes ingresar un correo valido. Por favor intentalo de nuevo')
         }
     }
 
