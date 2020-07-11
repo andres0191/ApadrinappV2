@@ -1,12 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import {  View, TextInput, Image, AsyncStorage } from 'react-native';
+import {  View, TextInput, Image, AsyncStorage, TouchableWithoutFeedback } from 'react-native';
 import styles from './styles';
 import firebaseService from '../../services/firebase';
 import YellowBigButton from '../../source/Components/YellowBigButton';
 import WhiteBigButton from '../../source/Components/WhiteBigButton';
 import PurpleBigButton from '../../source/Components/PurpleBigButton'
-import { TouchableWithoutFeedback } from 'react-native';
-import Color from '../../source/utils/Colors';
 
 let USEREMAIL = 'sinUser'
 let PASSW = "NoPass"

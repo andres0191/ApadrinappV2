@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Image, TextInput } from 'react-native';
+import { View, Image, TextInput, TouchableWithoutFeedback } from 'react-native';
 import styles from './styles';
 import firebaseService from '../../../services/firebase';
 import YellowBigButton from '../../../source/Components/YellowBigButton';
@@ -8,7 +8,8 @@ import PurpleBigButton from '../../../source/Components/PurpleBigButton';
 const SignUpRappi = ({navigation}) => {
     const [user, setUser] = useState('')
     const [pass, setPass] = useState('')
-    const [name, setName] = useState('')    
+    const [name, setName] = useState('')
+    const [hidePass, setHidePass] = useState(true)   
 
     const createNewUser = async () => {
         try{
@@ -51,14 +52,19 @@ const SignUpRappi = ({navigation}) => {
                 value = {user}
                 onChange = {(e) => setUser(e.nativeEvent.text)}
                 />
-            <TextInput
-                placeholder='Contraseña'
-                placeholderTextColor="white"
-                secureTextEntry
-                style={styles.inputText}
-                value = {pass}
-                onChange = {(e) => setPass(e.nativeEvent.text)}
-                />
+            <View style={styles.PassIn}>
+                <TextInput
+                    placeholder='contraseña'
+                    secureTextEntry={hidePass}
+                    placeholderTextColor="white"
+                    style={styles.PassText}
+                    value = {pass}
+                    onChange = {(e) => setPass(e.nativeEvent.text)}
+                    />
+                <TouchableWithoutFeedback onPress={() => setHidePass(!hidePass)}>
+                    <Image source={require('../../../assets/Botones/Eye.png')} style={styles.Eye} />
+                </TouchableWithoutFeedback>
+            </View>
         </View>
         <View style={styles.MenuOptions}>
             <YellowBigButton title='Registrarme' onPress={createNewUser}></YellowBigButton>

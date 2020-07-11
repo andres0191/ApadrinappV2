@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { View, TextInput, Image, AsyncStorage } from 'react-native';
+import { View, TextInput, Image, AsyncStorage, TouchableWithoutFeedback } from 'react-native';
 import styles from './styles';
 import firebaseService from '../../../services/firebase';
 import YellowBigButton from '../../../source/Components/YellowBigButton';
@@ -11,6 +11,7 @@ let PASSW = "NoPass"
 const login = ({navigation}) => {
     const [user, setUser] = useState('')
     const [pass, setPass] = useState('')
+    const [hidePass, setHidePass] = useState(true)
 
     const onPressLogin = async () => {
         try{
@@ -30,14 +31,11 @@ const login = ({navigation}) => {
 
             if (USEREMAIL !== null) {
                 setUser(user);
-            }
-            if (PASSW !== null) {
+            } if (PASSW !== null) {
                 setPass(pass);
-            }
-        } catch (e) {
-            alert(err);
-        }
-    };
+            }} catch (e) {
+            alert('Error al cargar los datos');
+        }}
 
     const remove = async () => {
         try {
@@ -71,14 +69,20 @@ const login = ({navigation}) => {
                 value = {user}
                 onChange = {(e) => setUser(e.nativeEvent.text)}
                 onChangeText={(text) => setUser(text)}/>
-            <TextInput
-                placeholder='Ingresa tu contraseña'
-                placeholderTextColor="white"
-                secureTextEntry
-                style={styles.inputText}
-                value = {pass}
-                onChange = {(e) => setPass(e.nativeEvent.text)}
-                onChangeText={(text) => setPass(text)}/>
+            <View style={styles.PassIn}>
+                <TextInput
+                    placeholder='Ingresa tu contraseña'
+                    secureTextEntry={hidePass}
+                    placeholderTextColor="white"
+                    value = {pass}
+                    style={styles.PassText}
+                    onChange = {(e) => setPass(e.nativeEvent.text)}
+                    onChangeText={(text) => setPass(text)}>
+                </TextInput>
+                <TouchableWithoutFeedback onPress={() => setHidePass(!hidePass)}>
+                    <Image source={require('../../../assets/Botones/Eye.png')} style={styles.Eye} />
+                </TouchableWithoutFeedback>
+            </View>
         </View>
         <View style={styles.MenuOptions}>
             <WhiteBigButton title='Ingresar' onPress={onPressLogin}></WhiteBigButton>
