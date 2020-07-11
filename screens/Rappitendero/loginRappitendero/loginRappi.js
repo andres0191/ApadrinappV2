@@ -19,7 +19,7 @@ const login = ({navigation}) => {
             await AsyncStorage.setItem(PASSW, pass);
             navigation.navigate('MenuDreamer')
         } catch (e) {
-            alert('Recuerda que la contraseña debe tener minimo 8 caracteres y debes ingresar un correo valido. Por favor intentalo de nuevo')
+            alert('Recuerde que la contraseña debe tener un mínimo de 8 caracteres y debe ingresar un correo electrónico válido. Inténtalo de nuevo')
         }
     }
 

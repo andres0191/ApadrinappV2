@@ -82,11 +82,11 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     marginVertical: 10
   },
-  YellowFont: {
+  Whitefont: {
     marginBottom: -8,
     fontSize: 30,
     fontWeight: "bold",
-    color: Color.yellow,
+    color: Color.white,
   },
   AllBoxes: {
     backgroundColor: Color.lightpurple

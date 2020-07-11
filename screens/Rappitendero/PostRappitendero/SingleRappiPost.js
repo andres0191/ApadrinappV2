@@ -92,13 +92,14 @@ return(
                         <Text style={styles.ItemMonto}>Cantidad solicitada: $ {item.monto}</Text>
                         <Text style={styles.ItemDescription}>Sueño: {item.description}</Text>
                         <Text style={styles.ItemDescription}>Fecha de publicación: {item.createdAt.toDate().toDateString()}</Text>
-                    </View>
-                ))}
-                    <View style={[styles.Boxes, styles.boxTime]}>
+                        <View style={[styles.Boxes, styles.boxTime]}>
                         <Text style={styles.publicationValidity}>Tu publiación tendra vigencia hasta: {timeDue}. Si la cantidad solicitada
                         se recoge antes de que se cumpla el tiempo de vigencia, comenzara el proceso del prestamo. </Text>
                         <Text style={styles.passedTime}>Tu sueño lleva {timePassed} dias desde su publicación</Text>
                     </View>
+                    </View>
+                ))}
+                    
             </View>
             </ScrollView>
             <View style={styles.footer}>

@@ -77,7 +77,7 @@ return(
         <View style={styles.header}>
             <View style={styles.headerLeft}>
                 <PrevScreenButton style={styles.back} onPress={() => navigation.navigate('MenuDreamer')}></PrevScreenButton>
-                <Text style={styles.PageTitle}>Dreamers</Text>
+                
                 <NameLogin></NameLogin>
             </View>
             <View style={styles.ElevatePic}>

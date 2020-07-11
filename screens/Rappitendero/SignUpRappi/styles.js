@@ -39,14 +39,13 @@ const styles = StyleSheet.create({
         width: win.width,
         height: 150 * ratio,
         resizeMode: 'contain',
+        alignItems: 'center',
+        justifyContent: 'center',
       },
       MenuOptions: {
         paddingTop : 40,
         alignItems: 'center',
       },
-      // bottony : {
-      //   paddingTop : 10
-      // }
   });
 
 export default styles
