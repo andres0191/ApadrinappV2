@@ -14,7 +14,7 @@ const SignUp = ({navigation}) => {
             await firebaseService.createUser(name, user, pass);
             navigation.navigate('Dreamer')
           } catch (e) {
-            alert('Recuerda que la contraseña debe tener minimo 8 caracteres y debes ingresar un correo valido. Por favor intentalo de nuevo')
+            alert('Recuerde que la contraseña debe tener un mínimo de 8 caracteres y debe ingresar un correo electrónico válido. Inténtalo de nuevo')
         }
     }
 
@@ -23,14 +23,14 @@ const SignUp = ({navigation}) => {
             await firebaseService.login(user, pass)
             navigation.navigate('Main')
         } catch (e) {
-            alert('Recuerda que la contraseña debe tener minimo 8 caracteres y debes ingresar un correo valido. Por favor intentalo de nuevo')
+            alert('Recuerde que la contraseña debe tener un mínimo de 8 caracteres y debe ingresar un correo electrónico válido. Inténtalo de nuevo')
         }
     }
 
   return (
     <View style={styles.container}>
         <View style={styles.logo}>
-       <Image source={require('../../assets/Cabeceras/registro.png')} style={styles.IconImage} />
+       <Image source={require('../../assets/apadrinapp_logo_h.png')} style={styles.IconImage} />
         </View>
         <View>
             <TextInput

@@ -40,6 +40,11 @@ const styles = StyleSheet.create({
     fontFamily: '',
     fontSize: 18,
     color: Color.purple,
+    margin: 10,
+    padding: 10,
+    height: 20,
+    width: 20,
+
   },
   body : {
     flex : 10,

@@ -34,8 +34,10 @@ const styles = StyleSheet.create({
       },
       IconImage: {
         width: win.width,
-        height: 362 * ratio,
+        height: 150 * ratio,
         resizeMode: 'contain',
+        alignItems: 'center',
+        justifyContent: 'center',
       },
       MenuOptions: {
         alignItems: 'center',

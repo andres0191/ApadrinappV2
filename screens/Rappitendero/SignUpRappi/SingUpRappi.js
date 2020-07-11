@@ -15,7 +15,7 @@ const SignUpRappi = ({navigation}) => {
             await firebaseService.createUser(name, user, pass);
             navigation.navigate('MenuDreamer')
           } catch (e) {
-            alert('Recuerda que la contraseña debe tener minimo 8 caracteres y debes ingresar un correo valido. Por favor intentalo de nuevo')
+            alert('Recuerde que la contraseña debe tener un mínimo de 8 caracteres y debe ingresar un correo electrónico válido. Inténtalo de nuevo')
         }
     }
 
@@ -24,7 +24,7 @@ const SignUpRappi = ({navigation}) => {
             await firebaseService.login(user, pass)
             navigation.navigate('Main')
         } catch (e) {
-            alert('Recuerda que la contraseña debe tener minimo 8 caracteres y debes ingresar un correo valido. Por favor intentalo de nuevo')
+            alert('Recuerde que la contraseña debe tener un mínimo de 8 caracteres y debe ingresar un correo electrónico válido. Inténtalo de nuevo')
         }
     }
 
@@ -32,7 +32,6 @@ const SignUpRappi = ({navigation}) => {
   return (
     <View style={styles.container}>
         <View style={styles.header}>
-            {/* <Image style={styles.logoH} source={require('../../../assets/apadrinapp_logo_h.png')}/>  */}
         </View>
         <View style={styles.logo}>
        <Image source={require('../../../assets/apadrinapp_logo_h.png')} style={styles.IconImage} />
@@ -46,14 +45,14 @@ const SignUpRappi = ({navigation}) => {
                 onChange = {(e) => setName(e.nativeEvent.text)}
                 />
             <TextInput
-                placeholder='e-mail'
+                placeholder='E-mail'
                 placeholderTextColor="white"
                 style={styles.inputText}
                 value = {user}
                 onChange = {(e) => setUser(e.nativeEvent.text)}
                 />
             <TextInput
-                placeholder='contraseña'
+                placeholder='Contraseña'
                 placeholderTextColor="white"
                 secureTextEntry
                 style={styles.inputText}

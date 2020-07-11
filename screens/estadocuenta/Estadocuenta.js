@@ -36,7 +36,7 @@ const LoadUserTransactions = async (userId) => {
       myTransactions.forEach(element => totalAmount = +totalAmount + +(element.monto));
       setCantidad('$' + totalAmount);
       setDisponible( (totalAmount * 5.83005244) / 100);
-      setPorMes((totalAmount * 0.94887929) / 100);
+      setPorMes(((totalAmount * 0.94887929) / 100).toFixed(0));
       
   } catch (error) {
     Alert.alert('No hay transacciones para mostrar')
@@ -67,7 +67,7 @@ const TransaccionStatus = async (userId) => {
       <View style={styles.header}>
         <View style={styles.headerLeft}>
           <PrevScreenButton onPress={() => navigation.navigate('MenuApadrinapp')}></PrevScreenButton>
-          <Text style={styles.PageTitle}>Inversión actual</Text>
+          <Text style={styles.PageTitle}></Text>
           <NameLogin></NameLogin>
         </View>
         <View style={styles.ElevatePic}>
@@ -81,7 +81,7 @@ const TransaccionStatus = async (userId) => {
           </View>
           <View style={styles.InputInfo}>
             <Text style={styles.YellowFont}>Tu interes generado es de: </Text>
-            <Text style={styles.inputText}>{'$' + porMes.toFixed(2)}</Text>
+            <Text style={styles.inputText}>{'$' + porMes}</Text>
           </View>
           <View style={styles.InputInfo}>
             <Text style={styles.YellowFont}>Enviar a Rappipay</Text>

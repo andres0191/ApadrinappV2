@@ -16,19 +16,27 @@ const Transferencia = ({ route, navigation }) => {
   const LoadUserId = async () => {
     try {
       const User = await firebaseService.getUserId()
-      setUserId(User)
+      setUserId(User)        
     } catch (error) {
       Alert('No user')
     }
   }
+
   useEffect(() => {
     LoadUserId()
 }, []);
 
+
+
 const onPressTransaction = async (monto, userId, publicacionId) => {
   try {
      await firebasePostService.saveTransaction(monto, userId, publicacionId, item.name);
-     await navigation.navigate('MenuApadrinapp', {userId: userId})
+     if (monto < 1 && monto != ('')){
+      Alert.alert('Debes ingresar un número mayor que 0. Intente nuevamente')
+    
+    } else {
+      await navigation.navigate('MenuApadrinapp', {userId: userId})
+    }
   } catch (error){
     Alert('No se pudo realizar la transacción')
   }
@@ -40,7 +48,7 @@ const onPressTransaction = async (monto, userId, publicacionId) => {
         <View style={styles.header}>
           <View style={styles.headerLeft}>
             <PrevScreenButton onPress={() => navigation.navigate('MenuApadrinapp')}></PrevScreenButton>
-            <Text style={styles.PageTitle}>Apadrinar</Text>
+            <Text style={styles.PageTitle}></Text>
             <NameLogin></NameLogin>
           </View>
           <View style={styles.ElevatePic}>
@@ -55,7 +63,7 @@ const onPressTransaction = async (monto, userId, publicacionId) => {
         <View style={styles.body}>
             <View style={styles.info}>
               <View style={styles.InputInfo}>
-                <Text style={styles.YellowFont}>Monto a invertir</Text>
+                <Text style={styles.YellowFont}>Cuanto vas a inveritr?</Text>
                 <TextInput
                 placeholder='$'
                 placeholderTextColor='#472387'
@@ -65,7 +73,7 @@ const onPressTransaction = async (monto, userId, publicacionId) => {
                 onChange = {(e) => setMonto(e.nativeEvent.text)}/>
               </View>
               <View style={styles.InputInfo}>
-                <Text style={styles.YellowFont}>Apadrinarás a</Text>
+                <Text style={styles.YellowFont}>Estás ayudando a:</Text>
                 <HollowInput title={item.name}></HollowInput>
               </View>
             </View>

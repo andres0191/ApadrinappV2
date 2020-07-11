@@ -36,7 +36,7 @@ const PublicacionesRappi = ({ navigation }) => {
                 <List navigation={navigation}/>
               </Provider>
               <View style={styles.InputInfo}>
-                <Text style={styles.YellowFont}>Juntos lograremos la meta!!</Text>
+                <Text style={styles.Whitefont}>Juntos lograremos la meta!!</Text>
               </View>
             </View>
         </View>
