@@ -5,12 +5,15 @@ import firebaseService from '../../services/firebase';
 import YellowBigButton from '../../source/Components/YellowBigButton';
 import WhiteBigButton from '../../source/Components/WhiteBigButton';
 import PurpleBigButton from '../../source/Components/PurpleBigButton'
+import { TouchableWithoutFeedback } from 'react-native';
+import Color from '../../source/utils/Colors';
 
 let USEREMAIL = 'sinUser'
 let PASSW = "NoPass"
 const login = ({navigation}) => {
     const [user, setUser] = useState('')
     const [pass, setPass] = useState('')
+    const [hidePass, setHidePass] = useState(true)
 
     const onPressLogin = async () => {
         try{
@@ -48,14 +51,20 @@ const login = ({navigation}) => {
                 value = {user}
                 onChange = {(e) => setUser(e.nativeEvent.text)}
                 onChangeText={(text) => setUser(text)}/>
-            <TextInput
-                placeholder='Ingresa tu contraseña'
-                secureTextEntry
-                placeholderTextColor="white"
-                style={styles.inputText}
-                value = {pass}
-                onChange = {(e) => setPass(e.nativeEvent.text)}
-                onChangeText={(text) => setPass(text)}/>
+            <View style={styles.PassIn}>
+                <TextInput
+                    placeholder='Ingresa tu contraseña'
+                    secureTextEntry={hidePass}
+                    placeholderTextColor="white"
+                    value = {pass}
+                    style={styles.PassText}
+                    onChange = {(e) => setPass(e.nativeEvent.text)}
+                    onChangeText={(text) => setPass(text)}>
+                </TextInput>
+                <TouchableWithoutFeedback onPress={() => setHidePass(!hidePass)}>
+                    <Image source={require('../../assets/Botones/Eye.png')} style={styles.Eye} />
+                </TouchableWithoutFeedback>
+            </View>
         </View>
         <View style={styles.MenuOptions}>
             <WhiteBigButton title='Ingresa' onPress={onPressLogin}></WhiteBigButton>
