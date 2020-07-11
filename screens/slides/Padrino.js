@@ -8,7 +8,7 @@ import PrevScreenButton from '../../source/Components/PrevScreenButton';
 const Padrino = ({ navigation }) => {
   return (
     <View style={styles.container}>
-      <PrevScreenButton onPress={() => navigation.navigate('Dreamer')}></PrevScreenButton>
+      {/* <PrevScreenButton onPress={() => navigation.navigate('Dreamer')}></PrevScreenButton> */}
       <View style={styles.header} />
       <View style={styles.body}>
         <Image source={require('../../assets/Slides/padrino.png')} style={styles.IconImage} />

@@ -7,7 +7,7 @@ import PrevScreenButton from '../../source/Components/PrevScreenButton';
 const Ciclo = ({ navigation }) => {
   return (
     <View style={styles.container}>
-      <PrevScreenButton onPress={() => navigation.navigate('Padrino')}></PrevScreenButton>
+      {/* <PrevScreenButton onPress={() => navigation.navigate('Padrino')}></PrevScreenButton> */}
       <View style={styles.header} />
       <View style={styles.body}>
         <ImageBackground source={require('../../assets/Slides/ciclo.png')} style={styles.CicloImage} />

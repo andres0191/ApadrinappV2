@@ -67,7 +67,7 @@ const TransaccionStatus = async (userId) => {
       <View style={styles.header}>
         <View style={styles.headerLeft}>
           <PrevScreenButton onPress={() => navigation.navigate('MenuApadrinapp')}></PrevScreenButton>
-          <Text style={styles.PageTitle}>Inversión actual</Text>
+          <Text style={styles.PageTitle}></Text>
           <NameLogin></NameLogin>
         </View>
         <View style={styles.ElevatePic}>

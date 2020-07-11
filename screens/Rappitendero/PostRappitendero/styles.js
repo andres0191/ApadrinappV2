@@ -99,7 +99,8 @@ const styles = StyleSheet.create({
     elevation: 2, 
   },
   buttons : {
-    justifyContent : 'space-evenly'
+    justifyContent : 'space-evenly',
+    marginTop: 15,
   }
 })
 

@@ -80,6 +80,7 @@ const styles = StyleSheet.create({
     position: 'absolute',
     bottom: 0,
     width: win.width,
+    
   },
   InputInfo: {
     flex: .5,
@@ -133,8 +134,7 @@ const styles = StyleSheet.create({
   publicationValidity: {
     fontSize: 20,
     color: Color.yellow,
-    margin: 5,
-    paddingHorizontal: 5,
+    alignItems: 'center',
   },
   passedTime: {
     color: Color.grey,

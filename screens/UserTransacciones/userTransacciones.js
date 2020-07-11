@@ -60,7 +60,7 @@ const LoadUserTransactions = async (userId) => {
         </View>
         <View style={styles.footer}>
             <View style={[styles.flex, styles.footerLeft]}>
-            <WhiteButton title='Menu' onPress={() => navigation.navigate('MenuApadrinapp')}></WhiteButton>
+{/*             <WhiteButton title='Menu' onPress={() => navigation.navigate('MenuApadrinapp')}></WhiteButton> */}
             </View>
         </View>
       </ScrollView>
