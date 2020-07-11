@@ -42,7 +42,7 @@ const SignUp = ({navigation}) => {
                 onChange = {(e) => setName(e.nativeEvent.text)}
                 />
             <TextInput
-                placeholder='e-mail'
+                placeholder='E-mail'
                 placeholderTextColor="white"
                 style={styles.inputText}
                 value = {user}
@@ -50,7 +50,7 @@ const SignUp = ({navigation}) => {
                 />
             <View style={styles.PassIn}>
                 <TextInput
-                    placeholder='contraseña'
+                    placeholder='Contraseña'
                     secureTextEntry={hidePass}
                     placeholderTextColor="white"
                     style={styles.PassText}

@@ -43,7 +43,7 @@ const login = ({navigation}) => {
         </View>
         <View>
             <TextInput
-                placeholder='Ingresa tu e-mail' 
+                placeholder='E-mail' 
                 placeholderTextColor="white"
                 style={styles.inputText}
                 value = {user}
@@ -51,7 +51,7 @@ const login = ({navigation}) => {
                 onChangeText={(text) => setUser(text)}/>
             <View style={styles.PassIn}>
                 <TextInput
-                    placeholder='Ingresa tu contraseña'
+                    placeholder='Contraseña'
                     secureTextEntry={hidePass}
                     placeholderTextColor="white"
                     value = {pass}
