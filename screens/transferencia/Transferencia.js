@@ -35,7 +35,11 @@ const onPressTransaction = async (monto, userId, publicacionId) => {
       Alert.alert('Debes ingresar un número mayor que 0. Intente nuevamente')
     
     } else {
+      Alert.alert(
+        'Gracias por aportar tu granito de arena'
+      )
       await navigation.navigate('MenuApadrinapp', {userId: userId})
+
     }
   } catch (error){
     Alert('No se pudo realizar la transacción')
