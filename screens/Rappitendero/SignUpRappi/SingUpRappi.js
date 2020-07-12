@@ -54,7 +54,7 @@ const SignUpRappi = ({navigation}) => {
                 />
             <View style={styles.PassIn}>
                 <TextInput
-                    placeholder='contraseña'
+                    placeholder='Contraseña'
                     secureTextEntry={hidePass}
                     placeholderTextColor="white"
                     style={styles.PassText}
