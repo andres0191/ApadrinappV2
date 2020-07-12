@@ -31,7 +31,7 @@ const Transferencia = ({ route, navigation }) => {
 const onPressTransaction = async (monto, userId, publicacionId) => {
   try {
      await firebasePostService.saveTransaction(monto, userId, publicacionId, item.name);
-     if (!parseInt(monto)){
+     if ((!parseInt(monto)) || (parseInt(monto) < 0)){
       Alert.alert('Debes ingresar un número mayor que 0. Intente nuevamente')
     
     } else {
