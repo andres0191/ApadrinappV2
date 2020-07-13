@@ -49,17 +49,12 @@ When the session is already started, the **menu** appears, where there are four 
   <img width="300" src="https://github.com/andres0191/ApadrinappV2/blob/master/assets/readmeImages/perfilInversor/menuInversor.jpg">
 </p>
 
-1- [In the Account Status](https://github.com/andres0191/ApadrinappV2/blob/master/screens/estadocuenta/Estadocuenta.js) you can see the **investment you currently** have, you will have the possibility to transfer money to Rappipay and return to the Menu
-<p align="center">
-  <img width="300" src="https://github.com/andres0191/ApadrinappV2/blob/master/assets/readmeImages/perfilInversor/saldo.jpg">
-</p>
-
-2- [in the Apadrinar ](https://github.com/andres0191/ApadrinappV2/blob/master/screens/publicacionesrappi/PublicacionesRappi.js) are all the **publications** made by people who want to be Rappitenderos, where you can see for what purpose they want the money and how much they are requesting.
+1- [in the Apadrinar ](https://github.com/andres0191/ApadrinappV2/blob/master/screens/publicacionesrappi/PublicacionesRappi.js) are all the **publications** made by people who want to be Rappitenderos, where you can see for what purpose they want the money and how much they are requesting.
 <p align="center">
   <img width="300" src="https://github.com/andres0191/ApadrinappV2/blob/master/assets/readmeImages/perfilInversor/listaPublicaciones.jpg">
 </p>
 
-2.1- When you have selected a dream that you want to sponsor, the following will happen:
+1.1- When you have selected a dream that you want to sponsor, the following will happen:
 
 <p align='center'>
   <img width="300" src="https://github.com/andres0191/ApadrinappV2/blob/master/assets/readmeImages/perfilInversor/Apadrinar.jpg">
@@ -69,15 +64,19 @@ When the session is already started, the **menu** appears, where there are four 
  </p>
 
 
-3- [In Microprestamos](https://github.com/andres0191/ApadrinappV2/blob/master/screens/UserTransacciones/userTransacciones.js) shows the history of the **transactions** made, whom you have invested in and in what time.
+2- [In Microprestamos](https://github.com/andres0191/ApadrinappV2/blob/master/screens/UserTransacciones/userTransacciones.js) shows the history of the **transactions** made, whom you have invested in and in what time.
 <p align='center'>
   <img width="300" src="https://github.com/andres0191/ApadrinappV2/blob/master/assets/readmeImages/perfilInversor/historialInversion.jpg">
 </p>
 
+3- [In the Account Status](https://github.com/andres0191/ApadrinappV2/blob/master/screens/estadocuenta/Estadocuenta.js) you can see the **investment you currently** have, you will have the possibility to transfer money to Rappipay and return to the Menu
+<p align="center">
+  <img width="300" src="https://github.com/andres0191/ApadrinappV2/blob/master/assets/readmeImages/perfilInversor/saldo.jpg">
+</p>
 
 For the development of this application we use the technologies of:
 <p align="center">
-  <img width="300" src="https://github.com/andres0191/ApadrinappV2/blob/master/assets/readmeImages/Tecnologias.png">
+  <img width="600" src="https://github.com/andres0191/ApadrinappV2/blob/master/assets/readmeImages/Tecnologias.png">
 </p>
 <p align="center">
   (image with firebase, react native, node js, redux technologies)
@@ -85,7 +84,7 @@ For the development of this application we use the technologies of:
 
 and we think the architecture in the following way:
 <p align="center">
-  <img width="800" src="https://github.com/andres0191/ApadrinappV2/blob/master/assets/readmeImages/arquitectura.png">
+  <img width="900" src="https://github.com/andres0191/ApadrinappV2/blob/master/assets/readmeImages/arquitectura.png">
 </p>
 
 Once the architecture and priorities were defined on the screens that we had to develop, we proceeded to design and connect the database:
