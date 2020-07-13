@@ -1,5 +1,5 @@
 <p align="center">
-  <img width="300", height="600" src="https://raw.githubusercontent.com/andres0191/ApadrinappV2/master/assets/icono-apadrinapp.png">
+  <img width="300" src="https://raw.githubusercontent.com/andres0191/ApadrinappV2/master/assets/icono-apadrinapp.png">
 </p>
 
 What is **Apadrinapp**?
