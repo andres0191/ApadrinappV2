@@ -1,7 +1,6 @@
-# APADRINAPP
-
-![img](https://raw.githubusercontent.com/andres0191/ApadrinappV2/master/assets/icono-apadrinapp.png)
-
+<p align="center">
+  <img width="300" src="https://raw.githubusercontent.com/andres0191/ApadrinappV2/master/assets/icono-apadrinapp.png">
+</p>
 
 What is **Apadrinapp**?
 
@@ -11,44 +10,64 @@ An application that, through **Crowdlending**, allows the collection to finance 
 The application consists of two different profiles:
 Rappitendero's Profile:
 The first screen that is found is the login screen, where you can create an account by filling in the **Name**, **e-mail** and **password**, or log in by entering the **e-mail** and **password**:
-
-![img register and singup Rappitendero](https://github.com/andres0191/ApadrinappV2/blob/andres/assets/readmeImages/perfilRappitendero/login-singup-rappitendero.png)
+<p align="center">
+  <img width="800" src="https://github.com/andres0191/ApadrinappV2/blob/andres/assets/readmeImages/perfilRappitendero/login-singup-rappitendero.png">
+</p>
 
 When the session is already started, the **menu** appears, where there are two options:
-![img menu rappitendero](https://github.com/andres0191/ApadrinappV2/blob/andres/assets/readmeImages/perfilRappitendero/menu-rappitendero.jpeg)
+
+<p align="center">
+  <img width="300" src="https://github.com/andres0191/ApadrinappV2/blob/andres/assets/readmeImages/perfilRappitendero/menu-rappitendero.jpeg">
+</p>
 
 1- [In Login Rappitendero](https://github.com/andres0191/ApadrinappV2/blob/master/screens/Rappitendero/loginRappitendero/loginRappi.js) you can see the **publication** that has been made, and how much has been collected so far
-![img singlepost Rappitendero](https://github.com/andres0191/ApadrinappV2/blob/andres/assets/readmeImages/perfilRappitendero/singlepostRappi.jpeg)
+<p align="center">
+  <img width="300" src="https://github.com/andres0191/ApadrinappV2/blob/andres/assets/readmeImages/perfilRappitendero/singlepostRappi.jpeg">
+</p>
 
 2- [In Post Rappitendero](https://github.com/andres0191/ApadrinappV2/blob/master/screens/Rappitendero/PostRappitendero/SingleRappiPost.js) you can **post** how much money you need and what you want to do with that money, what do you plan to invest in to be a Rappitendero
-![img postRappi Rappitendero](https://github.com/andres0191/ApadrinappV2/blob/andres/assets/readmeImages/perfilRappitendero/postRappi.jpeg)
-
+<p align="center">
+  <img width="300" src="https://github.com/andres0191/ApadrinappV2/blob/andres/assets/readmeImages/perfilRappitendero/postRappi.jpeg">
+</p>
 
 
 Investor Profile:
 
 The first screen that is found is the [login](https://github.com/andres0191/ApadrinappV2/blob/master/screens/login/login.js) screen, where you can **create an account** by filling in the Name, e-mail and password, or **login** by entering the e-mail and password:
-![image Login and Singup Inversor](https://github.com/andres0191/ApadrinappV2/blob/andres/assets/readmeImages/perfilInversor/loginSingupInversor.jpeg)
+<p align="center">
+  <img width="800" src="https://github.com/andres0191/ApadrinappV2/blob/andres/assets/readmeImages/perfilInversor/loginSingupInversor.jpeg">
+</p>
 When the session is already started, the **menu** appears, where there are four options:
-![Menu inversor](https://github.com/andres0191/ApadrinappV2/blob/andres/assets/readmeImages/perfilInversor/MenuInversor.jpeg)
+<p align="center">
+  <img width="300" src="https://github.com/andres0191/ApadrinappV2/blob/andres/assets/readmeImages/perfilInversor/MenuInversor.jpeg">
+</p>
 
 1- [In the Account Status](https://github.com/andres0191/ApadrinappV2/blob/master/screens/estadocuenta/Estadocuenta.js) you can see the **investment you currently** have, you will have the possibility to transfer money to Rappipay and return to the Menu
-![img EstadoCuenta Inversor](https://github.com/andres0191/ApadrinappV2/blob/andres/assets/readmeImages/perfilInversor/EstadocuentaInversor.jpeg)
+<p align="center">
+  <img width="300" src="https://github.com/andres0191/ApadrinappV2/blob/andres/assets/readmeImages/perfilInversor/EstadocuentaInversor.jpeg">
+</p>
 
 2- [in the Apadrinar ](https://github.com/andres0191/ApadrinappV2/blob/master/screens/publicacionesrappi/PublicacionesRappi.js) are all the **publications** made by people who want to be Rappitenderos, where you can see for what purpose they want the money and how much they are requesting
-![img Publicaciones](https://github.com/andres0191/ApadrinappV2/blob/andres/assets/readmeImages/perfilInversor/listaPublicaciones.jpeg)
+<p align="center">
+  <img width="300" src="https://github.com/andres0191/ApadrinappV2/blob/andres/assets/readmeImages/perfilInversor/listaPublicaciones.jpeg">
+</p>
 
 3- [In Microprestamos](https://github.com/andres0191/ApadrinappV2/blob/master/screens/UserTransacciones/userTransacciones.js) shows the history of the **transactions** made, whom you have invested in and in what time
 
 For the development of this application we use the technologies of:
-![img of technologies ](https://github.com/andres0191/ApadrinappV2/blob/andres/assets/readmeImages/tecnologias.jpg)
-(image with firebase, react native, node js, redux technologies)
+<p align="center">
+  <img width="300" src="https://github.com/andres0191/ApadrinappV2/blob/andres/assets/readmeImages/tecnologias.jpg">
+</p>
+<p align="center">
+  (image with firebase, react native, node js, redux technologies)
+</p>
 
 and we think the architecture in the following way:
-![img of architecture](https://github.com/andres0191/ApadrinappV2/blob/andres/assets/readmeImages/Crowdlending-Rappi.png)
+<p align="center">
+  <img src="https://github.com/andres0191/ApadrinappV2/blob/andres/assets/readmeImages/Crowdlending-Rappi.png">
+</p>
 
 Once the architecture and priorities were defined on the screens that we had to develop, we proceeded to design and connect the database:
-![db image]()
 
 
 We use firebase due to:
@@ -59,4 +78,3 @@ We use firebase due to:
 - Extensive functionalities.
 - Support for web, Android and iOS.
 - Simple control board.
-
