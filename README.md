@@ -1,5 +1,5 @@
 <p align="center">
-  <img width="300" src="https://raw.githubusercontent.com/andres0191/ApadrinappV2/master/assets/icono-apadrinapp.png">
+  <img width="600" src="https://raw.githubusercontent.com/andres0191/ApadrinappV2/master/assets/icono-apadrinapp.png">
 </p>
 
 What is **Apadrinapp**?
@@ -60,7 +60,7 @@ When the session is already started, the **menu** appears, where there are four 
   <img width="300" src="https://github.com/andres0191/ApadrinappV2/blob/master/assets/readmeImages/perfilInversor/Apadrinar.jpg">
  </p>
   <p align="center">
-   <img widht="300" src="https://github.com/andres0191/ApadrinappV2/blob/master/assets/readmeImages/perfilInversor/mensajeexito.jpg">
+   <img width="300" src="https://github.com/andres0191/ApadrinappV2/blob/master/assets/readmeImages/perfilInversor/mensajeexito.jpg">
  </p>
 
 
@@ -79,7 +79,6 @@ For the development of this application we use the technologies of:
   <img width="600" src="https://github.com/andres0191/ApadrinappV2/blob/master/assets/readmeImages/Tecnologias.png">
 </p>
 <p align="center">
-  (image with firebase, react native, node js, redux technologies)
 </p>
 
 and we think the architecture in the following way:
