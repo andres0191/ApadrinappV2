@@ -2,13 +2,13 @@
   <img width="300" src="https://raw.githubusercontent.com/andres0191/ApadrinappV2/master/assets/icono-apadrinapp.png">
 </p>
 
-What is **Apadrinapp**?
+# What is **Apadrinapp**?
 
 Due to the large number of people who want to belong to the wonderful family of Rappi as **Rappitenderos**, but for various reasons they lack economic resources for the acquisition of a vehicle or its documents, a cell phone, or even a data plan that allow them to connect with users, we have thought of Apadrinapp.
 An application that, through **Crowdlending**, allows the collection to finance the dream of future **Rappitenderos**. Being a high risk **investment**, the interest generated for the investor will be **8%**, while the Rappitendero will have an interest charge of **10%**.
 
-The application consists of two different profiles:
-Rappitendero's Profile:
+# The application consists of two different profiles:
+## Rappitendero's Profile:
 The first screen that is found is the [login](https://github.com/andres0191/ApadrinappV2/blob/master/screens/Rappitendero/loginRappitendero/loginRappi.js) screen, where you can create an account by filling in the **Name**, **e-mail** and **password**, or log in by entering the **e-mail** and **password**:
 <p align="center">
   <img width="300" src="https://github.com/andres0191/ApadrinappV2/blob/master/assets/readmeImages/perfilRappitendero/login.jpg">
@@ -34,7 +34,7 @@ When the session is already started, the **menu** appears, where there are two o
 </p>
 
 
-Investor Profile:
+## Investor Profile:
 
 The first screen that is found is the [login](https://github.com/andres0191/ApadrinappV2/blob/master/screens/login/login.js) screen, where you can **create an account** by filling in the Name, e-mail and password, or **login** by entering the e-mail and password:
 <p align="center">
@@ -104,6 +104,6 @@ We use firebase due to:
 
 
 Authors:
-* [Tomas Mejia](https://github.com/towasme) [Twitter: towasme](https://twitter.com/towasme) [Linkedin: ](https://www.linkedin.com/in/tom%C3%A1s-mej%C3%ADa-estrada-541596159/)
-* [Andres Garcia](https://github.com/andres0191) [Twitter: andres0191](https://twitter.com/andres0191) [Linkedin: ](https://www.linkedin.com/in/anfegar/)
-* [Pablo Sanchez](https://github.com/jackeado) [Twitter: jackeado](https://twitter.com/jackeado) [Linkedin: ](https://www.linkedin.com/in/pablo-a-s%C3%A1nchez-2bbb9940/)
+* [Github: Tomas Mejia](https://github.com/towasme) [Twitter: towasme](https://twitter.com/towasme) [Linkedin: Tomas Mejia Estrada](https://www.linkedin.com/in/tom%C3%A1s-mej%C3%ADa-estrada-541596159/)
+* [Github: Andres Garcia](https://github.com/andres0191) [Twitter: andres0191](https://twitter.com/andres0191) [Linkedin: Andres Felipe Garcia Rendon](https://www.linkedin.com/in/anfegar/)
+* [Github: Pablo Sanchez](https://github.com/jackeado) [Twitter: jackeado](https://twitter.com/jackeado) [Linkedin: Pablo Andres SAnchez](https://www.linkedin.com/in/pablo-a-s%C3%A1nchez-2bbb9940/)
