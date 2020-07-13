@@ -74,7 +74,7 @@ When the session is already started, the **menu** appears, where there are four 
   <img width="300" src="https://github.com/andres0191/ApadrinappV2/blob/master/assets/readmeImages/perfilInversor/saldo.jpg">
 </p>
  <p align="center">
-   <img widht="300" src="https://github.com/andres0191/ApadrinappV2/blob/master/assets/readmeImages/perfilInversor/alertTransferencia.jpg">
+   <img width="300" src="https://github.com/andres0191/ApadrinappV2/blob/master/assets/readmeImages/perfilInversor/alertTransferencia.jpg">
  </p>
 
 
