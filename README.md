@@ -105,8 +105,18 @@ We use firebase due to:
 - Support for web, Android and iOS.
 - Simple control board.
 
+**Authors**
 
-Authors:
-* [Github: Tomas Mejia](https://github.com/towasme) [Twitter: towasme](https://twitter.com/towasme) [Linkedin: Tomas Mejia Estrada](https://www.linkedin.com/in/tom%C3%A1s-mej%C3%ADa-estrada-541596159/)
-* [Github: Andres Garcia](https://github.com/andres0191) [Twitter: andres0191](https://twitter.com/andres0191) [Linkedin: Andres Felipe Garcia Rendon](https://www.linkedin.com/in/anfegar/)
-* [Github: Pablo Sanchez](https://github.com/jackeado) [Twitter: jackeado](https://twitter.com/jackeado) [Linkedin: Pablo Andres SAnchez](https://www.linkedin.com/in/pablo-a-s%C3%A1nchez-2bbb9940/)
+# Andres Felipe Garcia Rendon
+
+- [Github](https://github.com/andres0191) - [Twitter](https://twitter.com/andres0191) - [Linkedin](https://www.linkedin.com/in/anfegar/) - [Whatsapp](https://api.whatsapp.com/send?phone=3054214488text=Hola,%20soy%20Andres%20Garcia.%20Desarrollador%20Full%20Stack%20egreasdo%20de%20Holberton.%20En%20que%20te%20puedo%20ayudar?)
+
+
+# Tomas Mejia
+
+- [Github](https://github.com/towasme) - [Twitter](https://twitter.com/towasme) - [Linkedin](https://www.linkedin.com/in/tom%C3%A1s-mej%C3%ADa-estrada-541596159/) - [Whatsapp](https://api.whatsapp.com/send?phone=+3147982567text=Hola,%20soy%20Tomas%20Mejia.%20Desarrollador%20Full%20Stack%20egreasdo%20de%20Holberton.%20En%20que%20te%20puedo%20ayudar?)
+
+
+# Pablo Sanchez
+
+- [Github](https://github.com/andres0191) - [Twitter](https://twitter.com/andres0191) - [Linkedin](https://www.linkedin.com/in/anfegar/) - [Whatsapp](https://api.whatsapp.com/send?phone=3202055557text=Hola,%20soy%20Pablo%20Sanchez.%20Desarrollador%20Full%20Stack%20egreasdo%20de%20Holberton.%20En%20que%20te%20puedo%20ayudar?)
